@@ -1,89 +1,89 @@
 [{
-    "isFolder": true,
-    "text": "接入指引",
-    "des": "接入指引",
-    "in_use": true,
-    "children": [{
-        "filename": "/matchvs/guide/create/",
-        "text": "使用 Matchvs 服务",
-        "des": "使用 Matchvs 服务",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/guide/",
-        "text": "MatchvsSDK 接入指南",
-        "des": "MatchvsSDK 接入指南",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/gameserver/",
-        "text": "GameServer",
-        "des": "GameServer",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/storage/",
-        "text": "数据存储",
-        "des": "数据存储",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/relink/",
-        "text": "断线重连",
-        "des": "断线重连",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/team/",
-        "text": "组队匹配",
-        "des": "组队匹配",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/rank/",
-        "text": "排行榜",
-        "des": "排行榜",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/guide/sys/",
-        "text": "环境说明",
-        "des": "环境说明",
-        "in_use": true
-    }]
-}, {
-    "isFolder": true,
-    "text": "Demo 教程",
-    "des": "Demo 教程",
-    "in_use": true,
-    "children": [{
-        "filename": "/matchvs/demo/duck/",
-        "text": "鸭子抢球",
-        "des": "鸭子抢球",
-        "in_use": true
-    }]
-}, {
-    "isFolder": true,
-    "text": "微信相关",
-    "des": "微信相关",
-    "in_use": true,
-    "children": [{
-        "filename": "/matchvs/wxgame/third/",
-        "text": "第三方绑定使用指南",
-        "des": "第三方绑定使用指南",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/wxgame/wxrank/",
-        "text": "微信好友排行榜",
-        "des": "微信好友排行榜",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/wxgame/domain/",
-        "text": "微信域名列表",
-        "des": "微信域名列表",
-        "in_use": true
-    }, {
-        "filename": "/matchvs/wxgame/wechatInvite/",
-        "text": "微信约战",
-        "des": "微信约战",
-        "in_use": true
-    }]
-}, {
-    "filename": "/matchvs/api/",
-    "text": "API 手册",
-    "des": "API 手册",
+  "isFolder": true,
+  "text": "接入指引",
+  "des": "接入指引",
+  "in_use": true,
+  "children": [{
+    "filename": "/matchvs/guide/create/",
+    "text": "使用 Matchvs 服务",
+    "des": "使用 Matchvs 服务",
     "in_use": true
+  }, {
+    "filename": "/matchvs/guide/guide/",
+    "text": "MatchvsSDK 接入指南",
+    "des": "MatchvsSDK 接入指南",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/gameserver/",
+    "text": "GameServer",
+    "des": "GameServer",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/storage/",
+    "text": "数据存储",
+    "des": "数据存储",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/relink/",
+    "text": "断线重连",
+    "des": "断线重连",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/team/",
+    "text": "组队匹配",
+    "des": "组队匹配",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/rank/",
+    "text": "排行榜",
+    "des": "排行榜",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/guide/sys/",
+    "text": "环境说明",
+    "des": "环境说明",
+    "in_use": true
+  }]
+}, {
+  "isFolder": true,
+  "text": "Demo 教程",
+  "des": "Demo 教程",
+  "in_use": true,
+  "children": [{
+    "filename": "/matchvs/demo/duck/",
+    "text": "鸭子抢球",
+    "des": "鸭子抢球",
+    "in_use": true
+  }]
+}, {
+  "isFolder": true,
+  "text": "微信相关",
+  "des": "微信相关",
+  "in_use": true,
+  "children": [{
+    "filename": "/matchvs/wxgame/third/",
+    "text": "第三方绑定使用指南",
+    "des": "第三方绑定使用指南",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/wxgame/wxrank/",
+    "text": "微信好友排行榜",
+    "des": "微信好友排行榜",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/wxgame/domain/",
+    "text": "微信域名列表",
+    "des": "微信域名列表",
+    "in_use": true
+  }, {
+    "filename": "/matchvs/wxgame/wechatInvite/",
+    "text": "微信约战",
+    "des": "微信约战",
+    "in_use": true
+  }]
+}, {
+  "filename": "/matchvs/api/",
+  "text": "API 手册",
+  "des": "API 手册",
+  "in_use": true
 }]

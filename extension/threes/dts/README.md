@@ -32,7 +32,6 @@ declare function f(): void;
 declare var aa: string;
 ~~~
 
-
 ## 写法
 下面我们介绍下 “.d.ts” 的几种声明的写法。
 
@@ -61,7 +60,7 @@ declare module a {
 }
 ~~~
 
-### 类 class 
+### 类 class
 
 ~~~
 declare class A1 {
@@ -129,11 +128,11 @@ declare class A {
 ~~~
 declare var AAA: {
 	(id:number):any;		//直接调用
-    
+
 	new (s:string):any; 	//类似 class 的 new
-	
+
 	f(s:string):void;		//类似 class 的静态函数
-	
+
 	a:number;				//类似 class 的静态变量
 };
 ~~~
@@ -177,9 +176,9 @@ TDGA.Account.setGameServer('死亡之城')
 ### 分析
 
 * 从整体来看很好判断除了第一个外，其他的几个调用的都是函数体。
- 
+
 * 由于 TDGA.Account 有2层，因此 TDGA 可以使用 module 来定义。
- 
+
 * 下面就是一个重点了，Account 到底是什么。类的写法是 new Account()，而接口是不可以通过名称来初始化的，因而其实这2种方式的定义都与调用的 api 不吻合。现在如果大家熟悉最后一种定义（特殊变量），其实就非常简单了。
 
 最后在 .d.ts 中的写法如下
@@ -188,7 +187,7 @@ TDGA.Account.setGameServer('死亡之城')
 declare module TDGA {
     var Account: {
         (id: Object): any;
-        
+
         setAccountName(p_value: string): void;
         setAccountType(p_value: number): void;
         setLevel(p_value: number): void;

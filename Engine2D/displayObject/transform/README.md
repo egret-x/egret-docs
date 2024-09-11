@@ -46,7 +46,7 @@ class AnchorTest extends egret.DisplayObjectContainer
 修改上例锚点的位置，让锚点居于正方形左上角x轴 50 像素的位置，代码如下：
 
 ```javascript
-shp.anchorOffsetX = 50;
+shp.anchorOffsetX = 50
 ```
 
 再次编译项目并测试，效果如下：
@@ -61,8 +61,8 @@ shp.anchorOffsetX = 50;
 通过的 x 和 y 属性可访问修改显示对象的位置。
 
 ``` javascript
-container.x = 17;
-container.y = 212;
+container.x = 17
+container.y = 212
 ```
 
 显示对象定位系统将舞台视为一个笛卡尔坐标系（带有水平 x 轴和垂直 y 轴的常见网格系统）。坐标系的原点（x 和 y 轴相交的 0,0 坐标）位于舞台的左上角。从原点开始，x 轴的值向右为正，向左为负，而 y 轴的值向下为正，向上为负（与典型的图形系统相反）。例如，通过前面的代码行可以将对象 container 移到 x 轴坐标 17（原点向右 17 个像素）和 y 轴坐标 212（原点向下 212 个像素）。
@@ -72,7 +72,7 @@ container.y = 212;
 ### 本地坐标和舞台坐标
 
 x 和 y 属性始终是指显示对象相对于其父显示对象坐标轴的 (0,0) 坐标的位置。因此，对于包含在 DisplayObjectContainer 实例内的 Shape 实例（如圆），如果将 Shape 对象的 x 和 y 属性设置为 0，会将圆放在 DisplayObjectContainer 的左上角，但该位置不一定是舞台的左上角。若要确定对象相对于全局舞台坐标的位置，可以使用任何显示对象的 globalToLocal() 方法将坐标从全局（相对于舞台）坐标转换为本地（相对于显示对象容器）坐标，如下所示：
- 
+
 ```javascript
 //创建一个空的 DisplayObjectContainer，把它的 x 和 y 坐标都改为
 var container: egret.DisplayObjectContainer = new egret.DisplayObjectContainer();
@@ -145,7 +145,7 @@ function onMove(e:egret.TouchEvent):void{
    circle.y = e.stageY - offsetY;
 }
 ```
- 
+
 ## 3.尺寸和缩放
 
 有两种方式可测量和操作显示对象的大小：尺寸属性（width 和 height）或缩放属性（scaleX 和 scaleY）。
@@ -154,9 +154,9 @@ function onMove(e:egret.TouchEvent):void{
 尺寸属性 `width` 和 `height` 最初设置为对象的大小，以像素为单位。可以通过读取这些属性的值来确定显示对象的大小,也可以指定新值来更改对象的大小，如下所示：
 
 ```  javascript
-//设定对象的大小
-mySprite.width = 50;
-mySprite.height = 100;
+// 设定对象的大小
+mySprite.width = 50
+mySprite.height = 100
 ```
 更改显示对象的 height 或 width 会导致缩放对象。
 
@@ -165,9 +165,9 @@ mySprite.height = 100;
 通过缩放属性 `scaleX` 和 `scaleY` 可以等比更改显示对象的大小，如下面代码:
 
 ```javascript
-//设定对象的大小
-mySprite.scaleX = 2;
-mySprite.scaleY = 2;
+// 设定对象的大小
+mySprite.scaleX = 2
+mySprite.scaleY = 2
 ```
 
 将显示对象的宽和高同时放大了2倍。缩放是相对于显示对象的锚点进行的。
@@ -179,8 +179,8 @@ mySprite.scaleY = 2;
 下面代码使 `mySprit` 以锚点为圆心，顺时针旋转45°。
 
 ```javascript
-//把对象旋转 45 度（一整周旋转的 1/8）
-mySprite.rotation = 45;
+// 把对象旋转 45 度（一整周旋转的 1/8）
+mySprite.rotation = 45
 ```
 
 ## 5.斜切
@@ -189,27 +189,27 @@ mySprite.rotation = 45;
 
 斜切可从两个方向进行控制，对X方向的斜切将导致矩形的底边在X方向发生相应的偏移。
 
-![skewX_compare][]    
+![skewX_compare][]
 
-如上图所示，是对白鹭小鸟进行X方向斜切10所达到的结果。左边是未变形的原始图片，右边是变形后的图片。  
+如上图所示，是对白鹭小鸟进行X方向斜切10所达到的结果。左边是未变形的原始图片，右边是变形后的图片。
 
 ```javascript
-//设定对象的X方向斜切
-mySprite.skewX = 10;
+// 设定对象的X方向斜切
+mySprite.skewX = 10
 ```
 
 同理，对Y方向的斜切将导致矩形的右侧边在Y方向发生相应的偏移。
 
-![skewY_compare][]    
+![skewY_compare][]
 
-如上图所示，是对白鹭小鸟进行Y方向斜切10所达到的结果。   
+如上图所示，是对白鹭小鸟进行Y方向斜切10所达到的结果。
 
 [skewX_compare]: skewX_compare.png
 [skewY_compare]: skewY_compare.png
 
 ```javascript
-//设定对象的Y方向斜切
-mySprite.skewY = 10;
+// 设定对象的Y方向斜切
+mySprite.skewY = 10
 ```
 
-在适当的动画呈现场合使用斜切变形，可以在不增加图片资源的前提下实现灵活而有趣的效果。   
+在适当的动画呈现场合使用斜切变形，可以在不增加图片资源的前提下实现灵活而有趣的效果。

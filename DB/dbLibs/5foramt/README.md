@@ -3,13 +3,13 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/tbmhxgni/
 ---
-
+
 ```javascript
 {
     // DragonBones 数据名称
     "name": "dragonBonesName",
     // 数据版本
-    "version": "5.0",    
+    "version": "5.0",
     // 兼容版本
     "compatibleVersion": "4.5",
     // 动画帧频
@@ -107,7 +107,7 @@ permalink: /docs/tbmhxgni/
                     "inheritFFD": true,
                     // 包围盒类型 (可选属性 默认: "rectangle", 仅对包围盒有效)
                     // ["rectangle": 矩形, "ellipse": 椭圆, "polygon": 自定义多边形]
-                    "subType": "rectangle", 
+                    "subType": "rectangle",
                     // 显示对象颜色 (可选属性 默认: 0, 仅对包围盒有效)
                     "color": 0,
                     // 显示对象相对于骨骼的位移/ 斜切/ 缩放 (可选属性 默认: null)
@@ -201,7 +201,7 @@ permalink: /docs/tbmhxgni/
 
             // 深度排序时间轴
             "zOrder": {
-                "frame": [{                    
+                "frame": [{
                     // 帧长度 (可选属性 默认: 1)
                     "duration": 1,
                     // 插槽偏移 [slotIndexA, offsetA, slotIndexB, offsetB, ...] (可选属性 默认: null)
@@ -277,7 +277,7 @@ permalink: /docs/tbmhxgni/
             // 此动画包含的自由变形时间轴列表 (可选属性 默认: null)
             "ffd": [{
                 // 时间轴名称 (与网格名称对应)
-                "name": "timelineName",                
+                "name": "timelineName",
                 // 皮肤名称
                 "skin": "skinName",
                 // 插槽名称
@@ -319,7 +319,7 @@ permalink: /docs/tbmhxgni/
 * name属性的意义变为display的唯一标示符，不再代表路径。
 
 ## 支持包围盒
-* "display"的"type" 属性的值增加 "boundingBox" ，用于标记包围盒。  
+* "display"的"type" 属性的值增加 "boundingBox" ，用于标记包围盒。
 * 包围盒类型的 display 会包含如下属性
 	* "subType" : 标记包围盒的类型，可能的值为"rectangle": 矩形, "ellipse": 椭圆, "polygon": 自定义多边形
 	* "width", "height": 宽高（仅对矩形或椭圆类型的包围盒生效）

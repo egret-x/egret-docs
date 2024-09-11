@@ -117,6 +117,3 @@ NDK 版本：r10d
 gradle 版本：gradle-experimental:0.9.1
 
 默认 buildToolsVersion：25.0.2
-
-
-

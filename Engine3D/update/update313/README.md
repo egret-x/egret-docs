@@ -35,4 +35,3 @@ Egret Engine 3D 官方交流群: 180593985 。
 #### •	Bug修复
 
 - 修复Object3D中节点查找Bug
-

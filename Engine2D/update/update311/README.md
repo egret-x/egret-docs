@@ -5,7 +5,6 @@ permalink: /docs/oso2e61s/
 ---
 Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及全新打造的 3D 引擎，它解决了 HTML5 性能问题及碎片化问题，灵活地满足开发者开发 2D 或 3D 游戏的需求，并有着极强的跨平台运行能力。
 
-
 ## Egret Engine 2D
 
 继大幅提升了WebGL渲染能力，优化了重度化3D HTML5游戏开发性能之后，白鹭引擎（Egret  Engine）3.1.1版本将给开发者带来新的惊喜——新增了对Mesh功能的支持。
@@ -32,16 +31,16 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 在 Egret Engine 中使用 DragonBones 的 Mesh 动画与其动画的使用方式基本相同。以 DragonBones Pro 导出的纹理集为例，如下：
 
-``` 
+```
 //获取动画数据
 var dragonbonesData = RES.getRes( "Ubbie_json" );
 //获取纹理集数据
-var textureData = RES.getRes( "texture_json" ); 
+var textureData = RES.getRes( "texture_json" );
 //获取纹理集图片
 var texture = RES.getRes( "texture_png" );
 
 //创建一个工厂，用来创建Armature
-var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();  
+var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
 //把动画数据添加到工厂里
 dragonbonesFactory.addDragonBonesData(dragonBones.DataParser.parseDragonBonesData(dragonbonesData));
 //把纹理集数据和图片添加到工厂里
@@ -58,7 +57,7 @@ this.addChild(armature.display);
 
 dragonBones.WorldClock.clock.add( armature );.
 //播放动画
-armature.animation.gotoAndPlay("turn face");  
+armature.animation.gotoAndPlay("turn face");
 
 var time:number;
 
@@ -112,7 +111,3 @@ Mac 安装包下载地址：     [点击这里](http://tool.egret-labs.org/Egret
 Egret Engine 2D 源码地址：[点击这里](https://github.com/egret-labs/egret-core/tree/v3.1.1)
 
 Egret Engine 3D 源码地址：[点击这里](https://github.com/egret-labs/egret-3d/tree/rc/3.1.1)
-
-
-
-

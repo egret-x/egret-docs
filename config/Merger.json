@@ -1,82 +1,69 @@
 [{
-    "children": [{
-        "filename": "/tools/TextureMerger/update/update172/",
-        "text": "Texture Merger 1.7.2",
-        "des": "Texture Merger 1.7.2",
-        "in_use": true
-      },
-      {
-        "children": [{
-            "filename": "/tools/TextureMerger/update/update163/",
-            "text": "Texture Merger 1.6.3",
-            "des": "Texture Merger 1.6.3",
-            "in_use": true
-          },
-          {
-            "filename": "/tools/TextureMerger/update/update160/",
-            "text": "Texture Merger 1.6.0",
-            "des": "Texture Merger 1.6.0",
-            "in_use": true
-          }
-        ],
-        "isFolder": true,
-        "text": "历史更新",
-        "des": "历史更新",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "更新详情",
-    "des": "更新详情",
+  "children": [{
+    "filename": "/tools/TextureMerger/update/update172/",
+    "text": "Texture Merger 1.7.2",
+    "des": "Texture Merger 1.7.2",
     "in_use": true
-  },
-  {
+  }, {
     "children": [{
-        "filename": "/tools/TextureMerger/manual/",
-        "text": "TextureMerge简介",
-        "des": "TextureMerge简介",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/ui/",
-        "text": "界面介绍",
-        "des": "界面介绍",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/BitmapFont/",
-        "text": "创建位图字体",
-        "des": "创建位图字体",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/spriteSheet/",
-        "text": "创建纹理集合",
-        "des": "创建纹理集合",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/movieClip/",
-        "text": "创建动画",
-        "des": "创建动画",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/commandLine/",
-        "text": "命令行使用",
-        "des": "命令行使用",
-        "in_use": true
-      },
-      {
-        "filename": "/tools/TextureMerger/warning/",
-        "text": "注意",
-        "des": "注意",
-        "in_use": true
-      }
-    ],
+      "filename": "/tools/TextureMerger/update/update163/",
+      "text": "Texture Merger 1.6.3",
+      "des": "Texture Merger 1.6.3",
+      "in_use": true
+    }, {
+      "filename": "/tools/TextureMerger/update/update160/",
+      "text": "Texture Merger 1.6.0",
+      "des": "Texture Merger 1.6.0",
+      "in_use": true
+    }],
     "isFolder": true,
-    "text": "使用手册",
-    "des": "使用手册",
+    "text": "历史更新",
+    "des": "历史更新",
     "in_use": true
-  }
-]
+  }],
+  "isFolder": true,
+  "text": "更新详情",
+  "des": "更新详情",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/tools/TextureMerger/manual/",
+    "text": "TextureMerge简介",
+    "des": "TextureMerge简介",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/ui/",
+    "text": "界面介绍",
+    "des": "界面介绍",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/BitmapFont/",
+    "text": "创建位图字体",
+    "des": "创建位图字体",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/spriteSheet/",
+    "text": "创建纹理集合",
+    "des": "创建纹理集合",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/movieClip/",
+    "text": "创建动画",
+    "des": "创建动画",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/commandLine/",
+    "text": "命令行使用",
+    "des": "命令行使用",
+    "in_use": true
+  }, {
+    "filename": "/tools/TextureMerger/warning/",
+    "text": "注意",
+    "des": "注意",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "使用手册",
+  "des": "使用手册",
+  "in_use": true
+}]

@@ -10,30 +10,32 @@ permalink: /docs/extension/EUI/dataCollection/list/
 
 下面是List的基本用法：
 
-~~~ typescript 
+~~~ typescript
 class Main extends eui.Group {
-    constructor() {
-        super();
-    }
-    private list:eui.List;
-    protected createChildren() {
-        super.createChildren();
-        var exml = `
-        <e:Skin xmlns:e="http://ns.egret.com/eui" states="up,down" height="50"> <e:Label text="{data}" textColor.down="0xFFFFFF" textColor.up="0x666666" horizontalCenter="0" verticalCenter="0"/> </e:Skin>`;
-        var list = new eui.List();
-        list.dataProvider = new eui.ArrayCollection(["item1","item2","item3"]);
-        list.itemRendererSkinName = exml;
-        this.addChild(list);
-        this.list = list;
-        list.selectedIndex = 1;//设置默认选中项
-        list.addEventListener(eui.ItemTapEvent.ITEM_TAP,this.onChange,this);
-    }
-    private onChange(e:eui.PropertyEvent):void{
-    	//获取点击消息
-        console.log(this.list.selectedItem,this.list.selectedIndex)
-    }
+  constructor() {
+    super()
+  }
+
+  private list: eui.List
+  protected createChildren() {
+    super.createChildren()
+    const exml = `
+        <e:Skin xmlns:e="http://ns.egret.com/eui" states="up,down" height="50"> <e:Label text="{data}" textColor.down="0xFFFFFF" textColor.up="0x666666" horizontalCenter="0" verticalCenter="0"/> </e:Skin>`
+    const list = new eui.List()
+    list.dataProvider = new eui.ArrayCollection(['item1', 'item2', 'item3'])
+    list.itemRendererSkinName = exml
+    this.addChild(list)
+    this.list = list
+    list.selectedIndex = 1// 设置默认选中项
+    list.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onChange, this)
+  }
+
+  private onChange(e: eui.PropertyEvent): void {
+    // 获取点击消息
+    console.log(this.list.selectedItem, this.list.selectedIndex)
+  }
 }
-~~~ 
+~~~
 效果如下：
 
 ![](5604f13909a44.png)
@@ -49,7 +51,7 @@ list.selectedIndex
 ~~~
 ## 多选状态
  List 还可以开启多选状态
- 
+
 ~~~ TypeScript
 list.allowMultipleSelection = true;
 ~~~

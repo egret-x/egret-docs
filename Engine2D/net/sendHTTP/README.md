@@ -21,7 +21,7 @@ HTTP 通信机制都要经过如下的几个步骤：
 6. Web服务器向浏览器发送数据
 7. Web服务器关闭TCP连接(如果请求头部设置了`Connection:keep-alive`将保持连接状态仍然打开).
 
-### 1.2.HTTP 请求方法 
+### 1.2.HTTP 请求方法
 
 #### GET 方法
 
@@ -44,18 +44,17 @@ Egret 使用 `HttpRequest` 类发送 HTTP 请求。可以指定请求的方法�
 5. 通过 `send` 方法发送请求，如果是 `post` 方法可以传入参数。
 6. 添加监听，监听服务器端的响应，包括进度事件和请求成功和失败事件。
 
-
 代码如下:
 
 ~~~javascript
-var request = new egret.HttpRequest();
-request.responseType = egret.HttpResponseType.TEXT;
-request.open("http://httpbin.org/get",egret.HttpMethod.GET);
-request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-request.send();
-request.addEventListener(egret.Event.COMPLETE,this.onGetComplete,this);
-request.addEventListener(egret.IOErrorEvent.IO_ERROR,this.onGetIOError,this);
-request.addEventListener(egret.ProgressEvent.PROGRESS,this.onGetProgress,this);
+const request = new egret.HttpRequest()
+request.responseType = egret.HttpResponseType.TEXT
+request.open('http://httpbin.org/get', egret.HttpMethod.GET)
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+request.send()
+request.addEventListener(egret.Event.COMPLETE, this.onGetComplete, this)
+request.addEventListener(egret.IOErrorEvent.IO_ERROR, this.onGetIOError, this)
+request.addEventListener(egret.ProgressEvent.PROGRESS, this.onGetProgress, this)
 ~~~
 
 上面发送了一个 GET 请求到`http://httpbin.org/get`，然后添加回调事件，当请求成功或者失败之后来获取数据。
@@ -86,15 +85,15 @@ private onGetProgress(event:egret.ProgressEvent):void {
 发送 POST 请求的代码如下:
 
 ~~~javascript
-var request = new egret.HttpRequest();
-request.responseType = egret.HttpResponseType.TEXT;
-//设置为 POST 请求
-request.open("http://httpbin.org/post",egret.HttpMethod.POST);
-request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-request.send();
-request.addEventListener(egret.Event.COMPLETE,this.onPostComplete,this);
-request.addEventListener(egret.IOErrorEvent.IO_ERROR,this.onPostIOError,this);
-request.addEventListener(egret.ProgressEvent.PROGRESS,this.onPostProgress,this);
+const request = new egret.HttpRequest()
+request.responseType = egret.HttpResponseType.TEXT
+// 设置为 POST 请求
+request.open('http://httpbin.org/post', egret.HttpMethod.POST)
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+request.send()
+request.addEventListener(egret.Event.COMPLETE, this.onPostComplete, this)
+request.addEventListener(egret.IOErrorEvent.IO_ERROR, this.onPostIOError, this)
+request.addEventListener(egret.ProgressEvent.PROGRESS, this.onPostProgress, this)
 ~~~
 
 添加回调函数：
@@ -162,28 +161,28 @@ key1=value1&key2=valueP2
 首先是 GET 请求，GET 请求需要将参数拼接到 URL 后面实现。其中 URL 和 参数之间需要用 `?` 链接。修改上面 GET 请求相应代码如下:
 
 ~~~javascript
-//拼接参数 
-var params = "?p1=getP1&p2=getP2";
-var request = new egret.HttpRequest();
-request.responseType = egret.HttpResponseType.TEXT;
-//将参数拼接到url
-request.open("php/get_test.php"+params,egret.HttpMethod.GET);
-request.send();
+// 拼接参数
+const params = '?p1=getP1&p2=getP2'
+const request = new egret.HttpRequest()
+request.responseType = egret.HttpResponseType.TEXT
+// 将参数拼接到url
+request.open(`php/get_test.php${params}`, egret.HttpMethod.GET)
+request.send()
 ~~~
 
 发送 POST 请求. 需要注意的是发送 POST 请求需要将参数放到`send`方法的参数中发送出去。并且要设置其响应头，在我们的例子中使用`key` `value` 的方式来格式化参数，这里需要设置响应头`Content-Type`为`application/x-www-form-urlencoded`。修改上面 POST 请求相应代码如下:
 
 ~~~javascript
-//拼接参数
-var params = "p1=postP1&p2=postP2";
+// 拼接参数
+const params = 'p1=postP1&p2=postP2'
 
-var request = new egret.HttpRequest();
-request.responseType = egret.HttpResponseType.TEXT;
-request.open("php/post_test.php",egret.HttpMethod.POST);
-//设置响应头
-request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//发送参数
-request.send(params);
+const request = new egret.HttpRequest()
+request.responseType = egret.HttpResponseType.TEXT
+request.open('php/post_test.php', egret.HttpMethod.POST)
+// 设置响应头
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+// 发送参数
+request.send(params)
 ~~~
 
 完整代码如下:
@@ -285,18 +284,3 @@ class Main extends egret.DisplayObjectContainer {
     }
 }
 ~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

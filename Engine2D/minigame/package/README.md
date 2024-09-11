@@ -35,7 +35,7 @@ permalink: /docs/21x1kzka/
 #### 步骤二：将该项目移植进您的游戏
 
 * 将 scripts/wxgame/subpackage.ts 拷贝进您的项目
-* 修改 config.wxgame.ts，将 ManifestPlugin 替换为 SubPackagePlugin （注意，您需要修改 build 和 publish） 
+* 修改 config.wxgame.ts，将 ManifestPlugin 替换为 SubPackagePlugin （注意，您需要修改 build 和 publish）
 * 修改 config.wxgame.ts 中的 CleanPlugin，将 subpackage 对应的目录清除
 * 将示例项目的 EgretSubpackageLoading.js 拷贝进您的微信小游戏项目
 * 修改微信小游戏项目的 game.json，参考示例项目，引入 subpackages 属性
@@ -51,5 +51,3 @@ permalink: /docs/21x1kzka/
 --------------------------
 
 该功能目前 **尚未在真实项目中得到验证**，如果您希望在您的项目中添加此功能，强烈建议您联系白鹭引擎官方团队，并时刻关注 https://github.com/himuil/subPackageDemo/issues ，我们非常鼓励您在这里提交您的反馈意见。
-
-

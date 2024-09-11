@@ -11,5 +11,4 @@ permalink: /docs/m84i7heh/
 - **[修复]** 修正了Android上全面屏点击问题
 - **[修复]** 修正了Android Native收不到onJSError的问题
 
-
 **【发布日期】：2018-12-27 **

@@ -15,12 +15,12 @@ EgretWing提供了包括 **编辑器设置，文件设置，窗口设置** 等�
     "editor.tabSize": 4,
     // 按 "Tab" 时插入空格
     "editor.insertSpaces": true,
-    
+
     // 读取或写入文件的默认编码格式.
     "files.encoding": "utf8",
     // 默认换行符
     "files.eol": "\r\n"
-    
+
 点击`文件---首选项---用户设置` 可以进入如下编辑界面：
 
 ![](1.png)

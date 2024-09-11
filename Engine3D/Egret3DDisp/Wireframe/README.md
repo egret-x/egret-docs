@@ -6,7 +6,7 @@ permalink: /docs/sgfaa1ws/
 Wirefram
 ----------
 场景中渲染线条的对象
- 
+
 ----------
 	1.
 	// 用Geometry 创建线框
@@ -40,7 +40,7 @@ Wirefram
 	2.
     // 用顶点 创建线框
     protected createWireframeForVertex() {
-      
+
         var wireframe0: egret3d.Wireframe = new egret3d.Wireframe();
         var vb0: number[] = [];
 
@@ -56,7 +56,6 @@ Wirefram
 
         this.view.addChild3D(wireframe0);
         wireframe0.x = -400;
-
 
         var wireframe1: egret3d.Wireframe = new egret3d.Wireframe();
 
@@ -119,7 +118,7 @@ Wirefram
         for (var i: number = 0; i < vb.length / 3; ++i) {
             ib.push(i);
         }
-        // 设置顶点数据 
+        // 设置顶点数据
         geom.setVerticesForIndex(0, egret3d.VertexFormat.VF_POSITION, vb, vb.length / 3);
 
         // 设置索引数据

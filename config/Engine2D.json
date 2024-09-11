@@ -1,1289 +1,1114 @@
 [{
-    "children": [{
-        "filename": "/Engine2D/update/update5233/",
-        "text": "Egret Engine2D 5.2.33",
-        "des": "Egret Engine2D 5.2.33",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/releaseNote/allVersion/",
-        "text": "全部版本列表",
-        "des": "全部版本列表",
-        "in_use": false
-      },
-      {
-        "isFolder": true,
-        "text": "历史更新",
-        "des": "历史更新",
-        "in_use": true,
-        "children": [{
-            "filename": "/Engine2D/update/update5232/",
-            "text": "Egret Engine2D 5.2.32",
-            "des": "Egret Engine2D 5.2.32",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5231/",
-            "text": "Egret Engine2D 5.2.31",
-            "des": "Egret Engine2D 5.2.31",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5230/",
-            "text": "Egret Engine2D 5.2.30",
-            "des": "Egret Engine2D 5.2.30",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5229/",
-            "text": "Egret Engine2D 5.2.29",
-            "des": "Egret Engine2D 5.2.29",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5228/",
-            "text": "Egret Engine2D 5.2.28",
-            "des": "Egret Engine2D 5.2.28",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5227/",
-            "text": "Egret Engine2D 5.2.27",
-            "des": "Egret Engine2D 5.2.27",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5226/",
-            "text": "Egret Engine2D 5.2.26",
-            "des": "Egret Engine2D 5.2.26",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5225/",
-            "text": "Egret Engine2D 5.2.25",
-            "des": "Egret Engine2D 5.2.25",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5224/",
-            "text": "Egret Engine2D 5.2.24",
-            "des": "Egret Engine2D 5.2.24",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5223/",
-            "text": "Egret Engine2D 5.2.23",
-            "des": "Egret Engine2D 5.2.23",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5222/",
-            "text": "Egret Engine2D 5.2.22",
-            "des": "Egret Engine2D 5.2.22",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5221/",
-            "text": "Egret Engine2D 5.2.21",
-            "des": "Egret Engine2D 5.2.21",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5220/",
-            "text": "Egret Engine2D 5.2.20",
-            "des": "Egret Engine2D 5.2.20",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5219/",
-            "text": "Egret Engine2D 5.2.19",
-            "des": "Egret Engine2D 5.2.19",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5218/",
-            "text": "Egret Engine2D 5.2.18",
-            "des": "Egret Engine2D 5.2.18",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5217/",
-            "text": "Egret Engine2D 5.2.17",
-            "des": "Egret Engine2D 5.2.17",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5216/",
-            "text": "Egret Engine2D 5.2.16",
-            "des": "Egret Engine2D 5.2.16",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5215/",
-            "text": "Egret Engine2D 5.2.15",
-            "des": "Egret Engine2D 5.2.15",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5214/",
-            "text": "Egret Engine2D 5.2.14",
-            "des": "Egret Engine2D 5.2.14",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5213/",
-            "text": "Egret Engine2D 5.2.13",
-            "des": "Egret Engine2D 5.2.13",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5212/",
-            "text": "Egret Engine2D 5.2.12",
-            "des": "Egret Engine2D 5.2.12",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5211/",
-            "text": "Egret Engine2D 5.2.11",
-            "des": "Egret Engine2D 5.2.11",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update5210/",
-            "text": "Egret Engine2D 5.2.10",
-            "des": "Egret Engine2D 5.2.10",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update529/",
-            "text": "Egret Engine2D 5.2.9",
-            "des": "Egret Engine2D 5.2.9",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update528/",
-            "text": "Egret Engine2D 5.2.8",
-            "des": "Egret Engine2D 5.2.8",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update527/",
-            "text": "Egret Engine2D 5.2.7",
-            "des": "Egret Engine2D 5.2.7",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update526/",
-            "text": "Egret Engine2D 5.2.6",
-            "des": "Egret Engine2D 5.2.6",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update525/",
-            "text": "Egret Engine2D 5.2.5",
-            "des": "Egret Engine2D 5.2.5",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update524/",
-            "text": "Egret Engine2D 5.2.4",
-            "des": "Egret Engine2D 5.2.4",
-            "in_use": true
-          }, {
-            "filename": "/Engine2D/update/update523/",
-            "text": "Egret Engine2D 5.2.3",
-            "des": "Egret Engine2D 5.2.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update522/",
-            "text": "Egret Engine2D 5.2.2",
-            "des": "Egret Engine2D 5.2.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update521/",
-            "text": "Egret Engine2D 5.2.1",
-            "des": "Egret Engine2D 5.2.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update520/",
-            "text": "Egret Engine2D 5.2.0",
-            "des": "Egret Engine2D 5.2.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5111/",
-            "text": "Egret Engine2D 5.1.11",
-            "des": "Egret Engine2D 5.1.11",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5110/",
-            "text": "Egret Engine2D 5.1.10",
-            "des": "Egret Engine2D 5.1.10",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update519/",
-            "text": "Egret Engine2D 5.1.9",
-            "des": "Egret Engine2D 5.1.9",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update518/",
-            "text": "Egret Engine2D 5.1.8",
-            "des": "Egret Engine2D 5.1.8",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update517/",
-            "text": "Egret Engine2D 5.1.7",
-            "des": "Egret Engine2D 5.1.7",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update516/",
-            "text": "Egret Engine2D 5.1.6",
-            "des": "Egret Engine2D 5.1.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update515/",
-            "text": "Egret Engine2D 5.1.5",
-            "des": "Egret Engine2D 5.1.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update514/",
-            "text": "Egret Engine2D 5.1.4",
-            "des": "Egret Engine2D 5.1.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update513/",
-            "text": "Egret Engine2D 5.1.3",
-            "des": "Egret Engine2D 5.1.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update512/",
-            "text": "Egret Engine2D 5.1.2",
-            "des": "Egret Engine2D 5.1.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update511/",
-            "text": "Egret Engine2D 5.1.1",
-            "des": "Egret Engine2D 5.1.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update510/",
-            "text": "Egret Engine2D 5.1.0",
-            "des": "Egret Engine2D 5.1.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5015/",
-            "text": "Egret Engine2D 5.0.15",
-            "des": "Egret Engine2D 5.0.15",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5014/",
-            "text": "Egret Engine2D 5.0.14",
-            "des": "Egret Engine2D 5.0.14",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5013/",
-            "text": "Egret Engine2D 5.0.13",
-            "des": "Egret Engine2D 5.0.13",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5012/",
-            "text": "Egret Engine2D 5.0.12",
-            "des": "Egret Engine2D 5.0.12",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5011/",
-            "text": "Egret Engine2D 5.0.11",
-            "des": "Egret Engine2D 5.0.11",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update5010/",
-            "text": "Egret Engine2D 5.0.10",
-            "des": "Egret Engine2D 5.0.10",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update509/",
-            "text": "Egret Engine2D 5.0.9",
-            "des": "Egret Engine2D 5.0.9",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update508/",
-            "text": "Egret Engine2D 5.0.8",
-            "des": "Egret Engine2D 5.0.8",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update507/",
-            "text": "Egret Engine2D 5.0.7",
-            "des": "Egret Engine2D 5.0.7",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update506/",
-            "text": "Egret Engine2D 5.0.6",
-            "des": "Egret Engine2D 5.0.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update505/",
-            "text": "Egret Engine2D 5.0.5",
-            "des": "Egret Engine2D 5.0.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update504/",
-            "text": "Egret Engine2D 5.0.4",
-            "des": "Egret Engine2D 5.0.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update503/",
-            "text": "Egret Engine2D 5.0.3",
-            "des": "Egret Engine2D 5.0.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update502/",
-            "text": "Egret Engine2D 5.0.2",
-            "des": "Egret Engine2D 5.0.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update501/",
-            "text": "Egret Engine2D 5.0.1",
-            "des": "Egret Engine2D 5.0.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update500/",
-            "text": "Egret Engine2D 5.0.0",
-            "des": "Egret Engine2D 5.0.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update411/",
-            "text": "Egret Engine2D 4.1.1",
-            "des": "Egret Engine2D 4.1.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update410/",
-            "text": "Egret Engine2D 4.1.0",
-            "des": "Egret Engine2D 4.1.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update403/",
-            "text": "Egret Engine2D 4.0.3",
-            "des": "Egret Engine2D 4.0.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update402/",
-            "text": "Egret Engine2D 4.0.2",
-            "des": "Egret Engine2D 4.0.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update401/",
-            "text": "Egret Engine2D 4.0.1",
-            "des": "Egret Engine2D 4.0.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update400/",
-            "text": "Egret Engine2D 4.0.0",
-            "des": "Egret Engine2D 4.0.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update326/",
-            "text": "Egret Engine2D 3.2.6",
-            "des": "Egret Engine2D 3.2.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update325/",
-            "text": "Egret Engine2D 3.2.5",
-            "des": "Egret Engine2D 3.2.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update324/",
-            "text": "Egret Engine2D 3.2.4",
-            "des": "Egret Engine2D 3.2.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update323/",
-            "text": "Egret Engine2D 3.2.3",
-            "des": "Egret Engine2D 3.2.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update322/",
-            "text": "Egret Engine2D 3.2.2",
-            "des": "Egret Engine2D 3.2.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update321/",
-            "text": "Egret Engine2D 3.2.1",
-            "des": "Egret Engine2D 3.2.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update320/",
-            "text": "Egret Engine2D 3.2.0",
-            "des": "Egret Engine2D 3.2.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update318/",
-            "text": "Egret Engine2D 3.1.8",
-            "des": "Egret Engine2D 3.1.8",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update317/",
-            "text": "Egret Engine2D 3.1.7",
-            "des": "Egret Engine2D 3.1.7",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update316/",
-            "text": "Egret Engine2D 3.1.6",
-            "des": "Egret Engine2D 3.1.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update315/",
-            "text": "Egret Engine2D 3.1.5",
-            "des": "Egret Engine2D 3.1.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update314/",
-            "text": "Egret Engine2D 3.1.4",
-            "des": "Egret Engine2D 3.1.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update313/",
-            "text": "Egret Engine2D 3.1.3",
-            "des": "Egret Engine2D 3.1.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update312/",
-            "text": "Egret Engine2D 3.1.2",
-            "des": "Egret Engine2D 3.1.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update311/",
-            "text": "Egret Engine2D 3.1.1",
-            "des": "Egret Engine2D 3.1.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update310/",
-            "text": "Egret Engine2D 3.1.0",
-            "des": "Egret Engine2D 3.1.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update308/",
-            "text": "Egret Engine2D 3.0.8",
-            "des": "Egret Engine2D 3.0.8",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update307/",
-            "text": "Egret Engine2D 3.0.7",
-            "des": "Egret Engine2D 3.0.7",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update306/",
-            "text": "Egret Engine2D 3.0.6",
-            "des": "Egret Engine2D 3.0.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update305/",
-            "text": "Egret Engine2D 3.0.5",
-            "des": "Egret Engine2D 3.0.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update304/",
-            "text": "Egret Engine2D 3.0.4",
-            "des": "Egret Engine2D 3.0.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update303/",
-            "text": "Egret Engine2D 3.0.3",
-            "des": "Egret Engine2D 3.0.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update302/",
-            "text": "Egret Engine2D 3.0.2",
-            "des": "Egret Engine2D 3.0.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update301/",
-            "text": "Egret Engine2D 3.0.1",
-            "des": "Egret Engine2D 3.0.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update300/",
-            "text": "Egret Engine2D 3.0.0",
-            "des": "Egret Engine2D 3.0.0",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update257/",
-            "text": "Egret Engine2D 2.5.7",
-            "des": "Egret Engine2D 2.5.7",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update256/",
-            "text": "Egret Engine2D 2.5.6",
-            "des": "Egret Engine2D 2.5.6",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update255/",
-            "text": "Egret Engine2D 2.5.5",
-            "des": "Egret Engine2D 2.5.5",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update254/",
-            "text": "Egret Engine2D 2.5.4",
-            "des": "Egret Engine2D 2.5.4",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update253/",
-            "text": "Egret Engine2D 2.5.3",
-            "des": "Egret Engine2D 2.5.3",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update252/",
-            "text": "Egret Engine2D 2.5.2",
-            "des": "Egret Engine2D 2.5.2",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update251/",
-            "text": "Egret Engine2D 2.5.1",
-            "des": "Egret Engine2D 2.5.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Engine2D/update/update250/",
-            "text": "Egret Engine2D 2.5.0",
-            "des": "Egret Engine2D 2.5.0",
-            "in_use": true
-          }
-        ]
-      }
-    ],
-    "isFolder": true,
-    "text": "更新详情",
-    "des": "更新详情",
+  "children": [{
+    "filename": "/Engine2D/update/update5233/",
+    "text": "Egret Engine2D 5.2.33",
+    "des": "Egret Engine2D 5.2.33",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/getStarted/helloWorld/",
-        "text": "Hello World",
-        "des": "Hello World",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/getStarted/lifecycle/",
-        "text": "生命周期",
-        "des": "生命周期",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "Get Started",
-    "des": "Get Started",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigame/minigameFAQ/",
-        "text": "微信小游戏 FAQ",
-        "des": "微信小游戏 FAQ",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/introduction/",
-        "text": "小游戏简介",
-        "des": "小游戏简介",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/tutorial/",
-        "text": "小游戏新手教程",
-        "des": "小游戏新手教程",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/advance/",
-        "text": "小游戏进阶教程",
-        "des": "小游戏进阶教程",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/api/",
-        "text": "小游戏 API 调用",
-        "des": "小游戏 API 调用",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/openDataContext/",
-        "text": "开放数据域",
-        "des": "开放数据域",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/publish/",
-        "text": "项目发布小游戏指南",
-        "des": "项目发布小游戏指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/roadmap/",
-        "text": "后续路线图",
-        "des": "后续路线图",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/usingcache/",
-        "text": "如何使用缓存资源",
-        "des": "",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/package/",
-        "text": "如何分包加载资源",
-        "des": "",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigame/cloudapi/",
-        "text": "使用数据库API",
-        "des": "",
-        "in_use": true
-      }, {
-        "filename": "/Engine2D/minigame/useWxPlugin/",
-        "text": "使用微信引擎插件",
-        "des": "",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "微信小游戏开发指南",
-    "des": "微信小游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigameqq/getStart/",
-        "text": "开发快速指南",
-        "des": "开发快速指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigameqq/qqgameFAQ/",
-        "text": "QQ小游戏FAQ",
-        "des": "QQ小游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "QQ小游戏开发指南",
-    "des": "QQ小游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigamebaidu/getStart/",
-        "text": "开发快速指南",
-        "des": "开发快速指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigamebaidu/baidugameFAQ/",
-        "text": "百度小游戏FAQ",
-        "des": "百度小游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "百度小游戏开发指南",
-    "des": "百度小游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigamexiaomi/getStart/",
-        "text": "开发快速指南",
-        "des": "开发快速指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigamexiaomi/qgameFAQ/",
-        "text": "小米快游戏FAQ",
-        "des": "小米快游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "小米快游戏开发指南",
-    "des": "小米快游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigameoppo/getStart/",
-        "text": "开发快速指南",
-        "des": "开发快速指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigameoppo/oppogameFAQ/",
-        "text": "OPPO小游游戏FAQ",
-        "des": "OPPO小游游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "OPPO小游戏开发指南",
-    "des": "OPPO小游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/minigamevivo/getStart/",
-        "text": "开发快速指南",
-        "des": "开发快速指南",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/minigamevivo/vivogameFAQ/",
-        "text": "vivo小游游戏FAQ",
-        "des": "vivo小游游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "vivo小游戏开发指南",
-    "des": "vivo小游戏开发指南",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/bricksgame/start/",
-        "text": "新手教程",
-        "des": "新手教程",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bricksgame/question/",
-        "text": "玩一玩游戏FAQ",
-        "des": "玩一玩游戏FAQ",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "玩一玩平台开发指南",
-    "des": "玩一玩平台开发指南",
+  }, {
+    "filename": "/Engine2D/releaseNote/allVersion/",
+    "text": "全部版本列表",
+    "des": "全部版本列表",
     "in_use": false
-  },
-  {
+  }, {
+    "isFolder": true,
+    "text": "历史更新",
+    "des": "历史更新",
+    "in_use": true,
     "children": [{
-      "filename": "/Engine2D/facebookInstantGames/",
-      "text": "开发快速指南",
-      "des": "开发快速指南",
+      "filename": "/Engine2D/update/update5232/",
+      "text": "Egret Engine2D 5.2.32",
+      "des": "Egret Engine2D 5.2.32",
       "in_use": true
-    }],
-    "isFolder": true,
-    "text": "Facebook InstantGames",
-    "des": "Facebook InstantGames",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/projectConfig/installation/",
-        "text": "安装与部署",
-        "des": "安装与部署",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/cmdManual/",
-        "text": "命令行手册",
-        "des": "命令行手册",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/indexFile/",
-        "text": "入口文件说明",
-        "des": "入口文件说明",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/tempfile/",
-        "text": "入口文件模板",
-        "des": "入口文件模板",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/configFile/",
-        "text": "项目配置文件说明",
-        "des": "项目配置文件说明",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/modelconfig/",
-        "text": "模块配置",
-        "des": "模块配置",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/tsconfig/",
-        "text": "tsconfig 配置文件",
-        "des": "tsconfig 配置文件",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/compileOrder/",
-        "text": "编译顺序说明",
-        "des": "编译顺序说明",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/webassembly/",
-        "text": "webassembly 版本使用",
-        "des": "webassembly 版本使用",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/extendRepSummary/",
-        "text": "扩展库简介",
-        "des": "扩展库简介",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/libraryProject/",
-        "text": "第三方扩展库",
-        "des": "第三方扩展库",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/upgradev52/",
-        "text": "5.2 项目升级指南",
-        "des": "5.0 to 5.2",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "项目配置",
-    "des": "项目配置相关文档",
-    "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/displayObject/displayObject/",
-        "text": "基本概念",
-        "des": "基本概念",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/displayObject/transform/",
-        "text": "变换操作",
-        "des": "变换操作",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/displayObject/addAndRemove/",
-        "text": "添加与删除显示对象",
-        "des": "添加与删除显示对象",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/displayObject/depthManagement/",
-        "text": "深度管理",
-        "des": "深度管理",
-        "in_use": true
-      }, {
-        "filename": "/Engine2D/displayObject/resetDepth/",
-        "text": "重设子对象深度",
-        "des": "重设子对象深度",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "显示对象和显示容器",
-    "des": "显示对象和显示容器",
-    "in_use": true
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/vectorDrawing/vectorDrawing/",
-      "text": "使用矢量绘图",
-      "des": "使用矢量绘图",
+    }, {
+      "filename": "/Engine2D/update/update5231/",
+      "text": "Egret Engine2D 5.2.31",
+      "des": "Egret Engine2D 5.2.31",
       "in_use": true
-    }],
-    "isFolder": true,
-    "text": "矢量绘图",
-    "des": "矢量绘图",
-    "in_use": true
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/mask/mask/",
-      "text": "遮罩",
-      "des": "遮罩",
+    }, {
+      "filename": "/Engine2D/update/update5230/",
+      "text": "Egret Engine2D 5.2.30",
+      "des": "Egret Engine2D 5.2.30",
       "in_use": true
-    }],
-    "isFolder": true,
+    }, {
+      "filename": "/Engine2D/update/update5229/",
+      "text": "Egret Engine2D 5.2.29",
+      "des": "Egret Engine2D 5.2.29",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5228/",
+      "text": "Egret Engine2D 5.2.28",
+      "des": "Egret Engine2D 5.2.28",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5227/",
+      "text": "Egret Engine2D 5.2.27",
+      "des": "Egret Engine2D 5.2.27",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5226/",
+      "text": "Egret Engine2D 5.2.26",
+      "des": "Egret Engine2D 5.2.26",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5225/",
+      "text": "Egret Engine2D 5.2.25",
+      "des": "Egret Engine2D 5.2.25",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5224/",
+      "text": "Egret Engine2D 5.2.24",
+      "des": "Egret Engine2D 5.2.24",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5223/",
+      "text": "Egret Engine2D 5.2.23",
+      "des": "Egret Engine2D 5.2.23",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5222/",
+      "text": "Egret Engine2D 5.2.22",
+      "des": "Egret Engine2D 5.2.22",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5221/",
+      "text": "Egret Engine2D 5.2.21",
+      "des": "Egret Engine2D 5.2.21",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5220/",
+      "text": "Egret Engine2D 5.2.20",
+      "des": "Egret Engine2D 5.2.20",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5219/",
+      "text": "Egret Engine2D 5.2.19",
+      "des": "Egret Engine2D 5.2.19",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5218/",
+      "text": "Egret Engine2D 5.2.18",
+      "des": "Egret Engine2D 5.2.18",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5217/",
+      "text": "Egret Engine2D 5.2.17",
+      "des": "Egret Engine2D 5.2.17",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5216/",
+      "text": "Egret Engine2D 5.2.16",
+      "des": "Egret Engine2D 5.2.16",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5215/",
+      "text": "Egret Engine2D 5.2.15",
+      "des": "Egret Engine2D 5.2.15",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5214/",
+      "text": "Egret Engine2D 5.2.14",
+      "des": "Egret Engine2D 5.2.14",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5213/",
+      "text": "Egret Engine2D 5.2.13",
+      "des": "Egret Engine2D 5.2.13",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5212/",
+      "text": "Egret Engine2D 5.2.12",
+      "des": "Egret Engine2D 5.2.12",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5211/",
+      "text": "Egret Engine2D 5.2.11",
+      "des": "Egret Engine2D 5.2.11",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5210/",
+      "text": "Egret Engine2D 5.2.10",
+      "des": "Egret Engine2D 5.2.10",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update529/",
+      "text": "Egret Engine2D 5.2.9",
+      "des": "Egret Engine2D 5.2.9",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update528/",
+      "text": "Egret Engine2D 5.2.8",
+      "des": "Egret Engine2D 5.2.8",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update527/",
+      "text": "Egret Engine2D 5.2.7",
+      "des": "Egret Engine2D 5.2.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update526/",
+      "text": "Egret Engine2D 5.2.6",
+      "des": "Egret Engine2D 5.2.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update525/",
+      "text": "Egret Engine2D 5.2.5",
+      "des": "Egret Engine2D 5.2.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update524/",
+      "text": "Egret Engine2D 5.2.4",
+      "des": "Egret Engine2D 5.2.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update523/",
+      "text": "Egret Engine2D 5.2.3",
+      "des": "Egret Engine2D 5.2.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update522/",
+      "text": "Egret Engine2D 5.2.2",
+      "des": "Egret Engine2D 5.2.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update521/",
+      "text": "Egret Engine2D 5.2.1",
+      "des": "Egret Engine2D 5.2.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update520/",
+      "text": "Egret Engine2D 5.2.0",
+      "des": "Egret Engine2D 5.2.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5111/",
+      "text": "Egret Engine2D 5.1.11",
+      "des": "Egret Engine2D 5.1.11",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5110/",
+      "text": "Egret Engine2D 5.1.10",
+      "des": "Egret Engine2D 5.1.10",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update519/",
+      "text": "Egret Engine2D 5.1.9",
+      "des": "Egret Engine2D 5.1.9",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update518/",
+      "text": "Egret Engine2D 5.1.8",
+      "des": "Egret Engine2D 5.1.8",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update517/",
+      "text": "Egret Engine2D 5.1.7",
+      "des": "Egret Engine2D 5.1.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update516/",
+      "text": "Egret Engine2D 5.1.6",
+      "des": "Egret Engine2D 5.1.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update515/",
+      "text": "Egret Engine2D 5.1.5",
+      "des": "Egret Engine2D 5.1.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update514/",
+      "text": "Egret Engine2D 5.1.4",
+      "des": "Egret Engine2D 5.1.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update513/",
+      "text": "Egret Engine2D 5.1.3",
+      "des": "Egret Engine2D 5.1.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update512/",
+      "text": "Egret Engine2D 5.1.2",
+      "des": "Egret Engine2D 5.1.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update511/",
+      "text": "Egret Engine2D 5.1.1",
+      "des": "Egret Engine2D 5.1.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update510/",
+      "text": "Egret Engine2D 5.1.0",
+      "des": "Egret Engine2D 5.1.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5015/",
+      "text": "Egret Engine2D 5.0.15",
+      "des": "Egret Engine2D 5.0.15",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5014/",
+      "text": "Egret Engine2D 5.0.14",
+      "des": "Egret Engine2D 5.0.14",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5013/",
+      "text": "Egret Engine2D 5.0.13",
+      "des": "Egret Engine2D 5.0.13",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5012/",
+      "text": "Egret Engine2D 5.0.12",
+      "des": "Egret Engine2D 5.0.12",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5011/",
+      "text": "Egret Engine2D 5.0.11",
+      "des": "Egret Engine2D 5.0.11",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update5010/",
+      "text": "Egret Engine2D 5.0.10",
+      "des": "Egret Engine2D 5.0.10",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update509/",
+      "text": "Egret Engine2D 5.0.9",
+      "des": "Egret Engine2D 5.0.9",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update508/",
+      "text": "Egret Engine2D 5.0.8",
+      "des": "Egret Engine2D 5.0.8",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update507/",
+      "text": "Egret Engine2D 5.0.7",
+      "des": "Egret Engine2D 5.0.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update506/",
+      "text": "Egret Engine2D 5.0.6",
+      "des": "Egret Engine2D 5.0.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update505/",
+      "text": "Egret Engine2D 5.0.5",
+      "des": "Egret Engine2D 5.0.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update504/",
+      "text": "Egret Engine2D 5.0.4",
+      "des": "Egret Engine2D 5.0.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update503/",
+      "text": "Egret Engine2D 5.0.3",
+      "des": "Egret Engine2D 5.0.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update502/",
+      "text": "Egret Engine2D 5.0.2",
+      "des": "Egret Engine2D 5.0.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update501/",
+      "text": "Egret Engine2D 5.0.1",
+      "des": "Egret Engine2D 5.0.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update500/",
+      "text": "Egret Engine2D 5.0.0",
+      "des": "Egret Engine2D 5.0.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update411/",
+      "text": "Egret Engine2D 4.1.1",
+      "des": "Egret Engine2D 4.1.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update410/",
+      "text": "Egret Engine2D 4.1.0",
+      "des": "Egret Engine2D 4.1.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update403/",
+      "text": "Egret Engine2D 4.0.3",
+      "des": "Egret Engine2D 4.0.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update402/",
+      "text": "Egret Engine2D 4.0.2",
+      "des": "Egret Engine2D 4.0.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update401/",
+      "text": "Egret Engine2D 4.0.1",
+      "des": "Egret Engine2D 4.0.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update400/",
+      "text": "Egret Engine2D 4.0.0",
+      "des": "Egret Engine2D 4.0.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update326/",
+      "text": "Egret Engine2D 3.2.6",
+      "des": "Egret Engine2D 3.2.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update325/",
+      "text": "Egret Engine2D 3.2.5",
+      "des": "Egret Engine2D 3.2.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update324/",
+      "text": "Egret Engine2D 3.2.4",
+      "des": "Egret Engine2D 3.2.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update323/",
+      "text": "Egret Engine2D 3.2.3",
+      "des": "Egret Engine2D 3.2.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update322/",
+      "text": "Egret Engine2D 3.2.2",
+      "des": "Egret Engine2D 3.2.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update321/",
+      "text": "Egret Engine2D 3.2.1",
+      "des": "Egret Engine2D 3.2.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update320/",
+      "text": "Egret Engine2D 3.2.0",
+      "des": "Egret Engine2D 3.2.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update318/",
+      "text": "Egret Engine2D 3.1.8",
+      "des": "Egret Engine2D 3.1.8",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update317/",
+      "text": "Egret Engine2D 3.1.7",
+      "des": "Egret Engine2D 3.1.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update316/",
+      "text": "Egret Engine2D 3.1.6",
+      "des": "Egret Engine2D 3.1.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update315/",
+      "text": "Egret Engine2D 3.1.5",
+      "des": "Egret Engine2D 3.1.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update314/",
+      "text": "Egret Engine2D 3.1.4",
+      "des": "Egret Engine2D 3.1.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update313/",
+      "text": "Egret Engine2D 3.1.3",
+      "des": "Egret Engine2D 3.1.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update312/",
+      "text": "Egret Engine2D 3.1.2",
+      "des": "Egret Engine2D 3.1.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update311/",
+      "text": "Egret Engine2D 3.1.1",
+      "des": "Egret Engine2D 3.1.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update310/",
+      "text": "Egret Engine2D 3.1.0",
+      "des": "Egret Engine2D 3.1.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update308/",
+      "text": "Egret Engine2D 3.0.8",
+      "des": "Egret Engine2D 3.0.8",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update307/",
+      "text": "Egret Engine2D 3.0.7",
+      "des": "Egret Engine2D 3.0.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update306/",
+      "text": "Egret Engine2D 3.0.6",
+      "des": "Egret Engine2D 3.0.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update305/",
+      "text": "Egret Engine2D 3.0.5",
+      "des": "Egret Engine2D 3.0.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update304/",
+      "text": "Egret Engine2D 3.0.4",
+      "des": "Egret Engine2D 3.0.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update303/",
+      "text": "Egret Engine2D 3.0.3",
+      "des": "Egret Engine2D 3.0.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update302/",
+      "text": "Egret Engine2D 3.0.2",
+      "des": "Egret Engine2D 3.0.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update301/",
+      "text": "Egret Engine2D 3.0.1",
+      "des": "Egret Engine2D 3.0.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update300/",
+      "text": "Egret Engine2D 3.0.0",
+      "des": "Egret Engine2D 3.0.0",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update257/",
+      "text": "Egret Engine2D 2.5.7",
+      "des": "Egret Engine2D 2.5.7",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update256/",
+      "text": "Egret Engine2D 2.5.6",
+      "des": "Egret Engine2D 2.5.6",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update255/",
+      "text": "Egret Engine2D 2.5.5",
+      "des": "Egret Engine2D 2.5.5",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update254/",
+      "text": "Egret Engine2D 2.5.4",
+      "des": "Egret Engine2D 2.5.4",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update253/",
+      "text": "Egret Engine2D 2.5.3",
+      "des": "Egret Engine2D 2.5.3",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update252/",
+      "text": "Egret Engine2D 2.5.2",
+      "des": "Egret Engine2D 2.5.2",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update251/",
+      "text": "Egret Engine2D 2.5.1",
+      "des": "Egret Engine2D 2.5.1",
+      "in_use": true
+    }, {
+      "filename": "/Engine2D/update/update250/",
+      "text": "Egret Engine2D 2.5.0",
+      "des": "Egret Engine2D 2.5.0",
+      "in_use": true
+    }]
+  }],
+  "isFolder": true,
+  "text": "更新详情",
+  "des": "更新详情",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/getStarted/helloWorld/",
+    "text": "Hello World",
+    "des": "Hello World",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/getStarted/lifecycle/",
+    "text": "生命周期",
+    "des": "生命周期",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "Get Started",
+  "des": "Get Started",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigame/minigameFAQ/",
+    "text": "微信小游戏 FAQ",
+    "des": "微信小游戏 FAQ",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/introduction/",
+    "text": "小游戏简介",
+    "des": "小游戏简介",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/tutorial/",
+    "text": "小游戏新手教程",
+    "des": "小游戏新手教程",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/advance/",
+    "text": "小游戏进阶教程",
+    "des": "小游戏进阶教程",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/api/",
+    "text": "小游戏 API 调用",
+    "des": "小游戏 API 调用",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/openDataContext/",
+    "text": "开放数据域",
+    "des": "开放数据域",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/publish/",
+    "text": "项目发布小游戏指南",
+    "des": "项目发布小游戏指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/roadmap/",
+    "text": "后续路线图",
+    "des": "后续路线图",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/usingcache/",
+    "text": "如何使用缓存资源",
+    "des": "",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/package/",
+    "text": "如何分包加载资源",
+    "des": "",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/cloudapi/",
+    "text": "使用数据库API",
+    "des": "",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigame/useWxPlugin/",
+    "text": "使用微信引擎插件",
+    "des": "",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "微信小游戏开发指南",
+  "des": "微信小游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigameqq/getStart/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigameqq/qqgameFAQ/",
+    "text": "QQ小游戏FAQ",
+    "des": "QQ小游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "QQ小游戏开发指南",
+  "des": "QQ小游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigamebaidu/getStart/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigamebaidu/baidugameFAQ/",
+    "text": "百度小游戏FAQ",
+    "des": "百度小游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "百度小游戏开发指南",
+  "des": "百度小游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigamexiaomi/getStart/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigamexiaomi/qgameFAQ/",
+    "text": "小米快游戏FAQ",
+    "des": "小米快游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "小米快游戏开发指南",
+  "des": "小米快游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigameoppo/getStart/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigameoppo/oppogameFAQ/",
+    "text": "OPPO小游游戏FAQ",
+    "des": "OPPO小游游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "OPPO小游戏开发指南",
+  "des": "OPPO小游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/minigamevivo/getStart/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/minigamevivo/vivogameFAQ/",
+    "text": "vivo小游游戏FAQ",
+    "des": "vivo小游游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "vivo小游戏开发指南",
+  "des": "vivo小游戏开发指南",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/bricksgame/start/",
+    "text": "新手教程",
+    "des": "新手教程",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bricksgame/question/",
+    "text": "玩一玩游戏FAQ",
+    "des": "玩一玩游戏FAQ",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "玩一玩平台开发指南",
+  "des": "玩一玩平台开发指南",
+  "in_use": false
+}, {
+  "children": [{
+    "filename": "/Engine2D/facebookInstantGames/",
+    "text": "开发快速指南",
+    "des": "开发快速指南",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "Facebook InstantGames",
+  "des": "Facebook InstantGames",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/projectConfig/installation/",
+    "text": "安装与部署",
+    "des": "安装与部署",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/cmdManual/",
+    "text": "命令行手册",
+    "des": "命令行手册",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/indexFile/",
+    "text": "入口文件说明",
+    "des": "入口文件说明",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/tempfile/",
+    "text": "入口文件模板",
+    "des": "入口文件模板",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/configFile/",
+    "text": "项目配置文件说明",
+    "des": "项目配置文件说明",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/modelconfig/",
+    "text": "模块配置",
+    "des": "模块配置",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/tsconfig/",
+    "text": "tsconfig 配置文件",
+    "des": "tsconfig 配置文件",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/compileOrder/",
+    "text": "编译顺序说明",
+    "des": "编译顺序说明",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/webassembly/",
+    "text": "webassembly 版本使用",
+    "des": "webassembly 版本使用",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/extendRepSummary/",
+    "text": "扩展库简介",
+    "des": "扩展库简介",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/libraryProject/",
+    "text": "第三方扩展库",
+    "des": "第三方扩展库",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/projectConfig/upgradev52/",
+    "text": "5.2 项目升级指南",
+    "des": "5.0 to 5.2",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "项目配置",
+  "des": "项目配置相关文档",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/displayObject/displayObject/",
+    "text": "基本概念",
+    "des": "基本概念",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/displayObject/transform/",
+    "text": "变换操作",
+    "des": "变换操作",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/displayObject/addAndRemove/",
+    "text": "添加与删除显示对象",
+    "des": "添加与删除显示对象",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/displayObject/depthManagement/",
+    "text": "深度管理",
+    "des": "深度管理",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/displayObject/resetDepth/",
+    "text": "重设子对象深度",
+    "des": "重设子对象深度",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "显示对象和显示容器",
+  "des": "显示对象和显示容器",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/vectorDrawing/vectorDrawing/",
+    "text": "使用矢量绘图",
+    "des": "使用矢量绘图",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "矢量绘图",
+  "des": "矢量绘图",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/mask/mask/",
     "text": "遮罩",
     "des": "遮罩",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/hit/rectangleHit/",
-        "text": "矩形碰撞检测",
-        "des": "矩形碰撞检测",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/hit/pixelHit/",
-        "text": "像素碰撞检测",
-        "des": "像素碰撞检测",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/hit/boundingBoxHit/",
-        "text": "包围盒碰撞检测",
-        "des": "包围盒碰撞检测",
-        "in_use": false
-      }
-    ],
-    "isFolder": true,
-    "text": "碰撞检测",
-    "des": "碰撞检测",
+  }],
+  "isFolder": true,
+  "text": "遮罩",
+  "des": "遮罩",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/hit/rectangleHit/",
+    "text": "矩形碰撞检测",
+    "des": "矩形碰撞检测",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/textField/text/",
-        "text": "文本类型",
-        "des": "文本类型",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/textField/textStyle/",
-        "text": "文本样式",
-        "des": "文本样式",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "文本",
-    "des": "文本",
+  }, {
+    "filename": "/Engine2D/hit/pixelHit/",
+    "text": "像素碰撞检测",
+    "des": "像素碰撞检测",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/event/principle/",
-        "text": "事件处理机制",
-        "des": "事件处理机制",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/process/",
-        "text": "事件的执行流程",
-        "des": "事件的执行流程",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/event/",
-        "text": "Event类",
-        "des": "Event类",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/listener/",
-        "text": "事件侦听器",
-        "des": "事件侦听器",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/priority/",
-        "text": "事件的优先级",
-        "des": "事件的优先级",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/touchEvent/",
-        "text": "触摸事件",
-        "des": "触摸事件",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "事件机制",
-    "des": "事件机制",
+  }, {
+    "filename": "/Engine2D/hit/boundingBoxHit/",
+    "text": "包围盒碰撞检测",
+    "des": "包围盒碰撞检测",
+    "in_use": false
+  }],
+  "isFolder": true,
+  "text": "碰撞检测",
+  "des": "碰撞检测",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/textField/text/",
+    "text": "文本类型",
+    "des": "文本类型",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/net/sendHTTP/",
-        "text": "发送HTTP请求",
-        "des": "发送HTTP请求",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/net/loadBitmap/",
-        "text": "加载位图文件",
-        "des": "加载位图文件",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/net/loadText/",
-        "text": "加载文本和二进制文件",
-        "des": "加载文本和二进制文件",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "网络",
-    "des": "网络",
+  }, {
+    "filename": "/Engine2D/textField/textStyle/",
+    "text": "文本样式",
+    "des": "文本样式",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/bitmapTexture/bitmapTexture/",
-        "text": "位图纹理",
-        "des": "位图纹理",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/scale9Grid/",
-        "text": "九宫格",
-        "des": "九宫格",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/fillMode/",
-        "text": "纹理的填充方式",
-        "des": "纹理的填充方式",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/useTexture/",
-        "text": "纹理集的使用",
-        "des": "纹理集的使用",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/screenshots/",
-        "text": "截屏功能",
-        "des": "截屏功能",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/ktx/",
-        "text": "KTX 纹理压缩",
-        "des": "KTX 纹理压缩",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/ktxfaq/",
-        "text": "KTX 纹理压缩 FAQ",
-        "des": "KTX 纹理压缩 FAQ",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/ktxtool/",
-        "text": "KTX 转换工具",
-        "des": "KTX 转换工具",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
+  }],
+  "isFolder": true,
+  "text": "文本",
+  "des": "文本",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/event/principle/",
+    "text": "事件处理机制",
+    "des": "事件处理机制",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/event/process/",
+    "text": "事件的执行流程",
+    "des": "事件的执行流程",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/event/event/",
+    "text": "Event类",
+    "des": "Event类",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/event/listener/",
+    "text": "事件侦听器",
+    "des": "事件侦听器",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/event/priority/",
+    "text": "事件的优先级",
+    "des": "事件的优先级",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/event/touchEvent/",
+    "text": "触摸事件",
+    "des": "触摸事件",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "事件机制",
+  "des": "事件机制",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/net/sendHTTP/",
+    "text": "发送HTTP请求",
+    "des": "发送HTTP请求",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/net/loadBitmap/",
+    "text": "加载位图文件",
+    "des": "加载位图文件",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/net/loadText/",
+    "text": "加载文本和二进制文件",
+    "des": "加载文本和二进制文件",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "网络",
+  "des": "网络",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/bitmapTexture/bitmapTexture/",
     "text": "位图纹理",
     "des": "位图纹理",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/colorEffects/blendMode/",
-        "text": "混合模式",
-        "des": "混合模式",
-        "in_use": true
-      }, {
-        "filename": "/Engine2D/colorEffects/filter/",
-        "text": "滤镜",
-        "des": "滤镜",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/colorEffects/shader/",
-        "text": "自定义Shader",
-        "des": "自定义Shader",
-        "in_use": true
-      }, {
-        "filename": "/Engine2D/colorEffects/tint/",
-        "text": "设置填充色",
-        "des": "设置填充色",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "颜色效果",
-    "des": "颜色效果",
+  }, {
+    "filename": "/Engine2D/bitmapTexture/scale9Grid/",
+    "text": "九宫格",
+    "des": "九宫格",
     "in_use": true
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/timeControl/timeControl/",
-      "text": "时间控制",
-      "des": "时间控制",
-      "in_use": true
-    }],
-    "isFolder": true,
+  }, {
+    "filename": "/Engine2D/bitmapTexture/fillMode/",
+    "text": "纹理的填充方式",
+    "des": "纹理的填充方式",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bitmapTexture/useTexture/",
+    "text": "纹理集的使用",
+    "des": "纹理集的使用",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bitmapTexture/screenshots/",
+    "text": "截屏功能",
+    "des": "截屏功能",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bitmapTexture/ktx/",
+    "text": "KTX 纹理压缩",
+    "des": "KTX 纹理压缩",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bitmapTexture/ktxfaq/",
+    "text": "KTX 纹理压缩 FAQ",
+    "des": "KTX 纹理压缩 FAQ",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/bitmapTexture/ktxtool/",
+    "text": "KTX 转换工具",
+    "des": "KTX 转换工具",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "位图纹理",
+  "des": "位图纹理",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/colorEffects/blendMode/",
+    "text": "混合模式",
+    "des": "混合模式",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/colorEffects/filter/",
+    "text": "滤镜",
+    "des": "滤镜",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/colorEffects/shader/",
+    "text": "自定义Shader",
+    "des": "自定义Shader",
+    "in_use": true
+  }, {
+    "filename": "/Engine2D/colorEffects/tint/",
+    "text": "设置填充色",
+    "des": "设置填充色",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "颜色效果",
+  "des": "颜色效果",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/timeControl/timeControl/",
     "text": "时间控制",
     "des": "时间控制",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/multimedia/audio/",
-        "text": "音频",
-        "des": "音频",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/multimedia/video/",
-        "text": "视频",
-        "des": "视频",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/multimedia/environment/",
-        "text": "环境信息",
-        "des": "环境信息",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
-    "text": "多媒体",
-    "des": "多媒体",
+  }],
+  "isFolder": true,
+  "text": "时间控制",
+  "des": "时间控制",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/multimedia/audio/",
+    "text": "音频",
+    "des": "音频",
     "in_use": true
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/renderMode/webgl/",
-      "text": "WebGL渲染",
-      "des": "WebGL渲染",
-      "in_use": true
-    }],
-    "isFolder": true,
-    "text": "渲染模式",
-    "des": "渲染模式",
+  }, {
+    "filename": "/Engine2D/multimedia/video/",
+    "text": "视频",
+    "des": "视频",
     "in_use": true
-  },
-  {
-    "children": [{
-        "filename": "/Engine2D/screenAdaptation/screenAdaptation/",
-        "text": "屏幕适配",
-        "des": "屏幕适配",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/screenAdaptation/insight/",
-        "text": "深入了解屏幕适配",
-        "des": "深入了解屏幕适配",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/screenAdaptation/zoomMode/",
-        "text": "缩放模式",
-        "des": "缩放模式",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/screenAdaptation/rotationMode/",
-        "text": "旋转模式",
-        "des": "旋转模式",
-        "in_use": true
-      }
-    ],
-    "isFolder": true,
+  }, {
+    "filename": "/Engine2D/multimedia/environment/",
+    "text": "环境信息",
+    "des": "环境信息",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "多媒体",
+  "des": "多媒体",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/renderMode/webgl/",
+    "text": "WebGL渲染",
+    "des": "WebGL渲染",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "渲染模式",
+  "des": "渲染模式",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/screenAdaptation/screenAdaptation/",
     "text": "屏幕适配",
     "des": "屏幕适配",
+    "in_use": false
+  }, {
+    "filename": "/Engine2D/screenAdaptation/insight/",
+    "text": "深入了解屏幕适配",
+    "des": "深入了解屏幕适配",
+    "in_use": false
+  }, {
+    "filename": "/Engine2D/screenAdaptation/zoomMode/",
+    "text": "缩放模式",
+    "des": "缩放模式",
     "in_use": true
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/debug/debug/",
-      "text": "调试",
-      "des": "调试",
-      "in_use": true
-    }],
-    "isFolder": true,
+  }, {
+    "filename": "/Engine2D/screenAdaptation/rotationMode/",
+    "text": "旋转模式",
+    "des": "旋转模式",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "屏幕适配",
+  "des": "屏幕适配",
+  "in_use": true
+}, {
+  "children": [{
+    "filename": "/Engine2D/debug/debug/",
     "text": "调试",
     "des": "调试",
     "in_use": true
-  },
-  {
-    "isFolder": true,
+  }],
+  "isFolder": true,
+  "text": "调试",
+  "des": "调试",
+  "in_use": true
+}, {
+  "isFolder": true,
+  "text": "命令行扩展插件",
+  "des": "命令行扩展插件",
+  "in_use": true,
+  "children": [{
+    "filename": "/Engine2D/cmdExtensionPlugin/plugin/",
     "text": "命令行扩展插件",
     "des": "命令行扩展插件",
-    "in_use": true,
-    "children": [{
-      "filename": "/Engine2D/cmdExtensionPlugin/plugin/",
-      "text": "命令行扩展插件",
-      "des": "命令行扩展插件",
-      "in_use": true
-    }, {
-      "filename": "/Engine2D/cmdExtensionPlugin/api/",
-      "text": "API 文档",
-      "des": "API 文档",
-      "in_use": true
-    }, {
-      "filename": "/Engine2D/cmdExtensionPlugin/teach/",
-      "text": "插件使用案例教程",
-      "des": "插件使用案例教程",
-      "in_use": true
-    }]
-  },
-  {
-    "children": [{
-      "filename": "/Engine2D/callJS/tsCallJs/",
-      "text": "ts 与 js 互调",
-      "des": "ts 与 js 互调",
-      "in_use": true
-    }],
-    "isFolder": true,
-    "text": "调用原生JS",
-    "des": "调用原生JS",
     "in_use": true
-  },
-  {
-    "filename": "/Engine2D/publish/",
-    "text": "发布项目",
-    "des": "发布项目",
+  }, {
+    "filename": "/Engine2D/cmdExtensionPlugin/api/",
+    "text": "API 文档",
+    "des": "API 文档",
     "in_use": true
-  }
-]
+  }, {
+    "filename": "/Engine2D/cmdExtensionPlugin/teach/",
+    "text": "插件使用案例教程",
+    "des": "插件使用案例教程",
+    "in_use": true
+  }]
+}, {
+  "children": [{
+    "filename": "/Engine2D/callJS/tsCallJs/",
+    "text": "ts 与 js 互调",
+    "des": "ts 与 js 互调",
+    "in_use": true
+  }],
+  "isFolder": true,
+  "text": "调用原生JS",
+  "des": "调用原生JS",
+  "in_use": true
+}, {
+  "filename": "/Engine2D/publish/",
+  "text": "发布项目",
+  "des": "发布项目",
+  "in_use": true
+}]

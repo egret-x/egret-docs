@@ -8,7 +8,7 @@ permalink: /docs/ctz67i0r/
 Tiled组件是用来添加和使用Tiled Map Editor编辑的游戏地图文件的。
 Lakeshore当前只能够调用解析Tiled Map Editor制作的tmx地图文件，不提供对tmx地图文件的编辑功能。
 
-Tiled Map Editor官方地址：[http://www.mapeditor.org/](http://www.mapeditor.org/) 
+Tiled Map Editor官方地址：[http://www.mapeditor.org/](http://www.mapeditor.org/)
 
 Tiled Map Editor是基于Java/Qt的开源区块地图编辑器，Tiled支持2D和2.5D地图及多种区块类型，它将地图保存成一个xml文件，借助xml的特性使地图可通用于各种游戏平台，目前Lakeshore暂时只支持地图方向为正常模式的所编辑的地图（正常模式为90度），如下图设置：
 ![](564ae84786906.png)
@@ -17,7 +17,6 @@ Tiled Map Editor是基于Java/Qt的开源区块地图编辑器，Tiled支持2D�
 ![](564ae8477ccc1.png)
 
 ------------
-
 
 ### TiledMap属性
 
@@ -36,12 +35,10 @@ Tiled Map Editor是基于Java/Qt的开源区块地图编辑器，Tiled支持2D�
 
 ------------
 
-
 ### Tiled条件
 Tiled组件不支持任何条件。
 
 ------------
-
 
 ### Tiled动作
 TIled组件不支持任何动作。

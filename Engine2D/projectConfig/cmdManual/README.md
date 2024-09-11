@@ -23,17 +23,15 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 | `--type` |          要创建的项目类型 core 或 eui，默认值为core
-
 
 ### 举例:
 	1、创建名为【HelloWorld】的一个空项目
 	egret create HelloWorld
 	2、创建名为【HelloWorld】的一个eui项目
 	egret create HelloWorld --type eui
-    
 
 ## create_lib
 创建新第三方库项目
@@ -44,11 +42,8 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `lib_name` |    第三方库名称，按照操作系统的命名规范命名
-
-
-
 
 ## create_app
 从h5游戏生成app
@@ -60,7 +55,7 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `app_name` |    移动应用项目名称，按照操作系统的命名规范命名
 | `-f` |          app项目所对应h5项目的路径
 | `-t` |          对应 Native Support 路径
@@ -77,13 +72,12 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 | `-e` |              编译指定项目的同时编译引擎目录
 | `--target` |       编译的目标版本，可选参数有 `wxgame`：微信小游戏；`bricks`：玩一玩；`android`：安卓项目；`iOS`：iOS项目
 
 如果是在项目文件夹下执行命令，可以不加项目名称
-
 
 ### 举例:
 
@@ -103,7 +97,7 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 | `--version` |       设置发布之后的版本号，可以不设置
 | `--target` |       编译的目标版本，可选参数有 `wxgame`：微信小游戏；`bricks`：玩一玩；`android`：安卓项目；`iOS`：iOS项目
@@ -120,14 +114,13 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 
 ### 用法:
 
-    egret run [project_name] [--port 3000] 
+    egret run [project_name] [--port 3000]
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 | `--port` |          指定端口号
-
 
 如果是在项目文件夹下执行命令，可以不加项目名称
 
@@ -145,7 +138,7 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 ### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 
 如果是在项目文件夹下执行命令，可以不加项目名称
@@ -161,7 +154,7 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 #### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 | `target version` |    要切换的目标版本号
 
@@ -180,7 +173,7 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 #### 参数说明:
 
 | 关键字 | 描述
-| ------------ | ------------ 
+| ------------ | ------------
 | `project_name` |    项目名称，按照操作系统的命名规范命名
 
 如果是在项目文件夹下执行命令，可以不加项目名称
@@ -200,8 +193,6 @@ permalink: /docs/egret2d/projectConfig/cmdManual/
 
 ### 用法:
     egret make
-
-
 
 ## info
 获得Egret信息，如当前Egret版本，以及安装路径

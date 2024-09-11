@@ -11,8 +11,6 @@ permalink: /docs/96tt5j9s/
 
 ## 流程图
 
- 
-
 ![wxdev-groupplay](http://imgs.matchvs.com/static/wx/wxdev-groupplay.png)
 
 流程:
@@ -65,7 +63,6 @@ joinRoomWithProperties(matchinfo:MsMatchInfo, userProfile:string):number
 2. 通过 `wx.getLaunchOptionsSync()`或者` wx.onShow() `获取传递到小游戏中的参数
 
 关键字 `shareAppMessage` , `query` ,`wx.getLaunchOptionsSync()`,`wx.onShow()`
-
 
 > 具体参考
 [More...](https://mp.weixin.qq.com/debug/wxagame/dev/document/system/life-cycle/wx.getLaunchOptionsSync.html?t=201822)
@@ -120,5 +117,3 @@ private isFromShareJoin() {
 		this.isFromShareJoin();
 	}.bind(this);
 ```
-
-

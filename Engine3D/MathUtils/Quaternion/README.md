@@ -18,7 +18,7 @@ permalink: /docs/fulm5eyv/
 
 	//乘法运算
 	quat1.multiply(quat1, quat2);
-	
+
 	//quat1
 	//w	-57	Number
 	//x	6	Number
@@ -29,13 +29,13 @@ permalink: /docs/fulm5eyv/
 
 * normalize():单位化一个四元数;
 	* 将四元数的四个分量缩放至长度为指定的标准，默认为1
-	
+
 ----------
 
 	var quat1:egret3d.Quaternion = new egret3d.Quaternion(2, 3, 4, 1);
 	//单位化
 	quat1.normalize();
-	
+
 	//quat1
 	//w	0.18257418583505536	Number
 	//x	0.3651483716701107	Number
@@ -46,7 +46,7 @@ permalink: /docs/fulm5eyv/
 
 * transformVector():四元数转换一个3D坐标点
 	* 按照四元数所描述的规则，对3D点坐标进行旋转，得到旋转后的位置信息
-	
+
 ----------
 
 	var quat1:egret3d.Quaternion = new egret3d.Quaternion(2, 3, 4, 1);
@@ -55,19 +55,18 @@ permalink: /docs/fulm5eyv/
 	//乘法运算
 	quat1.normalize();
 	quat1.transformVector(point, point);
-	
+
 	//point
 	//w	1	Number
 	//x	1.9999999999999991	Number
 	//y	9.999999999999996	Number
 	//z	13.999999999999996	Number
 
-
 ---------
 
 * fromAxisAngle(): 创建一个以指定轴旋转一定角度的四元数;
 	* 重新设置该四元数的xyzw数据，使其表达的意思为以axis轴为中心旋转angle角
-	
+
 ----------
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion();
@@ -76,14 +75,12 @@ permalink: /docs/fulm5eyv/
 	axis.normalize();
 	//赋值四元数
 	quat.fromAxisAngle(axis, angle);
-	
+
 	//quat
 	//w	0.9999765121745486	Number
 	//x	0.003957065378313664	Number
 	//y	0.003957065378313664	Number
 	//z	0.003957065378313664	Number
-
-
 
 ---------
 
@@ -93,12 +90,12 @@ permalink: /docs/fulm5eyv/
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion(2, -1, 1, 1);
 	var axis:egret3d.Vector3D = new egret3d.Vector3D(10, 10, 10, 1);
-	
+
 	axis.normalize();
 	quat.normalize();
 	//根据传入的旋转轴，获得旋转角度
 	var angle:number = quat.toAxisAngle(axis);
-	
+
 	//angle: 135.58469140280704
 
 ---------
@@ -106,12 +103,12 @@ permalink: /docs/fulm5eyv/
 * slerp():两个四元数之间球形插值，插值之间提供旋转恒定角变化率
 	* 在四元数a和四元数b之间，输入0-1之间的参数t，获得圆滑变化插值数据
 	* 可用于骨骼动画关节旋转的插值
-	
+
 ----------
 
 	var quat1:egret3d.Quaternion = new egret3d.Quaternion(2, -1, 1, 1);
 	var quat2:egret3d.Quaternion = new egret3d.Quaternion(-1, 4, 10, 1);
-	
+
 	quat1.normalize();
 	quat2.normalize();
 
@@ -122,12 +119,12 @@ permalink: /docs/fulm5eyv/
 ---------
 
 * lerp():两个四元数之间线形插值
- 
+
 ----------
 
 	var quat1:egret3d.Quaternion = new egret3d.Quaternion(2, -1, 1, 1);
 	var quat2:egret3d.Quaternion = new egret3d.Quaternion(-1, 4, 10, 1);
-	
+
 	quat1.normalize();
 	quat2.normalize();
 
@@ -138,7 +135,7 @@ permalink: /docs/fulm5eyv/
 ---------
 
 * fromEulerAngles():根据传入的x/y/z三轴的旋转(欧拉角)，生成四元数数据
- 
+
 ----------
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion();
@@ -147,11 +144,11 @@ permalink: /docs/fulm5eyv/
 	var angleZ:number = -20;
 	//欧拉角转换成四元数对象
 	quat.fromEulerAngles(angleX, angleY, angleZ);
-	
+
 ---------
 
 * toEulerAngles():转换四元数对象到欧拉角
- 
+
 ----------
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion(2, -1, 1, 1);
@@ -168,7 +165,7 @@ permalink: /docs/fulm5eyv/
 ---------
 
 * toMatrix3D():转换这个四元数旋转信息至一个4X4的矩阵中。
- 
+
 ----------
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion(2, -1, 1, 1);
@@ -194,12 +191,11 @@ permalink: /docs/fulm5eyv/
 	//[14]	0	Number
 	//[15]	1	Number
 
-
 ---------
 
 * fromToRotation():计算由一个向量变换到另一个向量的四元数
 	* 获得向量a至向量b的变换的旋转信息，用四元数的形式表达
- 
+
 ----------
 
 	var quat:egret3d.Quaternion = new egret3d.Quaternion();

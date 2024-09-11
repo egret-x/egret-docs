@@ -13,16 +13,15 @@ PickEvent3D拣选事件
 
 	创建一个演示场景，其中我们定义了abc三个不通的cube：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cube_A: egret3d.Mesh;
 	    protected cube_B: egret3d.Mesh;
 	    protected cube_C: egret3d.Mesh;
-	
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -63,13 +62,12 @@ PickEvent3D拣选事件
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	    }
-	
-	}      
+
+	}
 
 ![](Img_1.png)
-
 
 	1) Pick事件是引擎中可操作物体拣选事件。
 	2）需要注册对象IRender，开启enablePick后才能监听了PickEvent3D事件，触摸和鼠标点选都是可以触发该事件的。
@@ -78,16 +76,16 @@ PickEvent3D拣选事件
 	4) 示例代码：我们这里书写一个测试Pick事件的代码，选中的cube将变为红色。
 
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cube_A: egret3d.Mesh;
 	    protected cube_B: egret3d.Mesh;
 	    protected cube_C: egret3d.Mesh;
 	    protected cube_Pick: egret3d.Mesh;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -128,12 +126,12 @@ PickEvent3D拣选事件
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	        ///开启拣选功能
 	        this.cube_A.enablePick = true;
 	        this.cube_B.enablePick = true;
 	        this.cube_C.enablePick = true;
-	
+
 	        ///给Cube注册事件。
 	        this.cube_A.addEventListener(egret3d.PickEvent3D.PICK_CLICK, this.OnPickClick, this);
 	        this.cube_A.addEventListener(egret3d.PickEvent3D.PICK_DOWN, this.OnPickDown, this);
@@ -170,9 +168,7 @@ PickEvent3D拣选事件
 	    public OnPickUp(e: egret3d.PickEvent3D) {
 	        console.log("OnPickUp");
 	    }
-	
-	}            
 
-![](Img_8.gif)![](Img_9.png)  
+	}
 
-
+![](Img_8.gif)![](Img_9.png)

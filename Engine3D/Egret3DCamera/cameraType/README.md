@@ -29,7 +29,7 @@ class CameraDemo extends LoadingUI
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.canvas.start();
-        
+
         this._view = new egret3d.View3D(0,0,window.innerWidth,window.innerHeight);
         this.canvas.addView3D(this._view);
         this._view.backColor = 0x00ff00;

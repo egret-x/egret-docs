@@ -23,9 +23,7 @@ WebAssembly 是一个可移植、体积小、加载快并且兼容 Web 的全新
 
 ![xxx](./image1.jpeg)
 
-
 WebAssembly 的发布并不意味着白鹭引擎已经放弃了基于 4.x 的 JavaScript 版渲染器。接下来的至少半年内，我们会对 JavaScript 版本、WebAssembly 版本进行同等的支持力度，保证现有的基于 4.x 的游戏在不升级渲染器的情况下，仍然可以得到白鹭引擎的技术支持。
-
 
 ## 如何使用白鹭引擎 WebAssembly 版本
 
@@ -33,7 +31,6 @@ WebAssembly 的发布并不意味着白鹭引擎已经放弃了基于 4.x 的 Ja
 * 下载启动器后，安装引擎的 5.0 版本，并将其设置为默认版本
 * 在项目管理中，点击创建新项目，项目类型选择 WebAssembly 示例项目
 * 创建成功后，会自动启动 Egret Wing ，就可以直接运行这个项目了
-
 
 ## 开发者建议
 
@@ -43,4 +40,3 @@ WebAssembly 的发布并不意味着白鹭引擎已经放弃了基于 4.x 的 Ja
 ## 内存管理
 * WebAssembly 会在 egret 启动时申请一块内存，所有 WebAssembly 对象均在这块内存中进行维护。申请内存的大小可以在 inde.html 中 runEgret 的 wasmSize 参数进行配置，默认大小为128MB。建议根据实际项目情况进行设置，如果 WebAssembly 内存不足程序会闪退。
 * WebAssembly 中显示对象和滤镜增加 dispose 方法进行对象销毁。由于 WebAssembly 端对象必须主动释放，所以在希望对象被垃圾回收时必须主动调用 dispose 方法。
-

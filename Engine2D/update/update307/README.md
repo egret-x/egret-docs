@@ -7,9 +7,8 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 在 Egret Engine 3.0.7 中，我们更新了 Egret Engine 3D 的内容，使得引擎更加完善，高效和易用。同时 Egret Engine 2D 支持在 WebGL 渲染模式下使用自动脏矩形。下面介绍 Egret Engine 3.0.6 到 Egret Engine 3.0.7 之间的更新详情。
 
-
 ### Egret Engine 2D
- 
+
 在 Egret Engine 2D 的本次更新中，我们吸收开发者的建议进一步稳定引擎并修复若干问题。下面列出的是 3.0.6 到 3.0.7 的更新详情。
 
 #### WebGL 支持脏矩形渲染
@@ -30,7 +29,3 @@ Windows 安装包下载地址：[点击这里](http://tool.egret-labs.org/EgretE
 Mac 安装包下载地址：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [点击这里](http://tool.egret-labs.org/EgretEngine/EgretEngine-v3.0.7.dmg)
 Egret Engine 2D 源码地址：[点击这里](https://github.com/egret-labs/egret-core/tree/v3.0.7)
 Egret Engine 3D 源码地址：[点击这里](https://github.com/egret-labs/egret-3d/releases/tag/v3.0.7)
-
-
-
-

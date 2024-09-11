@@ -21,31 +21,31 @@ DataGroup，可以直译为"数据容器"。但他不是传统意义上的“容
 ~~~ typescript
 //伪代码
 <ul> <%for(data each collection)%> <li><a href="{data.link}">{data.label}</a></li> <%end for%> </ul>
-~~~ 
+~~~
 
 对于 DataGroup 而言，也是类似的道理。您除了设置数据源，还要设置单条数据的"模板"。这个"模板"，在eui 框架中称之为 ItemRenderer。
 
 来看一个DataGroup的例子，首先创建数据源：
 
 ~~~ typescript
-//先创建一个数组
-var sourceArr:any[] = [];
-for (var i:number = 1; i < 5; i++) {
-    sourceArr.push({label:"item"+i});
+// 先创建一个数组
+const sourceArr: any[] = []
+for (let i: number = 1; i < 5; i++) {
+  sourceArr.push({ label: `item${i}` })
 }
-//用ArrayCollection包装
-var myCollection:eui.ArrayCollection = new eui.ArrayCollection(sourceArr);
-~~~ 
+// 用ArrayCollection包装
+const myCollection: eui.ArrayCollection = new eui.ArrayCollection(sourceArr)
+~~~
 
 然后创建DataGroup的实例，并设置数据源(属性名称是dataProvider)：
 
 ~~~ typescript
-var dataGroup:eui.DataGroup = new eui.DataGroup();
-dataGroup.dataProvider = myCollection;
-dataGroup.percentWidth = 100;
-dataGroup.percentHeight = 100;
-this.addChild(dataGroup);
-~~~ 
+const dataGroup: eui.DataGroup = new eui.DataGroup()
+dataGroup.dataProvider = myCollection
+dataGroup.percentWidth = 100
+dataGroup.percentHeight = 100
+this.addChild(dataGroup)
+~~~
 
 写到这里直接编译运行后，什么都看不到的。因为还有两个重要的工作没有做，一个是创建 ItemRenderer，一个时设置 ItemRenderer 的样式。
 
@@ -53,19 +53,20 @@ this.addChild(dataGroup);
 
 ~~~ typescript
 class LabelRenderer extends eui.ItemRenderer {
-	private labelDisplay:eui.Label;
-    public constructor(){
-        super();
-        this.touchChildren = true;
+  private labelDisplay: eui.Label
+  public constructor() {
+    super()
+    this.touchChildren = true
 
-        this.labelDisplay = new eui.Label();
-        this.addChild( this.labelDisplay );
-    }
-    protected dataChanged():void{
-        this.labelDisplay.text = this.data.label;
-    }
+    this.labelDisplay = new eui.Label()
+    this.addChild(this.labelDisplay)
+  }
+
+  protected dataChanged(): void {
+    this.labelDisplay.text = this.data.label
+  }
 }
-~~~ 
+~~~
 
 注意两点：
 
@@ -75,8 +76,8 @@ class LabelRenderer extends eui.ItemRenderer {
 然后我们将自定义的 LabelRenderer 类赋值给 itemRenderer 属性：
 
 ~~~ typescript
-dataGroup.itemRenderer = LabelRenderer;
-~~~ 
+dataGroup.itemRenderer = LabelRenderer
+~~~
 再编译就能看到显示效果了：
 
 ![](5604ef2d2f09d.png)
@@ -85,49 +86,51 @@ dataGroup.itemRenderer = LabelRenderer;
 
 Main.ts
 
-~~~ typescript 
+~~~ typescript
 class DataGroupDemo extends eui.Group {
-    public constructor() {
-        super();
-    }
-    protected createChildren():void {
-        //先创建一个数组
-        var sourceArr:any[] = [];
-        for (var i:number = 1; i < 5; i++){
-        	//给数据中添加一个含有"label"属性的对象
-            sourceArr.push({label:"item"+i});
-        }
-        //用ArrayCollection包装
-        var myCollection:eui.ArrayCollection = new eui.ArrayCollection(sourceArr);
+  public constructor() {
+    super()
+  }
 
-        var dataGroup:eui.DataGroup = new eui.DataGroup();
-        dataGroup.dataProvider = myCollection;
-        dataGroup.percentWidth = 100;
-        dataGroup.percentHeight = 100;
-        this.addChild(dataGroup);
-
-        dataGroup.itemRenderer = LabelRenderer;
+  protected createChildren(): void {
+    // 先创建一个数组
+    const sourceArr: any[] = []
+    for (let i: number = 1; i < 5; i++) {
+      // 给数据中添加一个含有"label"属性的对象
+      sourceArr.push({ label: `item${i}` })
     }
+    // 用ArrayCollection包装
+    const myCollection: eui.ArrayCollection = new eui.ArrayCollection(sourceArr)
+
+    const dataGroup: eui.DataGroup = new eui.DataGroup()
+    dataGroup.dataProvider = myCollection
+    dataGroup.percentWidth = 100
+    dataGroup.percentHeight = 100
+    this.addChild(dataGroup)
+
+    dataGroup.itemRenderer = LabelRenderer
+  }
 }
-~~~ 
+~~~
 
 LabelRenderer.ts
 
-~~~ typescript 
+~~~ typescript
 class LabelRenderer extends eui.ItemRenderer {
-	private labelDisplay:eui.Label;
-    public constructor(){
-        super();
-        this.touchChildren = true;
-        this.labelDisplay = new eui.Label();
-        this.addChild( this.labelDisplay );
-    }
-    protected dataChanged():void{
-    	//显示数据中的 label 值
-        this.labelDisplay.text = this.data.label;
-    }
+  private labelDisplay: eui.Label
+  public constructor() {
+    super()
+    this.touchChildren = true
+    this.labelDisplay = new eui.Label()
+    this.addChild(this.labelDisplay)
+  }
+
+  protected dataChanged(): void {
+    // 显示数据中的 label 值
+    this.labelDisplay.text = this.data.label
+  }
 }
-~~~ 
+~~~
 **如何给 ItemRenderer 设置皮肤，请看后面的[自定义项呈示器](../../dataCollection/itemRenderer/README.md)章节**
 
 ## 大数据优化

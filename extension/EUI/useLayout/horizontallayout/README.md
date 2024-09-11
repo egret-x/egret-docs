@@ -13,48 +13,45 @@ permalink: /docs/extension/EUI/useLayout/horizontallayout/
 * `verticalAlign`属性，设置垂直对齐方式
 * `padding`系列属性，设置容器内间距，相对于4个边分别可以使用 `paddingTop`, `addingBottom`, `addingLeft`, `paddingRight`
 
-示例：    
-~~~ typescript    
+示例：
+~~~ typescript
 class hLayout extends egret.Sprite {
+  private myGroup: eui.Group
+  public constructor() {
+    super()
 
-    private  myGroup:eui.Group;
-    public constructor() {
-        super();
+    this.myGroup = new eui.Group()
+    this.addChild(this.myGroup)
 
-        this.myGroup = new eui.Group();
-        this.addChild( this.myGroup );
+    this.myGroup.layout = new eui.BasicLayout()
+    this.myGroup.width = 500
+    this.myGroup.height = 300
 
-        this.myGroup.layout = new eui.BasicLayout();
-        this.myGroup.width = 500;
-        this.myGroup.height = 300;
-        
-        var outline:egret.Shape = new egret.Shape;
-        outline.graphics.lineStyle(3,0x00ff00);
-        outline.graphics.beginFill(0x000000,0);
-        outline.graphics.drawRect(0,0,500,300);
-        outline.graphics.endFill();
-        this.myGroup.addChild(outline);
+    const outline: egret.Shape = new egret.Shape()
+    outline.graphics.lineStyle(3, 0x00FF00)
+    outline.graphics.beginFill(0x000000, 0)
+    outline.graphics.drawRect(0, 0, 500, 300)
+    outline.graphics.endFill()
+    this.myGroup.addChild(outline)
 
-        var btn1:eui.Button = new eui.Button();
-        btn1.label = "button A";
-        var btn2:eui.Button = new eui.Button();
-        btn2.label = "button B";
-        var btn3:eui.Button = new eui.Button();
-        btn3.label = "button C";
-        this.myGroup.addChild( btn1 );
-        this.myGroup.addChild( btn2 );
-        this.myGroup.addChild( btn3 );
+    const btn1: eui.Button = new eui.Button()
+    btn1.label = 'button A'
+    const btn2: eui.Button = new eui.Button()
+    btn2.label = 'button B'
+    const btn3: eui.Button = new eui.Button()
+    btn3.label = 'button C'
+    this.myGroup.addChild(btn1)
+    this.myGroup.addChild(btn2)
+    this.myGroup.addChild(btn3)
 
-        var hLayout:eui.HorizontalLayout = new eui.HorizontalLayout();
-        hLayout.gap = 10;
-        hLayout.paddingTop = 30;
-        hLayout.horizontalAlign = egret.HorizontalAlign.CENTER;
-        this.myGroup.layout = hLayout;   /// 水平布局
-
-    }
+    const hLayout: eui.HorizontalLayout = new eui.HorizontalLayout()
+    hLayout.gap = 10
+    hLayout.paddingTop = 30
+    hLayout.horizontalAlign = egret.HorizontalAlign.CENTER
+    this.myGroup.layout = hLayout /// 水平布局
+  }
 }
-~~~               
+~~~
 效果如图：
 
 ![](20170920122619.png)
-

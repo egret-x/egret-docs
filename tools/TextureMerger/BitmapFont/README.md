@@ -35,4 +35,3 @@ permalink: /docs/ley5xpmj/
 按顺序输入字符后，点击确定。
 
 ![image](4.PNG)
-

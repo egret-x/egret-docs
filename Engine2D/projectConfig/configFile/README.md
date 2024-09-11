@@ -36,24 +36,24 @@ permalink: /docs/egret2d/projectConfig/configFile/
 
 ``` json
 {
-	"egret_version":"5.2.6",
-	"modules":[
-		{
-			"name":"egret",
-		},
-		{
-			"name":"tween",
-			"path":"${EGRET_APP_DATA}/4.0.3"
-		},
-		{
-			"name": "particle",
-			"path": "../libsrc"
-		},
-		{
-			"name": "promise",
-			"path": "./promise"
-		}
-	]
+  "egret_version": "5.2.6",
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "tween",
+      "path": "${EGRET_APP_DATA}/4.0.3"
+    },
+    {
+      "name": "particle",
+      "path": "../libsrc"
+    },
+    {
+      "name": "promise",
+      "path": "./promise"
+    }
+  ]
 }
 ```
 
@@ -73,10 +73,10 @@ permalink: /docs/egret2d/projectConfig/configFile/
 
 ``` json
 {
-	"urlParams":{
-		"okok":12,
-		"id":455464564
-	}
+  "urlParams": {
+    "okok": 12,
+    "id": 455464564
+  }
 }
 ```
 例如上面这个配置，在执行`egret run`后会在浏览器里打开地址：

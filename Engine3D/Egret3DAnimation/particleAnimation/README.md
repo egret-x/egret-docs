@@ -12,7 +12,7 @@ permalink: /docs/0bllvdu4/
         var mat: egret3d.TextureMaterial = new egret3d.TextureMaterial();
         mat.ambientColor = 0xffffff;
 
-        // 获取资源 这张贴图不是透明贴图 
+        // 获取资源 这张贴图不是透明贴图
         mat.diffuseTexture = this.queueLoader.getAsset("resource/doc/ice_0001.png");
 
         // 设置渲染模式  颜色叠加渲染出来的效果会受背景影响
@@ -22,9 +22,9 @@ permalink: /docs/0bllvdu4/
         var data: egret3d.ParticleData = new egret3d.ParticleData();
         data.followTarget = new egret3d.ParticleDataFollowTarget();
 
-        // 设置最大粒子数量 
+        // 设置最大粒子数量
         data.property.particleCount = 1000;
-        // 
+        //
         data.shape.type = egret3d.ParticleDataShapeType.Point;
 
         var moveSpeed: egret3d.ParticleDataMoveSpeed = new egret3d.ParticleDataMoveSpeed();
@@ -62,10 +62,9 @@ permalink: /docs/0bllvdu4/
         // 播放粒子
         particle.play();
 
-        // 加入场景 
+        // 加入场景
         this.view.addChild3D(particle);
     }
-
 
 ![](Img_2.gif)
 

@@ -14,4 +14,3 @@ permalink: /docs/extension/EUI/autoLayout/asynchronous/
 * 1.延迟到帧末失效验证结束时访问宽度。可以使用`eui.callLater()`方法来实现延迟回调，具体用法请参考API文档。
 
 * 2.调用组件父级容器的 `validateNow()` 方法，这里请注意是&quot;父级容器&quot;的`validateNow()`方法，不是自身的，因为组件的布局是由父级容器决定的。
-

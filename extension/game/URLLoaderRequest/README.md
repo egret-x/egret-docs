@@ -16,31 +16,29 @@ permalink: /docs/extension/game/URLLoaderRequest/
 具体示例代码如下：
 
 ``` typescript
-class NetDemo extends egret.DisplayObjectContainer
-{
-    public constructor()
-    {
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-    }
-    private onAddToStage(event:egret.Event)
-    {
-        var url:string = "http://httpbin.org/post";
-        var loader:egret.URLLoader = new egret.URLLoader();
-        loader.addEventListener(egret.Event.COMPLETE, this.onPostComplete, this);
-        var request:egret.URLRequest = new egret.URLRequest(url);
-        request.method = egret.URLRequestMethod.POST;
-        request.data = new egret.URLVariables("test=ok");
-        loader.load(request);
-    }
-    private onPostComplete(event:egret.Event):void
-    {
-        var loader:egret.URLLoader = <egret.URLLoader> event.target;
-        var data:egret.URLVariables = loader.data;
-        console.log( data.toString() );
-    }
+class NetDemo extends egret.DisplayObjectContainer {
+  public constructor() {
+    super()
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this)
+  }
+
+  private onAddToStage(event: egret.Event) {
+    const url: string = 'http://httpbin.org/post'
+    const loader: egret.URLLoader = new egret.URLLoader()
+    loader.addEventListener(egret.Event.COMPLETE, this.onPostComplete, this)
+    const request: egret.URLRequest = new egret.URLRequest(url)
+    request.method = egret.URLRequestMethod.POST
+    request.data = new egret.URLVariables('test=ok')
+    loader.load(request)
+  }
+
+  private onPostComplete(event: egret.Event): void {
+    const loader: egret.URLLoader = <egret.URLLoader> event.target
+    const data: egret.URLVariables = loader.data
+    console.log(data.toString())
+  }
 }
-``` 
+```
 
 编译后运行，效果如图
 

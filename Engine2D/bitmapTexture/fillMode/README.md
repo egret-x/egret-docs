@@ -8,7 +8,7 @@ permalink: /docs/egret2d/bitmapTexture/fillMode/
 
 * 拉伸图像以填充区域
 
-* 重复图像以填充区域 
+* 重复图像以填充区域
 
 ### 1.拉伸图像填充
 创建 `Bitmap` 对象时会默认选择第一种填充方式。
@@ -38,11 +38,9 @@ class BitmapTest extends egret.DisplayObjectContainer{
 }
 ```
 
-
 编译后运行，效果如图：
 
 ![](56614f986ab98.png)
-
 
 ### 2.重复图像填充
 
@@ -81,4 +79,3 @@ class BitmapTest extends egret.DisplayObjectContainer{
 编译后运行，效果如图：
 
 ![](56614f988d39e.png)
-

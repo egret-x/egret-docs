@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/rufak433/
 ---
-
+
 这个版本为稳定性更新，主要进行细节优化和修复 bug。
 
 - 更新核心代码到 VS Code 1.2
@@ -23,7 +23,6 @@ permalink: /docs/rufak433/
     - 修复webview中某些情况和mac无法使用快捷键复制粘贴的问题。
     - 修复窗口记忆放大重置的bug
     - 修复 RES 编辑器 subkey刷新无效的bug
-
 
 ## 更新核心代码到 VS Code 1.2
 
@@ -72,7 +71,6 @@ permalink: /docs/rufak433/
 { "key": "tab", "command": "-editor.emmet.action.expandAbbreviation" }
 ```
 
-
 ### 调试
 
 #### 修改调试控制台打开的策略
@@ -90,18 +88,18 @@ permalink: /docs/rufak433/
 我们暴露了 `vscode.startDebug` command，插件可以调用它来启动调试。
 
 ```javascript
-    let launchConfig = {
-        type: "node",
-        request: "launch",
-        program: "${workspaceRoot}/test.js",
-        cwd: "${workspaceRoot}"
-    };
+const launchConfig = {
+  type: 'node',
+  request: 'launch',
+  program: '${workspaceRoot}/test.js',
+  cwd: '${workspaceRoot}'
+}
 
-    vscode.commands.executeCommand('vscode.startDebug', launchConfig).then(() => {
-        vscode.window.showInformationMessage('Debug session started successfully');
-    }, err => {
-        vscode.window.showInformationMessage('Error: ' + err.message);
-    });
+vscode.commands.executeCommand('vscode.startDebug', launchConfig).then(() => {
+  vscode.window.showInformationMessage('Debug session started successfully')
+}, (err) => {
+  vscode.window.showInformationMessage(`Error: ${err.message}`)
+})
 ```
 
 #### TextMate 语法注入
@@ -126,5 +124,3 @@ permalink: /docs/rufak433/
 ## 添加 Egret 项目助手右边栏
 我们内置了 Egret 项目的右边栏，提供 Egret 项目常用的操作按钮。并根据当前操作推荐相关的文档。
 ![](575fda63198e3.png)
-
-

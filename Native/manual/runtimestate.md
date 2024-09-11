@@ -24,7 +24,7 @@ private void setExternalInterfaces() {
         @Override
         public void callback(String message) {
             String str = "Native get onState message: ";
-    
+
             str += message;
             Log.e(TAG, str);
         }
@@ -51,7 +51,7 @@ private void setExternalInterfaces() {
         @Override
         public void callback(String message) {
             String str = "Native get onError message: ";
-    
+
             str += message;
             Log.e(TAG, str);
         }
@@ -70,7 +70,7 @@ private void setExternalInterfaces() {
         public void callback(String message) {
             // 参数为堆栈信息
             String str = "Native get onJSError message: ";
-    
+
             str += message;
             Log.e(TAG, str);
         }

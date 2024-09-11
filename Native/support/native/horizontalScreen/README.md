@@ -100,15 +100,8 @@ iOS 项目内的屏幕方向可以使用 ViewController 或者 info.plist 来设
 
 * LandscapeRight:右上角开始的横屏(right home button)
 
-
 也可以在项目目录下直接找到 info.plist 文件，在 info.plist 可以找到`UISupportedInterfaceOrientations`和`UISupportedInterfaceOrientations~ipad`字段。
 
 如果要设置横屏，可以将竖屏的两种模式删除，反之同理。
 
-> 一般情况下不推荐修改 info.plist。 
-
-
-
-
-
-
+> 一般情况下不推荐修改 info.plist。

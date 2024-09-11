@@ -12,13 +12,13 @@ permalink: /docs/egret3d/Egret3DLights/parallel/
 
 	创建一个演示场景：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cameraCtl: egret3d.LookAtController;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -49,14 +49,12 @@ permalink: /docs/egret3d/Egret3DLights/parallel/
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
 	    }
-	
-	
-	    
+
 	    public update(e: egret3d.Event3D) {
 	        ///更新控制器
 	        this.cameraCtl.update();
 	    }
-	}  
+	}
 
 ![](Img_1.png)
 
@@ -86,9 +84,9 @@ permalink: /docs/egret3d/Egret3DLights/parallel/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_3.png)  
+![](Img_3.png)
 
-		还可以修改灯光的背光颜色，如下所示：  
+		还可以修改灯光的背光颜色，如下所示：
 
  		///创建一个灯光组，该灯光组将管理场景内的灯光资源
         var lights: egret3d.LightGroup = new egret3d.LightGroup();
@@ -104,6 +102,6 @@ permalink: /docs/egret3d/Egret3DLights/parallel/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_4.png)  
+![](Img_4.png)
 
 ----------

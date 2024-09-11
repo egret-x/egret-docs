@@ -36,7 +36,7 @@ shape.y = 20;
 
 ```javascript
 var shape:egret.Shape = new egret.Shape();
-shape.scaleX = 0.5; 
+shape.scaleX = 0.5;
 shape.scaleY = 0.5;
 ```
 
@@ -118,13 +118,12 @@ class MyGrid extends egret.Shape{
 
         this.graphics.beginFill( 0xff0000 );
         this.graphics.drawRect( 0, 50, 50,50 );
-        this.graphics.endFill();               
+        this.graphics.endFill();
     }
 }
 ```
 
 在 `MyGrid` 中绘制了一个红蓝相间的2*2格子，然后修改文档类`Main`，在文档类中创建并显示 `MyGrid`类的实例，具体代码如下：
-
 
 ```javascript
 class Main extends egret.DisplayObjectContainer{
@@ -189,15 +188,15 @@ class GridSprite extends egret.Sprite
         this.graphics.beginFill( 0x0000ff );
         this.graphics.drawRect( 0, 0, 50,50 );
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0x0000ff );
         this.graphics.drawRect( 50, 50, 50, 50);
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0xff0000 );
         this.graphics.drawRect( 50, 0, 50,50 );
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0xff0000 );
         this.graphics.drawRect( 0, 50, 50,50 );
         this.graphics.endFill();
@@ -208,14 +207,13 @@ class GridSprite extends egret.Sprite
 在文档类中，实例化 `GridSprite` 即可。
 
 ```javascript
-var _myGrid:GridSprite = new GridSprite();  
+var _myGrid:GridSprite = new GridSprite();
 this.addChild( _myGrid );
 ```
 
 编译运行效果如下：
 
 ![](5565355e688c7.png)
-
 
 ## 显示列表
 显示列表用来管理和组织容器和非容器对象，当某个显示对象处在显示列表中，就可以在画面中看到该对象。当显示对象从显示列表中移除后，该对象从画面中消失。

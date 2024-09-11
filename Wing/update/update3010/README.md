@@ -3,7 +3,6 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/i9cdr9a0/
 ---
-
 
 这个版本修复了 3.0 中的几个 bug：
 - 某些用户调试窗口 Inspector 不能显示的问题
@@ -12,4 +11,3 @@ permalink: /docs/i9cdr9a0/
 - Extension API 中 previewWebview 报错的问题
 
 添加 Nodejs 和 Web 项目模板。
-

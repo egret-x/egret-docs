@@ -3,7 +3,7 @@ title: hello World
 createTime: 2024/09/11 10:50:04
 permalink: /docs/egret2d/guide/helloWorld/
 ---
-
+
 ### 安装引擎
 
 下载[Egret Engine](http://www.egret.com/products/engine.html),（可参考：[安装与部署](../../projectConfig/installation/README.md)）。
@@ -26,12 +26,11 @@ permalink: /docs/egret2d/guide/helloWorld/
 
 也可以选择 `导入项目` 来导入已有项目。
 
-
 2、在弹出的新建项目面板中，设置项目的基本配置，如下图。
 
 ![](project2.png)
 
-* 项目名称 
+* 项目名称
 当前项目的名称，如 HelloWorld。
 
 * 项目路径
@@ -51,7 +50,7 @@ permalink: /docs/egret2d/guide/helloWorld/
 
 * 缩放模式
   屏幕的适配方式，这里选择showALL模式。更多关于缩放模式的介绍可以参考：[屏幕适配](../../screenAdaptation/zoomMode/README.md)
-	
+
 * 旋转方式
 	屏幕的旋转模式，这里选择auto模式。更多关于旋转设置的介绍可以参考：[屏幕适配](../../screenAdaptation/rotationMode/README.md)
 
@@ -80,7 +79,6 @@ permalink: /docs/egret2d/guide/helloWorld/
 * index.html：入口文件。具体的配置说明可以参考：[入口文件说明](../../projectConfig/indexFile/README.md)
 * manifest.json：网页清单文件。
 * tsconfig.json：typescript 编译配置文件。
-
 
 ### 运行项目
 

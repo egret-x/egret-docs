@@ -22,7 +22,6 @@ var renderTexture:egret.RenderTexture = new egret.RenderTexture();
 renderTexture.drawToTexture(displayObject);
 ```
 
-
 ## 2.方法
 
 ### 2.1.toDataURL()
@@ -82,11 +81,12 @@ texture.saveToFile("image/png", "a/down.png", new egret.Rectangle(20, 20, 100, 1
 
 ```javascript
 if (this.bmp.texture == this.renderTexture) {
-    this.renderTexture2.drawToTexture(this, new egret.Rectangle(0, 0, 1024, 768));   
-    this.bmp.texture = this.renderTexture2;
-} else {
-    this.renderTexture.drawToTexture(this, new egret.Rectangle(0, 0, 1024, 768)); 
-    this.bmp.texture = this.renderTexture;
+  this.renderTexture2.drawToTexture(this, new egret.Rectangle(0, 0, 1024, 768))
+  this.bmp.texture = this.renderTexture2
+}
+else {
+  this.renderTexture.drawToTexture(this, new egret.Rectangle(0, 0, 1024, 768))
+  this.bmp.texture = this.renderTexture
 }
 ```
 

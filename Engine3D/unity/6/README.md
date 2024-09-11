@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/1cdc1rbh/
 ---
 
-
 	1）前面我们已经完整的导出了整个场景的内容，接下来我们继续了解使用unity3d粒子系统导出时候所需要注意的事项。
 	2）我们打开Example文件夹下的Example_6场景文件，目录位置如图所示：
 
@@ -25,7 +24,7 @@ permalink: /docs/1cdc1rbh/
 		c) 其中Emission和Render为必备的节点，请确保该节点处于勾选中的状态，
 
 ![](Img_5.png)
-		
+
 		d）不支持：Color by Speed,Size by Speed,Rotation by Speed,External Forces和Collision等模块。
 
 ![](Img_6.png)

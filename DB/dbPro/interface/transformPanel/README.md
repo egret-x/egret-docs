@@ -12,4 +12,3 @@ permalink: /docs/db/dbPro/interface/transformPanel/
 可以通过↑↓方向按钮微调数值框中的数值。
 
 *注：当骨骼或插槽复选时，变换面板内数值为空。
-

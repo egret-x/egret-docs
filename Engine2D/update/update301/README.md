@@ -11,7 +11,6 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 
 下面介绍 Egret Engine 3.0.0 到 Egret Engine 3.0.1 之间的更新详情。
 
-
 ## Egret Engine 2D
 
 下面汇总了 Egret Engine 2D 在 3.0.1 中的更新详情。
@@ -45,6 +44,3 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 * create_app 创建项目跟随H5项目的版本。
 * 修复 MovieClipData 获取到的纹理对象 offset 属性异常。
 * 修复文本缩放后脏矩形区域异常问题。
-
-
-

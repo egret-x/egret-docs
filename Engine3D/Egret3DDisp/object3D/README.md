@@ -61,7 +61,6 @@ var container:egret3d.Object3D = new egret3d.Object3D();
 
 container.addChildAt( target, 5 );
 
-
 //通过id属性查找
 var obj:egret3d.Object3D = container.findObject3DToID(55);
 
@@ -99,5 +98,3 @@ obj3d.scaleZ = 6;
 //缩放，方法2
 obj3d.scale = new egret3d.Vector3D(2, 4, 6);
 ```
-
-

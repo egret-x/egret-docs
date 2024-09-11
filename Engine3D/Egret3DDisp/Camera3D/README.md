@@ -19,7 +19,7 @@ Camera3D
 
         // 创建摄像机 透视
         var camera: egret3d.Camera3D = new egret3d.Camera3D(egret3d.CameraType.perspective);
-        //var camera: egret3d.Camera3D = new egret3d.Camera3D(egret3d.CameraType.orthogonal); 正交 
+        //var camera: egret3d.Camera3D = new egret3d.Camera3D(egret3d.CameraType.orthogonal); 正交
 
         // 设置摄像机的坐标为(0, 1000, -1000) 看向目标(0, 0, 0)
         camera.lookAt(new egret3d.Vector3D(0, 1000, -1000), new egret3d.Vector3D(0, 0, 0));

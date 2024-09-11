@@ -9,13 +9,11 @@ permalink: /docs/r0fqxuuc/
 
 * 不允许动态执行代码的能力，eval、setTimeout 和 setInterval 函数的第一个参数不能为字符串，Function构造函数的参数不能为字符串。
 
-
 * 关于小游戏体积问题，小游戏的体积不得大于 4M，缓存不得大于 50M。具体的解释为：
 
     1. 本地的代码和资源不得超过 4M。
     2. 单个小游戏项目缓存的文件不能超过 50M，目前当缓存超过 50M 时后续的资源将不会缓存，未来新版的 AssetsManager 将会允许开发者自定义哪些资源需要缓存的机制。
     3. 不允许从服务器下载脚本文件。
-
 
 接下来向诸位开发者汇总一下这两天开发者普遍遇到的问题以及解决方案：
 
@@ -23,7 +21,7 @@ permalink: /docs/r0fqxuuc/
 
 #### 我在使用白鹭引擎 5.0 / 4.x / 3.x 版本，可以直接转换为微信小游戏么？
 
-答：目前我们只支持白鹭引擎 5.1.x 版本发布为微信小游戏，推荐您使用最新的 5.1.2 版本。[升级教程](../../minigame/publish/README.md) 
+答：目前我们只支持白鹭引擎 5.1.x 版本发布为微信小游戏，推荐您使用最新的 5.1.2 版本。[升级教程](../../minigame/publish/README.md)
 
 #### 我在使用 egret res 库，5.1.2 创建的新项目使用的是 assetsmanager 库，这两个库有区别么？
 
@@ -31,11 +29,9 @@ permalink: /docs/r0fqxuuc/
 
 ![img](x02.png)
 
-
 #### 微信开发者工具无法识别项目或者无法读取 manifest.js 文件
 
 答：请确保您的微信开发者工具版本是 v1.02.1712280[下载连接](https://mp.weixin.qq.com/debug/wxagame/dev/devtools/download.html?scene=21#wechat_redirect)，遇到识别项目或者无法读取manifest.js 文件问题时先写检查下版本是不是太低导致的
-
 
 #### egret 设置横屏后微信小游戏不生效:
 
@@ -44,8 +40,6 @@ permalink: /docs/r0fqxuuc/
 ![img](x01.png)
 
 下一引擎版本将会自动切换屏幕旋转模式
-
-
 
 #### 当老项目（5.1.2以前）升到到最新版时，发布小游戏项目报错：
 
@@ -64,7 +58,6 @@ permalink: /docs/r0fqxuuc/
 #### 在小游戏中报错 “Main is not defined” 时，
 
 答：请查看游戏的入口类名是否为 Main，如不是请修改为 Main。
-
 
 #### 找不到 "不检验安全域名、TLS 版本以及 HTTPS 证书" 时如何解决：
 
@@ -93,12 +86,11 @@ permalink: /docs/r0fqxuuc/
 #### 在 iphone 7plus ios10 系统中会出现文字排版错误。
 答：解决方法：在进入游戏前先判断一下机型和系统型号，如果是 7plus，请切换到 canvas 模式来避免。
 
-#### 使用 navigator.userAgent 在小游戏中获取信息时无论是什么手机的返回值都是一样的 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E8301 MicroMessenger/6.6.0 MiniGame NetType/WIFI Language/zh_CN',  
+#### 使用 navigator.userAgent 在小游戏中获取信息时无论是什么手机的返回值都是一样的 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E8301 MicroMessenger/6.6.0 MiniGame NetType/WIFI Language/zh_CN',
 
 答：目前请暂时避免这种使用方式，这个问题已经反馈给微信团队。
 
 #### 开发者已经安装了最新版微信开发工具，但是执行 egret run --target wxgame 命令时还是提示请安装最新版开发者工具。
-
 
 答：请开发者检查下自己的操作系统是否是 32位 Windows，这是 5.1.2 版本在 32位 Windows系统上的 BUG，我们会尽快修复，在此之前，建议开发者使用 egret publish --target wxgame 发布后，手动使用微信开发者工具打开。
 
@@ -107,14 +99,13 @@ permalink: /docs/r0fqxuuc/
 答：检查是否使用了 嵌入EXML到代码中，例：
 
 ~~~javascript
-    var className = "skins.ButtonSkin";
-    var exmlText = `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
+const className = 'skins.ButtonSkin'
+const exmlText = `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
                     ...
-                    </e:Skin>`;
+                    </e:Skin>`
 ~~~
 
 需要改成单独的皮肤文件。
-
 
 #### 为什么真机关了调试模式就黑屏。
 
@@ -145,7 +136,6 @@ permalink: /docs/r0fqxuuc/
 
 答：
 请您直接使用微信开发者工具 打开这个小游戏项目即可。
-
 
 #### 升级到 5.1.5 时会报  `isMobile of function Capabilities`  错误
 

@@ -47,5 +47,3 @@ http://10.0.6.138:3000/another/resource/eui_skins/ButtonSkin.exml
 ~~~
 
 按照上述方法可以根据开发者的需求来自定义 exml 文件的加载根目录。
-
-

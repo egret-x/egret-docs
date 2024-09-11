@@ -7,7 +7,7 @@ permalink: /docs/egret3d/Egret3DAnimation/skeletonAnimation/
 ----------
 
 骨骼动画资源需要用导出插件导出，导出之后可以用以下方式进行使用
- 	
+
     // 按1 2 3 4键 切换动画
     protected onKeyDown(e: egret3d.KeyEvent3D) {
         switch (e.keyCode) {
@@ -36,7 +36,7 @@ permalink: /docs/egret3d/Egret3DAnimation/skeletonAnimation/
 
     // 加载资源完成后 创建骨骼动画
     protected createSkeletonAnimation() {
-        // 加载完成后用url查找资源 
+        // 加载完成后用url查找资源
         var geo: egret3d.Geometry = this.queueLoader.getAsset("resource/doc/ganning/Ganning.esm");
         var clip0: egret3d.SkeletonAnimationClip = this.queueLoader.getAsset("resource/doc/ganning/Idle.eam");
         var clip1: egret3d.SkeletonAnimationClip = this.queueLoader.getAsset("resource/doc/ganning/Run.eam");
@@ -74,7 +74,7 @@ permalink: /docs/egret3d/Egret3DAnimation/skeletonAnimation/
         mesh.animation.play("Idle");
 
         this.view.addChild3D(mesh);
-        // 监听动画播放完成事件 
+        // 监听动画播放完成事件
         mesh.animation.skeletonAnimationController.addEventListener(egret3d.AnimationEvent3D.EVENT_PLAY_COMPLETE, this.onPlayComplete, this);
         mesh.animation.skeletonAnimationController.addEventListener(egret3d.AnimationEvent3D.EVENT_FRAME_CHANGE, this.onPlayChange, this);
 

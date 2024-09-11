@@ -278,7 +278,7 @@ function createSign($params, $appkey){
 
 ### 在线验证：
 
-[http://open.egret.com/checkSign](http://open.egret.com/checkSign) 
+[http://open.egret.com/checkSign](http://open.egret.com/checkSign)
 
 ## 附录二：游戏接入前需提供信息
 
@@ -324,4 +324,3 @@ function createSign($params, $appkey){
 | 1009 | 重复订单 |
 | 1010 | 当前渠道不提供该功能 |
 | 1013 | 支付失败 |
-

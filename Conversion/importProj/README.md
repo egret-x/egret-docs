@@ -31,7 +31,7 @@ permalink: /docs/Conversion/importProj/
 
 可以看到游戏成功在浏览器页面上运行起来了，而没有使用flash player。
 
-这里要注意的是：开发时最好使用chrome浏览器，如果当前无法自动弹出浏览器页面，可以手动在浏览器里打开 
+这里要注意的是：开发时最好使用chrome浏览器，如果当前无法自动弹出浏览器页面，可以手动在浏览器里打开
 
 **3. 查看示例项目代码**
 
@@ -48,4 +48,3 @@ permalink: /docs/Conversion/importProj/
 如果修改的是egret项目，从“编译Egret项目”这一步开始。
 
 注意：“转换Flash项目”操作会重新生成所有代码，如果在转换后的egret项目有修改要注意备份。
-

@@ -19,7 +19,6 @@ permalink: /docs/u16cbjg3/
 
 【修复】修复windows在无法启动的问题。
 
-
 ## 下载地址
 http://tool.egret-labs.org/TextureMerger/TextureMerger-v1.6.3.dmg
 

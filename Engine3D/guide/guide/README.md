@@ -3,11 +3,11 @@ title: Egret 3D入门
 createTime: 2024/09/11 10:50:04
 permalink: /docs/egret3d/guide/guide/guide/
 ---
-> Egret3D 有几个基本的元素，基本上会围绕这些元素节点做引擎结构 
+> Egret3D 有几个基本的元素，基本上会围绕这些元素节点做引擎结构
 
 ## Egret3DCanvas
 
-- Egret3DCanvas 是整个3D显示的缓冲屏幕大小。并且包含了和Egret2D混合的接口。  
+- Egret3DCanvas 是整个3D显示的缓冲屏幕大小。并且包含了和Egret2D混合的接口。
 - 在egret2D和egret3D混合的时候egret2D（非 webgl加速版本）永远在最上一层。
 
 ## View3D
@@ -83,5 +83,3 @@ CubeTexture是一个6面体贴图，它通过（x,y,z)形式的三维像素矩�
 
 light是指给定方向所反射或发射的发光强度的灯光，然后影响3D场景中的可渲染对象的渲染效果。增强3D场景更加真实性的效果。
 引擎中分为3种灯光：点光源、方向光、聚光灯。
-
-

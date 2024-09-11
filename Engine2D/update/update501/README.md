@@ -13,7 +13,6 @@ permalink: /docs/10dw367o/
 
 ## 更新内容
 
-
 * 命令行
     * 为 HTML5 游戏引入HTML模板机制，开发者可以更自由的修改游戏的 HTML 模板。
 * EUI

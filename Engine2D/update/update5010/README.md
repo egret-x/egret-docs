@@ -36,17 +36,18 @@ canvasScaleFactor 是用于解决图片和字体发虚所引入的机制，它�
 
 ~~~javascript
 egret.runEgret({
-    renderMode: "webgl", audioType: 0,
-    calculateCanvasScaleFactor: function (context) {
-        var backingStore = context.backingStorePixelRatio ||
-            context.webkitBackingStorePixelRatio ||
-            context.mozBackingStorePixelRatio ||
-            context.msBackingStorePixelRatio ||
-            context.oBackingStorePixelRatio ||
-            context.backingStorePixelRatio || 1;
-        return (window.devicePixelRatio || 1) / backingStore;
-    }
-});
+  renderMode: 'webgl',
+  audioType: 0,
+  calculateCanvasScaleFactor(context) {
+    const backingStore = context.backingStorePixelRatio
+      || context.webkitBackingStorePixelRatio
+      || context.mozBackingStorePixelRatio
+      || context.msBackingStorePixelRatio
+      || context.oBackingStorePixelRatio
+      || context.backingStorePixelRatio || 1
+    return (window.devicePixelRatio || 1) / backingStore
+  }
+})
 ~~~
 
 ## Tween.removeAllTweens

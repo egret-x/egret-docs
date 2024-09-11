@@ -21,17 +21,16 @@ permalink: /docs/zz3yh5xc/
 
 ## 二、Runtime 入口文件编写规范
 
-
 ~~~
     {
         //游戏代码包路径
-        "code_url":"http://your-cdn-domain/game/version_1/game_code.zip",  
+        "code_url":"http://your-cdn-domain/game/version_1/game_code.zip",
         //游戏资源前缀路径
-        "update_url":"http://your-cdn-domain/game/version_1/",     
-        //游戏代码公钥，在默认情况下请勿填写此字段                          
+        "update_url":"http://your-cdn-domain/game/version_1/",
+        //游戏代码公钥，在默认情况下请勿填写此字段
         "customParams":
         {
-        } 
+        }
     }
 ~~~
 入口文件应该保存在您的游戏动态服务器上，而非 CDN 上，当游戏内容需要更新时，只需修改入口文件中的 code_url 和 update_url 字段即可
@@ -79,7 +78,7 @@ egret.MainContext.runtimeType //值为 egret.MainContext.RUNTIME_HTML5或egret.M
 
 用户场景：渠道上游戏已经上线，需要在先在开发者的本地测试机上进行新版本测试，同时不影响线上用户。
 
-测试方法：Runtime在启动时，回向 Runtime 入口文件发一下请求 `http://{your-runtime-file}?egretDeviceId=abcdefg` 
+测试方法：Runtime在启动时，回向 Runtime 入口文件发一下请求 `http://{your-runtime-file}?egretDeviceId=abcdefg`
 其中 egretDeviceId 是一个加密后的设备id，开发者可以在Runtime入口文件中解析这个请求，根据不同的egretDeviceId 派发不同的 `code_url` 即可
 
 ## 七、Runtime 启动流程
@@ -107,16 +106,16 @@ egret.MainContext.runtimeType //值为 egret.MainContext.RUNTIME_HTML5或egret.M
 ~~~
     {
         //游戏代码包路径
-        "code_url":"http://your-cdn-domain/game/version_1/game_code.zip",  
+        "code_url":"http://your-cdn-domain/game/version_1/game_code.zip",
         //游戏资源前缀路径
-        "update_url":"http://your-cdn-domain/game/version_1/",     
-        //游戏代码公钥，在默认情况下请勿填写此字段                          
-        "customParams": 
+        "update_url":"http://your-cdn-domain/game/version_1/",
+        //游戏代码公钥，在默认情况下请勿填写此字段
+        "customParams":
         {
-            //使用自定义Loading功能，在默认情况下请勿填写此字段   
+            //使用自定义Loading功能，在默认情况下请勿填写此字段
             "customLoading":1
         }
-    } 
+    }
 ~~~
 
 Runtime 如果检测到这个字段，就不会主动在加载过程第四步关闭 Runtime Loading。然后开发者可以通过游戏的业务逻辑来控制这个 Loading 的行为，具体 API 如下：

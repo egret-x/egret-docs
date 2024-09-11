@@ -25,10 +25,3 @@ DragonBones Professional提供脚本文件，可以很方便将Photoshop中的�
 导入时，在DragonBones Professional的导入窗口选择导出的json文件，纹理类型选择“图片文件”，便可以把设计图导入到DragonBones Professional中了。
 
 导入后，图片的相对位置，大小和相互间的层级关系都和PS中完全相同。
-
-
-
-
-
-
-

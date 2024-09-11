@@ -30,11 +30,11 @@ permalink: /docs/bml5rus8/
 答：如果是直接通过 [厘米游戏](http://hudong.qq.com/) 的游戏管理上传的包，有一下两种情况。
 
 - 安卓端与ios端都显示为黑屏。
- 
+
  可能是混淆导致类名变动的问题，使得找不到egret项目的主入口类。需要在js/main.js文件中加入以下代码。
 
  ![类名混淆](./calss04.png)
- 
+
  这样，代码即使经过提交混淆也可以找到主类了。
 
  - 只有安卓端显示黑屏，ios显示正常。
@@ -97,9 +97,8 @@ declare var GameStatusInfo: {
 
 即可在项目中使用Bricks引擎提供的相关变量和接口，避免混淆机制的困扰。
 
-
 ```
-console.log("开始游戏roomID:“ + GameStatusInfo.roomId); 
+console.log("开始游戏roomID:“ + GameStatusInfo.roomId);
 ```
 
 有更多的相关问题请您到egret论坛bbs.egret.com参与讨论。我们也会持续更新问题以及解决方案。

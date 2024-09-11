@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/db/dbPro/interface/inheritToolbar/
 ---
 
-
 ![](5576b6120294c.png)
 
 * 显示/可选/继承工具用于打开和关闭骨骼和插槽的显示，可选，继承关系。
@@ -14,8 +13,6 @@ permalink: /docs/db/dbPro/interface/inheritToolbar/
 * 可选：打开时，骨骼或插槽在主场景中可以被选中。关闭时，骨骼或插槽在主场景中不可以被选中。
 
 * 继承：打开时，骨骼或插槽会继承父骨骼的动作。关闭时，骨骼或插槽不会继承父骨骼的动作。
-
-
 
 特性：
 

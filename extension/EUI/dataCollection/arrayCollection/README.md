@@ -9,34 +9,34 @@ ArrayCollection 是 eui 中专用的一个数据封装类。一个典型的数�
 
 创建 ArrayCollection 的示例如下:
 
-~~~ typescript 
-//先创建一个数组
-var sourceArr:any[] = [{name:"one",value:1},{name:"two",value:2}];
-//用 ArrayCollection 包装
-var myCollection:eui.ArrayCollection = new eui.ArrayCollection(sourceArr);
-~~~ 
+~~~ typescript
+// 先创建一个数组
+const sourceArr: any[] = [{ name: 'one', value: 1 }, { name: 'two', value: 2 }]
+// 用 ArrayCollection 包装
+const myCollection: eui.ArrayCollection = new eui.ArrayCollection(sourceArr)
+~~~
 > 也可以不创建数组，直接使用new eui.ArrayCollection()，这样将在内部默认创建一个空数组。
 
 封装的最大意义在于事件，可以在 ArrayCollection 上添加事件侦听，每当数据改变时，就可以获取消息：
 
-~~~ typescript 
-//当数据改变的时候，ArrayCollection 会派发事件
-myCollection.addEventListener(eui.CollectionEvent.COLLECTION_CHANGE,this.collectionChangeHandler,this);
-~~~ 
+~~~ typescript
+// 当数据改变的时候，ArrayCollection 会派发事件
+myCollection.addEventListener(eui.CollectionEvent.COLLECTION_CHANGE, this.collectionChangeHandler, this)
+~~~
 
-~~~ typescript 
+~~~ typescript
 private collectionChangeHandler(evt:eui.CollectionEvent):void {
     console.log("数据已改变:"+evt.kind+","+evt.target.length);
 }
-~~~ 
+~~~
 
 然后给 ArrayCollection 添加数据，事件侦听的效果如下：
 
-~~~ typescript 
-var itemData:Object = {name:"three",value:3};
-myCollection.addItem(itemData);//相当于push
-myCollection.addItemAt({name:"zero",value:0},0);//添加的指定的索引位置
-~~~ 
+~~~ typescript
+const itemData: object = { name: 'three', value: 3 }
+myCollection.addItem(itemData)// 相当于push
+myCollection.addItemAt({ name: 'zero', value: 0 }, 0)// 添加的指定的索引位置
+~~~
 
 编译并运行，效果如图：
 
@@ -44,11 +44,11 @@ myCollection.addItemAt({name:"zero",value:0},0);//添加的指定的索引位置
 
 如果要获取 ArrayCollection 中的数据，可以这样：
 
-~~~ typescript 
-console.log(myCollection.getItemAt(0).name);//根据索引位置获取某一项数据
-console.log(myCollection.getItemIndex(itemData));//获取某一项数据所在的索引值
-console.log(myCollection.length);//获取数组长度
-~~~ 
+~~~ typescript
+console.log(myCollection.getItemAt(0).name)// 根据索引位置获取某一项数据
+console.log(myCollection.getItemIndex(itemData))// 获取某一项数据所在的索引值
+console.log(myCollection.length)// 获取数组长度
+~~~
 
 编译并运行，效果如图：
 
@@ -56,50 +56,51 @@ console.log(myCollection.length);//获取数组长度
 
 如果要替换某一项数据，可以：
 
-~~~ typescript 
-myCollection.replaceItemAt({name:"zero",value:-1},0);
-~~~ 
+~~~ typescript
+myCollection.replaceItemAt({ name: 'zero', value: -1 }, 0)
+~~~
 
 做删除操作，可以：
 
-~~~ typescript 
-myCollection.removeItemAt(0);//删除某一个
-myCollection.removeAll();//全部删除
-~~~ 
+~~~ typescript
+myCollection.removeItemAt(0)// 删除某一个
+myCollection.removeAll()// 全部删除
+~~~
 
 完整代码如下：
 
-~~~ typescript 
+~~~ typescript
 class Main extends eui.Group {
-    public constructor() {
-        super();
-    }
-    protected createChildren():void {
-        //先创建一个数组
-        var sourceArr:any[] = [{name:"one",value:1},{name:"two",value:2}];
-        //用ArrayCollection包装
-        var myCollection:eui.ArrayCollection = new eui.ArrayCollection(sourceArr);
+  public constructor() {
+    super()
+  }
 
-        //当数据改变的时候，ArrayCollection会派发事件
-        myCollection.addEventListener(eui.CollectionEvent.COLLECTION_CHANGE,this.collectionChangeHandler,this);
+  protected createChildren(): void {
+    // 先创建一个数组
+    const sourceArr: any[] = [{ name: 'one', value: 1 }, { name: 'two', value: 2 }]
+    // 用ArrayCollection包装
+    const myCollection: eui.ArrayCollection = new eui.ArrayCollection(sourceArr)
 
-        var itemData:Object = {name:"three",value:3};
-        myCollection.addItem(itemData);//相当于push
-        myCollection.addItemAt({name:"zero",value:0},0);//添加的指定的索引位置
+    // 当数据改变的时候，ArrayCollection会派发事件
+    myCollection.addEventListener(eui.CollectionEvent.COLLECTION_CHANGE, this.collectionChangeHandler, this)
 
-        myCollection.replaceItemAt({name:"zero",value:-1},0);
+    const itemData: object = { name: 'three', value: 3 }
+    myCollection.addItem(itemData)// 相当于push
+    myCollection.addItemAt({ name: 'zero', value: 0 }, 0)// 添加的指定的索引位置
 
-        //获取
-        console.log(myCollection.getItemAt(0).name);//根据索引位置获取某一项数据
-        console.log(myCollection.getItemIndex(itemData));//获取某一项数据所在的索引值
-        console.log(myCollection.length);//获取数组长度
+    myCollection.replaceItemAt({ name: 'zero', value: -1 }, 0)
 
-        myCollection.removeItemAt(0);//删除某一个
-        myCollection.removeAll();//全部删除
-    }
+    // 获取
+    console.log(myCollection.getItemAt(0).name)// 根据索引位置获取某一项数据
+    console.log(myCollection.getItemIndex(itemData))// 获取某一项数据所在的索引值
+    console.log(myCollection.length)// 获取数组长度
 
-    private collectionChangeHandler(evt:eui.CollectionEvent):void {
-        console.log("数据已改变:"+evt.kind+","+evt.target.length);
-    }
+    myCollection.removeItemAt(0)// 删除某一个
+    myCollection.removeAll()// 全部删除
+  }
+
+  private collectionChangeHandler(evt: eui.CollectionEvent): void {
+    console.log(`数据已改变:${evt.kind},${evt.target.length}`)
+  }
 }
-~~~ 
+~~~

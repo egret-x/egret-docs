@@ -5,12 +5,9 @@ permalink: /docs/vlbtsnfd/
 ---
 # 白鹭引擎 5.1.3 发布日志
 
-
 ---
 
 白鹭引擎在 2017年 12 月份正式发布了 5.1 版本。本次版本是 5.1 版本的一次集中性缺陷修复，主要目标是完善微信小游戏、AssetsManager 的稳定性。
-
-
 
 ## 微信小游戏
 
@@ -25,7 +22,6 @@ permalink: /docs/vlbtsnfd/
 
 以上这些内容，已经随着近期的 Egret Launcher 进行了独立的更新，开发者目前可以通过在 Egret Launcher 中重新创建微信项目以得到更新，您可以通过在微信开发者工具的控制台中输入  ```egret.wxgame.version``` 检查版本，当前版本为 1.0.10
 
-
 # AssetsManager
 
 本次更新修复了 AssetsManager 的多个 BUG，以保证其行为与旧的 RES 模块一致。主要包含：
@@ -38,11 +34,3 @@ permalink: /docs/vlbtsnfd/
 * 修复位图字体无法渲染的 BUG
 * 修复加载http的图集以及字体路径不正确问题
 * 修复当开发者设置 ```RES.loadConfig``` 中设置 resourceRoot，但是并没有生效的 BUG
-
-
-
-
-
-
-
-

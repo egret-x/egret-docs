@@ -142,7 +142,7 @@ Content-Type: application/json
 
 - 如，上周（周一至周天）的榜单为小明 ： 3 ，小红 ：2 ；当前周截止周三 10:10 的榜单为 小红：1 ，小明 1
 
-**排名个数： ** 须指定历史周期的排名个数，如，用户有500万，而上一周期只需要保持top 100的用户。开发者可指定 0 - 全部数据，n - top n 数据 
+**排名个数： ** 须指定历史周期的排名个数，如，用户有500万，而上一周期只需要保持top 100的用户。开发者可指定 0 - 全部数据，n - top n 数据
 
 **分数更新规则：**  取大，取小，取最新，求和；取大/小是指，当有新的分数上报时，保留一个较大/小值；取最新是指，新的分数直接覆盖掉旧的分数；求和是指将上报的分数累加。
 
@@ -200,11 +200,11 @@ Content-Type: application/json
 ```
 该接口支持以游戏ID(gameID)和排行榜名称(rankinglistName)来查询所需的排行榜配置信息及其快照列表，例如
 
-a. 一次性查回来1000条满足gameID为123456的排行榜配置信息以及这些排行榜对应的快照列表：   
+a. 一次性查回来1000条满足gameID为123456的排行榜配置信息以及这些排行榜对应的快照列表：
 
   /rank/ranking_list_configs?gameID=123456&limit=1000
 
-b. 查询gameID为123456并且排行榜名（rankinglistName）为liuzhihao_test的排行榜配置信息以及其对应的快照列表：   
+b. 查询gameID为123456并且排行榜名（rankinglistName）为liuzhihao_test的排行榜配置信息以及其对应的快照列表：
 
   /rank/ranking_list_configs?gameID=123456&rankinglistName=liuzhihao_test
 
@@ -320,11 +320,8 @@ Content-Type: application/json
 
 - 如，积分榜，设置周期为总，即不自动刷新榜单；然后开发者在中秋前一天晚上设置排行榜快照(不保留快照，重置排行榜)，在中秋期间拉取的榜单，即为中秋三天里的活动排行榜。
 
-
 - 开发者可选择是否保留排行榜快照，如果否，则历史排行榜不会保留，达到重置排行榜作用（重置是指将排行榜里的玩家数据清除，排行榜规则不变，清除之后，重新开始计算排行榜）；如果是，则需要指定排行榜快照的名称，top n 值（0 为保存全部），此时服务保留的是设置快照前的排行榜数据。
   - 如，某游戏是在国庆分三次（1-2号，3-4号，5-7号）举行赛事，每次赛事的成绩是基于之前成绩取最高分；则开发者可以在1号赛事开始时，设置排行榜快照，选择保留快照，不重置排行榜数据；然后在3号设置排行榜快照，选择保留快照，不重置排行榜；在5号、7号同样设置；最后在国庆假期结束时，连续三次赛事排名前三的玩家可领取奖励。
-
-
 
 ```
 接口: POST /rank/snapshot?ts=xxx&seq=xxx&mode=2&sign=xxx
@@ -341,11 +338,11 @@ Content-Type: application/json
 
 ```json
 {
-	"gameID": 102003,
-	"rankName": "高分榜",
-	"reset": false,
-	"snapshotName": "第一个快照",
-	"top": 10
+  "gameID": 102003,
+  "rankName": "高分榜",
+  "reset": false,
+  "snapshotName": "第一个快照",
+  "top": 10
 }
 ```
 
@@ -430,14 +427,14 @@ Content-Type: application/json
 
 ```json
 {
-    "userID": 123,
-    "gameID": 1000,
-    "items": [
-        {
-            "fieldName": "金币",
-            "value": 20
-        }
-    ]
+  "userID": 123,
+  "gameID": 1000,
+  "items": [
+    {
+      "fieldName": "金币",
+      "value": 20
+    }
+  ]
 }
 ```
 
@@ -452,8 +449,8 @@ Content-Type: application/json
 
 ```json
 {
-    "statusCode": 200,
-    "desc": "成功"
+  "statusCode": 200,
+  "desc": "成功"
 }
 ```
 
@@ -484,15 +481,15 @@ Content-Type: application/json
 
 ```json
 {
-    "statusCode": 200,
-    "desc": "成功",
-    "data": [
-        {
-            "userID": 1000,
-            "rank": 1,
-            "value": 100
-        }
-    ]
+  "statusCode": 200,
+  "desc": "成功",
+  "data": [
+    {
+      "userID": 1000,
+      "rank": 1,
+      "value": 100
+    }
+  ]
 }
 ```
 
@@ -532,15 +529,15 @@ Content-Type: application/json
 
 ```json
 {
-    "statusCode": 200,
-    "desc": "成功",
-    "data": [
-        {
-            "userID": 1000,
-            "rank": 1,
-            "value": 100
-        }
-    ]
+  "statusCode": 200,
+  "desc": "成功",
+  "data": [
+    {
+      "userID": 1000,
+      "rank": 1,
+      "value": 100
+    }
+  ]
 }
 ```
 
@@ -580,15 +577,15 @@ Content-Type: application/json
 
 ```json
 {
-    "statusCode": 200,
-    "desc": "成功",
-    "data": [
-        {
-            "userID": 1000,
-            "rank": 1,
-            "value": 100
-        }
-    ]
+  "statusCode": 200,
+  "desc": "成功",
+  "data": [
+    {
+      "userID": 1000,
+      "rank": 1,
+      "value": 100
+    }
+  ]
 }
 ```
 

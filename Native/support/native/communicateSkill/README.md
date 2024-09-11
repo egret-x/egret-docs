@@ -38,21 +38,21 @@ egret.ExternalInterface.addCallback("sendToJS", function (message:string) {
 
 上面我们调用`addCallback`,他的第一个参数"sendToJS",表示`Native`端发送的函数名。另外一个参数是回调函数，当 `Native` 端发送消息来时将调用回调函数，其中`message`就是`Native`端发送过来的值了。
 
-### Native 发送消息 
+### Native 发送消息
 
 在原生代码中向 Egret 发送消息也比较简单，通过调用相应 API 向 Egret 发送消息。这里的参数都是两个，第一个是发送消息的`ID`,第二个为发送消息的值。当 Egret 内监听了同样 `ID`的消息，将收到该消息，并触发回调。这里我们使用上面 Egret 内监听的 `sendToJS` 为发送消息的 `ID`。
 
 Android 对应发送消息代码:
 ```
 // Java 代码
-// gameEngine 在 onCreate 实例化出来。 
+// gameEngine 在 onCreate 实例化出来。
 gameEngine.callEgretInterface("sendToJS", "message from Android");
 ```
 
 IOS 对应发送消息代码：
 
 ```
-/// Objective-C 代码 
+/// Objective-C 代码
 [[EgretRuntime getInstance] callEgretInterface:@"sendToJS" value:@"message from IOS"];
 ```
 
@@ -90,19 +90,19 @@ IOS 部分对应接收代码,IOS部分监听回调也比较简单，同样调用
 
 IOS 对应的监听消息的代码：
 ```
-/// Objective-C 代码 
-[[EgretRuntime getInstance] setRuntimeInterface:@"sendToNative" 
+/// Objective-C 代码
+[[EgretRuntime getInstance] setRuntimeInterface:@"sendToNative"
     block:^(NSString * message) {
         NSLog(@"message :%@", message);
     }];
 ```
 
-### Egret 发送消息 
+### Egret 发送消息
 
 在`ExternalInterface`中，通过`call`方法向`native`发送消息。`call`中的两个参数分别是`functionName`和`value`,需要注意的是这两个参数都是字符串类型。`functionName`表示在 Native 端调用的函数回调名。也可以将此参数看成是函数回调的 ID ，有多个函数需要在 Native 端回调的时候可以通过此名称来区分。而`value`参数则比较好理解，表示要传给 Native 端的具体值。
 
 ```
 // TypeScript 代码
-egret.ExternalInterface.call("sendToNative", "message from js");   
+egret.ExternalInterface.call("sendToNative", "message from js");
 ```
 比如上面代码发送了一段消息`message from js`给`Native`,当`Native`端添加了`sendToNative`的监听的时候，就可以在其回调函数中收到这个消息了。

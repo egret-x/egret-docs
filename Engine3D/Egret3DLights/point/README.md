@@ -12,13 +12,13 @@ permalink: /docs/egret3d/Egret3DLights/point/
 
 	创建一个演示场景：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cameraCtl: egret3d.LookAtController;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -49,14 +49,12 @@ permalink: /docs/egret3d/Egret3DLights/point/
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
 	    }
-	
-	
-	    
+
 	    public update(e: egret3d.Event3D) {
 	        ///更新控制器
 	        this.cameraCtl.update();
 	    }
-	}  
+	}
 
 ![](Img_1.png)
 
@@ -66,9 +64,9 @@ permalink: /docs/egret3d/Egret3DLights/point/
 		点光源是理想化为质点点光源。点光源是抽象化了的物理概念，点光源在现实中也是不存在的，指的是从一个点向周围空间均匀发光的光源，类似蜡烛的光照效果。
 
 	2）点光源的模型如图：
-![](Img_5.jpg)  
+![](Img_5.jpg)
 
-	3) 给演示场景添加一个点光源： 
+	3) 给演示场景添加一个点光源：
 
  		///创建一个灯光组，该灯光组将管理场景内的灯光资源
         var lights: egret3d.LightGroup = new egret3d.LightGroup();
@@ -83,9 +81,9 @@ permalink: /docs/egret3d/Egret3DLights/point/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_6.png)  
+![](Img_6.png)
 
-	还可以修改点光源的半径，如下所示：  
+	还可以修改点光源的半径，如下所示：
 
         ///创建一个灯光组，该灯光组将管理场景内的灯光资源
         var lights: egret3d.LightGroup = new egret3d.LightGroup();
@@ -102,9 +100,9 @@ permalink: /docs/egret3d/Egret3DLights/point/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_7.png)  
+![](Img_7.png)
 
-	还可以修改点光源的衰减度，如下所示：  
+	还可以修改点光源的衰减度，如下所示：
 
         ///创建一个灯光组，该灯光组将管理场景内的灯光资源
         var lights: egret3d.LightGroup = new egret3d.LightGroup();
@@ -123,9 +121,9 @@ permalink: /docs/egret3d/Egret3DLights/point/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_8.png)  
+![](Img_8.png)
 
-	还可以修改灯光的背光颜色，如下所示： 
+	还可以修改灯光的背光颜色，如下所示：
         ///创建一个灯光组，该灯光组将管理场景内的灯光资源
         var lights: egret3d.LightGroup = new egret3d.LightGroup();
         ///创建一个点光源
@@ -145,4 +143,4 @@ permalink: /docs/egret3d/Egret3DLights/point/
         ///设置灯效组。
         cube.material.lightGroup = lights;
         plane.material.lightGroup = lights;
-![](Img_9.png)  
+![](Img_9.png)

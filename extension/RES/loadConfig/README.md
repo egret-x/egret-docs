@@ -54,8 +54,8 @@ RES模块对资源加载配置有两种读取方式，一种是通过配置读�
 这是一个json文件，通常我们取名为`default.res.json`。载入代码如下：
 
 ```
-RES.addEventListener( RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this ); 
-RES.addEventListener( RES.ResourceEvent.CONFIG_LOAD_ERROR, this.onConfigLoadErr, this ); 
+RES.addEventListener( RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this );
+RES.addEventListener( RES.ResourceEvent.CONFIG_LOAD_ERROR, this.onConfigLoadErr, this );
 RES.loadConfig("resource/default.res.json","resource/");
 ```
 

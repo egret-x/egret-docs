@@ -11,10 +11,9 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 
 下面介绍 Egret Engine 3.0.1 到 Egret Engine 3.0.2 之间的更新详情。
 
+### Egret Engine 2D
 
-### Egret Engine 2D 
-
-在 Egret Engine 2D 的 本次更新中，我们吸收开发者提供的反馈和建议，进一步稳定引擎并优化了一些体验。下面列出的是 3.0.1 到 3.0.2 的更新详情。 
+在 Egret Engine 2D 的 本次更新中，我们吸收开发者提供的反馈和建议，进一步稳定引擎并优化了一些体验。下面列出的是 3.0.1 到 3.0.2 的更新详情。
 
 #### Scroller
 
@@ -39,4 +38,3 @@ myscroller.stopAnimation();
 * 修复文本测量bug
 * 修复 eui 内存泄露问题
 * 修复加载空文本文件导致报错问题
-

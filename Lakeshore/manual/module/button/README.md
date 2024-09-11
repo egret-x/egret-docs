@@ -20,7 +20,6 @@ permalink: /docs/krrvpb9x/
 
 ------------
 
-
 ### 按钮条件
 按钮组件除特有条件外，也适用部分通用条件（按钮不支持“碰撞”相关条件），参看：[通用条件](../../commonElements/conditions/README.md)
 
@@ -52,7 +51,6 @@ permalink: /docs/krrvpb9x/
 如果当前按钮处于可用状态。【持续性触发】
 
 ------------
-
 
 ### 按钮动作
 按钮组件除特有动作外，也适用部分通用动作（按钮不支持“碰撞”相关动作），参看：[通用动作](../../commonElements/action/README.md)

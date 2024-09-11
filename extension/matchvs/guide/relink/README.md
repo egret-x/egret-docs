@@ -4,12 +4,11 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/415m6oib/
 ---
 
-
 Matchvs 提供了断线重连的功能：当客户端网络异常（包含网络关闭、弱网络、挂起至后台等情况），网络异常时应用层会收到“检测到客户端已经断线的`errorResponse` 错误码1001。此种情况下可以使用 reconnect接口进行重连。
 
 #### 重连的原理
 
-> reconnect = (haveLogin?nothing:dologin)+jointeam+jionroom 
+> reconnect = (haveLogin?nothing:dologin)+jointeam+jionroom
 
 在reconnectResponse 接口可以得到重连的结果
 
@@ -17,7 +16,7 @@ Matchvs 提供了断线重连的功能：当客户端网络异常（包含网络
 
 如果重连失败则会在 reconnectResponse 接口收到错误码，当错误码为 201 的时候说明你已经不能再加入房间了，这个时候你将处于已经登录状态，不用再次调用 login 接口。
 
-**房间断线重连超时时间默认是 20秒，可以由开发者自己调用 setReconnectTimeout 自己设置超时时间,需要每次进入房间之前设置超时时间。（可支持的SDK版本 v3.7.5.0+）** 
+**房间断线重连超时时间默认是 20秒，可以由开发者自己调用 setReconnectTimeout 自己设置超时时间,需要每次进入房间之前设置超时时间。（可支持的SDK版本 v3.7.5.0+）**
 
 **组队重连的超时默认是不允许重连（可支持的SDK版本 v3.7.9.2+）**
 
@@ -31,15 +30,11 @@ engine.setTeamReconnectTimeout(59) //组队重连超时
 断开后调用reconnect的时机
 
 > 1: 被杀进程的情况                      -> login+reconnect
-> 2: 拔网线掉线 的情况                 -> button.onclick -> reconnect 
-
-
+> 2: 拔网线掉线 的情况                 -> button.onclick -> reconnect
 
 **重连接口的调用 不要直接写在 errorReponse 回调里面,不然会出现反复断线反复重连死循环情况**
 
-
-
-断线重连接口使用说明请看 [API文档](../APIDoc/JavaScript)    
+断线重连接口使用说明请看 [API文档](../APIDoc/JavaScript)
 
 ## 自定义重连逻辑
 
@@ -51,7 +46,7 @@ engine.setTeamReconnectTimeout(59) //组队重连超时
 
 #### 玩家重连结果通知
 
-![](http://imgs.matchvs.com/static/reconnect4.png)  
+![](http://imgs.matchvs.com/static/reconnect4.png)
 
 reconnectResponse接口是重连的结果。
 
@@ -70,12 +65,3 @@ networkStateNotify 接口 state 结果值
 - 如果用户正在重新连接 state 为 2.
 - 如果用户用户不能 再重连了彻底离开了房间 state为 3。
 - 如果用户重连成功了 networkStateNotify 接口没有通知，需要玩家自己使用 sendEvent 接口发送消息 告诉其他人。
-
-
-
-
-
-
-
-
-

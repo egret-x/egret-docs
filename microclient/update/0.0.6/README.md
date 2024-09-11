@@ -15,7 +15,7 @@ permalink: /docs/beqywfkp/
 
 【修复】横屏游戏时，输入框会占据全屏的问题
 
-【修复】某些情况下window.localStorage.getItem方法的返回值不准确 
+【修复】某些情况下window.localStorage.getItem方法的返回值不准确
 
 【修复】带"./"的本地资源报错的问题
 

@@ -4,18 +4,16 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/rktt54v9/
 ---
 
-
-* nest [下载地址](https://github.com/egret-labs/Nest) 
+* nest [下载地址](https://github.com/egret-labs/Nest)
 
 	egret 引擎：下载完后按照 [第三方库接入流程](../../../extension/threes/instructions/README.md) 将Nest添加到项目中，path 指向到 ```nest/libsrc``` 下。
 
 	非 egret 引擎：下载完后，请将 ```libsrc/bin/nest/nest.min.js``` 文件按普通 js 一样加入到项目中。
 
 * 按钮资源
-  
+
   可以使用 loginAssets 下默认的资源或者自行找对应的素材。
-	
-	
+
 ## 新版说明
 
 ```nest.easyuser.startup``` 代替老版本的 ```nest.core.startup```
@@ -26,7 +24,7 @@ permalink: /docs/rktt54v9/
 
 ```nest.easyuser.getInfo``` 代替老版本的 ```nest.user.getInfo```
 
-```nest.easyuser.isSupport``` 简化成判断有没有 ```getInfo、logout``` 
+```nest.easyuser.isSupport``` 简化成判断有没有 ```getInfo、logout```
 
 ## 流程
 
@@ -36,7 +34,7 @@ permalink: /docs/rktt54v9/
 
 * nest.easyuser.login 如果有登录方式，则传入登录方式，如果没有，直接传入 {}
 
-* [测试](#h5测试) 请完全按照下方的测试方式来。 
+* [测试](#h5测试) 请完全按照下方的测试方式来。
 
 ## api 参数说明
 
@@ -52,7 +50,7 @@ permalink: /docs/rktt54v9/
 * callback:(resultInfo:nest.core.ResultCallbackInfo)=>any)：方法回调函数，一个拥有参数为 resultInfo:nest.core.LoginCallbackInfo 返回值为 any 的函数。
 
 * 示例：
- 
+
 		var info:any = {};
 		//设置游戏id。如果是通过开放平台接入，请在开放平台游戏信息-》基本信息-》游戏ID 找到。
 		info.egretAppId = 88888;
@@ -107,7 +105,6 @@ permalink: /docs/rktt54v9/
 
 有则需要在进入游戏登录页面前先显示带有登录按钮方式的界面；没有则直接调用 ```nest.easyuser.login``` 进入到游戏。如果调用登出api后，需要重新调用此api获取登录方式
 
-
 * 示例
 
 		var loginTypes:Array<nest.easyuser.ILoginType> = nest.easyuser.getLoginTypes();
@@ -120,12 +117,12 @@ permalink: /docs/rktt54v9/
 		        //按照获取到的类型，显示全部的按钮，其中，qq（qq对应按钮）、 wx（微信对应按钮）、default（游戏内自己进入按钮），请可能兼容多种按钮同时存在的页面
 				//如果传入的参数带有 accInfo 信息，请根据 accInfo.avatarUrl 来显示头像，并修改名称为 XX一键登录。
 				//按钮点击后，请调用 nest.easyuser.login，并传入对应的登录类型
-			
+
 		    }
 
 		}
 		else {//直接调用 nest.easyuser.login，传入 {} 即可。
-			
+
 		}
 
 	![image](login3.jpg) ![image](login4.jpg)
@@ -137,9 +134,9 @@ permalink: /docs/rktt54v9/
 ```请确保已经调用过  nest.easyuser.startup ```，并且需要调用根据 ```nest.easyuser.getLoginTypes();``` 来传入相应的参数。登录 api 的处理需要在进入游戏自己的第一页面前处理完（比如游戏默认的登录页面）。
 
 * 参数说明
-		
+
 		loginInfo: nest.user.LoginInfo 登录传入的类型方式。 如果没有获取到登录类型，请传递 {}
-		
+
 		callback:(resultInfo: nest.user.LoginCallbackInfo)=>void 回调结果函数
 			resultInfo：登录获取到的信息，根据 resultInfo.result == 0 来判断是否登录成功
 
@@ -150,22 +147,22 @@ permalink: /docs/rktt54v9/
 				//resultInfo.token
 			}
 			else if (resultInfo.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 			else {//登录失败
-				
+
 			}
 		})
 
 ### nest.easyuser.isSupport 检测api是否支持
 
 * 参数说明
-		
+
 		info:Object 请传递 {}
-		
+
 		callback:(resultInfo:nest.easyuser.UserSupportCallbackInfo)=>void 回调结果函数
 			getInfo：获取渠道是否支持获得用户信息接口，1是支持，其他不支持。如果支持可以使用nest.easyuser.getInfo获取用户信息
-			logout：获取渠道是否登出接口，1是支持，其他或者不存在都属于不支持。如果支持可以使用nest.easyuser.logout 
+			logout：获取渠道是否登出接口，1是支持，其他或者不存在都属于不支持。如果支持可以使用nest.easyuser.logout
 
 * 示例
 
@@ -202,14 +199,12 @@ permalink: /docs/rktt54v9/
 		         var country = data.country;      //国家
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		         //获取用户信息失败
 		    }
 		})
-
-
 
 ### nest.easyuser.logout 登出
 * 参数说明
@@ -225,18 +220,17 @@ permalink: /docs/rktt54v9/
 		nest.easyuser.logout({}, function (resultInfo:nest.core.ResultCallbackInfo) {
 		    if (resultInfo.result == 0) {
 		    	//登出成功，再次登录请使用直接按之前的登录方式登录 nest.easyuser.login
-        		
+
 		    }
 			else if (resultInfo.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //登出失败，有可能是该平台不支持登出接口
 		    }
 		});
-		
-### nest.core.addCallback 添加runtime事件回调
 
+### nest.core.addCallback 添加runtime事件回调
 
 * 参数说明
 
@@ -284,14 +278,12 @@ permalink: /docs/rktt54v9/
 		         //支付取消
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //支付失败
 		    }
 		})
-
-
 
 ### nest.share.isSupport 是否支持分享
 * 示例
@@ -300,9 +292,8 @@ permalink: /docs/rktt54v9/
 		    //获取是否支持nest.share.share接口，有该字段并且该字段值为1表示支持
 		    var share = data.share;
 		})
-	
-### nest.share.setDefaultData 设置默认分享信息接口
 
+### nest.share.setDefaultData 设置默认分享信息接口
 
 * 示例
 
@@ -322,13 +313,13 @@ permalink: /docs/rktt54v9/
 		        //设置成功
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //设置失败
 		    }
 		})
-		
+
 ### nest.share.share 分享
 
 ```调用此接口前请先使用 nest.share.isSupport 判断是否支持该功能```
@@ -352,13 +343,12 @@ permalink: /docs/rktt54v9/
 		        //分享取消
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //分享失败
 		    }
-		})	
-
+		})
 
 ### nest.social.isSupport 社交相关支持
 
@@ -369,15 +359,13 @@ permalink: /docs/rktt54v9/
 		    var openBBS = data.openBBS;
 		    var getFriends = data.getFriends;
 		})
-		
-		
+
 ### nest.social.getFriends 获取好友列表
 
 ```调用此接口前请先使用 nest.social.isSupport 判断是否支持该功能```
 
 * 示例
 
-		
 ### nest.social.openBBS 打开论坛
 
 ```调用此接口前请先使用 nest.social.isSupport 判断是否支持该功能```
@@ -389,7 +377,7 @@ permalink: /docs/rktt54v9/
 		        //打开成功
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //打开失败
@@ -411,8 +399,7 @@ permalink: /docs/rktt54v9/
 		    //获取是否支持nest.app.getInfo接口，有该字段并且该字段值为1表示支持
 		    var getInfo = data.getInfo;
 		})
-		
-		
+
 ### nest.app.attention 关注
 
 ```调用此接口前请先使用 nest.app.isSupport 判断是否支持该功能```
@@ -427,13 +414,13 @@ permalink: /docs/rktt54v9/
 		        //关注取消
 		     }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //关注失败
 		    }
 		})
-				
+
 ### nest.app.exitGame 退出游戏，回到 App 界面
 
 ```调用此接口前请先使用 nest.app.isSupport 判断是否支持该功能```
@@ -448,7 +435,7 @@ permalink: /docs/rktt54v9/
 		        //退出失败
 		    }
 		})
-				
+
 ### nest.app.sendToDesktop 发送到桌面
 
 ```调用此接口前请先使用 nest.app.isSupport 判断是否支持该功能```
@@ -460,13 +447,13 @@ permalink: /docs/rktt54v9/
 		        //保存成功
 		    }
 			else if (data.result == -3) {//平台登陆账号被踢掉，需要重新登陆
-			
+
 			}
 		    else {
 		        //保存失败
 		    }
 		})
-		
+
 ### nest.app.getInfo 获取客服信息
 
 ```调用此接口前请先使用 nest.app.isSupport 判断是否支持该功能```
@@ -492,10 +479,7 @@ permalink: /docs/rktt54v9/
 		    }
 		})
 
-
-
 ## 本地测试 （使用测试gameId 88888 测试）
-
 
 ### h5测试
 
@@ -510,13 +494,9 @@ platInfo=open\_```my_appId```_9166&egret.runtime.spid=9166&appId=```my_appId```&
 
 	4、弹出登录窗之后请选择`其他方式登陆`，用户名：```guest1```到```guest8```，密码：```123456```。qq、微博暂不可以测试。
 
-
 * 下面以游戏appId `88888` 为例代替上面参数中的 `my_appId`，最后测试的网址应该是（如果有跳转，请务必把参数也一起加上，一句话，最终的游戏运行的地址中必须要看到有上面的参数）
 
 	http://localhost:63342/HelloGUI/launcher/index.html?platInfo=open\_88888_9166&egret.runtime.spid=9166&appId=88888&channelId=9166&egretSdkDomain=http://api.egret-labs.org/v2&egretServerDomain=http://api.egret-labs.org/v2
-
-
-
 
 ### runtime
 

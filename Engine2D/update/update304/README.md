@@ -7,12 +7,11 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 
 下面介绍 Egret Engine 3.0.3 到 Egret Engine 3.0.4 之间的更新详情。
 
-### Egret Engine 2D 
+### Egret Engine 2D
 
-在 Egret Engine 2D 的 本次更新中，我们吸收开发者提供的反馈和建议，进一步稳定引擎并优化了一些体验。下面列出的是 3.0.3 到 3.0.4 的更新详情。 
+在 Egret Engine 2D 的 本次更新中，我们吸收开发者提供的反馈和建议，进一步稳定引擎并优化了一些体验。下面列出的是 3.0.3 到 3.0.4 的更新详情。
 
-
-#### TypeScipt 1.8 
+#### TypeScipt 1.8
 
 本次更新将 Egret Engine 内部的 TypeScript 版本进行了升级。从原来的 TypeScript 1.7 版本升级到 TypeScript 1.8 版本。在新版的 TypeScitpt 中有几点需要我们注意.
 
@@ -28,8 +27,8 @@ class TestBase {
 }
 
 class Test extends TestBase {
-	public constructor() {   	
-    	super(this._num);  //error  	
+	public constructor() {
+    	super(this._num);  //error
 	}
 	private _num:number = 1;
 }
@@ -60,7 +59,7 @@ for(var key in test) {
 更多关于 TypeScipt 1.8 的新特性可以关注 [What's new in TypeScript](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript)
 
 #### 获取声音长度
- 
+
 在 Egret Engine 2D 3.0.4 中，新增了一个 API ，用以获取当前播放声音的长度。通过获取 `egret.Sound`的 length 属性来获取当前播放声音的长度。需要注意的是该属性是只读的，我们并不能改变播放声音的长度。
 
 更多教程参考:[声音系统](http://edn.egret.com/cn/docs/page/156)

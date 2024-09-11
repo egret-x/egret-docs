@@ -27,7 +27,6 @@ permalink: /docs/egret3d/getStarted/getStarted/
 ![](Img_4.png)
 ![](Img_5.png)
 
-
 ----------
 
 * Hello Egret3D
@@ -35,20 +34,20 @@ permalink: /docs/egret3d/getStarted/getStarted/
 ----------
 
 	1) 打开src文件夹下的Main.ts文件，删除模板代码。输入如下代码：
-	
+
 	class Main extends egret.DisplayObject{
-		
+
 	    public constructor() {
 	        super();
-	        
+
 	    }
-	}     
+	}
 
 	2) 打开index.html文件，修改<body></body>内代码,如下所示：
 
 	<body>
-	
-	    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" 
+
+	    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
 	        data-entry-class="Main"
 	        data-orientation="auto"
 	        data-scale-mode="noScale"
@@ -60,13 +59,13 @@ permalink: /docs/egret3d/getStarted/getStarted/
 	        data-show-fps="false" data-show-log="false"
 	        data-log-filter="" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
 	    </div>
-	    
+
 	    <script>
 	        setTimeout( function () {
 				egret.runEgret();
 			},300);
 	    </script>
-	    
+
 	</body>
 
 ![](Img_6.png)
@@ -76,7 +75,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 * 创建Egret3DCanvas
 
 ----------
-	
+
 	1）什么是Egret3DCanvas：
 		a) Egret3DCanvas可以理解为渲染的画布，为我们绘制画面提供支持。
 		b) Egret3DCanvas构造后，需要定义起始点位置，和画布大小来控制我们显示内容的位置。
@@ -85,10 +84,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 		e) 代码示例：
 
 			class Main extends egret.DisplayObject {
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
-			
+
 			    public constructor() {
 			        super();
 			        console.log("Hello World,Hello Egret3D");
@@ -102,7 +101,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._egret3DCanvas.height = window.innerHeight;
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			        
+
 			    }
 			}
 
@@ -126,13 +125,12 @@ permalink: /docs/egret3d/getStarted/getStarted/
 		e) 代码示例：
 
 			class Main extends egret.DisplayObject {
-			
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    // View3D操作对象
 			    protected _view3D: egret3d.View3D;
-			
+
 			    public constructor() {
 			        super();
 			        //创建Canvas对象。
@@ -143,7 +141,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -154,12 +152,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._view3D.backColor = 0xffffff;
 			        //将View3D添加进Canvas中
 			        this._egret3DCanvas.addView3D(this._view3D);
-			
-			
+
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			
-			
+
 			        console.log("Hello World,Hello Egret3D");
 			    }
 			}
@@ -175,13 +171,12 @@ permalink: /docs/egret3d/getStarted/getStarted/
 		a）示例代码：
 
 			class Main extends egret.DisplayObject {
-			
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    // View3D操作对象
 			    protected _view3D: egret3d.View3D;
-			
+
 			    public constructor() {
 			        super();
 			        //创建Canvas对象。
@@ -192,7 +187,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -203,12 +198,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._view3D.backColor = 0xffffff;
 			        //将View3D添加进Canvas中
 			        this._egret3DCanvas.addView3D(this._view3D);
-			
-			
+
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			
-			
+
 			        //创建立方体，放置于场景内(0,0,0)位置
 			        //创建一个红色的颜色材质球
 			        var mat_cube: egret3d.ColorMaterial = new egret3d.ColorMaterial(0xff0000);
@@ -218,8 +211,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var cube = new egret3d.Mesh(geometery_Cube, mat_cube);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(cube);
-			
-			
+
 			        ///创建面片，放置于场景内(0,0,0)位置
 			        ///创建一个绿色的颜色材质球
 			        var mat_Plane: egret3d.ColorMaterial = new egret3d.ColorMaterial(0x00ff00);
@@ -229,8 +221,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(plane);
-			
-			
+
 			        console.log("Hello World,Hello Egret3D");
 			    }
 			}
@@ -241,13 +232,12 @@ permalink: /docs/egret3d/getStarted/getStarted/
 		a) 示例代码：
 
 			class Main extends egret.DisplayObject {
-			
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    // View3D操作对象
 			    protected _view3D: egret3d.View3D;
-			
+
 			    public constructor() {
 			        super();
 			        //创建Canvas对象。
@@ -258,7 +248,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -269,12 +259,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._view3D.backColor = 0xffffff;
 			        //将View3D添加进Canvas中
 			        this._egret3DCanvas.addView3D(this._view3D);
-			
-			
+
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			
-			
+
 			        //创建立方体，放置于场景内(0,0,0)位置
 			        //创建一个红色的颜色材质球
 			        var mat_cube: egret3d.ColorMaterial = new egret3d.ColorMaterial(0xff0000);
@@ -284,8 +272,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var cube = new egret3d.Mesh(geometery_Cube, mat_cube);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(cube);
-			
-			
+
 			        ///创建面片，放置于场景内(0,0,0)位置
 			        ///创建一个绿色的颜色材质球
 			        var mat_Plane: egret3d.ColorMaterial = new egret3d.ColorMaterial(0x00ff00);
@@ -295,45 +282,44 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(plane);
-			
+
 			        //自定三角面
 			        this.createTriangle();
-			
+
 			        console.log("Hello World,Hello Egret3D");
 			    }
-			
+
 			    //自定义数据构造一个三角面片
 			    protected createTriangle() {
 			        var geom: egret3d.Geometry = egret3d.GeometryUtil.createGeometry();
-			
+
 			        var vb: number[] = [];
 			        var ib: number[] = [];
-			
+
 			        // 0 1 2 坐标 3 4 5 6 颜色 7 8 uv
 			        vb.push(-50, -50, 0, 1, 0, 0, 1);
 			        vb.push(0, 50, 0, 0, 1, 0, 1);
 			        vb.push(50, -50, 0, 0, 0, 1, 1);
-			        // 加入3个顶点       
-			
+			        // 加入3个顶点
+
 			        // 设置顶点索引  3个索引  1个3角形面
 			        ib.push(0, 1, 2);
-			
+
 			        // 把数据填充进Geometry
 			        geom.setVerticesForIndex(0, egret3d.VertexFormat.VF_POSITION | egret3d.VertexFormat.VF_COLOR, vb, 3);
 			        geom.setVertexIndices(0, ib);
-			
+
 			        // 使用Geometry 创建Mesh
 			        var mesh: egret3d.Mesh = new egret3d.Mesh(geom, new egret3d.ColorMaterial(0xffffff));
-			
+
 			        // 设置双面渲染
 			        mesh.material.bothside = true;
-			
+
 			        this._view3D.addChild3D(mesh);
-			
+
 			        mesh.x = -200;
 			    }
-			
-			
+
 			}
 
 ![](Img_10.png)
@@ -342,13 +328,12 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			a) 示例代码：
 
 			class Main extends egret.DisplayObject {
-			
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    // View3D操作对象
 			    protected _view3D: egret3d.View3D;
-			
+
 			    public constructor() {
 			        super();
 			        //创建Canvas对象。
@@ -359,7 +344,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -370,12 +355,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._view3D.backColor = 0xffffff;
 			        //将View3D添加进Canvas中
 			        this._egret3DCanvas.addView3D(this._view3D);
-			
-			
+
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			
-			
+
 			        //创建立方体，放置于场景内(0,0,0)位置
 			        //创建一个默认的贴图材质球
 			        var mat_cube: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -385,8 +368,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var cube = new egret3d.Mesh(geometery_Cube, mat_cube);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(cube);
-			
-			
+
 			        ///创建面片，放置于场景内(0,0,0)位置
 			        ///创建一个默认的贴图材质球
 			        var mat_Plane: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -396,13 +378,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(plane);
-			
-			
-			
+
 			        console.log("Hello World,Hello Egret3D");
 			    }
-			
-			
+
 			}
 
 ![](Img_11.png)
@@ -411,8 +390,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			a) 示例代码：
 
 				class Main extends egret.DisplayObject {
-				
-				
+
 				    // Canvas操作对象
 				    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 				    // View3D操作对象
@@ -421,7 +399,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				    protected _camera: egret3d.Camera3D;
 				    // 当前按键状态
 				    protected _key: number;
-				
+
 				    public constructor() {
 				        super();
 				        //创建Canvas对象。
@@ -432,7 +410,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				        //设置Canvas页面尺寸。
 				        this._egret3DCanvas.width = window.innerWidth;
 				        this._egret3DCanvas.height = window.innerHeight;
-				
+
 				        //创建View3D对象,页面左上角为起始坐标(0,0)
 				        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 				        //当前对象对视位置,其参数依次为:
@@ -445,12 +423,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				        this._egret3DCanvas.addView3D(this._view3D);
 				        //初始化当前相机
 				        this._camera = this._view3D.camera3D;
-				
-				
+
 				        //启动_egret3DCanvas
 				        this._egret3DCanvas.start();
-				
-				
+
 				        //创建立方体，放置于场景内(0,0,0)位置
 				        //创建一个默认的贴图材质球
 				        var mat_cube: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -460,8 +436,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				        var cube = new egret3d.Mesh(geometery_Cube, mat_cube);
 				        //将mesh节点添加到View3D内
 				        this._view3D.addChild3D(cube);
-				
-				
+
 				        ///创建面片，放置于场景内(0,0,0)位置
 				        ///创建一个默认的贴图材质球
 				        var mat_Plane: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -471,20 +446,19 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 				        //将mesh节点添加到View3D内
 				        this._view3D.addChild3D(plane);
-				
+
 				        ///设置默认值-1
 				        this._key = -1;
-				
+
 				        ///注册事件，持有对象为_egret3DCanvas，每帧触发该注册方法，需要依次写入事件标识符，注册方法和注册对象。
 				        this._egret3DCanvas.addEventListener(egret3d.Event3D.ENTER_FRAME, this.OnUpdate, this);
 				        ///注册鼠标按下事件
 				        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_DOWN, this.OnKeyDown, this);
 				        ///注册鼠标回弹事件
 				        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_UP, this.OnKeyUp, this);
-				
-				
+
 				        console.log("Hello World,Hello Egret3D");
-				
+
 				    }
 				    //鼠标回弹事件
 				    public OnKeyUp(e: egret3d.KeyEvent3D) {
@@ -496,7 +470,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				        //记录按键信息
 				        this._key = e.keyCode;
 				    }
-				
+
 				    ///注册后，该事件将每帧响应
 				    public OnUpdate(e: egret3d.Event3D) {
 				        if (!this._camera || this._key == -1) {
@@ -512,7 +486,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				                break;
 				            case egret3d.KeyCode.Key_W:
 				                this._camera.z += -1;
-				
+
 				                break;
 				            case egret3d.KeyCode.Key_S:
 				                this._camera.z += 1;
@@ -521,11 +495,11 @@ permalink: /docs/egret3d/getStarted/getStarted/
 				                this._camera.x += 1;
 				                break;
 				            case egret3d.KeyCode.Key_D:
-				
+
 				                this._camera.x += -1;
 				                break;
 				        }
-				
+
 				    }
 				}
 
@@ -535,8 +509,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			a) 示例代码：
 
 			class Main extends egret.DisplayObject {
-			
-			
+
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    // View3D操作对象
@@ -545,7 +518,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			    protected _camera: egret3d.Camera3D;
 			    // 当前按键状态
 			    protected _key: number;
-			
+
 			    public constructor() {
 			        super();
 			        //创建Canvas对象。
@@ -556,7 +529,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -569,12 +542,10 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        this._egret3DCanvas.addView3D(this._view3D);
 			        //初始化当前相机
 			        this._camera = this._view3D.camera3D;
-			
-			
+
 			        //启动_egret3DCanvas
 			        this._egret3DCanvas.start();
-			
-			
+
 			        //创建立方体，放置于场景内(0,0,0)位置
 			        //创建一个默认的贴图材质球
 			        var mat_cube: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -584,8 +555,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var cube = new egret3d.Mesh(geometery_Cube, mat_cube);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(cube);
-			
-			
+
 			        ///创建面片，放置于场景内(0,0,0)位置
 			        ///创建一个默认的贴图材质球
 			        var mat_Plane: egret3d.TextureMaterial = new egret3d.TextureMaterial();
@@ -595,20 +565,17 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 			        //将mesh节点添加到View3D内
 			        this._view3D.addChild3D(plane);
-			
+
 			        ///设置默认值-1
 			        this._key = -1;
-			
+
 			        ///注册事件，持有对象为_egret3DCanvas，每帧触发该注册方法，需要依次写入事件标识符，注册方法和注册对象。
 			        this._egret3DCanvas.addEventListener(egret3d.Event3D.ENTER_FRAME, this.OnUpdate, this);
 			        ///注册鼠标按下事件
 			        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_DOWN, this.OnKeyDown, this);
 			        ///注册鼠标回弹事件
 			        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_UP, this.OnKeyUp, this);
-			
-			
-			
-			        
+
 			    	///创建一个灯光组，该灯光组将管理场景内的灯光资源
 			        var lights: egret3d.LightGroup = new egret3d.LightGroup();
 			        ///创建一个方向光对象，其中参数(-0.5, -0.6, 0.2)为方向向量，为灯光方向，默认方向为0, 0, 1)。
@@ -620,9 +587,9 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        ///设置灯效组。
 			        cube.material.lightGroup = lights;
 			        plane.material.lightGroup = lights;
-			
+
 			        console.log("Hello World,Hello Egret3D");
-			
+
 			    }
 			    //鼠标回弹事件
 			    public OnKeyUp(e: egret3d.KeyEvent3D) {
@@ -634,7 +601,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			        //记录按键信息
 			        this._key = e.keyCode;
 			    }
-			
+
 			    ///注册后，该事件将每帧响应
 			    public OnUpdate(e: egret3d.Event3D) {
 			        if (!this._camera || this._key == -1) {
@@ -650,7 +617,7 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			                break;
 			            case egret3d.KeyCode.Key_W:
 			                this._camera.z += -1;
-			
+
 			                break;
 			            case egret3d.KeyCode.Key_S:
 			                this._camera.z += 1;
@@ -659,11 +626,11 @@ permalink: /docs/egret3d/getStarted/getStarted/
 			                this._camera.x += 1;
 			                break;
 			            case egret3d.KeyCode.Key_D:
-			
+
 			                this._camera.x += -1;
 			                break;
 			        }
-			
+
 			    }
 			}
 

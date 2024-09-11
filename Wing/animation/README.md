@@ -26,9 +26,7 @@ permalink: /docs/r3fqaisx/
 
 ![](http://xzper.qiniudn.com/2016/12/animation/19.png)
 
-
 **TIPS:** 尽量不要给要添加动画的目标对象设置自动布局(left, right, top, bottom, horizontalCenter，verticalCenter)属性。这些属性可能会使对象的x, y, widht, height属性失效，如果动画里面涉及到改变这些属性的值，那么动画的表现也会出现异常。
-
 
 ### 切换到动画模式
 
@@ -44,7 +42,6 @@ permalink: /docs/r3fqaisx/
 
 **TIPS:** 一些行为在动画模式下将会被禁用或者限制。 例如在动画模式下，无法删除/复制/粘贴显示对象，对应的快捷键也会失效。 在**非关键帧状态下**也无法设置显示对象的位置, 大小等属性。 如果要对显示对象进行操作请**切换到设计模式**或者**在关键帧下操作属性**。
 
-
 ### 添加动画组和动画
 
 动画是以**组为单位**进行播放的，每个动画组可以为**多个显示对象**设置动画属性。
@@ -53,7 +50,7 @@ permalink: /docs/r3fqaisx/
 
 ![](http://xzper.qiniudn.com/2016/12/animation/04.png)
 
-接下来为动画组添加第一个动画。 但是可以发现动画那一栏的添加按钮是灰色不可用的。 在添加动画之前需要先选中一个显示对象，指定动画对应的目标才能添加动画。 
+接下来为动画组添加第一个动画。 但是可以发现动画那一栏的添加按钮是灰色不可用的。 在添加动画之前需要先选中一个显示对象，指定动画对应的目标才能添加动画。
 
 这里以刚刚添加的按钮为例，先在编辑区选中该按钮。
 
@@ -67,7 +64,7 @@ permalink: /docs/r3fqaisx/
 
 ![](http://xzper.qiniudn.com/2016/12/animation/07.png)
 
-“button”是这个按钮的id。 如果目标对象没有设置id属性则会自动创建一个，否则使用用户设置的id。 
+“button”是这个按钮的id。 如果目标对象没有设置id属性则会自动创建一个，否则使用用户设置的id。
 
 ### 编辑动画属性
 
@@ -144,7 +141,6 @@ AnimationSkin.exml
 		<e:Button id="button" label="按钮" x="193" y="35" width="100" height="50" anchorOffsetX="50" anchorOffsetY="25"/>
 	</e:Skin>
 
-
 在项目中，通过以下代码，当用户点击按钮的时候播放该动画组中的动画：
 
 AnimationPanel.ts
@@ -155,24 +151,24 @@ AnimationPanel.ts
 			// 设置当前面板的皮肤
 			this.skinName = skins.AnimationSkin;
 		}
-	
+
 		/**
 		 * EXML中对应id为tweenGroup的动画组对象
 		 */
 		public tweenGroup: egret.tween.TweenGroup;
-	
+
 		/**
 		 * EXML中对应id为button的按钮对象
 		 */
 		public button: eui.Button;
-	
+
 		/**
 		 * 动画组播放完成
 		 */
 		private onTweenGroupComplete(): void {
 			console.log('TweenGroup play completed.');
 		}
-	
+
 		/**
 		 * 动画组中的一项播放完成
 		 */
@@ -181,7 +177,7 @@ AnimationPanel.ts
 			console.log(item.target);
 			console.log('TweenItem play completed.');
 		}
-	
+
 		/**
 		 * 当点击按钮时播放动画
 		 */
@@ -189,7 +185,7 @@ AnimationPanel.ts
 			this.tweenGroup.play();
 			//this.tweenGroup.play(0);从头播放
 		}
-	
+
 		protected createChildren(): void {
 			super.createChildren();
 			this.tweenGroup.addEventListener('complete', this.onTweenGroupComplete, this);
@@ -198,8 +194,6 @@ AnimationPanel.ts
 		}
 	}
 
-
 最后如果对动画的实现感兴趣可以研究下EXML中关于动画的部分，以及在GitHub上可以找到动画实现的源代码：
 
 https://github.com/egret-labs/egret-core/blob/master/src/extension/tween/TweenWrapper.ts
-

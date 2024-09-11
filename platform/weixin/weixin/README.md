@@ -4,8 +4,7 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/ex5inmc2/
 ---
 
-
-## 一、配置JSSDK第三方库 
+## 一、配置JSSDK第三方库
 
 1、下载或更新第三方库 [第三方库github地址点此进入](https://github.com/egret-labs/egret-game-library)
 
@@ -58,7 +57,6 @@ path 表示微信模块文件的目录.
 
 在 egret 项目中添加如下代码
 
-
 ```
 var bodyConfig: BodyConfig = new BodyConfig();
 bodyConfig.appId = "此处填写公共平台appID，未认证的ID将不能使用自定义分享等接口，请联系微信官方获取";
@@ -83,28 +81,27 @@ if(wx) {
 
 [微信JS-SDK说明文档](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#JSSDK.E4.BD.BF.E7.94.A8.E6.AD.A5.E9.AA.A4)
 
-* 步骤一：绑定域名 
+* 步骤一：绑定域名
 
-先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。 
+先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
 
 备注：登录后可在“开发者中心”查看对应的接口权限。
 
- 
-* 步骤二：引入JS文件 
+* 步骤二：引入JS文件
 
 详见上一章，“配置JSSDK第三方库”
- 
+
 * 步骤三：通过config接口注入权限验证配置
 
 所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用（同一个url仅需调用一次，对于变化url的SPA的web app可在每次url变化时进行调用,目前Android微信客户端不支持pushState的H5新特性，所以使用pushState来实现web app的页面会导致签名失败，此问题会在Android6.2中修复）。
 
-注：这里需要通过后台脚本获得动态签名和时间戳等，这里可以参考开发者提供的教程配置后台脚本。 
+注：这里需要通过后台脚本获得动态签名和时间戳等，这里可以参考开发者提供的教程配置后台脚本。
 
 开发者提供的教程：[d8q8提供的教程地址](http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=3279)
 
 开发者提供的代码下载： [d8q8提供的源码下载](http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=6411)
 
-                    [php新接口更新](http://bbs.egret.com/forum.php?mod=viewthread&tid=10639) 
+                    [php新接口更新](http://bbs.egret.com/forum.php?mod=viewthread&tid=10639)
 
 此处感谢 [开发者论坛](http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=3279) d8q8 同志提供教程。
 
@@ -123,7 +120,7 @@ interface SignPackage {
 获取数据：
 
 ```
-private url:string; 
+private url:string;
 private signPackage:SignPackage;
     /**
      * 获取签名分享
@@ -140,13 +137,13 @@ private signPackage:SignPackage;
 }
 ```
 
-这里使用以上开发者 d8q8 教程中规定的json数据格式，具体如下: 
+这里使用以上开发者 d8q8 教程中规定的json数据格式，具体如下:
 
-* 公众号的唯一标识:  appId 
+* 公众号的唯一标识:  appId
 
-* 时间戳: timestamp  
+* 时间戳: timestamp
 
-* 随机码: nonceStr  
+* 随机码: nonceStr
 
 * 签名: signature
 
@@ -196,28 +193,28 @@ wx.ready(function() {
 
 备注：checkJsApi接口是客户端6.0.2新引入的一个预留接口，第一期开放的接口均可不使用checkJsApi来检测。
 
-## 三、具体接口的使用举例 
+## 三、具体接口的使用举例
 
 实例参考来源: [微信JSSDK 实例参考来源](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E6.AD.A5.E9.AA.A4.E5.9B.9B.EF.BC.9A.E9.80.9A.E8.BF.87ready.E6.8E.A5.E5.8F.A3.E5.A4.84.E7.90.86.E6.88.90.E5.8A.9F.E9.AA.8C.E8.AF.81)
 
 1.微信分享接口
 
-注：微信公共平台需要认证才能使用分享接口，详情咨询微信官方。 
+注：微信公共平台需要认证才能使用分享接口，详情咨询微信官方。
 
 1.1  获取“分享给朋友”按钮点击状态及自定义分享内容接口.
 
 ```
-private onShareAPPMessage() { 
+private onShareAPPMessage() {
             var shareAppMessage = new BodyMenuShareAppMessage();
             shareAppMessage.title = '发送给朋友';
             shareAppMessage.desc = '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。';
             shareAppMessage.link = 'http://movie.douban.com/subject/25785114/';
             shareAppMessage.imgUrl = 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg';
-            
+
             shareAppMessage.trigger = function (res) {
                 // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
                 console.log('用户点击发送给朋友');
-            }    
+            }
             shareAppMessage.success = function (res) {
                 console.log('已分享');
             };
@@ -226,15 +223,14 @@ private onShareAPPMessage() {
             };
             shareAppMessage.cancel = function (res) {
                 console.log(JSON.stringify(res));
-            };   
+            };
         }
 ```
 
 1.2 获取“分享到QQ”按钮点击状态及自定义分享内容接口
 
-
 ```
- private onShareQQ() { 
+ private onShareQQ() {
         var shareqq = new BodyMenuShareQQ();
         shareqq.title = "分享到QQ";
         shareqq.desc = "在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。";
@@ -254,14 +250,14 @@ private onShareAPPMessage() {
         };
         shareqq.fail = function (res) {
             console.log(JSON.stringify(res));
-        };    
+        };
     }
 ```
 
 1.3 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
 
 ```
-private onshareWeibo(e:egret.TouchEvent) { 
+private onshareWeibo(e:egret.TouchEvent) {
         var shareweibo = new BodyMenuShareWeibo();
         shareweibo.title = "用户点击分享到微博";
         shareweibo.desc = "在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。";
@@ -285,7 +281,7 @@ private onshareWeibo(e:egret.TouchEvent) {
 1.4 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
 
 ```
-private onTimeline(e:egret.TouchEvent): void { 
+private onTimeline(e:egret.TouchEvent): void {
         var sharet = new BodyMenuShareTimeline();
         sharet.title = "用户点击分享到朋友圈";
         sharet.link = "http://movie.douban.com/subject/25785114/";
@@ -302,7 +298,7 @@ private onTimeline(e:egret.TouchEvent): void {
         };
         sharet.fail = function (res) {
             console.log(JSON.stringify(res));
-        };    
+        };
     }
 ```
 

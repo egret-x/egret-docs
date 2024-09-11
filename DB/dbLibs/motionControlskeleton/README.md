@@ -11,8 +11,8 @@ permalink: /docs/db/dbLibs/motionControlskeleton/
 下面看一下实现这个功能的关键代码段。
 
 ~~~javascript
-this.head = this.armature.getBone("head");
-this.head.offset.rotation = r;
+this.head = this.armature.getBone('head')
+this.head.offset.rotation = r
 ~~~
 
 从上面代码我们可以看到，通过方法dragonBones.Armature.getBone(_name:String):Bone来获取某个骨骼。骨骼中的offset是一个DBTransform对象，是专门用于给开发者设置叠加的变换信息的，包括平移，旋转，缩放，等等。我们可以根据游戏逻辑的需要对设置这些参数，从而实现动态控制此骨骼的效果。

@@ -41,7 +41,7 @@ var onKeyEvent = function(code:number, action:number) {
     default:
         break;
 };
- 
+
 var registerKeyEvent = function () {
     // 注册一个KeyEvent的接口和回调
     var onKeyEventName = "onKeyEvent";
@@ -52,7 +52,7 @@ var registerKeyEvent = function () {
             onKeyEvent(event.code, event.action);
         }
     });
- 
+
     // 通知Runtime开始监听KeyEvent，并告知Egret的回调函数的接口名称
 	var message = {
 		"egretInterfaceName":onKeyEventName

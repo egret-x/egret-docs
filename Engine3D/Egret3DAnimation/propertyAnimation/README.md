@@ -9,7 +9,7 @@ permalink: /docs/qogssxov/
 
 物体动画 和 摄像机动画
 ----------
-这两种动画的驱动方式是一样的 
+这两种动画的驱动方式是一样的
 
     // 自定义数据动画
     protected createObjectAnimation() {
@@ -57,7 +57,7 @@ permalink: /docs/qogssxov/
         var proAnimation: egret3d.PropertyAnimController = new egret3d.PropertyAnimController();
         proAnimation.addPropertyAnim(proAnim);
         // 给cube 创建属性动画控制器
-        
+
         cube.proAnimation = proAnimation;
 
         // 播放
@@ -82,4 +82,3 @@ permalink: /docs/qogssxov/
 ![](Img_4.gif)
 
 ----------
-

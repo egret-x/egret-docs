@@ -106,7 +106,7 @@ class CameraAni extends LoadingUI
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.canvas.start();
-        
+
         this._view = new egret3d.View3D(0,0,window.innerWidth,window.innerHeight);
         this.canvas.addView3D(this._view);
         this._view.backColor = 0x00ff00;
@@ -136,10 +136,10 @@ class CameraAni extends LoadingUI
         this.ani = evt.target.data;
         this.ani.bindCamera(this._view.camera3D);
         this.ani.play(true);
-        
+
          this.canvas.addEventListener(egret3d.Event3D.ENTER_FRAME,this.update,this);
     }
-    
+
     private update(evt:egret3d.Event3D)
     {
         this.ani.update(10,16);
@@ -154,5 +154,3 @@ class CameraAni extends LoadingUI
 ## 摄像机帧数据
 
 由于摄像机动画相对比较简单，不涉及变形等信息，只包含了时间和摄像机在三维空间中的运动轨迹于姿态。你可以通过`CameraAnimationController`类中的`cameraAnimationFrames`属性获取当前摄像机动画的全部帧数据。每个帧数据的内容可参考`CameraAnimationFrame`类的API内容。
-
-

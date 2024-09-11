@@ -38,7 +38,7 @@ loader.load(new egret.URLRequest("resource/sound/sound.mp3"));
 ```javascript
 var sound:egret.Sound = RES.getRes("sound_mp3");
 sound.play();
-```     
+```
 ## 2.播放Sound
 
 ### 2.1.播放方法
@@ -57,7 +57,6 @@ sound.play();
 
 目前引擎内提供了4种声音的兼容模式，分别是 Audio、 WebAudio、QQAudio（qzone提供的声音解决方案）、以及 NativeAudio（打包方案Audio）
 
-
 * WebAudio：IOS系统版本大于等于7的所有IOS版本的浏览器，Egret 3.2.0 以后 Android 默认也使用 WebAudio，如果不支持 WebAudio 的 app 则会自动改成 Audio 方式。
 
 * QQAudio：在html页面指定了 “ https://qzonestyle.gtimg.cn/qzone/hybrid/lib/jsbridge.js ” （Qzone使用的js api）并且运行在`qq空间`的 android 机型。
@@ -66,19 +65,18 @@ sound.play();
 
 * NativeAudio：打包方案使用的audio。
 
-
-设置播放类型在项目根目录下的 index.html 模板文件中进行： 
+设置播放类型在项目根目录下的 index.html 模板文件中进行：
 
 ```javascript
 /**
-* {
-* "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
-* "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
-* "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
-* "retina": //是否基于devicePixelRatio缩放画布
-* }
-**/
-egret.runEgret({renderMode:"webgl", audioType:0});
+ * {
+ * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+ * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+ * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+ * "retina": //是否基于devicePixelRatio缩放画布
+ * }
+ */
+egret.runEgret({ renderMode: 'webgl', audioType: 0 })
 ```
 
 ## 3.音频示例
@@ -165,7 +163,6 @@ class SoundExample extends egret.DisplayObjectContainer {
 这里`play`方法会返回一个`SoundChannel`对象，通过控制`SoundChannel`的`volume`属性来设置音量大小,音量范围从 0（静音）至 1（最大音量）。`SoundChannel`对象的`position`属性可以获取到当前播放的时间，单位为秒。需要注意的是`position`属性是一个只读的属性，不能通过设置`position`来设置当前的播放时间。
 如果需要停止声音，可以调用`SoundChannel`对象的 `stop()` 方法。
 
-
 ## 4.注意事项
 
 * 声音资源的格式生成请严格按照此步骤来，不然会影响兼容性。
@@ -179,7 +176,7 @@ class SoundExample extends egret.DisplayObjectContainer {
 4. 如果还有问题，请到论坛联系我们 [开发者论坛](http://bbs.egret.com/portal.php)，并提供对应的音频文件。
 
 > 如果有问题，请尝试多转几次。
- 
+
 > 对于更专业的转换工具比如 audition，在测试中发现转换后的文件并不能解决在所有的浏览器中的播放问题，所以不推荐大家使用。
 
 > 在 iOS 系统（所有设备，包括IPAD）中，使用者在可能付费的网络环境中需要等待用户交互操作后才能播放媒体。为了获得在 iOS 系统中最大的兼容性，请避免使用自动播放音频（载入完成即播放），应添加合适的触发条件（比如播放按钮）。

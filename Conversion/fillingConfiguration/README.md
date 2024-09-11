@@ -51,7 +51,7 @@ permalink: /docs/Conversion/fillingConfiguration/
 
 **2. 在egret项目目录相应目录下创建ts类。**
 
-InvokeEventReason的flash包路径为flash.desktop.InvokeEventReason，在目录C:\Users\chenpeng\Desktop\out\demo1\src\as3\flash\desktop下创建InvokeEventReason.ts文件。填充内容如下： 
+InvokeEventReason的flash包路径为flash.desktop.InvokeEventReason，在目录C:\Users\chenpeng\Desktop\out\demo1\src\as3\flash\desktop下创建InvokeEventReason.ts文件。填充内容如下：
 
 ```
 module flash

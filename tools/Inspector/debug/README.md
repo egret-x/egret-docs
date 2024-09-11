@@ -24,13 +24,11 @@ permalink: /docs/tools/Inspector/debug/
 
 ![image](4.png)
 
-
 * 显示鼠标划过的对象
 
 勾选显示列表面板中的“高亮划过对象”选项，然后当鼠标在场景中移动时就会高亮显示鼠标滑过的对象
 
 ![image](5.png)
-
 
 * 选中点击对象
 
@@ -38,20 +36,17 @@ permalink: /docs/tools/Inspector/debug/
 
 ![image](6.png)
 
-
 * 刷新按钮
 
 由于在游戏中显示列表树变化频繁，所以Inspector中的显示列表树并不是实时更新的，而是当鼠标点击对象时更新。当你长时间没有点击时，显示列表树可能会与场景中的结构由很大差异导致不能自动更新，这时可以点击刷新按钮开重新加载显示列表树。
 
 ![image](7.png)
 
-
 * 展开显示列表
 
 在现实列表树中显示对象前方带有 + 号的对象表明含有子元素，可以点击展开。显示对象后面的选框是快速隐藏或者显示该对象的开关方便查看被遮盖的对象
 
 ![image](8.png)
-
 
 * 搜索在现实列表树下方的搜索框中（快捷键Ctrl/Command + Shift + F）输入 显示对象name或hashCode来搜索
 
@@ -80,9 +75,8 @@ permalink: /docs/tools/Inspector/debug/
 	![image](12.png)
 
 	对于只提供Getter没有Setter方法的属性，不能编辑
-	
-	![image](13.png)
 
+	![image](13.png)
 
 * 搜索在属性列表下方的搜索框中（快捷键Ctrl/Command + F）输入字符来搜索属性或属性值
 

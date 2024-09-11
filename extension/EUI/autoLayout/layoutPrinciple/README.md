@@ -32,6 +32,5 @@ protected updateDisplayList(unscaledWidth:number, unscaledHeight:number):void {
     }
     this.updateScrollRect();
 }
-~~~ 
+~~~
 `Group`把自己的`measure()`方法交给`layout.measure()`实现，`updateDisplayList()`交给`layout.updateDisplayList()`实现。也就是把具体的布局方式解耦出来，形成独立的`LayoutBase`类。这样所有的容器都可以采用`Group+LayoutBase`的组合的方式，来设置任意的布局。
-

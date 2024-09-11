@@ -328,7 +328,7 @@ permalink: /docs/db/dbLibs/dataFormat/
     "name": "dataName",
     // DB版本号
     "version": "4.0",
-    // DB动画帧频           
+    // DB动画帧频
     "frameRate": 24
     //【可选属性】是否使用绝对数据，默认0（使用相对数据）
     "isGlobal": 0,

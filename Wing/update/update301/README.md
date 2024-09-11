@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/h1jhnvzv/
 ---
-
+
 在Egret Wing 3.0.1 这个版本中，我们主要做了以下改进
 - 增强了 Wing 插件体系的用户交互能力
 - 优化了插件项目的创作和发布流程。
@@ -25,7 +25,7 @@ permalink: /docs/h1jhnvzv/
 
     import * as wing from 'wing';
     import {PopupType, Store, IStoreMap, IStoreSchema, IStoreSchemaMap, IFormOptions} from 'wing';
-    
+
     export function action(): void {
     	wing.window.showPopup<IFormOptions>(PopupType.Form, new Store(properties, scheme), {
     		title: '表单例子'
@@ -33,7 +33,7 @@ permalink: /docs/h1jhnvzv/
     		wing.window.showInformationMessage(JSON.stringify(result.getProperties(true)));
     	});
     }
-    
+
     const scheme: IStoreSchemaMap = {
     	checkbox: {
     		type: 'boolean',
@@ -46,7 +46,7 @@ permalink: /docs/h1jhnvzv/
     		description: '文本输入框'
     	}
     }
-    
+
     const properties = {
     	inputbox: 'Initial Value'
     }
@@ -64,7 +64,6 @@ Wing 现在可以直接调试插件项目，在插件项目中直接点击“调
 ![alt tag](56de6794a01fb.png)
 
 **自定义文件格式编辑器正在紧张的开发中，敬请期待。**
-
 
 ##Egret Store
 ###插件商城
@@ -88,7 +87,6 @@ Wing 现在可以使用内置的浏览器直接调试 Egret 或者其他 HTML5 �
 
 ##优化 Mac retina 屏幕下的显示效果。
 Wing 3.0.1 优化了部分面板在 Mac retina 屏幕下的显示效果，UI界面更加清晰。
-
 
 ##Next
 

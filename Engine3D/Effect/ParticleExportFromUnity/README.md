@@ -20,7 +20,7 @@ permalink: /docs/5fkvlpzd/
 		this._particleLoader = new UnitLoader("resource/doc/effect_doc/particle_res/MapConfig.json");
         this._particleLoader.addEventListener(LoaderEvent3D.LOADER_COMPLETE, this.onParticleLoad, this);
 	}
-    
+
     private onParticleLoad(e: LoaderEvent3D): void {
         this._view3D.addChild3D(this._particleLoader.container);
     }
@@ -49,4 +49,3 @@ permalink: /docs/5fkvlpzd/
 * 谨慎使用world类型的粒子，这种类型的粒子会使用CPU检测更新顶点数据，导致渲染效率下降。
 
 ----------
-

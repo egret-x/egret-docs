@@ -5,7 +5,6 @@ permalink: /docs/egret2d/bitmapTexture/useTexture/
 ---
 纹理集是将一些零碎的小图放到一张大图当中。游戏中经常使用到纹理集。
 
-
 Egret内置了纹理集的支持，在编写代码之前，需要先制作一张纹理集，具体使用的工具可以选择业内比较流行的 Texture Merger。 具体使用方法请参考[Texture Merger](../../../tools/TextureMerger/manual/README.md)。
 
 ## 使用步骤
@@ -14,77 +13,75 @@ Egret内置了纹理集的支持，在编写代码之前，需要先制作一张
 
   ![](566150114f41c.png)
 
-
 同时生成的对应的json文件如下：
-  
+
 ```json
 {
-    "file": "dogs.png",
-    "frames": {
-        "dog1": {
-            "x": 322,
-            "y": 2,
-            "w": 184,
-            "h": 222,
-            "offX":0,
-            "offY":0,
-            "sourceW":184,
-            "sourceH":222
-        },
-        "dog2": {
-            "x": 307,
-            "y": 226,
-            "w": 147,
-            "h": 154,
-            "offX":0,
-            "offY":0,
-            "sourceW":147,
-            "sourceH":154
-        },
-        "dog3": {
-            "x": 2,
-            "y": 2,
-            "w": 318,
-            "h": 217,
-            "offX":0,
-            "offY":0,
-            "sourceW":318,
-            "sourceH":217
-        },
-        "dog4": {
-            "x": 2,
-            "y": 393,
-            "w": 298,
-            "h": 201,
-            "offX":0,
-            "offY":0,
-            "sourceW":298,
-            "sourceH":201
-        },
-        "dog5": {
-            "x": 2,
-            "y": 221,
-            "w": 303,
-            "h": 170,
-            "offX":0,
-            "offY":0,
-            "sourceW":303,
-            "sourceH":170
-        },
-        "dog6": {
-            "x": 2,
-            "y": 596,
-            "w": 245,
-            "h": 125,
-            "offX":0,
-            "offY":0,
-            "sourceW":245,
-            "sourceH":125
-        }
+  "file": "dogs.png",
+  "frames": {
+    "dog1": {
+      "x": 322,
+      "y": 2,
+      "w": 184,
+      "h": 222,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 184,
+      "sourceH": 222
+    },
+    "dog2": {
+      "x": 307,
+      "y": 226,
+      "w": 147,
+      "h": 154,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 147,
+      "sourceH": 154
+    },
+    "dog3": {
+      "x": 2,
+      "y": 2,
+      "w": 318,
+      "h": 217,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 318,
+      "sourceH": 217
+    },
+    "dog4": {
+      "x": 2,
+      "y": 393,
+      "w": 298,
+      "h": 201,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 298,
+      "sourceH": 201
+    },
+    "dog5": {
+      "x": 2,
+      "y": 221,
+      "w": 303,
+      "h": 170,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 303,
+      "sourceH": 170
+    },
+    "dog6": {
+      "x": 2,
+      "y": 596,
+      "w": 245,
+      "h": 125,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 245,
+      "sourceH": 125
     }
+  }
 }
 ```
-
 
 * 将资源文件拷贝到项目文件夹中的 `resource/assets/` 目录下，同时修改资源配置文件 `default.res.json` 。
 
@@ -92,13 +89,13 @@ Egret内置了纹理集的支持，在编写代码之前，需要先制作一张
 
 ```json
 {
-"resources":
+  "resources":
     [
-        {"name":"dogs","type":"sheet","url":"assets/dogs.json"}
+      { "name": "dogs", "type": "sheet", "url": "assets/dogs.json" }
     ],
-"groups":
+  "groups":
     [
-        {"name":"preload","keys":"dogs"}
+      { "name": "preload", "keys": "dogs" }
     ]
 }
 ```
@@ -136,9 +133,7 @@ var txtr:egret.Texture = RES.getRes( "dogs#dog1" );
 
 编译后运行，效果如图：
 
-
 ![](5661501178058.png)
-
 
 ## 那么在 HTML5 游戏中使用纹理集的好处是什么呢？
 
@@ -158,7 +153,6 @@ var txtr:egret.Texture = RES.getRes( "dogs#dog1" );
 我们知道浏览器本身对 HTTP 请求的数量也是有限制的，而当到达了这一限制时，浏览器便会阻塞之后的请求。
 如果你拥有 4千个待请求的 HTTP，但是这时候却只能同时进行 6 个连接，所以后面的请求便只能被暂时搁置着。所以除了能够减少加载时间，同样也能够减少 HTTP 的请求数量。
 
-
 * 第二个 在 webgl 模式下，能够进行硬件加速。这也就意味着 GPU 将处理图像和转化。这时使用了纹理集可以降低 GPU 渲染批次（Draw）来提升渲染性能，每个纹理都必须在绘制出几何体图像前与 GPU 连接在一起，并且特定的 GPU 都必须拥有一个特定数量的纹理槽，所以在抽样单位间进行纹理转化将需要花费大量的时间。而纹理集则能够通过让 GPU 将一个单一纹理绑定在图像驱动器上而减少转化所需要的额外开销，也就是减少少 Draw 的次数，而提升游戏的性能。
 
 使用纹理集
@@ -172,4 +166,3 @@ var txtr:egret.Texture = RES.getRes( "dogs#dog1" );
 在图中可以很明确的看出如果不使用纹理集时 Draw 的次数应该为 8，在使用了纹理集时 Draw 的数量仅为 1，这个简单的例子足以说明纹理集对 Draw 数量的影响程度。有很多开发者遇到 Draw 的数量太高，其实合理的使用纹理图集会很好的减少 Draw 数量。
 
 关于纹理集先介绍到这里，后期将会更深入的介绍如何根据实际项目来使用纹理集。
-

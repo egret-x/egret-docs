@@ -35,7 +35,7 @@ class BitmapTest extends egret.DisplayObjectContainer{
         super();
         this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
     }
-    
+
     private onAddToStage(event:egret.Event) {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComp, this);
         RES.loadConfig("resource/resource.json", "resource/");
@@ -79,8 +79,8 @@ Warning #1018: 9宫格设置错误
 
 具体来讲正确的九宫格设置为:
 ```javascript
-x + w < 图片宽度;
-y + h < 图片高度;
+x + w < 图片宽度
+y + h < 图片高度
 ```
 其中`x`和`y`是设置九宫格的位置，w和h为设置九宫格的宽和高。其中 x,y,w,h 应大于等于 0。
 

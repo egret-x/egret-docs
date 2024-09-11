@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/np8n1uhz/
 ---
-
+
 最新版本下载地址
 
 - [Egret Wing 3.1.6 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v3.1.6.exe?d=0707)
@@ -34,15 +34,14 @@ permalink: /docs/np8n1uhz/
 - 可视化编辑区右键菜单中提示快捷键。
 
  ![](57a9b2a03a9a6.png)
- 
+
 - 图层中增加解组合打组的快捷按钮。
 
  ![](57a9b2ddab182.png)
- 
+
 - 标尺可单独控制开关，不在占用编辑区空间。
 
  ![](57a9b30f7032b.png)
-
 
 ### 修复
 - 修复调试时getter/setter属性无法显示正确值的问题。
@@ -52,4 +51,3 @@ permalink: /docs/np8n1uhz/
 - 修复部分sheet中资源无法解析的bug。
 - 修复Label色值无法手动编辑的bug。
 - 修复属性面板下拉框滚动条嵌套时，两个滚动条会同时响应滚轮的bug。
-

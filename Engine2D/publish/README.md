@@ -12,12 +12,12 @@ permalink: /docs/Engine2D/publish/
 #### 发布的项目类型
 我们在引擎工具 [Egret Launcher](https://egret.com/products/engine.html) 里集成了打包发布的可视化工具，可以把您的项目发布成多种类型。
 
-目前支持的发布类型有： 
+目前支持的发布类型有：
 
 * `Html5`
 * `iOS`
-* `Android` 
-* `微信小游戏` 
+* `Android`
+* `微信小游戏`
 * `QQ 玩一玩`
 * `Facebook Instant Game`
 * `QQ 玩一玩`
@@ -28,14 +28,12 @@ permalink: /docs/Engine2D/publish/
 
 ![](./p1.png)
 
-
 * 2）在弹出的面板中，左侧可以选择要发布的项目类型。
 
 ![](./p2.png)
 
-
 * 3）在 `Html5` 类型里可以填写版本号，用于版本控制。比如版本号填写了`v1`,那么发布出来的项目结构如下图所示
- 
+
 ![](./p3.png)
 
 **更多发布原生项目的信息，请查看 [Egret Native 相关文档](http://developer.egret.com/cn/github/egret-docs/Native/index.html?home=1)**

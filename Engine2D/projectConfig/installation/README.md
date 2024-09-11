@@ -39,7 +39,6 @@ EgretLauncher 安装完成后，点击完成按钮。
 
 ![](Snip20170829_8.png)
 
-
 ## 安装引擎和工具
 
 打开 EgretLauncher ，选择“引擎”，如下图。

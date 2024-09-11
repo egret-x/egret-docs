@@ -32,15 +32,15 @@ img.texture = RES.getRes("图片ID");
 
 ```json
 {
-    "resources":
+  "resources":
     [
-        {"name":"bgImage","type":"image","url":"assets/bg.jpg"},
-        {"name":"egretIcon","type":"image","url":"assets/egret_icon.png"},
-        {"name":"description","type":"json","url":"config/description.json"}
+      { "name": "bgImage", "type": "image", "url": "assets/bg.jpg" },
+      { "name": "egretIcon", "type": "image", "url": "assets/egret_icon.png" },
+      { "name": "description", "type": "json", "url": "config/description.json" }
     ],
-    "groups":
+  "groups":
     [
-        {"name":"preload","keys":"bgImage,egretIcon"}
+      { "name": "preload", "keys": "bgImage,egretIcon" }
     ]
 }
 ```
@@ -59,7 +59,7 @@ img.texture = RES.getRes("图片ID");
 
 ### 2.2.组
 
-组包含在“groups”中，组的概念是将不同的资源分类，当逻辑启动加载后，可以选择以组为单位进行加载。 
+组包含在“groups”中，组的概念是将不同的资源分类，当逻辑启动加载后，可以选择以组为单位进行加载。
 
 ## 3.示例
 
@@ -91,18 +91,15 @@ class BitmapTest extends egret.DisplayObjectContainer{
 
 ![](56614ea87fa1a.jpg)
 
-
 ## 3.其他方式创建位图
 ### 3.1 您还可以通过其他方式创建位图，例如 base64
 ```javascript
- let str64 = "iVBORw0KGgoAAAANSUhEUgAAAHM..."
- egret.BitmapData.create("base64",str64,(bitmapData)=>{
-    let texture = new egret.Texture();
-    texture.bitmapData = bitmapData;
-    let bmp = new egret.Bitmap(texture);
-    this.addChild(bmp)
+const str64 = 'iVBORw0KGgoAAAANSUhEUgAAAHM...'
+egret.BitmapData.create('base64', str64, (bitmapData) => {
+  const texture = new egret.Texture()
+  texture.bitmapData = bitmapData
+  const bmp = new egret.Bitmap(texture)
+  this.addChild(bmp)
 })
 ```
 [示例demo](http://tool.egret-labs.org/DocZip/engine/core/display/base64Demo.zip)
-
-

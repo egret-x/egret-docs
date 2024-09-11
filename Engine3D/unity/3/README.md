@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/xgke9qnv/
 ---
 
-
 	1）前两篇教程我们讲述了，如何调节材质球和如何输出mesh信息，本篇教程将进一步讲解如何输出SkinnedMesh。
 	2）我们打开Example文件夹下的Example_3场景文件，目录位置如图所示：
 
@@ -50,7 +49,7 @@ permalink: /docs/xgke9qnv/
 			class Main extends egret.DisplayObject {
 			    // Canvas操作对象
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
-			
+
 			    // View3D操作对象
 			    protected _view3D: egret3d.View3D;
 			    /**
@@ -61,16 +60,15 @@ permalink: /docs/xgke9qnv/
 			    * 3.滑动鼠标滚轮可以控制摄像机的视距。</p>
 			    */
 			    private cameraCtl: egret3d.LookAtController;
-			
+
 			    //加载队列
 			    private urlArray: Array<string> = new Array<string>();
 			    //队列加载器
 			    private mapLoader: egret3d.QueueLoader;
-			
-			
+
 			    public constructor() {
 			        super();
-			
+
 			        //创建Canvas对象。
 			        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 			        //Canvas的起始坐标，页面左上角为起始坐标(0,0)。
@@ -79,7 +77,7 @@ permalink: /docs/xgke9qnv/
 			        //设置Canvas页面尺寸。
 			        this._egret3DCanvas.width = window.innerWidth;
 			        this._egret3DCanvas.height = window.innerHeight;
-			
+
 			        //创建View3D对象,页面左上角为起始坐标(0,0)
 			        this._view3D = new egret3d.View3D(0, 0, window.innerWidth, window.innerHeight);
 			        //当前对象对视位置,其参数依次为:
@@ -90,7 +88,7 @@ permalink: /docs/xgke9qnv/
 			        this._view3D.backColor = 0xffffffff;
 			        //将View3D添加进Canvas中
 			        this._egret3DCanvas.addView3D(this._view3D);
-			
+
 			        //插入加载任务
 			        this.urlArray.push("resource/Main/character.e3dPack");
 			        this.mapLoader = new egret3d.QueueLoader();
@@ -98,21 +96,21 @@ permalink: /docs/xgke9qnv/
 			            this.mapLoader.load(this.urlArray[i]);
 			        }
 			        this.mapLoader.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE, this.OnMapLoad, this);
-			
+
 			        this.InitCameraCtl();
-			
+
 			        //启动Canvas。
 			        this._egret3DCanvas.start();
 			        this._egret3DCanvas.addEventListener(egret3d.Event3D.ENTER_FRAME, this.update, this);
-			
+
 			        //设置window resize事件
 			        egret3d.Input.addEventListener(egret3d.Event3D.RESIZE, this.OnWindowResize, this);
 			    }
-			
+
 			    public update(e: egret3d.Event3D) {
 			        this.cameraCtl.update();
 			    }
-			
+
 			    /**
 			    * 窗口尺寸变化事件
 			    */
@@ -123,7 +121,7 @@ permalink: /docs/xgke9qnv/
 			        this._view3D.width = window.innerWidth;
 			        this._view3D.height = window.innerHeight;
 			    }
-			
+
 			    /**
 			    * 初始化相机控制
 			    */
@@ -135,19 +133,18 @@ permalink: /docs/xgke9qnv/
 			        //设置相机x轴旋转
 			        this.cameraCtl.rotationX = 0;
 			    }
-			
+
 			    ///加载完成事件
 			    private OnMapLoad(e: egret3d.LoaderEvent3D) {
-			
+
 			        for (var i = 0; i < this.urlArray.length; i++) {
 			            var role: egret3d.Role = this.mapLoader.getAsset(this.urlArray[i]);
 			            this._view3D.addChild3D(role);
 			            role.skeletonAnimation.play();
 			        }
 			    }
-			
-			
-			}     
+
+			}
 
 		b）Index.html
 			<!DOCTYPE HTML>
@@ -157,7 +154,7 @@ permalink: /docs/xgke9qnv/
 			    <title>Egret</title>
 			    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 			    <meta name="apple-mobile-web-app-capable" content="yes">
-			    
+
 			    <style>
 			        html, body {
 			            -ms-touch-action: none;
@@ -168,18 +165,18 @@ permalink: /docs/xgke9qnv/
 			            height: 100%;
 			        }
 			    </style>
-			
+
 			    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
 			    <!--modules_files_start-->
 				<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
 				<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
 				<script egret="lib" src="libs/modules/egret3d/egret3d.js" src-release="libs/modules/egret3d/egret3d.min.js"></script>
 				<!--modules_files_end-->
-				
+
 			    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
 			    <!--other_libs_files_start-->
 			    <!--other_libs_files_end-->
-			
+
 			    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
 			    <!--game_files_start-->
 				<script egret="game" src="bin-debug/Main.js"></script>
@@ -193,8 +190,8 @@ permalink: /docs/xgke9qnv/
 			    </script>
 			</head>
 			<body>
-			
-			    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" 
+
+			    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
 			        data-entry-class="Main"
 			        data-orientation="auto"
 			        data-scale-mode="noScale"
@@ -211,7 +208,7 @@ permalink: /docs/xgke9qnv/
 						egret.runEgret();
 					},300);
 			    </script>
-			    
+
 			</body>
 			</html>
 

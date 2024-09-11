@@ -198,7 +198,7 @@ public showPosition(e:egret.Event) {
 }
 ```
 
-### 2.6.获取视频的`bitmapData` 
+### 2.6.获取视频的`bitmapData`
 
 通过视频的`bitmapData`属性可以获得其当前帧的纹理信息。可以将它绘制到舞台上。
 
@@ -232,7 +232,6 @@ public printScreen(e:egret.Event) {
 `Video`的 `length` 属性可以获得视频的长度。
 
 ```javascript
-//获取视频长度
-console.log(this.video.length);
+// 获取视频长度
+console.log(this.video.length)
 ```
-

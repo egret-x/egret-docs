@@ -55,7 +55,7 @@ private onResourceLoadErr( event:RES.ResourceEvent ):void {
 若同时启动多个资源组一起加载，比如在加载"preload"前，我们希望先加载一个更小的"loading"资源组，以提供显示"preload"组加载进度的素材，可以使用RES.loadGroup()的第二个参数，为"loading"组传入一个优先级更大的数字，来迫使loading组在preload前加载完成，代码如下：
 
 ```
-RES.loadGroup("loading",1); 
+RES.loadGroup("loading",1);
 RES.loadGroup("preload",0);
 ```
 

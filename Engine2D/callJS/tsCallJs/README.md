@@ -24,7 +24,7 @@ permalink: /docs/egret2d/callJS/tsCallJs/
 
 ~~~javascript
 function callJsFunc(msg) {
-	console.log("msg from egret : " + msg);
+  console.log(`msg from egret : ${msg}`)
 }
 ~~~
 
@@ -37,7 +37,7 @@ declare function callJsFunc(msg:string);//可以放在 ts 文件内（建议在�
 * ts 内调用
 
 ~~~javascript
-callJsFunc("hello js");
+callJsFunc('hello js')
 ~~~
 
 * 输出
@@ -46,9 +46,7 @@ callJsFunc("hello js");
 msg from egret : hello js
 ~~~
 
-
 > 总结：在 js 调用 js 的基础上增加声明。其他的比如变量等，也是按上面步骤来实现。
-
 
 ## 3.js 调用 ts
 
@@ -78,7 +76,6 @@ module exampleA {
 }
 ~~~
 
-
 * 非同一模块下 ts 调用
 
 ~~~javascript
@@ -87,23 +84,20 @@ module exampleB {
     	//调用方法
     	var a:exampleA.A = new exampleA.A();
     	a.callEgretMethod("method");
-    	
+
     	//调用静态函数
     	exampleA.A.CallEgretFunc("function");
     }
 }
 ~~~
 
-
-
 * js 内调用
 
-
 ~~~javascript
-var a = new exampleA.A();//去掉 a 的类型
-a.callEgretMethod("method");
+const a = new exampleA.A()// 去掉 a 的类型
+a.callEgretMethod('method')
 
-exampleA.A.CallEgretFunc("function");
+exampleA.A.CallEgretFunc('function')
 ~~~
 
 * 输出

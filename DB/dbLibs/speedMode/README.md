@@ -99,7 +99,7 @@ private _animationStateList:Array<AnimationState>;
 
 因为FastAnimation中只包含一个FastAnimationState实例，也就是说任何时间，同一时间一个角色只会播放一个动画。一个动画的开始就意味着之前一个动画的结束。
 
-而普通模式的Animation中，一个角色是可以同时播放多个动画的，也就是动画融合功能。例如一个奔跑的角色被子弹打中身体后仰。就可以通过让这个角色同时播放奔跑和后仰两个动作来实现，这样当这个角色站立时中弹和下蹲时中弹，都可以用类似的方式实现，而不需要动画设计师额外设计动画。这个功能在极速模式中已经不再支持了。 
+而普通模式的Animation中，一个角色是可以同时播放多个动画的，也就是动画融合功能。例如一个奔跑的角色被子弹打中身体后仰。就可以通过让这个角色同时播放奔跑和后仰两个动作来实现，这样当这个角色站立时中弹和下蹲时中弹，都可以用类似的方式实现，而不需要动画设计师额外设计动画。这个功能在极速模式中已经不再支持了。
 
 2. 动画过渡原理和效果发生变化
 
@@ -114,7 +114,6 @@ private _animationStateList:Array<AnimationState>;
 下面看看极速模式是如何生成并使用数据缓存的：
 
 在db源代码中有个叫cache的文件夹里面包含所有的好数据缓存有关的类。其中最重要的就是AnimationCacheManager和AnimationCache这两个类。AnimationCacheManager是使用数据缓存的入口，也是AnimationCache的管理器。AnimationCache负责对某个特定的动画进行缓存。
-
 
 ![](56c315065bd6b.png)
 
@@ -142,7 +141,7 @@ public enableAnimationCache(frameRate:number, animationList:Array<any> = null, l
    }
    animationCacheManager.setCacheGeneratorArmature(this);
    animationCacheManager.generateAllAnimationCache(loop);
-   
+
    animationCacheManager.bindCacheUserArmature(this);
    this.enableCache = true;
    return animationCacheManager;
@@ -186,7 +185,6 @@ animationCacheManager.bindCacheUserArmature(this);//绑定缓存使用者
 
 这个参数代表动画在缓存采样时，采用循环播放的方式还是只播放1次。是否循环的区别在于从动画的最后一帧到第一帧是否有补间产生。这里建议根据角色动画的需要，需要循环播放的动画就循环采样，只需要播放一次的动画，就不循环采样。
 
-
 深入使用数据缓存
 
 FastArmature的enableAnimationCache 方法给开发者提供了快速开启缓存的方法，操作简单但不够灵活。如果开发者希望灵活的使用数据缓存，就需要直接操作AnimationCacheManager了。
@@ -209,4 +207,4 @@ animationCacheManager.bindCacheUserArmatures([a1,a2,a3,a4,a5]);
 
 ```
 animationCacheManager.generateAnimationCache(animationName);
-```    
+```

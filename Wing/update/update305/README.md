@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/0s3tlysn/
 ---
-
+
 3.0.5 是一个小幅更新，主要修复了以下问题
 
 - 修复某些浏览器异常会导致调试功能失败的 bug
@@ -12,4 +12,3 @@ permalink: /docs/0s3tlysn/
 已知问题：
 
 - 修改快捷键后，需要重新启动 Wing 才生效的问题
-

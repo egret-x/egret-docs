@@ -35,13 +35,13 @@ Channel3d 类控制应用程序中 在三维空间中播放的声音。每个声
     // 加载声音文件成功
     private loadSoundSuccess(e): void {
         var channel3d:egret3d.Channel3d = new egret3d.Channel3d(e,{"volume":1,"loop":true});
-        
+
         channel3d.volume = 1;
         channel3d.position = new egret3d.Vector3D(0,0,0);
         channel3d.velocity = new egret3d.Vector3D(0,0,0);
         channel3d.play();
-        
+
     }
-        
+
 ```
 使用`F5`调试即可播放。

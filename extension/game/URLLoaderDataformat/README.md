@@ -20,35 +20,33 @@ permalink: /docs/extension/game/URLLoaderDataformat/
 以上五种数据格式的设置均需要 `URLLOaderDataFormat` 类。如果想更改默认的文本格式，可以修改 `URLLoader` 中的 `dataFormat` 属性。 具体示例代码如下：
 
 ``` typescript
-class NetDemo extends egret.DisplayObjectContainer
-{
-    public constructor()
-    {
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-    }
-    private urlloader:egret.URLLoader;
-    private onAddToStage(event:egret.Event)
-    {
-        this.urlloader = new egret.URLLoader();
-        this.urlloader.dataFormat = egret.URLLoaderDataFormat.VARIABLES;
-        var urlreq:egret.URLRequest = new egret.URLRequest();
-        urlreq.url = "http://httpbin.org/headers";
-        this.urlloader.load( urlreq );
-        this.urlloader.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
-    }
-    private onComplete(event:egret.Event):void
-    {
-        console.log( this.urlloader.data );
-    }
-}   
-``` 
+class NetDemo extends egret.DisplayObjectContainer {
+  public constructor() {
+    super()
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this)
+  }
+
+  private urlloader: egret.URLLoader
+  private onAddToStage(event: egret.Event) {
+    this.urlloader = new egret.URLLoader()
+    this.urlloader.dataFormat = egret.URLLoaderDataFormat.VARIABLES
+    const urlreq: egret.URLRequest = new egret.URLRequest()
+    urlreq.url = 'http://httpbin.org/headers'
+    this.urlloader.load(urlreq)
+    this.urlloader.addEventListener(egret.Event.COMPLETE, this.onComplete, this)
+  }
+
+  private onComplete(event: egret.Event): void {
+    console.log(this.urlloader.data)
+  }
+}
+```
 
 其中有一行：
 
 ``` typescript
-this.urlloader.dataFormat = egret.URLLoaderDataFormat.VARIABLES;
-``` 
+this.urlloader.dataFormat = egret.URLLoaderDataFormat.VARIABLES
+```
 
 对加载的数据格式进行了修改，设置为“URL编码”格式。
 

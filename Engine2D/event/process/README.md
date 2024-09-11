@@ -101,4 +101,3 @@ class DateEvent extends egret.Event
 编译并运行，效果如图：
 
 ![](566143f9ec1bc.png)
-

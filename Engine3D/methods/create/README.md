@@ -45,7 +45,6 @@ permalink: /docs/egret3d/methods/create/
 10. `编辑器右侧`就是代码编辑区域了。
 11. `底部的状态栏`显示一些警告错误和用户登录情况的提示。
 
-
 ## 3、Egret3D项目目录说明
 
 `Hello Egret3D`创建完毕，也和大家一起了解了Wing的界面结构，接下来大家一块了解一下Egret3D的项目结构吧。先看下图。
@@ -63,5 +62,3 @@ permalink: /docs/egret3d/methods/create/
 7. `index.html`配置了当前项目的显示方式。
 8. `tsconfig.json`配置了TS的编译方式。
 9. `wingProperties.json`配置了Wing的一些配置信息。
-
-

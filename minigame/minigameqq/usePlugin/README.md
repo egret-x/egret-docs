@@ -6,7 +6,6 @@ permalink: /docs/minigame/minigameqq/usePlugin/
 
 白鹭引擎插件使用说明
 
-
 #### 什么是引擎插件
 我们发布QQ小游戏的时候，里面会带有 `egret.min.js` `eui.min.js` 之类的库文件。玩家每次打开一个小游戏，都要重复的下载这些文件。
 
@@ -25,7 +24,6 @@ permalink: /docs/minigame/minigameqq/usePlugin/
 * 目前一个APPID，只支持引用一个插件
 * 目前支持整包小游戏使用插件，以及分包小游戏的主包使用插件
 
-
 #### 白鹭引擎插件使用方法
 1.在 Egret Launcher 里下载引擎 5.2.32 版本，使用该版本创建一个游戏项目
 2.打开项目中的 `scripts/config.qqgame.ts` 文件，将 `useQQPlugin` 变量改为 `true`,在发布成 QQ 小游戏后会开启插件功能。设置为 `false`，将关闭插件功能。
@@ -40,11 +38,9 @@ permalink: /docs/minigame/minigameqq/usePlugin/
 1.使用最新版引擎 5.2.32 创建一个新项目，把这 3 个文件拷贝到老项目里替换原有文件。
 ![](p1.png)
 
-
 2.在老项目根目录的 `egretProperties.json` 里，把 `compilerVersion` 编译器版本改成 5.2.32。比如在本示例中，引擎代码还是 `5.2.16` 的，但是编译脚本使用 `5.2.32`，这样就能支持把游戏发布成开启微信插件的形式了。
 
 ![](p2.png)
-
 
 #### FAQ
 * 问：引擎插件里都包含哪些库？
@@ -65,4 +61,3 @@ tween.min.js
 * 答：远程插件是由白鹭官方上传到QQ后台，您自己在本地的修改不会生效。
 
 -----
-

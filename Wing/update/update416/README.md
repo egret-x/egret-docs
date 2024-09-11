@@ -9,7 +9,6 @@ permalink: /docs/203kut8y/
 - [Egret Wing 4.1.6 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.1.6.exe?d=0707)
 - [Egret Wing 4.1.6 for Mac OS](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.1.6.dmg?d=0707)
 
-
 ## BUG 修复：
 - 英文版本中cancel单词拼写错误的问题。
 - 没有打开任何项目时，点击创建项目不弹出新建项目提示框的问题。

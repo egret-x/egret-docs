@@ -9,7 +9,6 @@ permalink: /docs/egret2d/colorEffects/shader/
 egret 5.0.3 以上版本中提供了 `egret.CustomFilter` ，供开发者自由扩展滤镜，实现各种定制化效果。
 > 该功能仅在web和微端环境下支持
 
-
 `CustomFilter` 构造函数中需要传入顶点着色器和片段着色器程序的字符串，以及 `uniforms` 对象
 
 * 开发者可以根据项目需求自行编写顶点着色器和片段着色器程序
@@ -27,53 +26,53 @@ egret 5.0.3 以上版本中提供了 `egret.CustomFilter` ，供开发者自由�
 下面示例实现一个黑白方块背景的效果，首先创建一个game项目，之后在Main.ts中createGameScene函数最后插入顶点着色器代码：
 
 ```javascript
-let vertexSrc =
-	"attribute vec2 aVertexPosition;\n" +
-	"attribute vec2 aTextureCoord;\n" +
-	"attribute vec2 aColor;\n" +
-	
-	"uniform vec2 projectionVector;\n" +
-	
-	"varying vec2 vTextureCoord;\n" +
-	
-	"const vec2 center = vec2(-1.0, 1.0);\n" +
-	
-	"void main(void) {\n" +
-	"   gl_Position = vec4( (aVertexPosition / projectionVector) + center , 0.0, 1.0);\n" +
-	"   vTextureCoord = aTextureCoord;\n" +
-	"}";
+const vertexSrc
+	= 'attribute vec2 aVertexPosition;\n'
+	+ 'attribute vec2 aTextureCoord;\n'
+	+ 'attribute vec2 aColor;\n'
+
+	+ 'uniform vec2 projectionVector;\n'
+
+	+ 'varying vec2 vTextureCoord;\n'
+
+	+ 'const vec2 center = vec2(-1.0, 1.0);\n'
+
+	+ 'void main(void) {\n'
+	+ '   gl_Position = vec4( (aVertexPosition / projectionVector) + center , 0.0, 1.0);\n'
+	+ '   vTextureCoord = aTextureCoord;\n'
+	+ '}'
 ```
 
 在之后插入片段着色器代码：
 
 ```javascript
-let fragmentSrc =
-    "precision lowp float;\n" +
+const fragmentSrc
+    = 'precision lowp float;\n'
 
-    "varying vec2 vTextureCoord;\n" +
+    + 'varying vec2 vTextureCoord;\n'
 
-    "uniform float width;\n" +
-    "uniform float height;\n" +
+    + 'uniform float width;\n'
+    + 'uniform float height;\n'
 
-    "void main(void) {\n" +
-    "vec4 fg;\n" +
-    "if(mod(floor(vTextureCoord.x / width) + floor(vTextureCoord.y / height), 2.0) == 0.0) {" +
-    "fg = vec4(1,1,1,1);" +
-    "}" +
-    "else {" +
-    "fg = vec4(0,0,0,1);" +
-    "}" +
-    "gl_FragColor = fg;\n" +
-    "}";
+    + 'void main(void) {\n'
+    + 'vec4 fg;\n'
+    + 'if(mod(floor(vTextureCoord.x / width) + floor(vTextureCoord.y / height), 2.0) == 0.0) {'
+    + 'fg = vec4(1,1,1,1);'
+    + '}'
+    + 'else {'
+    + 'fg = vec4(0,0,0,1);'
+    + '}'
+    + 'gl_FragColor = fg;\n'
+    + '}'
 ```
 在代码中定义了每个方格的宽高，这两个值由`uniforms`属性传入。之后根据uv信息以及传入的宽高，利用取余函数算出奇偶数，通过奇偶决定方格是黑色还是白色。
 
 对背景图使用自定义滤镜，设定每个方格大小为50像素：
 
 ```javascript
-let size = 50;
-let filter = new egret.CustomFilter(vertexSrc, fragmentSrc, { width: size / stageW, height: size / stageH });
-sky.filters = [filter];
+const size = 50
+const filter = new egret.CustomFilter(vertexSrc, fragmentSrc, { width: size / stageW, height: size / stageH })
+sky.filters = [filter]
 ```
 
 运行效果如下图，发现背景图变成了黑白交替的方格，每个方格大小为50像素。
@@ -83,18 +82,18 @@ sky.filters = [filter];
 之后再通过帧函数改变方格大小(uniforms属性)：
 
 ```javascript
-let inc = 1;
-this.stage.addEventListener(egret.Event.ENTER_FRAME, function () {
-    size += inc;
-    if (size >= 80) {
-        inc = -1;
-    }
-    if (size <= 50) {
-        inc = 1;
-    }
-    filter.uniforms.width = size / stageW;
-    filter.uniforms.height = size / stageH;
-}, this);
+let inc = 1
+this.stage.addEventListener(egret.Event.ENTER_FRAME, () => {
+  size += inc
+  if (size >= 80) {
+    inc = -1
+  }
+  if (size <= 50) {
+    inc = 1
+  }
+  filter.uniforms.width = size / stageW
+  filter.uniforms.height = size / stageH
+}, this)
 ```
 
 再次运行游戏，会发现每帧方格的大小都会相应变化

@@ -99,7 +99,7 @@ async onFinish(commandContext: plugins.CommandContext) {
   const serialize = JSON.stringify(obj);
   commandContext.createFile(this.manifestPath, new Buffer(serialize));
 }
-```	
+```
 
 现在我们已经完成了这小小的插件，要想使用还需要把我们的插件引入到 config.ts 文件中，首先使用 import 引入我们的插件，例：import { testPlugin } from './TestPlugin';然后在 buildConfig 的返回值的 commands 数组中实例化这个插件：new testPlugin()。最后执行命令 egret publish 命令的运行结果如图：
 

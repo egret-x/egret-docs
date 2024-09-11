@@ -6,7 +6,6 @@ permalink: /docs/egret3d/interactive/modelModel/
 
 ## 模型与模型碰撞
 
-
 ### 原理：模型与模型碰撞其实就是检测各个面是否有相交。
 
 这里为了更好的理解，我们将点想象成一个稍微大些的球。
@@ -44,4 +43,3 @@ var result:boolean = cube.bound.intersect(ball.bound);
 * result： 是否碰撞，true 碰撞，false 未碰撞
 
 ```
-

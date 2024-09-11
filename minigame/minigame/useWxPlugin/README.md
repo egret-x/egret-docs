@@ -5,7 +5,6 @@ permalink: /docs/minigame/minigame/useWxPlugin/
 ---
 白鹭引擎插件使用说明
 
-
 #### 什么是引擎插件
 我们发布微信小游戏的时候，里面会带有 `egret.min.js` `eui.min.js` 之类的库文件。玩家每次打开一个小游戏，都要重复的下载这些文件。
 
@@ -23,7 +22,6 @@ permalink: /docs/minigame/minigame/useWxPlugin/
 * 由于微信开发者工具的bug，使用测试版的 APPID 在开启插件功能时会报错，必须使用在微信后台注册过的正式版 APPID 才可以。
 * 目前一个APPID，只支持引用一个插件
 * 目前支持整包小游戏使用插件，以及分包小游戏的主包使用插件
-
 
 #### 白鹭引擎插件使用方法
 1. 在 Egret Launcher 里下载引擎 5.2.31 版本，使用该版本创建一个游戏项目
@@ -43,7 +41,6 @@ permalink: /docs/minigame/minigame/useWxPlugin/
 
 *注意：*其中的 `wxgame.ts` 里会对 `js` 文件做一定的修改，一定要使用我们提供的方法，不要对这块做任何的修改。因为微信会对 `js` 文件做 MD5 校验，任何修改都会改变 MD5 值。
 
-
 2. 在老项目根目录的 `egretProperties.json` 里，把 `compilerVersion` 编译器版本改成 5.2.31。比如在本示例中，引擎代码还是 `5.2.16` 的，但是编译脚本使用 `5.2.31`，这样就能支持把游戏发布成开启微信插件的形式了。
 
 ![](p2.png)
@@ -60,8 +57,6 @@ permalink: /docs/minigame/minigame/useWxPlugin/
 3. 微信开发者工具打包上传的时候，会自动生成两个包。
     - 带 `egret-library` 文件夹的包：不支持插件功能的老版本微信，会调用这个文件夹内的引擎文件。
     - 不带 `egret-library` 文件夹的包：支持插件功能的新版本微信会读取这个包，直接调用微信服务器上的引擎插件
-
-
 
 #### FAQ
 * 问：引擎插件里都包含哪些库？
@@ -86,4 +81,3 @@ tween.min.js
 * 答：不能做任何修改，而且必须用官方提供的编译配置文件 `script/wxgame/wxgame.ts`里的默认参数发布 。因为微信会校验本地和插件里 js 文件的 MD5 值，只要做了任何一点修改， MD5 值就会不一致，那么微信会调用本地的这个 js 版本，不会使用远程插件里的。
 
 -----
-

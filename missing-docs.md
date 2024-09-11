@@ -22,7 +22,7 @@ permalink: /docs/s7ui7t00/
 	- ts 与 js 互调   ts(Egret) 与 js 的调用   http://edn.egret.com/cn/docs/page/777
 - 打包发布
 	- 打包HTML5      这个文档不需要！
-	- 打包Android app   IntelliJ IDEA中Andorid APP打包(http://edn.egret.com/cn/index.php/article/index/id/166)  
+	- 打包Android app   IntelliJ IDEA中Andorid APP打包(http://edn.egret.com/cn/index.php/article/index/id/166)
 
 ### 平台接入
 
@@ -55,7 +55,7 @@ permalink: /docs/s7ui7t00/
 ### Lakeshore
 
 - 历史更新
-- 使用手册 
+- 使用手册
 	- 安装
 		- [安装](Lakeshore/manual/installation/index.md)
 	- 界面
@@ -67,4 +67,3 @@ permalink: /docs/s7ui7t00/
 		- [设置起始场景]()
 		- [场景尺寸]()
 		- [图层名]()
-

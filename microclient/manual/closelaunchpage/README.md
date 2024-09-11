@@ -18,7 +18,7 @@ permalink: /docs/zfchdqkr/
 launcher.closeLoadingViewAutomatically = 1;
 ```
 
-将代码里的 **=1** 改为 **=0** 
+将代码里的 **=1** 改为 **=0**
 
 iOS 工程在 ViewController.mm 里做同样的修改
 

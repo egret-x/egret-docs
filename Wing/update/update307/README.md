@@ -26,7 +26,6 @@ permalink: /docs/t94i8wtd/
   - 修复添加sheet文件没有自动添加subkey的问题。
   - 修复删除最后一个组依然显示组内资源的问题。
 
-
 ## 新增新手向导
 
 新用户在首次启动时或者通过命令面板(Start Guide)会开启新手向导，让新用户快速熟悉Egert Wing。
@@ -56,4 +55,3 @@ permalink: /docs/t94i8wtd/
 ![](573c4b94483ce.png)
 
 使用中得任何问题欢迎跟我们反馈. 感谢支持!
-

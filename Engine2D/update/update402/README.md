@@ -30,7 +30,7 @@ permalink: /docs/slvhni8r/
 * 实验性功能更新，目前只支持 Web 端
     * 新增照片选择器功能，可以选择手机照片并显示
     * 示例： egretProperties.json 加入 ”experimental“ 第三方库（和 ”egret“ 一样）
-    
+
     ~~~
     this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, (e:egret.TouchEvent) => {
         egret.experimental.pickPhoto().then((baseUrl:string) => {
@@ -46,21 +46,20 @@ permalink: /docs/slvhni8r/
             }
         });
     }, this);
-    
+
     ~~~
-    
+
     * 显示
-    
-![image](1.png) 
-	
-![image](2.png) 
-	
-![image](3.png) 
+
+![image](1.png)
+
+![image](2.png)
+
+![image](3.png)
 
 ## 已知问题
 
 * 修改 ```tsconfig.json```后，执行 ``` egret build ``` 不会生效，需执行 ``` egret clean ```
-
 
 ## 路线图
 
@@ -77,4 +76,3 @@ permalink: /docs/slvhni8r/
 * 白鹭引擎4.0 需要最新的 Egret Wing 4.0 配合，或将 WebStrom 等其他开发工具升级至较新版本以支持 TypeScript 2.1
 * 骨骼动画的白鹭极速模式需要开发者将 DragonBonesPro 升级至4.8版本以上，建议使用最新的 5.0 版本
 * 使用白鹭引擎开发原生游戏的工具（ egret-ios-support / egret-android-support ）将会很快以 Egret-Native的全新面貌发布
-

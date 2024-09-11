@@ -3,15 +3,15 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/bq50x896/
 ---
-## Egret Engine 3D  
+## Egret Engine 3D
 
 #### 更新内容
-* 增加水渲染特效    
-新增的水波渲染方法已经达到相当逼真的效果：   
-![3d-waterWave](578349b594649.jpg)     
+* 增加水渲染特效
+新增的水波渲染方法已经达到相当逼真的效果：
+![3d-waterWave](578349b594649.jpg)
 
-核心代码如下：  
-```   
+核心代码如下：
+```
 var waterWaveMethod: WaterWaveMethod = new WaterWaveMethod();
 var waterNormal: WaterNormalMethod = new WaterNormalMethod();
 var envMethod: EnvironmentMethod = new EnvironmentMethod();
@@ -30,8 +30,8 @@ this.matPlane.diffusePass.addMethod(envMethod);
 waterNormal.normalTextureA = CheckerboardTexture.texture;
 waterNormal.normalTextureB = CheckerboardTexture.texture;
 envMethod.environmentTexture = cubeTexture;
-```    
-简言之，就是为水面的材质加入水波纹和水平面法线两种方法。具体用法可参考 引擎3D部分的`ClassSample\Class_WaveWater.ts`类实现。   
+```
+简言之，就是为水面的材质加入水波纹和水平面法线两种方法。具体用法可参考 引擎3D部分的`ClassSample\Class_WaveWater.ts`类实现。
 
 #### Bug列表
 * 修复骨骼动画缺少帧数的bug

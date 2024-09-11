@@ -10,8 +10,6 @@ permalink: /docs/c6ylej5y/
 
 通过使用白鹭引擎，开发者可以尽可能的不用关注浏览器的底层实现，解决HTML5游戏性能问题及碎片化问题，灵活地满足开发者开发2D或3D游戏的需求。
 
-
-
 ## 更新内容
 
 * 完善 TypeScriptCompiler 2.1.4 核心
@@ -22,9 +20,9 @@ permalink: /docs/c6ylej5y/
     * 修复了枚举中不能有 DEBUG 字符的BUG
     * 编译器报错支持多语言
     * 重构内部逻辑，为未来进一步扩展做准备
-    
+
     以下是 TypeScript 2.1.4 在白鹭引擎中的部分典型应用
-    
+
     ![TypeScript 2.1.4 特性概述](typescript.jpg)
 
 * 资源管理框架
@@ -36,7 +34,7 @@ permalink: /docs/c6ylej5y/
     * 更多内容请参见[这里](https://github.com/egret-labs/resourcemanager)
 
     通过使用新的资源管理框架，可以帮助开发者节省超过30%的流量开销，从而提升HTML5游戏的用户转化率、降低服务器运维费用
-    
+
     ![资源管理框架](res.jpg)
 
 * 骨骼动画-白鹭极速格式
@@ -47,9 +45,9 @@ permalink: /docs/c6ylej5y/
     ![白鹭极速格式](db.jpg)
 
 * Facebook Instant Game
-    
-    提供 Facebook Instant Game 模板，帮助开发者开发基于 Facebook Instant Game 的游戏 
-    
+
+    提供 Facebook Instant Game 模板，帮助开发者开发基于 Facebook Instant Game 的游戏
+
     Faceook Instant Game 是一项尚未全面开放的功能，开发者如果想基于其构建游戏，请继续关注 Facebook 的下一步策略，或与白鹭引擎官方团队联系。
 
     ![Instant Game](fb.png)
@@ -75,4 +73,3 @@ permalink: /docs/c6ylej5y/
 * 白鹭引擎4.0 需要最新的 Egret Wing 4.0 配合，或将 WebStrom 等其他开发工具升级至较新版本以支持 TypeScript 2.1
 * 骨骼动画的白鹭极速模式需要开发者将 DragonBonesPro 升级至4.8版本以上，建议使用最新的 5.0 版本
 * 使用白鹭引擎开发原生游戏的工具（ egret-ios-support / egret-android-support ）将会很快以 Egret-Native的全新面貌发布
-

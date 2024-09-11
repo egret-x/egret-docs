@@ -13,13 +13,13 @@ TouchEvent3D 触摸事件
 
 	创建一个演示场景：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cube: egret3d.Mesh;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -44,10 +44,10 @@ TouchEvent3D 触摸事件
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	    }
-	
-	}      
+
+	}
 
 ![](Img_1.png)
 
@@ -61,15 +61,15 @@ TouchEvent3D 触摸事件
 ![](Img_4.png)
 
 	3)示例代码：这是我们制作一个控制cube旋转的代码。
-	
+
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
-	
+
 	    private x_Cur: number = 0;
 	    private cube: egret3d.Mesh;
-	
+
 	    public constructor() {
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
@@ -95,7 +95,7 @@ TouchEvent3D 触摸事件
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	        ///注册事件，持有对象为IRender，需要依次写入事件标识符，注册方法和注册对象。
 	        egret3d.Input.addEventListener(egret3d.TouchEvent3D.TOUCH_START, this.OnTouchStart, this);
 	        egret3d.Input.addEventListener(egret3d.TouchEvent3D.TOUCH_END, this.OnTouchEnd, this);
@@ -103,7 +103,7 @@ TouchEvent3D 触摸事件
 	        ///开启手机屏幕日志信息显示
 	        egret3d.Debug.instance.isDebug = true;
 	    }
-	
+
 	    ///触摸开始事件。
 	    public OnTouchStart(e: egret3d.TouchEvent3D) {
 	        egret3d.Debug.instance.trace("OnTouchStart");
@@ -121,7 +121,6 @@ TouchEvent3D 触摸事件
 	        }
 	        this.x_Cur = e.targetTouches[0].clientX;
 	    }
-	}      
-		
+	}
 
 ![](Img_3.png)

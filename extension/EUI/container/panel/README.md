@@ -13,29 +13,30 @@ permalink: /docs/extension/EUI/container/panel/
 
 下面是标准 Panel 的示例代码：
 
-~~~ typescript 
+~~~ typescript
 class PanelDemo extends eui.Group {
-    constructor() {
-        super();
-    }
-    protected createChildren() {
-        super.createChildren();
-        var theme = new eui.Theme(`resource/default.thm.json`, this.stage);
-        var exml = `
-        <e:Skin class="skins.PanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui"> 
-            <e:Image left="0" right="0" bottom="0"  top="0" source="resource/assets/Panel/border.png" scale9Grid="2,2,12,12" /> 
-            <e:Group id="moveArea" width="450" height="45" top="0"> 
-                <e:Image width="100%" height="100%" source="resource/assets/Panel/header.png"/> 
-                <e:Label id="titleDisplay" size="20"  textColor="0x000000" horizontalCenter="0" verticalCenter = "0"/> 
-            </e:Group> <e:Button id="closeButton" label="touch to close" bottom="5" horizontalCenter="0"/> 
+  constructor() {
+    super()
+  }
+
+  protected createChildren() {
+    super.createChildren()
+    const theme = new eui.Theme(`resource/default.thm.json`, this.stage)
+    const exml = `
+        <e:Skin class="skins.PanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui">
+            <e:Image left="0" right="0" bottom="0"  top="0" source="resource/assets/Panel/border.png" scale9Grid="2,2,12,12" />
+            <e:Group id="moveArea" width="450" height="45" top="0">
+                <e:Image width="100%" height="100%" source="resource/assets/Panel/header.png"/>
+                <e:Label id="titleDisplay" size="20"  textColor="0x000000" horizontalCenter="0" verticalCenter = "0"/>
+            </e:Group> <e:Button id="closeButton" label="touch to close" bottom="5" horizontalCenter="0"/>
         </e:Skin>`
-        var myPannel = new eui.Panel();
-        myPannel.skinName = exml;
-        myPannel.title = "titleHello";
-        this.addChild(myPannel)
-    }
+    const myPannel = new eui.Panel()
+    myPannel.skinName = exml
+    myPannel.title = 'titleHello'
+    this.addChild(myPannel)
+  }
 }
-~~~ 
+~~~
 
 显示效果：
 ![](8-3-panel-C.png)
@@ -50,4 +51,3 @@ Panel 容器为他们提供了一些默认的功能，若皮肤中不存在这�
 
 *closeButton*
 上面显示效果中底部的按钮，点击它会把面板关闭
-

@@ -16,8 +16,6 @@ permalink: /docs/jh3ejibb/
 * [修复] 修复在部分机型使用语音输入闪退的问题；
 * [改进] 提高稳定性。
 
-
-
 ### 下载地址
 
 [http://tool.egret-labs.org/ios-support/egret-ios-support-4.1.0.zip](http://tool.egret-labs.org/ios-support/egret-ios-support-4.1.0.zip)

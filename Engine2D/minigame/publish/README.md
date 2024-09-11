@@ -49,9 +49,9 @@ permalink: /docs/zllfksrb/
 * 检查是否使用了嵌入EXML到代码中，例：
 
 ~~~javascript
-    var className = "skins.ButtonSkin";
-    var exmlText = `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">                ...
-                    </e:Skin>`;
+const className = 'skins.ButtonSkin'
+const exmlText = `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">                ...
+                    </e:Skin>`
 ~~~
 
 如果有需要改成单独的皮肤文件。
@@ -59,11 +59,10 @@ permalink: /docs/zllfksrb/
 * ts 代码和 eui 是不允许相同的命令空间，例如：
 
 ~~~javascript
-<?xml version="1.0" encoding="utf-8" ?> 
-<e:Skin class="ui.MyButtonSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui"> 
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="ui.MyButtonSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
 
 </e:Skin>`;
-
 
 namespace ui {
 	export class TestNameSpace {

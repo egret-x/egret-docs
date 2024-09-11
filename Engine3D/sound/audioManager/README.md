@@ -8,7 +8,6 @@ AudioManager 类允许您在应用程序中 播放 HTML5 Audio 和 Web Audio。�
 
 ## 1、AudioManager属性
 
-
 * `context : any` AudioContext 上下文
 egret3d.AudioManager
 * `instance : egret3d.AudioManager` [静态] [只读] AudioManager类的单例模式，返回一个 AudioManager 对象
@@ -34,14 +33,14 @@ egret3d.AudioManager
 ```
     public constructor() {
         super();
-        
+
         this._sound = egret3d.AudioManager.instance.createSound("resource/ccnn.mp3", this.loadSoundSuccess);
     }
-    
+
     // 加载声音文件成功
     private loadSoundSuccess(e): void {
         this._manager = new egret3d.AudioManager();
-        
+
         // 生成一个新的 Channel 对象来播放该声音。
         this._channel = this._manager.playSound(e, { "volume": 0.5, "loop": true });
 

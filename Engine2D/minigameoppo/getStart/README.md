@@ -25,11 +25,9 @@ permalink: /docs/1su566u2/
 	* 调试：使用 USB 连接手机和电脑后，点击调试，会把 `rpk` 上传到手机中，然后启动一个 `Chrome` 窗口，可以调试手机中运行的小游戏
 	* 分包加载机制，请访问小游戏支持网站：[网站地址](https://cdofs.oppomobile.com/cdo-activity/static/201810/26/quickgame/documentation/subpackage/subpackage.html)
 
-
-
 ### 三.使用命令行把白鹭游戏编译到小游戏项目
 #### 方法1：开发者可以使用命令行来编译和发布到OPPO小游戏项目中：
-	
+
   * dubug 模式： ```egret build --target oppogame```
   * release 模式： ```egret publish --target oppogame```
 
@@ -63,7 +61,6 @@ permalink: /docs/1su566u2/
 	* resource 文件夹：游戏资源文件
 	* sign 文件夹：签名文件存放的位置
 
-
 * manifest.json 配置说明
 
 ```
@@ -86,9 +83,8 @@ permalink: /docs/1su566u2/
 	* icon：应用图标的路径
 	* orientation：支持的屏幕方向。portrait 为竖屏，landscape 为横屏。该参数会自动从白鹭游戏项目的 index.html 里获取。
 
-
 ### 四.真机调试调试
-**注意：**一定要使用 OPPO 手机才可以调试 
+**注意：**一定要使用 OPPO 手机才可以调试
 
 1.在 OPPO 手机上安装 `OPPO 小游戏调试器`
 

@@ -73,12 +73,11 @@ Egret的封装项目无论在Android还是iOS平台，均支持热更新。
 
 - 修改 setLoaderUrl 方法中 case 为 1 的 loaderUrl 与 updateUrl 变量，如图：
 
-![](562da618ca122.png)  
+![](562da618ca122.png)
 
 - case 2, 空字符串。即当前包使用最原始的格式。`egret build [-e] --runtime native` 之后的数据结构。
 - default, 本地使用zip包方式。`egret publish --runtime native --version xxx` 之后，会将最新的资源包拷贝到Android项目中。此时如果需要在Android项目中测试。
 - case 1, 一般这里为动态地址，根据请求的内容返回具体的 json 内容。只有使用这种方式才会有热更新机制，引擎会根据提供的 game_code.zip 的名称进行更新。
-
 
 ## 服务器端设置
 
@@ -97,11 +96,11 @@ APP每次启动会从事先设置好的HTTP（loaderUrl）地址请求更新内�
 
 	<?php
 	define('CASE_NAME', '151023172200');
-	
+
 	function startsWith($string, $pattern) {
 		return $pattern === "" || strrpos($string, $pattern, -strlen($string)) !== FALSE;
 	}
-	
+
 	$json = array();  //不存在就false;
 	if (!startsWith(CASE_NAME, 'http://')) {
 		$ip = "http://10.0.5.155/app/";
@@ -156,7 +155,6 @@ Android：
 options.put(EgretRuntime.OPTION_PUBLISH_ZIP, "game_code.zip");
 ~~~
 
-
 iOS:
 
 在 runGame 中为 _options 添加属性，指定本地zip包名：
@@ -166,7 +164,6 @@ options[@OPTION_PUBLISH_ZIP] = @"game_code.zip";
 ~~~
 
 ## 不进行热更新仍然显示GameLoadingView的方法（Android support 3.2.5添加）
-
 
 在设置GameLoadingView时添加最短持续时间的参数:
 

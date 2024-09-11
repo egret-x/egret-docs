@@ -6,7 +6,6 @@ permalink: /docs/atzgw67d/
 
 Egret3D中的几何体中的平面几何体由`PlaneGeometry`类实现。通过`PlaneGeometry`可以快速创建一个默认边长为500的正方形平面。下面的代码，展示了如何创建一个正方形平面。
 
-
 ```
 class PlaneDemo extends LoadingUI {
     /**
@@ -67,9 +66,7 @@ class PlaneDemo extends LoadingUI {
      */
     public currentAnim: string;
 
-
     public constructor() {
-        
 
         super();
 
@@ -109,15 +106,14 @@ class PlaneDemo extends LoadingUI {
 
         this.OnInitLoadingView(5);
 
-
         ///设置window resize事件
         egret3d.Input.addEventListener(egret3d.Event3D.RESIZE,this.OnWindowResize,this);
-        
+
         this.createPlane();
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 窗口尺寸变化事件
     * @version Egret 3.0
     * @platform Web,Native
@@ -131,7 +127,7 @@ class PlaneDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 初始化相机控制
     * @version Egret 3.0
     * @platform Web,Native
@@ -146,7 +142,7 @@ class PlaneDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 模型加载回调
     * @param e: egret3d.URLLoader 加载器对象
     * @version Egret 3.0
@@ -169,11 +165,10 @@ class PlaneDemo extends LoadingUI {
 
     }
 
-
     public update(e: egret3d.Event3D) {
         this.cameraCtl.update();
     }
-}     
+}
 ```
 
 编译并运行，效果如图：
@@ -254,9 +249,7 @@ class PlaneDemo extends LoadingUI {
      */
     public currentAnim: string;
 
-
     public constructor() {
-        
 
         super();
 
@@ -296,17 +289,16 @@ class PlaneDemo extends LoadingUI {
 
         this.OnInitLoadingView(5);
 
-
         ///设置window resize事件
         egret3d.Input.addEventListener(egret3d.Event3D.RESIZE,this.OnWindowResize,this);
-        
+
         var loader:egret3d.URLLoader = new egret3d.URLLoader();
         loader.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE,this.createPlane,this);
         loader.load("resource/wing.png");
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 窗口尺寸变化事件
     * @version Egret 3.0
     * @platform Web,Native
@@ -320,7 +312,7 @@ class PlaneDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 初始化相机控制
     * @version Egret 3.0
     * @platform Web,Native
@@ -335,7 +327,7 @@ class PlaneDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 模型加载回调
     * @param e: egret3d.URLLoader 加载器对象
     * @version Egret 3.0
@@ -358,11 +350,10 @@ class PlaneDemo extends LoadingUI {
 
     }
 
-
     public update(e: egret3d.Event3D) {
         this.cameraCtl.update();
     }
-}     
+}
 ```
 
 编译并运行，效果如图：

@@ -13,13 +13,13 @@ permalink: /docs/egret3d/events/normal/
 
 	创建一个演示场景：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cube: egret3d.Mesh;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -44,13 +44,12 @@ permalink: /docs/egret3d/events/normal/
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	    }
-	
-	}      
+
+	}
 
 ![](Img_1.png)
-
 
 	1) 该事件的持有对象为egret3d.Egret3DCanvas对象，所以注册该事件应该如示例代码所示：
 		this._egret3DCanvas.addEventListener(egret3d.Event3D.ENTER_FRAME, this.OnUpdate, this);
@@ -59,14 +58,14 @@ permalink: /docs/egret3d/events/normal/
 		通过每帧更新控制cube进行x轴水平运动。
 
 				class Main {
-				
+
 				    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 				    protected view1: egret3d.View3D;
 				    protected cube: egret3d.Mesh;
-				
+
 				    private cur_x: number;
 				    private radio: number = 1;;
-				
+
 				    public constructor() {
 				        ///创建3DCanvas
 				        this._egret3DCanvas = new egret3d.Egret3DCanvas();
@@ -95,8 +94,7 @@ permalink: /docs/egret3d/events/normal/
 				        ///注册事件，持有对象为_egret3DCanvas，每帧触发该注册方法，需要依次写入事件标识符，注册方法和注册对象。
 				        this._egret3DCanvas.addEventListener(egret3d.Event3D.ENTER_FRAME, this.OnUpdate, this);
 				    }
-				
-				
+
 				    ///注册后，该事件将每帧响应
 				    public OnUpdate(e: egret3d.Event3D) {
 				        var speed = 0.04;
@@ -110,7 +108,6 @@ permalink: /docs/egret3d/events/normal/
 				        ///通过速度和每帧间隔时长计算位移，radio是位移方向系数。
 				        this.cube.x += speed * e.delay * this.radio;
 				    }
-				}      
+				}
 
 ![](Img_6.gif)
-

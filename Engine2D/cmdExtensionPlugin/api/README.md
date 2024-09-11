@@ -8,10 +8,10 @@ permalink: /docs/egret2d/cmdExtensionPlugin/api/
 ## 脚本插件目录结构
 
 ```
-scripts    
-	|-- api.d.ts // 文档    
-	|-- config.ts // 构建脚本入口        
-	|-- myplugin.ts // 开发者自定义插件的示例        
+scripts
+	|-- api.d.ts // 文档
+	|-- config.ts // 构建脚本入口
+	|-- myplugin.ts // 开发者自定义插件的示例
 	|-- node.d.ts // node的.d.ts 文件
 ```
 
@@ -22,8 +22,6 @@ scripts
 在项目构建的时候会自动执行 ` config.ts` 文件中的 ` buildConfig` 函数。
 
 >  这个函数的功能是返回一个对象，对象中的内容会根据执行不同的命令返回相对应的输出路径和需要执行的插件，插件在返回对象的 commands 数组中实例化后就会执行。
-
-
 
 ` config.ts` 有多个版本对应着不同的平台：
 
@@ -47,7 +45,7 @@ else if (command == 'publish') {
             const outputDir = `bin-release/web/${version}`;
             return {
                 outputDir,
-                
+
                 // ----------调用开始-----------
                 // commands数组中实例化之后，就会执行该插件
                 commands: [
@@ -66,8 +64,7 @@ else if (command == 'publish') {
                     new ManifestPlugin({ output: "manifest.json" }),
                 ]
                 // ----------调用结束------------
-                
-                
+
             }
         }
 ```
@@ -77,10 +74,6 @@ else if (command == 'publish') {
 为了方便开发者使用，Egret内置了一些常用插件。
 
 ----
-
-
-
-
 
 ## 插件---ExmlPlugin
 
@@ -109,8 +102,6 @@ new ExmlPlugin(publishPolicy: EXML_Publish_Policy)
 
 如果当前项目非EUI项目，请关掉这个设置。
 
-
-
 ## 插件---UglifyPlugin
 
 ### 定义
@@ -121,8 +112,8 @@ new ExmlPlugin(publishPolicy: EXML_Publish_Policy)
 
 ```typescript
 new UglifyPlugin([{
-    sources: ["main.js"],
-    target: "main.min.js"
+  sources: ['main.js'],
+  target: 'main.min.js'
 }])
 ```
 
@@ -135,8 +126,6 @@ UglifyPlugin 的参数是一个数组，数组中的值是一个 ` UglifyPluginO
 | sources | string[] | 需要被压缩的文件 |
 | target  | string   | 压缩后的文件名   |
 
-
-
 ## 插件---RenamePlugin
 
 ### 定义
@@ -147,9 +136,11 @@ UglifyPlugin 的参数是一个数组，数组中的值是一个 ` UglifyPluginO
 
 ```typescript
 new RenamePlugin({
-    verbose: true, hash: 'crc32', matchers: [
-        { from: "**/*.js", to: "[path][name]_[hash].[ext]" }
-    ]
+  verbose: true,
+  hash: 'crc32',
+  matchers: [
+    { from: '**/*.js', to: '[path][name]_[hash].[ext]' }
+  ]
 })
 ```
 
@@ -176,8 +167,6 @@ Matcher对象：
 { from:"resource/**.*" , to:"[path][name]_[hash].[ext]" }
 ```
 
-
-
 ## 插件---ManifestPlugin
 
 ### 定义
@@ -187,7 +176,7 @@ Matcher对象：
 ### 语法
 
 ```typescript
-new ManifestPlugin({ output: "manifest.json" })
+new ManifestPlugin({ output: 'manifest.json' })
 ```
 
 ### 参数值
@@ -200,8 +189,6 @@ ManifestPlugin的参数是一个对象，属性如下：
 | hash    | string  | 使用的算法，暂只支持 “crc32”   (可选参数) |
 | verbose | boolean | 是否输出转换过程 (可选参数)               |
 
-
-
 ## 插件---CompilePlugin
 
 ### 定义
@@ -211,7 +198,7 @@ ManifestPlugin的参数是一个对象，属性如下：
 ### 语法
 
 ```typescript
-new CompilePlugin({ libraryType: "release", defines: { DEBUG: false, RELEASE: true } })
+new CompilePlugin({ libraryType: 'release', defines: { DEBUG: false, RELEASE: true } })
 ```
 
 ### 参数值
@@ -231,13 +218,9 @@ libraryType参数设置编译的模式。
 
 ![image-20180731140029051](./006tKfTcly1ftt0qlp9r9j31kw11fdsu.png)
 
-
-
 设置为 release 时，发布后的js文件会被混淆压缩。
 
 ![image-20180731140130770](./006tKfTcly1ftt0qjetboj31kw11fqg6.png)
-
-
 
 ## 插件---IncrementCompilePlugin
 
@@ -257,10 +240,6 @@ new IncrementCompilePlugin()
 
 这个功能将会在未来被 watch 模式代替掉。
 
-
-
-
-
 ## 插件---EmitResConfigFilePlugin
 
 ### 定义
@@ -271,52 +250,52 @@ new IncrementCompilePlugin()
 
 ```typescript
 new EmitResConfigFilePlugin({
-    output: "resource/default.res.json",
-    
-    // typeSelector方法，写在下面
-    typeSelector: config.typeSelector, 
-    
-    // 根据传进来的路径p，生成文件name
-    nameSelector: p => {
-        // 获取文件名，然后把 '.' 替换成 '_'
-        return path.basename(p).replace(/\./gi, "_")
-    },
-    
-    // 根据传进来的路径p，生成group
-    groupSelector: p => {
-        // 这里数据写死，可以根据自己的需求自定
-        return "preload"
-    }
+  output: 'resource/default.res.json',
+
+  // typeSelector方法，写在下面
+  typeSelector: config.typeSelector,
+
+  // 根据传进来的路径p，生成文件name
+  nameSelector: (p) => {
+    // 获取文件名，然后把 '.' 替换成 '_'
+    return path.basename(p).replace(/\./g, '_')
+  },
+
+  // 根据传进来的路径p，生成group
+  groupSelector: (p) => {
+    // 这里数据写死，可以根据自己的需求自定
+    return 'preload'
+  }
 })
 
-	//…………其他代码…………
-    
+// …………其他代码…………
+
 // 根据传进来的path，判断文件的类型
 typeSelector: (path) => {
-    const ext = path.substr(path.lastIndexOf(".") + 1);
-    const typeMap = {
-        "jpg": "image",
-        "png": "image",
-        "webp": "image",
-        "json": "json",
-        "fnt": "font",
-        "pvr": "pvr",
-        "mp3": "sound",
-        "zip": "zip",
-        "sheet": "sheet",
-        "exml": "text"
+  const ext = path.substr(path.lastIndexOf('.') + 1)
+  const typeMap = {
+    jpg: 'image',
+    png: 'image',
+    webp: 'image',
+    json: 'json',
+    fnt: 'font',
+    pvr: 'pvr',
+    mp3: 'sound',
+    zip: 'zip',
+    sheet: 'sheet',
+    exml: 'text'
+  }
+  let type = typeMap[ext]
+  if (type == 'json') {
+    if (path.includes('sheet')) {
+      type = 'sheet'
     }
-    let type = typeMap[ext];
-    if (type == "json") {
-        if (path.indexOf("sheet") >= 0) {
-            type = "sheet";
-        } else if (path.indexOf("movieclip") >= 0) {
-            type = "movieclip";
-        };
-    }
-    return type;
+    else if (path.includes('movieclip')) {
+      type = 'movieclip'
+    };
+  }
+  return type
 }
-
 ```
 
 ### 参数值
@@ -332,35 +311,34 @@ EmitResConfigFilePlugin的参数是一个对象，参数如下：
 
 ` typeSelector` ,   `nameSelector `,   `groupSelector`  三个方法都有一个默认参数 p，即每个文件的完整路径。
 
-
-
 ### typeSelector
 
 ``` typescript
-    typeSelector: (path) => {
-        const ext = path.substr(path.lastIndexOf(".") + 1);
-        const typeMap = {
-            "jpg": "image",
-            "png": "image",
-            "webp": "image",
-            "json": "json",
-            "fnt": "font",
-            "pvr": "pvr",
-            "mp3": "sound",
-            "zip": "zip",
-            "sheet": "sheet",
-            "exml": "text"
-        }
-        let type = typeMap[ext];
-        if (type == "json") {
-            if (path.indexOf("sheet") >= 0) {
-                type = "sheet";
-            } else if (path.indexOf("movieclip") >= 0) {
-                type = "movieclip";
-            };
-        }
-        return type;
+typeSelector: (path) => {
+  const ext = path.substr(path.lastIndexOf('.') + 1)
+  const typeMap = {
+    jpg: 'image',
+    png: 'image',
+    webp: 'image',
+    json: 'json',
+    fnt: 'font',
+    pvr: 'pvr',
+    mp3: 'sound',
+    zip: 'zip',
+    sheet: 'sheet',
+    exml: 'text'
+  }
+  let type = typeMap[ext]
+  if (type == 'json') {
+    if (path.includes('sheet')) {
+      type = 'sheet'
     }
+    else if (path.includes('movieclip')) {
+      type = 'movieclip'
+    };
+  }
+  return type
+}
 ```
 
 先通过完整路径获取到文件的后缀名，然后在typeMap中找到对应的文件类型，接着判断”sheet"和"movieclip”类型，最后返回type。
@@ -370,8 +348,8 @@ EmitResConfigFilePlugin的参数是一个对象，参数如下：
 ### nameSelector
 
 ```typescript
-nameSelector: p => {
-    return path.basename(p).replace(/\./gi, "_")
+nameSelector: (p) => {
+  return path.basename(p).replace(/\./g, '_')
 }
 ```
 
@@ -382,8 +360,8 @@ res.json中资源的“name”属性的值的命名方式，就是由这个方�
 ###groupSelector
 
 ```typescript
-groupSelector: p => {
-    return "preload"
+groupSelector: (p) => {
+  return 'preload'
 }
 ```
 
@@ -392,17 +370,15 @@ groupSelector: p => {
 开发者可以自定义分组方式，比如根据文件所在的文件夹来分组。
 
 ```typescript
-groupSelector: p => {
-	// 把p分割成数组
-    let arr = p.split('/')
-    // 数组中倒数第二个就是文件夹名
-    return arr[arr.length - 2]
+groupSelector: (p) => {
+  // 把p分割成数组
+  const arr = p.split('/')
+  // 数组中倒数第二个就是文件夹名
+  return arr[arr.length - 2]
 }
 ```
 
 根据不同的父级文件夹分组。
-
-
 
 ## 插件---CleanPlugin
 
@@ -413,7 +389,7 @@ groupSelector: p => {
 ### 语法
 
 ```typescript
-new CleanPlugin({ matchers: ["js", "resource"] })
+new CleanPlugin({ matchers: ['js', 'resource'] })
 ```
 
 ### 参数值
@@ -428,8 +404,6 @@ CleanPlugin的参数是一个对象，属性如下：
 
 matchers 的值是需要清理的文件夹的名称，这个文件夹名是相对于publish的outputDir，也就是发布后生成的文件夹，语法中实例表示清理 js和resource两个文件夹。一般作为第一个插件运行，清空上一次生成的资源。
 
-
-
 ## 插件---ResSplitPlugin
 
 ### 定义
@@ -440,10 +414,10 @@ matchers 的值是需要清理的文件夹的名称，这个文件夹名是相�
 
 ```typescript
 new ResSplitPlugin({
-    verbose: true,
-    matchers: [
-        { from:"resource/**" , to:"dir" }
-        ]
+  verbose: true,
+  matchers: [
+    { from: 'resource/**', to: 'dir' }
+  ]
 })
 ```
 
@@ -456,9 +430,9 @@ ResSplitPlugin的参数是一个对象，对象属性如下：
 | verbose  | boolean | 是否输出日志                      |
 | matchers | array   | 一个数组，数组内的项是Matcher对象 |
 
-`Matcher` 有两个属性，`from` 、`to` 
+`Matcher` 有两个属性，`from` 、`to`
 
-> 将满足 from 的文件输出到 to 
+> 将满足 from 的文件输出到 to
 
 ### 细节
 
@@ -467,8 +441,6 @@ ResSplitPlugin插件在`publish`时使用，可以将资源目录分离到别的
 在开发微信小游戏的时候，可以使用这个插件将资源放到初始包外，减小游戏包体积。
 
 案例：[如何使用缓存资源](http://developer.egret.com/cn/github/egret-docs/Engine2D/minigame/usingcache/index.html)
-
-
 
 ## 插件---ZipPlugin
 
@@ -500,7 +472,7 @@ ZipPlugin的参数是一个对象，属性如下：
 
 ```shell
 //全局安装
-npm install cross-zip -g   
+npm install cross-zip -g
 npm install cross-zip-cli -g
 ```
 
@@ -508,21 +480,18 @@ npm install cross-zip-cli -g
 
 ```typescript
 new ZipPlugin({
-    mergeSelector: path => {
-        
-        // 如果文件是assets/Button/路径下的， 压缩到assets/but.zip
-        if (path.indexOf("assets/Button/") >= 0) {
-            return "assets/but.zip"
-        }
+  mergeSelector: (path) => {
+    // 如果文件是assets/Button/路径下的， 压缩到assets/but.zip
+    if (path.includes('assets/Button/')) {
+      return 'assets/but.zip'
     }
+  }
 })
 ```
 
 ![image-20180802164312618](./006tNc79ly1ftvgmpt1gyj31kw11sna8.png)
 
 （图中项目是新建的默认EUI项目）
-
-
 
 ## 插件---TextureMergerPlugin
 
@@ -533,7 +502,7 @@ new ZipPlugin({
 ### 语法
 
 ```typescript
-new TextureMergerPlugin({textureMergerRoot:[ 'resource']})
+new TextureMergerPlugin({ textureMergerRoot: ['resource'] })
 ```
 
 ### 参数值
@@ -554,8 +523,6 @@ TextureMergerPlugin根据项目中的`tmproject`文件进行合图操作（暂�
 
 * 开发者通过wing做出一款游戏后，我们建议使用TextureMerger工具进行合图操作，这样主要目的就是可以自由设置，开发者可以根据项目的需求来调节最后的显示效果和合图的方式。使用[TextureMerger工具](http://developer.egret.com/cn/github/egret-docs/tools/TextureMerger/update/update172/index.html)生成`tmproject`文件。
 
-
-
 * 当游戏项目比较小，对资源配置的要求不高时，开发者可以选择使用一个自动化的脚本来处理生成`tmproject`文件。
 
   脚本 autoMerger.js，主要将对应的res.json里面的组进行合并图集操作，支持粒子，龙骨，位图字体的筛选，支持多个res.json，自动扫描配置好的res.json，但是由于资源引用问题，建议将所有res.json合并为一个文件后，然后再执行这个脚本去生成对应的tmproject文件，因为针对的是比较普遍的情况，所以性能比较低，如果开发者所需项目命名比较规范统一，建议修改脚本去提高性能，使用此脚本时开发者看不到最终显示效果，如果组的资源过多，很有可能导致合完的图集很大，大量空白区域被闲置，**因此建议开发者修改组之后或是采用[TextureMerger工具](http://developer.egret.com/cn/github/egret-docs/tools/TextureMerger/manual/index.html)进行拆分**，以达到最好的效果。
@@ -566,12 +533,12 @@ TextureMergerPlugin根据项目中的`tmproject`文件进行合图操作（暂�
 
   ```typescript
   // 要扫描的res.json文件数组
-  var resjsons = ["default.res.json"];
+  const resjsons = ['default.res.json']
   ```
 
   ```typescript
   // tmproject文件的输出目录， 必须在resource目录下
-  var targetDir = "resource/TextureMerger";
+  const targetDir = 'resource/TextureMerger'
   ```
 
   在Egret Wing中打开终端，或使用其他终端进入当前项目根目录：
@@ -582,119 +549,113 @@ TextureMergerPlugin根据项目中的`tmproject`文件进行合图操作（暂�
 
 #### autoMerget脚本
 
-
 ```typescript
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
-var path = require("path");
-var resjsons = ["resource/default.res.json"]; //要扫描的res.json文件
-var targetDir = "resource/TextureMerger"; //输出目录
-var pathNor = path.relative(targetDir, "resource"); //返回一个相对路径
-var tempindex = 0;
-//创建输出文件夹
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
+const fs = require('node:fs')
+const path = require('node:path')
+const resjsons = ['resource/default.res.json'] // 要扫描的res.json文件
+const targetDir = 'resource/TextureMerger' // 输出目录
+const pathNor = path.relative(targetDir, 'resource') // 返回一个相对路径
+let tempindex = 0
+// 创建输出文件夹
 if (resjsons.length > 0) {
-    if (!fs.existsSync(targetDir)) {
+  if (!fs.existsSync(targetDir)) {
+    // var paths = path.normalize(targetDir).split("\\");   //windows 下使用
+    const paths = path.normalize(targetDir).split('\/') // mac linux 下使用
 
-        // var paths = path.normalize(targetDir).split("\\");   //windows 下使用
-        var paths = path.normalize(targetDir).split("\/");   //mac linux 下使用
+    let target = '.'
+    for (let _i = 0, paths_1 = paths; _i < paths_1.length; _i++) {
+      const p = paths_1[_i]
 
-        var target = ".";
-        for (var _i = 0, paths_1 = paths; _i < paths_1.length; _i++) {
-            var p = paths_1[_i];
+      // target += ("\\" + p);  // windows 下使用
+      target += (`\/${p}`) // mac linux 下使用
 
-            // target += ("\\" + p);  // windows 下使用
-            target += ("\/" + p);  // mac linux 下使用
-
-            if (!fs.existsSync(target))
-                // 根据路径创建文件夹
-                fs.mkdirSync(target);
-        }
+      if (!fs.existsSync(target))
+      // 根据路径创建文件夹
+        fs.mkdirSync(target)
     }
+  }
 }
-var _loop_1 = function (resJson) {
-    // 判断是否是res.json文件
-    if (fs.existsSync(resJson) && resJson.indexOf("res.json") > -1) {
-        var defaultJson = fs.readFileSync(resJson, "utf-8");
-        // 解析res.json文件内容
-        var defaultObject = JSON.parse(defaultJson);
-        var groups = defaultObject.groups; //组
-        var resources = defaultObject.resources; //资源
-        var resourcesHash_1 = {}; // 用来存放resources的资源信息
+const _loop_1 = function (resJson) {
+  // 判断是否是res.json文件
+  if (fs.existsSync(resJson) && resJson.includes('res.json')) {
+    const defaultJson = fs.readFileSync(resJson, 'utf-8')
+    // 解析res.json文件内容
+    const defaultObject = JSON.parse(defaultJson)
+    const groups = defaultObject.groups // 组
+    const resources = defaultObject.resources // 资源
+    const resourcesHash_1 = {} // 用来存放resources的资源信息
 
-        // 遍历resources
-        for (var _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
-            var resource = resources_1[_i];
-            resourcesHash_1[resource.name] = resource.url;
-        }
-
-        // 遍历groups
-        for (var _a = 0, groups_1 = groups; _a < groups_1.length; _a++) {
-            var group = groups_1[_a];
-            var tmproject = {}; //用来存放tmproject文件的信息
-            // tmproject文件配置
-            tmproject["options"] = {
-                "layoutMath": "2",
-                "sizeMode": "2n",
-                "useExtension": 1,
-                "layoutGap": 1,
-                "extend": 0
-            };
-            // projectName
-            tmproject["projectName"] = group.name + "_" + tempindex; 
-            // 版本
-            tmproject["version"] = 5;
-            tempindex++;
-
-            // 获取res.json分组的keys, 并分割成数组
-            var oldkeys = group.keys.split(","); 
-            var oldkeysHash = {};
-            // 遍历oldkeys
-            for (var _b = 0, oldkeys_1 = oldkeys; _b < oldkeys_1.length; _b++) {
-                var key = oldkeys_1[_b];
-                // 保存到oldkeysHash对象中
-                oldkeysHash[key] = true;
-            }
-
-            var newKeys = [];
-            // 遍历oldkeys
-            for (var _c = 0, oldkeys_2 = oldkeys; _c < oldkeys_2.length; _c++) {
-                var key = oldkeys_2[_c];
-                if (key.indexOf("json") == -1) {
-                    if (!oldkeysHash[key.replace("png", "json")]) { //粒子和龙骨对应的图集不合图
-                        if (!oldkeysHash[key.replace("png", "fnt")]) //位图字体
-                            newKeys.push(key);
-                    }
-                    else if (key.indexOf("jpg") > -1) {
-                        newKeys.push(key);
-                    }
-                }
-            }
-            oldkeysHash = {};
-            oldkeys = [];
-            // files路径
-            var urls = newKeys.map(function (key) {
-                return path.join(pathNor, resourcesHash_1[key]);
-            });
-            tmproject["files"] = urls;
-            // 根据tmproject写入文件
-            if (urls.length > 0) {
-                fs.writeFileSync(path.join(targetDir, tmproject["projectName"] + ".tmproject"), JSON.stringify(tmproject));
-            }
-            tmproject = {};
-        }
+    // 遍历resources
+    for (let _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
+      const resource = resources_1[_i]
+      resourcesHash_1[resource.name] = resource.url
     }
-};
-//根据数组开始扫描
-for (var _a = 0, resjsons_1 = resjsons; _a < resjsons_1.length; _a++) {
-    var resJson = resjsons_1[_a];
-    _loop_1(resJson);
-}
 
+    // 遍历groups
+    for (let _a = 0, groups_1 = groups; _a < groups_1.length; _a++) {
+      const group = groups_1[_a]
+      let tmproject = {} // 用来存放tmproject文件的信息
+      // tmproject文件配置
+      tmproject.options = {
+        layoutMath: '2',
+        sizeMode: '2n',
+        useExtension: 1,
+        layoutGap: 1,
+        extend: 0
+      }
+      // projectName
+      tmproject.projectName = `${group.name}_${tempindex}`
+      // 版本
+      tmproject.version = 5
+      tempindex++
+
+      // 获取res.json分组的keys, 并分割成数组
+      let oldkeys = group.keys.split(',')
+      let oldkeysHash = {}
+      // 遍历oldkeys
+      for (let _b = 0, oldkeys_1 = oldkeys; _b < oldkeys_1.length; _b++) {
+        var key = oldkeys_1[_b]
+        // 保存到oldkeysHash对象中
+        oldkeysHash[key] = true
+      }
+
+      const newKeys = []
+      // 遍历oldkeys
+      for (let _c = 0, oldkeys_2 = oldkeys; _c < oldkeys_2.length; _c++) {
+        var key = oldkeys_2[_c]
+        if (!key.includes('json')) {
+          if (!oldkeysHash[key.replace('png', 'json')]) { // 粒子和龙骨对应的图集不合图
+            if (!oldkeysHash[key.replace('png', 'fnt')]) // 位图字体
+              newKeys.push(key)
+          }
+          else if (key.includes('jpg')) {
+            newKeys.push(key)
+          }
+        }
+      }
+      oldkeysHash = {}
+      oldkeys = []
+      // files路径
+      const urls = newKeys.map((key) => {
+        return path.join(pathNor, resourcesHash_1[key])
+      })
+      tmproject.files = urls
+      // 根据tmproject写入文件
+      if (urls.length > 0) {
+        fs.writeFileSync(path.join(targetDir, `${tmproject.projectName}.tmproject`), JSON.stringify(tmproject))
+      }
+      tmproject = {}
+    }
+  }
+}
+// 根据数组开始扫描
+for (let _a = 0, resjsons_1 = resjsons; _a < resjsons_1.length; _a++) {
+  const resJson = resjsons_1[_a]
+  _loop_1(resJson)
+}
 ```
-
-
-
 
 #### 调用插件
 
@@ -703,8 +664,6 @@ publish之后，会在打包后的文件夹的resource目录下生成一个Textu
 ![image-20180806144123553](./006tKfTcly1ftzzaieuuxj31kw104wqe.png)
 
 此时纹理集并没有被添加到 res.json 配置中，需要使用[ConvertResConfigFilePlugin](#ConvertResConfigFilePlugin)插件。
-
-
 
 ## 插件---ConvertResConfigFilePlugin
 
@@ -716,11 +675,13 @@ publish之后，会在打包后的文件夹的resource目录下生成一个Textu
 
 ```typescript
 new ConvertResConfigFilePlugin({
-    resourceConfigFiles: [{ 
-        filename: "resource/default.res.json", root: "resource/" }],
-        nameSelector: (p) => {
-        return path.basename(p).split(".").join("_");
-    }
+  resourceConfigFiles: [{
+    filename: 'resource/default.res.json',
+    root: 'resource/'
+  }],
+  nameSelector: (p) => {
+    return path.basename(p).split('.').join('_')
+  }
 })
 ```
 
@@ -747,6 +708,3 @@ nameSelector函数主要是规定了怎么资源的url名字转为对应res.json
 ### TIP
 
 当文件打包出的图集在res.json文件上级的时候，是不能使用的，在res.json中不能出现  `../`  这种向上级寻找资源的语法，因此开发者如果要使用合图插件，只能将tmproject文件放到与res.json或是它的子集中去。另外可能存在很多res.json都会引用同一份的合图，这份合图的位置就要保证在所有res.json文件的子集下。
-
-
-

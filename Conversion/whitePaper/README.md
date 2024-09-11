@@ -43,8 +43,6 @@ Egret Conversion的产品特性：
 
 * 丰富详尽的转换结果报告，包括语法兼容性及转换率报告，API转换和警告列表，类型提示列表报告，资源转换报告等。
 
- 
-
 ## Egret Conversion 2.0能用来做什么？
 
     1. 转换AS3项目到Egret HTML5项目。
@@ -54,8 +52,6 @@ Egret Conversion的产品特性：
     3. 支持使用Flash制作的swf资源转换成Egret可用的资源。
 
     4. 支持位图，动画，矢量等单个资源的转换。
-
- 
 
 ## 为什么选择Egret Conversion 2.0？
 
@@ -148,6 +144,3 @@ Egret官方网站 [http://www.egret.com](http://www.egret.com)
 Egret Conversion 2.0产品页 [http://www.egret.com/products-conversion](http://www.egret.com/products-conversion)
 
 开发者中心 [http://edn.egret.com/cn/](http://edn.egret.com/cn/)
-
-
-

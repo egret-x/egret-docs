@@ -4,7 +4,7 @@ title: 其他原生支持
 createTime: 2024/09/11 10:50:04
 permalink: /docs/n1b4ck36/
 ---
-
+
 ##	开启优化开关
 
 **适用于Android和iOS support 3.2.2及以上。**
@@ -23,8 +23,6 @@ egret_native.featureEnable(feature);
 cmdBatch: 减少引擎与support的数据传输次数，提高渲染效率（3.2.2添加）。
 
 pretreatTexture：提高一张纹理被多次使用时的渲染效率（3.2.4添加）。
-
-
 
 ##	热更新地址不能访问时启动最后一次更新的游戏包
 
@@ -46,14 +44,13 @@ pretreatTexture：提高一张纹理被多次使用时的渲染效率（3.2.4添
 
 **参数：**true/false
 
-
 ##	设置游戏背景透明
 
 **适用于Android support 3.2.1及以上，iOS support 3.2.4及以上。**
 
 **功能：**设置游戏所在View的背景透明。
 
-**使用方法：** 
+**使用方法：**
 
 Android：
 
@@ -82,7 +79,6 @@ _options[@OPTION_GAME_GLVIEW_TRANSPARENT] = @"true";
 
 **使用方法：**将获取 gameEngineView 的方法由 game_engine_get_view 改为 game_engine_get_view_set_top ，将游戏所在的 View 放到最顶层。
 
-
 ##  获取原生设备的电池电量信息
 
 **适用于Android/iOS support 3.1.4及以上。**
@@ -91,15 +87,14 @@ _options[@OPTION_GAME_GLVIEW_TRANSPARENT] = @"true";
 
 **使用方法：**
 ```javascript
-var json_listene = { action: "listenDeviceInfoChanged" };
-var jsonStr_listene = JSON.stringify(json_listene);
-egret.ExternalInterface.call("egret.deviceInfo", jsonStr_listene);
-             
-egret.ExternalInterface.addCallback("egret.deviceInfo", function (message) {
-        console.log("message form native : " + message);
-});
-var json = { action: "getCurrentBatteryInfo" };
-var jsonStr = JSON.stringify(json);
-egret.ExternalInterface.call("egret.deviceInfo", jsonStr);
-```
+const json_listene = { action: 'listenDeviceInfoChanged' }
+const jsonStr_listene = JSON.stringify(json_listene)
+egret.ExternalInterface.call('egret.deviceInfo', jsonStr_listene)
 
+egret.ExternalInterface.addCallback('egret.deviceInfo', (message) => {
+  console.log(`message form native : ${message}`)
+})
+const json = { action: 'getCurrentBatteryInfo' }
+const jsonStr = JSON.stringify(json)
+egret.ExternalInterface.call('egret.deviceInfo', jsonStr)
+```

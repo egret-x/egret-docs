@@ -14,9 +14,9 @@ permalink: /docs/db/dbLibs/createAnimation/
 实例化DragonBones所需要的数据。
 
 ~~~ javascript
-var dragonbonesData = RES.getRes( "RobotGame_1_json" );  
-var textureData = RES.getRes( "texture_json" );  
-var texture = RES.getRes( "texture_png" );
+const dragonbonesData = RES.getRes('RobotGame_1_json')
+const textureData = RES.getRes('texture_json')
+const texture = RES.getRes('texture_png')
 ~~~
 
 DragonBones动画由工厂类进行管理，可以使用EgretFactory对象来处理所有的动画数据以及贴图。
@@ -27,7 +27,7 @@ DragonBones动画由工厂类进行管理，可以使用EgretFactory对象来处
 
 ~~~ javascript
 let egretFactory: dragonBones.EgretFactory = dragonBones.EgretFactory.factory;
-egretFactory.parseDragonBonesData(dragonbonesData);  
+egretFactory.parseDragonBonesData(dragonbonesData);
 egretFactory.parseTextureAtlasData(textureData, texture);
 ~~~
 
@@ -38,13 +38,13 @@ egretFactory.parseTextureAtlasData(textureData, texture);
 通过`buildArmatureDisplay`方法，我们提取名称为`robot`的骨架。要想在舞台中看到该骨架，我们需要将其显性的添加到的舞台当中，可以使用下面语句。
 
 ~~~ javascript
-this.addChild(armatureDisplay);
-armatureDisplay.x = 200;
-armatureDisplay.y = 300;
-armatureDisplay.scaleX = 0.5;
-armatureDisplay.scaleY = 0.5;
+this.addChild(armatureDisplay)
+armatureDisplay.x = 200
+armatureDisplay.y = 300
+armatureDisplay.scaleX = 0.5
+armatureDisplay.scaleY = 0.5
 
-armatureDisplay.animation.play("Walk");
+armatureDisplay.animation.play('Walk')
 ~~~
 
 `armatureDisplay`是名称为`robot`的骨架对象的显示对象。将其添加到显示列表中，就可以在舞台中看到当前提取的机器人。效果如图：
@@ -54,4 +54,3 @@ armatureDisplay.animation.play("Walk");
 需要播放的动画名称，可参考下图，在DragonBones Pro中，动画面板罗列了所有可播放的动画名称。
 
 ![](56c314504fd66.png)
-

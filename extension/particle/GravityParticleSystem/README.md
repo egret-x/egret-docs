@@ -95,8 +95,8 @@ GravityParticleSystem 是继承自 ParticleSystem 扩展的重力粒子系统，
 
 ```
  @brief 粒子切向加速度差值，取值范围[-Number.MAX_VALUE,Number.MAX_VALUE]
-``` 
- 
+```
+
 ** private startSize:number; **
 
 ```
@@ -175,4 +175,4 @@ GravityParticleSystem 是继承自 ParticleSystem 扩展的重力粒子系统，
 
 ```
  @brief 构造函数  @param texture {egret.Texture} 粒子纹理  @param config {any} 粒子属性配置，包含重力系统所需要的各项属性值
-``` 
+```

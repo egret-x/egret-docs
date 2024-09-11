@@ -39,7 +39,6 @@ DragonBones作为Egret引擎的扩展库已经集成在安装包中。如果你�
 
 3、重新编译项目
 
-
 重新编译请执行 `egret build -e`
 
 通过上述三个步骤操作，你可以在项目中直接使用DragonBones。

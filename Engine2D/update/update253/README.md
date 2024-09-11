@@ -30,4 +30,3 @@ EUI 可以现在也可以使用位图组件了。详情可以参考 API [BitmapL
 * 修复输入文本特定情况下显示异常问题
 * 修复 Bitmap 和 Graphics 测量不准确导致脏矩形绘制错乱问题
 * 修复 BitmapText 测量问题
-

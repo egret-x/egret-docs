@@ -24,7 +24,7 @@ egret项目中所用的[资源配置文件](../../extension/RES/loadConfig/READM
 
 选中一项会在信息区和预览区显示所选资源。
 右键可以删除资源/在资源管理器中查看。如果是图片资源，可以编辑九宫格。
-可以批量删除资源，同时按住ctrl/command/shift键即可选择多项。 
+可以批量删除资源，同时按住ctrl/command/shift键即可选择多项。
 可以删除文件夹。
 删除资源的同时会从相关的组里自动删除。
 可以从本地文件系统中拖入图片等资源到资源树中，拖入的文件自动添加到资源配置中。
@@ -71,4 +71,3 @@ egret项目中所用的[资源配置文件](../../extension/RES/loadConfig/READM
 
 资源编辑器基于wing项目，需要从项目的配置文件wingProperties.json中读取资源配置。打开wingProperties.json，在resourcePlugin->configs下加入自己的资源文件：
 ![](573aff0506c43.png)
-

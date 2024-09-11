@@ -6,7 +6,7 @@ permalink: /docs/egret3d/Egret3DDisp/3DModel/
 * Mesh 场景中的网格对象 显示模型
 
 ----------
-    
+
     // 创建3角形
     protected createTriangle() {
         var geom: egret3d.Geometry = egret3d.GeometryUtil.createGeometry();
@@ -18,7 +18,7 @@ permalink: /docs/egret3d/Egret3DDisp/3DModel/
         vb.push(-50, -50, 0, 1, 0, 0, 1);
         vb.push(0, 50, 0, 0, 1, 0, 1);
         vb.push(50, -50, 0, 0, 0, 1, 1);
-        // 加入3个顶点       
+        // 加入3个顶点
 
         // 设置顶点索引  3个索引  1个3角形面
         ib.push(0, 1, 2);
@@ -54,7 +54,7 @@ permalink: /docs/egret3d/Egret3DDisp/3DModel/
         vb.push(50, 50, 0, 0, 0, 1, 1, 1, 0);
         vb.push(-50, -50, 0, 1, 0, 0, 1, 0, 1);
         vb.push(50, -50, 0, 0, 0, 1, 1, 1, 1);
-        // 加入4个顶点        
+        // 加入4个顶点
 
         // 设置顶点索引  6个索引  2个3角形面
         ib.push(0, 2, 1, 2, 3, 1);

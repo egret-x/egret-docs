@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/6sp7aop6/
 ---
-
+
 ## 添加多标签支持
 这个版本中加入了多标签的支持,现在可以更方便的切换打开的文件。
 ![](577bb3e6106f5.png)
@@ -25,6 +25,3 @@ permalink: /docs/6sp7aop6/
 ## 原生打包增加 Android Studio 支持
 结合 Android Support Wing现在可以生成 Android Studio 工程，并完成打包工作。
 ![](577bb54f594a1.png)
-
-
-

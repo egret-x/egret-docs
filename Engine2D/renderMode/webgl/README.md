@@ -22,13 +22,13 @@ WebGL 提供了底层的渲染 API，对于传统 Web 开发者来说使用 WebG
 | Chrome | Chrome 8 开始支持。|
 | Firefox | WebGL 在 Firefox 4 及以上版本默认支持。|
 | Safari  | Safari 5.1 开始支持 (Lion 版本系统已经使用)。|
-| Opera | Opera 12 alpha 及以上版本。| 
+| Opera | Opera 12 alpha 及以上版本。|
 | IE | IE 11 开始支持。 |
 
 | 手机浏览器 | 兼容性 |
 |---|---|
-| ChromeAndroid | Chrome 30 开始在支持 GL_EXT_robustness 扩展的设备上支持. | 
-| 腾讯x5内核 | QQ浏览器以及X5 tbs 2.x： android 4.0以下不支持webgl功能，4.0以上会根据手机的gl指令进行检查从而最终决定是否开启webgl功能 | 
+| ChromeAndroid | Chrome 30 开始在支持 GL_EXT_robustness 扩展的设备上支持. |
+| 腾讯x5内核 | QQ浏览器以及X5 tbs 2.x： android 4.0以下不支持webgl功能，4.0以上会根据手机的gl指令进行检查从而最终决定是否开启webgl功能 |
 
 ## 2.使用
 
@@ -73,7 +73,3 @@ console.log(egret.Capabilities.renderMode);
 在 WebGL 下如果要使用 `Texture` 对象的 `toDataURL()` 方法把纹理转换为 base64 字符串，那么纹理图片应放在同一服务器下，引用不同的服务器下的资源将不成功。
 
 当然 WebGL 标准正在普及，在手机上有些特性支持还不是很友好。手机上非 Chrome 浏览器现在对不规则遮罩支持还不是很好，在使用 WebGL 渲染器时可以尽量避免使用不规则遮罩。
-
-
-
-

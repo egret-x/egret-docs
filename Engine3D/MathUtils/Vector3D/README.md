@@ -31,7 +31,6 @@ permalink: /docs/puvh31zi/
 	var vector1:egret3d.Vector3D = new egret3d.Vector3D(1, 0, 0, 0);
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 0, 1, 0);
 
-	
 	//vector1加上vector2数据
 	vector1.incrementBy(vector2);
 
@@ -59,7 +58,6 @@ permalink: /docs/puvh31zi/
 	var vector1:egret3d.Vector3D = new egret3d.Vector3D(1, 0, 0, 0);
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 0, 1, 0);
 
-	
 	//vector1减去vector2数据
 	vector1.decrementBy(vector2);
 
@@ -70,17 +68,14 @@ permalink: /docs/puvh31zi/
 * crossProduct():叉乘, a·b=|a|·|b|·cos(a,b),(a,b)表示a,b的夹角;
 	* 通过叉乘计算可以获得一个垂直于ab所在平面的方向，在a和b为单位向量的情况下，所得结果也为单位向量。
 
-
 ![](crossProduct.jpg)
 
 ----------
 
-
-
 	var vector1:egret3d.Vector3D = new egret3d.Vector3D(1, 0, 0, 0);
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 1, 0, 0);
 	var result:egret3d.Vector3D = new egret3d.Vector3D();
-	
+
 	//vector1加上vector2数据
 	vector1.crossProduct(result);
 
@@ -94,18 +89,15 @@ permalink: /docs/puvh31zi/
 
 ----------
 
-
-
 	var vector1:egret3d.Vector3D = new egret3d.Vector3D(1, 0, 0, 0);
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 1, 0, 0);
-		
+
 	//vector1加上vector2数据
 	var result:number = vector1.dotProduct(result);
 
 	//result: 0; (vector1和vector2夹角的余弦值为0)
 
 ---------
-
 
 * negate():取反;
 	* 取反操作为x/y/z三轴数据各自乘以-1
@@ -120,7 +112,6 @@ permalink: /docs/puvh31zi/
 
 ---------
 
-
 * normalize():标准化
 	* 在不改变向量方向的条件下，改变向量长度为指定的值
 
@@ -129,15 +120,13 @@ permalink: /docs/puvh31zi/
 	var vector1:egret3d.Vector3D = new egret3d.Vector3D(1, 2, 3, 0);
 	//标准化
 	vector1.normalize(1);
-	
+
 	//w	0	Number
 	//x	0.2672612419124244	Number
 	//y	0.5345224838248488	Number
 	//z	0.8017837257372732	Number
 
-
 ---------
-
 
 * slerp():四元数平滑插值
 	* 输入一个0-1之间的参数，在四元数a和四元数b的之间平滑插值获得新的向量
@@ -149,16 +138,13 @@ permalink: /docs/puvh31zi/
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 1, 0, 1);
 	//插值
 	vector1.slerp(vector1, vector2, 0.2);
-	
+
 	//w	1	Number
 	//x	0.9510565400123596	Number
 	//y	0.30901700258255005	Number
 	//z	0	Number
 
-
-
 ---------
-
 
 * lerp():普通线性插值
 	* 在向量a和向量b的之间线性插值获得新的向量，x/y/z三轴各自线性插值
@@ -169,12 +155,11 @@ permalink: /docs/puvh31zi/
 	var vector2:egret3d.Vector3D = new egret3d.Vector3D(0, 1, 0, 1);
 	//插值
 	vector1.slerp(vector1, vector2, 0.2);
-	
+
 	//w	1	Number
 	//x	0.8	Number
 	//y	0.2	Number
 	//z	0	Number
-
 
 ---------
 
@@ -188,12 +173,10 @@ permalink: /docs/puvh31zi/
 	var result:egret3d.Vector3D = new egret3d.Vector3D();
 	//乘法运算
 	vector1.multiply(vector2, result);
-	
+
 	//result: (8, 18, 32, 1)
 
-
 ---------
-
 
 * divided():除法运算，将向量a的x/y/z分量分别除以向量b的x/y/z分量，结果存入target中
 
@@ -204,7 +187,7 @@ permalink: /docs/puvh31zi/
 	var result:egret3d.Vector3D = new egret3d.Vector3D();
 	//乘法运算
 	vector1.divided(vector2, result);
-	
+
 	//result: (0.5, 0.5, 0.5, 1)
 
 ---------

@@ -28,9 +28,8 @@ Scene3D
         // 并把原来主摄像机加载当前场景
         this.view.scene = scene;
         this.view.scene.addChild(this.view.camera3D);
-		// 如果主摄像机在 scene 节点中 则不需要再添加为子节点  但是需要设置 view.camera3D 
+		// 如果主摄像机在 scene 节点中 则不需要再添加为子节点  但是需要设置 view.camera3D
     }
-
 
 ![](Img_2.gif)
 

@@ -4,8 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/ldw6b0by/
 ---
 
-
-
 ## 什么是微端
 
 白鹭微端是 Egret 团队为了解决原生 APP 包体过大而推出的打包解决方案。
@@ -80,7 +78,7 @@ launcher.callExternalInterface("sendToJS", "message from microclient");
 launcher.closeLoadingViewAutomatically = 1;
 ```
 
-将代码里的 **=1** 改为 **=0** 
+将代码里的 **=1** 改为 **=0**
 
 - 修改游戏代码
 
@@ -126,7 +124,6 @@ launcher.launchPageUrl = "启动页地址";
 
 通过 NativeLauncher 类的 initViews 方法启用启动图功能，函数原型如下：
 
-
 ```
 public void initViews(FrameLayout layout, int imageResId, int duration);
 ```
@@ -134,7 +131,6 @@ public void initViews(FrameLayout layout, int imageResId, int duration);
 其中，layout 表示 View 的根节点，imageResId 表示启动图的图片资源 id，duration 表示启动图展示的时间，单位为毫秒。如果该时间等于 0，则表示启动图启动图会在游戏启动后自行关闭，如果大于 0，则表示启动图会在到达该时间之后关闭。
 
 举例来说，假设 res 文件夹下面的 drawable 目录下有一个名为 background.jpg 的图片，该图片被用于启动图并且启动图的展示时间为 2 秒，那么示例代码如下：
-
 
 ```
 launcher.initViews(rootLayout, R.drawable.background, 2000);

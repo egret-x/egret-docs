@@ -65,7 +65,6 @@ window['ExternalInterface']['call']("callNative", "message from JS");
 
 ### 在 JS 中注册相应的回调函数
 
-
 #### 1. 在egret游戏中使用addCallback()
 
 在 JS 中使用 egret.ExternalInterface.addCallback 方法将函数名及其对应的回调函数接口注册到系统中。函数原型如下：
@@ -75,7 +74,6 @@ egret.ExternalInterface.addCallback(funcName, callback);
 ```
 
 其中，funcName 表示要注册的函数的名字，callback 表示注册的函数的回调接口。callback 是接受一个字符串参数的函数。一个完整的注册示例如下：
-
 
 ```
 function callJS(msg) {
@@ -108,7 +106,6 @@ public void callExternalInterface(String funcName, String funcArg)；
 ```
 
 其中，funcName 表示调用函数名字的字符串和 funcArg 是传递给被调用函数的参数字符串。经过上面两步，就实现了在 Java 中调用 JS 函数。调用前面注册的 callJS 函数的示例代码如下：
-
 
 ```
 launcher.callExternalInterface("callJS", "message from native");

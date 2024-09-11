@@ -8,10 +8,10 @@ permalink: /docs/extension/particle/useParticle/
 通过RES模块获得 GravityParticleSystem 所需要的纹理以及配置，然后创建particle.GravityParticleSystem对象。注：纹理和配置需要加载过的
 
 ``` typescript
-var texture = RES.getRes("texture");
-var config = RES.getRes("texture_json");
-this.system = new particle.GravityParticleSystem(texture, config);
-``` 
+const texture = RES.getRes('texture')
+const config = RES.getRes('texture_json')
+this.system = new particle.GravityParticleSystem(texture, config)
+```
 
 ## 配置文件
 
@@ -55,53 +55,53 @@ this.system = new particle.GravityParticleSystem(texture, config);
     "tangentialAcceleration": 0,
     "tangentialAccelerationVariance": 0
 }
-``` 
+```
 
 ## 启动
 
 通过 start 函数启动粒子系统
 
 ``` typescript
-this.system.start();
-``` 
+this.system.start()
+```
 
 ## 停止
 
 通过 `stop` 函数停止粒子系统
 
 ``` typescript
-this.system.stop();
-``` 
+this.system.stop()
+```
 
 ## 更换纹理
 
 通过 `changeTexture` 函数更换粒子纹理
 
 ``` typescript
-var newTexture = RES.getRes("newTexture");
-this.system.changeTexture(newTexture);
-``` 
+const newTexture = RES.getRes('newTexture')
+this.system.changeTexture(newTexture)
+```
 
 ## 创建示例
 
 通过以下代码可以创建粒子系统并启动
 
 ``` typescript
-//获取纹理
-var texture = RES.getRes("texture");
+// 获取纹理
+const texture = RES.getRes('texture')
 
-//获取配置
-var config = RES.getRes("texture_json");
+// 获取配置
+const config = RES.getRes('texture_json')
 
-//创建 GravityParticleSystem
-this.system = new particle.GravityParticleSystem(texture, config);
+// 创建 GravityParticleSystem
+this.system = new particle.GravityParticleSystem(texture, config)
 
-//启动粒子库
-this.system.start();
+// 启动粒子库
+this.system.start()
 
-//将例子系统添加到舞台
-this.addChild(this.system);
-``` 
+// 将例子系统添加到舞台
+this.addChild(this.system)
+```
 
 ## 粒子系统相关链接
 

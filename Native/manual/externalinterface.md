@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/2oroi6e2/
 ---
 
-
 ## JS与Java通信
 
 ### JS向Java发送消息
@@ -25,7 +24,7 @@ nativeAndroid.setExternalInterface("sendToNative", new INativePlayer.INativeInte
 JS发送消息：
 
 ```javascript
-egret.ExternalInterface.call("sendToNative", "message from JS");
+egret.ExternalInterface.call('sendToNative', 'message from JS')
 ```
 
 ### Java向JS发送消息
@@ -33,9 +32,9 @@ egret.ExternalInterface.call("sendToNative", "message from JS");
 JS注册接收消息的方法：
 
 ```javascript
-egret.ExternalInterface.addCallback("sendToJS", function(msg) {
-    console.log(msg);
-});
+egret.ExternalInterface.addCallback('sendToJS', (msg) => {
+  console.log(msg)
+})
 ```
 
 Java发送消息：

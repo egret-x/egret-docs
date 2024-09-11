@@ -35,7 +35,6 @@ permalink: /docs/qihrqpsm/
 
 ------------
 
-
 ### 文本条件
 文本组件除特有条件外，也适用部分通用条件（文本不支持“碰撞”相关条件）。参见：[通用条件](../../commonElements/conditions/README.md)
 
@@ -46,7 +45,6 @@ permalink: /docs/qihrqpsm/
 ![](564ad9fa66759.png)
 
 ------------
-
 
 ### 文本动作
 文本组件除特有动作外，也适用部分通用动作（文本不支持“碰撞”相关动作）。参见：[通用动作](../../commonElements/action/README.md)
@@ -101,5 +99,3 @@ permalink: /docs/qihrqpsm/
 #### 换行
 设置文本是否支持换行。默认为“支持”。
 ![](564ad9f969f63.png)
-
-

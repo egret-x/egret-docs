@@ -6,8 +6,6 @@ permalink: /docs/egret2d/projectConfig/tsconfig/
 
 `tsconfig.json` 是 Typescript 项目的配置文件，TypeScript 编译器编译代码之前，会首先读取这个配置文件，并根据其中的属性来设置 TypeScript 项目的编译参数。
 
-
-
 ### 使用方式
 
 1 ) 在创建 egret 项目时，会自动在项目根目录下生成名为 "tsconfig.json" 的文本文件。
@@ -16,21 +14,21 @@ permalink: /docs/egret2d/projectConfig/tsconfig/
 
 ``` json
 {
-    "compilerOptions": {
-        "target": "es5",
-        "outDir": "bin-debug",
-        "experimentalDecorators": true,
-        "lib": [
-            "es5",
-            "dom",
-            "es2015.promise"
-        ],
-        "types": []
-    },
-    "include": [
-        "src",
-        "libs"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "bin-debug",
+    "experimentalDecorators": true,
+    "lib": [
+      "es5",
+      "dom",
+      "es2015.promise"
+    ],
+    "types": []
+  },
+  "include": [
+    "src",
+    "libs"
+  ]
 }
 ```
 
@@ -43,11 +41,8 @@ permalink: /docs/egret2d/projectConfig/tsconfig/
 * 其他常用参数
 	* `"sourceMap": true`:把`.ts` 文件编译成`.js` 文件时，生成对应的 `.js.map` 文件，该文件可以让用户直接在浏览器里调试 ts 文件
 	* `"removeComments": true`:  编译 `.js` 时删除原本 `.ts` 文件中的注释。
-	
-
 
 3 ) 设置其他字段，比如与 `compilerOptions` 平级的还有一个 `include` 字段,表示哪些文件会参与编译。在引擎 `4.x` 之前的版本里，该字段为 `exclude`, 表示哪些文件不参与编译
-
 
 4 ) 执行 `egret build` 命令，可以按照配置文件来编译 egret 项目。
 

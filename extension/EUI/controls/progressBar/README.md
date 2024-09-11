@@ -8,7 +8,7 @@ permalink: /docs/extension/EUI/controls/progressBar/
 与滑块控件一样，进度条控件也继承自 `eui.Range` 控件。也就是说 `eui.Progress` 进度条控件也可以设置 `maximum` 、`minimum `、`value` 等属性。
 
 ### 水平方向进度条
-~~~ typescript 
+~~~ typescript
 private pBar:eui.ProgressBar
 private initProgressBar():void{
     this.pBar = new eui.ProgressBar();
@@ -27,13 +27,13 @@ private timerHandler():void{
     this.pBar.value += 1;
     if(this.pBar.value>=210){this.pBar.value=0;}
 }
-~~~ 
+~~~
 得到的效果：
 
 ![](56015bfa15f46.png)
 
 ### 垂直方向进度条
-~~~ typescript 
+~~~ typescript
 private vBar:eui.ProgressBar;
 private initProgressvBar() {
 
@@ -56,7 +56,7 @@ private timerVBarHandler():void{
         this.vBar.value=0;
     }
 }
-~~~ 
+~~~
 得到的效果：
 
 ![](56015bfe4b254.png)
@@ -64,5 +64,5 @@ private timerVBarHandler():void{
 > 同前面一节一样，这里也使用：
 ~~~ typescript
 egret create HelloEUI --type eui
-~~~ 
+~~~
 > 创建示例项目的默认皮肤。可以在示例项目的`eui_skins`文件夹下找到默认皮肤的 exml 文件。

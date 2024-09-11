@@ -60,9 +60,8 @@ class TestCall{
 这种情况解决方法是告诉编译器项目中的类的依赖关系。在 TypeScript 中，使用`<reference>`标签来表示引用关系。在 reference 标签中可以标记依赖文件的相对路径。所以只需要在 TestB 类之前加入如下注释即可：
 
 ``` javascript
-///<reference path="TestA.ts" />
+/// <reference path="TestA.ts" />
 ```
-
 
 ``` javascript
 class TestB{

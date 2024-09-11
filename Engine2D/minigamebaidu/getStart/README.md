@@ -10,7 +10,6 @@ permalink: /docs/pfhxk2zt/
 * 百度小游戏官网：[链接地址](https://smartprogram.baidu.com/docs/introduction/register/)，注册账号，获取 appid
 * 准备最新版百度开发者工具：[下载地址](https://smartprogram.baidu.com/docs/game/tutorials/howto/dev/)
 
-
 ### 二.创建小游戏
 
 使用最新的 Egret Launcher 创建 5.2.13 以上版本的项目，项目名字叫做 `BaiduDemo`。
@@ -32,7 +31,7 @@ permalink: /docs/pfhxk2zt/
 ### 三.编译和发布命令
 
 #### 方法1：开发者可以使用命令行来编译和发布百度小游戏：
-	
+
   * 编译小游戏： ```egret build --target baidugame```。
   * 发布小游戏： ```egret publish --target baidugame``` 。
 
@@ -63,4 +62,3 @@ permalink: /docs/pfhxk2zt/
 
 * 点击`预览`，可以使用`百度App`扫码在手机上调试。
 * 点击`发布`，可以上传到百度后台，审核后正式发布。
-

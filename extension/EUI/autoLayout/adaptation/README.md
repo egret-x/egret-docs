@@ -8,23 +8,22 @@ permalink: /docs/extension/EUI/autoLayout/adaptation/
 而在 EUI 库里，通过引入自适应流式布局（简称自动布局），能够解决第二步骤的屏幕适配问题。下面是一个屏幕适配的示例：
 
 ~~~ typescript
-class Main extends egret.Sprite{
+class Main extends egret.Sprite {
+  public constructor() {
+    super()
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this)
+  }
 
-    public constructor(){
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-    }
+  public onAddToStage(event: egret.Event): void {
+    const uiLayer: eui.UILayer = new eui.UILayer()
+    this.addChild(uiLayer)
 
-    public onAddToStage(event:egret.Event):void{
-        var uiLayer:eui.UILayer = new eui.UILayer();
-        this.addChild(uiLayer);
+    const exmlText = `<e:Group width="100%" height="100%" xmlns:e="http://ns.egret.com/eui"> <e:Image source="image/header-background.png" fillMode="repeat" width="100%" height="90"/> <e:Label horizontalCenter="0" top="25" text="Alert"/> <e:Button skinName="skins.BackButtonSkin" top="16" left="16" label="Back"/> <e:Group width="100%" top="90" bottom="0"> <e:Button skinName="skins.ButtonSkin" horizontalCenter="0" verticalCenter="0" label="Show Alert"/> </e:Group> </e:Group>`
 
-        var exmlText = `<e:Group width="100%" height="100%" xmlns:e="http://ns.egret.com/eui"> <e:Image source="image/header-background.png" fillMode="repeat" width="100%" height="90"/> <e:Label horizontalCenter="0" top="25" text="Alert"/> <e:Button skinName="skins.BackButtonSkin" top="16" left="16" label="Back"/> <e:Group width="100%" top="90" bottom="0"> <e:Button skinName="skins.ButtonSkin" horizontalCenter="0" verticalCenter="0" label="Show Alert"/> </e:Group> </e:Group>`;
-
-        var exmlClass = EXML.parse(exmlText);
-        var group:eui.Group = new exmlClass();
-        uiLayer.addChild(group);
-    }
+    const exmlClass = EXML.parse(exmlText)
+    const group: eui.Group = new exmlClass()
+    uiLayer.addChild(group)
+  }
 }
 ~~~
 

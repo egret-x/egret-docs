@@ -12,7 +12,7 @@ permalink: /docs/8wysn5x3/
 * [改进] 提高稳定性。
 
 	关闭优化方法：
-	
+
 	~~~
 /* egret.native.js */
 // native.$supportCmdBatch = egret_native.sendToC ? true : false;

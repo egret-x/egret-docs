@@ -12,12 +12,12 @@ permalink: /docs/extension/tween/tween/
  {
      "name": "tween"
  }
- ``` 
+ ```
 在项目所在目录内执行一次引擎编译：
 
 ``` typescript
 egret build -e
-``` 
+```
 
 ## 2.缓动基本用法
 
@@ -31,23 +31,24 @@ egret build -e
 
 ``` typescript
 /// 代码段 A
-class TweenTest extends egret.DisplayObjectContainer{
-    public constructor(){
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-    }
-    private onAddToStage(event:egret.Event){
-        var shp:egret.Shape = new egret.Shape();
-        shp.graphics.beginFill( 0x00ff00 );
-        shp.graphics.drawRect( 0, 0, 100, 100 );
-        shp.graphics.endFill();
-        shp.x = 50;
-        this.addChild( shp );
-        var tw = egret.Tween.get( shp );
-        tw.to( {x:150}, 1000 );
-    }
+class TweenTest extends egret.DisplayObjectContainer {
+  public constructor() {
+    super()
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this)
+  }
+
+  private onAddToStage(event: egret.Event) {
+    const shp: egret.Shape = new egret.Shape()
+    shp.graphics.beginFill(0x00FF00)
+    shp.graphics.drawRect(0, 0, 100, 100)
+    shp.graphics.endFill()
+    shp.x = 50
+    this.addChild(shp)
+    const tw = egret.Tween.get(shp)
+    tw.to({ x: 150 }, 1000)
+  }
 }
-``` 
+```
 
 如代码所示，缓动对象是用 `Tween.get()` 获得的，该方法需要传入用于缓动的目标对象，即例中的 `shp` ，然后通过 `to()` 方法给出需要设置缓动的具体参数。`to()` 的第一个参数用于设置缓动属性以及目标值：例中的属性为 x ，目标值为 150，即会将 shp 从当前 x 坐标位置缓动到 x 坐标为 150；`to()` 的第二个参数为缓动时间长度，单位为毫秒，例中的缓动长度为 1000毫秒，即 1 秒 。
 
@@ -64,8 +65,8 @@ class TweenTest extends egret.DisplayObjectContainer{
 例如，给代码段 A 加入循环控制，只需要修改 `Tween.get()` :
 
 ``` typescript
-var tw = egret.Tween.get( shp, { loop:true} );
-``` 
+const tw = egret.Tween.get(shp, { loop: true })
+```
 
 ## 4.缓动对象的缓动变化事件
 
@@ -77,22 +78,21 @@ var tw = egret.Tween.get( shp, { loop:true} );
 
 ``` typescript
 /// 代码段 B
-var obj = { x:0 };
+const obj = { x: 0 }
 
-var funcChange = function():void{
-    console.log( this.x );
+const funcChange = function (): void {
+  console.log(this.x)
 }
 
-egret.Tween.get( obj, { onChange:funcChange, onChangeObj:obj } )
-    .to( {x:600}, 1000 , egret.Ease.backInOut );
-``` 
+egret.Tween.get(obj, { onChange: funcChange, onChangeObj: obj })
+  .to({ x: 600 }, 1000, egret.Ease.backInOut)
+```
 
 ## 5.缓动过程参数设定
 
-对控制缓动过程的 `to()` 方法的第三个参数也需要特别说明一下。这个参数指定缓动函数，即整个动画过程中属性的变化方式，匀速或先快后慢，先慢后快等等。这个可以用现有的 Ease 中提供的函数常量来设定。 
+对控制缓动过程的 `to()` 方法的第三个参数也需要特别说明一下。这个参数指定缓动函数，即整个动画过程中属性的变化方式，匀速或先快后慢，先慢后快等等。这个可以用现有的 Ease 中提供的函数常量来设定。
 
 例如代码段 B 中使用了 `Ease.backInOut` 缓动方程，该缓动方程的属性变化曲线是在缓动的开始和结束阶段均有一个短暂的反方向运动过程。 每个缓动函数具体的变化方式，可以从 [EDN中心的Tween效果演示](http://edn.egret.com/cn/article/index/id/53) 中看到直观效果。
-
 
 ## 6.缓动对象的其他方法
 
@@ -108,16 +108,16 @@ egret.Tween.get( obj, { onChange:funcChange, onChangeObj:obj } )
 
 ``` typescript
 /// 代码段 C
-var shp:egret.Shape = new egret.Shape();
-shp.graphics.beginFill( 0x00ff00 );
-shp.graphics.drawRect( 0, 0, 100, 100 );
-shp.graphics.endFill();
-shp.x = 50;
-shp.y = 50;
-this.addChild( shp );
-var tw = egret.Tween.get( shp, { loop:true} );
-tw.to( {x:250}, 500 ).call( function(){ console.log( "右上角" ) } ).wait( 100 )
-    .to( {y:250}, 500 ).call( function(){ console.log( "右下角" ) } ).wait( 100 )
-    .to( {x:50}, 500 ).call( function(){ console.log( "左下角" ) } ).wait( 100 )
-    .to( {y:50}, 500 ).call( function(){ console.log( "左上角" ) } ).wait( 100 );
-``` 
+const shp: egret.Shape = new egret.Shape()
+shp.graphics.beginFill(0x00FF00)
+shp.graphics.drawRect(0, 0, 100, 100)
+shp.graphics.endFill()
+shp.x = 50
+shp.y = 50
+this.addChild(shp)
+const tw = egret.Tween.get(shp, { loop: true })
+tw.to({ x: 250 }, 500).call(() => { console.log('右上角') }).wait(100)
+  .to({ y: 250 }, 500).call(() => { console.log('右下角') }).wait(100)
+  .to({ x: 50 }, 500).call(() => { console.log('左下角') }).wait(100)
+  .to({ y: 50 }, 500).call(() => { console.log('左上角') }).wait(100)
+```

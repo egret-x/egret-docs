@@ -13,13 +13,13 @@ KeyEvent3D
 
 	创建一个演示场景：
 	class Main {
-	
+
 	    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 	    protected view1: egret3d.View3D;
 	    protected cube: egret3d.Mesh;
-	
+
 	    public constructor() {
-	
+
 	        ///创建3DCanvas
 	        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 	        this._egret3DCanvas.x = 0;
@@ -44,26 +44,25 @@ KeyEvent3D
 	        var geometery_Plane: egret3d.PlaneGeometry = new egret3d.PlaneGeometry();
 	        var plane = new egret3d.Mesh(geometery_Plane, mat_Plane);
 	        this.view1.addChild3D(plane);
-	
+
 	    }
-	
-	}  
+
+	}
 
 ![](Img_1.png)
-
 
 	1) 在egret3d.KeyCode内引擎定义了所有Key的枚举类型，详细可以参考引擎内的枚举值。
 	2) 按键事件分别为：KEY_DOWN 按键每次按下时响应和KEY_UP 按键每次回弹时响应。
 	3) 示例代码：
-			
+
 			class Main {
-			
+
 			    protected _egret3DCanvas: egret3d.Egret3DCanvas;
 			    protected view1: egret3d.View3D;
 			    protected cube: egret3d.Mesh;
-			
+
 			    public constructor() {
-			
+
 			        ///创建3DCanvas
 			        this._egret3DCanvas = new egret3d.Egret3DCanvas();
 			        this._egret3DCanvas.x = 0;
@@ -92,7 +91,7 @@ KeyEvent3D
 			        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_DOWN, this.OnKeyDown, this);
 			        egret3d.Input.addEventListener(egret3d.KeyEvent3D.KEY_UP, this.OnKeyUp, this);
 			    }
-			
+
 			    ///按键按下事件响应,其中e: egret3d.KeyEvent3D会作为参数传递给响应事件。
 			    public OnKeyDown(e: egret3d.KeyEvent3D) {
 			        ///e.keyCode保存了触发该次事件的按键枚举值，通过转换成字符串可以输出。
@@ -105,6 +104,6 @@ KeyEvent3D
 			        var code = egret3d.KeyCode[e.keyCode];
 			        console.log("OnKeyUp=>" + code);
 			    }
-			}      
+			}
 
 ![](Img_2.png)

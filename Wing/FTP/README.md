@@ -25,7 +25,6 @@ permalink: /docs/lxctocdi/
 
 ![RES](1.png)
 
-
 ## 项目发布并上传至FTP服务器使用介绍
 
 - 首先打开一个项目文件（若当工作空间没有项目，则无法使用ftp功能）

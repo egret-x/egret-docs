@@ -9,11 +9,11 @@ permalink: /docs/k0rpatbc/
 
 TextInput 是一个方便的文本输入控件。可以通过它来快速定义输入默认的输入文本和背景样式。
 
-更多关于输入控件可以参考，请点击: [API：TextInput](http://edn.egret.com/cn/apidoc/index/name/eui.TextInput) 和 [EUI教程：输入文本](http://edn.egret.com/cn/docs/page/538#输入控件 TextInput) 
+更多关于输入控件可以参考，请点击: [API：TextInput](http://edn.egret.com/cn/apidoc/index/name/eui.TextInput) 和 [EUI教程：输入文本](http://edn.egret.com/cn/docs/page/538#输入控件 TextInput)
 
 ### EXML 设置版本号
 
-通常我们希望更新版本的时候避免被浏览器缓存，现在可以通过设置 EXML 版本号的方式来实现。 
+通常我们希望更新版本的时候避免被浏览器缓存，现在可以通过设置 EXML 版本号的方式来实现。
 
 ```
  "exmls": [
@@ -40,7 +40,6 @@ ImageLoader 增加静态变量 `crossOrigin` 来设置全局跨域策略。如�
 * 修复 `RELEASE` 模式下开启 `show-paint-rect` 引发异常
 * 修复 `Graphics` 设置 `lineStyle` 第一个参数用默认值引发渲染异常
 * 修复断网情况下，引擎无法执行 `build` 命令问题
-
 
 更多关于 Egret 全局函数可以参考:[全局函数](http://edn.egret.com/cn/apidoc/index/name/egret.globalFunction#getOption)
 

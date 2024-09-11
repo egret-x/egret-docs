@@ -7,15 +7,11 @@ Matchvs 服务器会通过注册接口下发“用于在服务器校验的 userI
 
 第三方绑定是指：使用其他的 **用户身份代号** 与Matchvs平台的userID做映射。以实现使用 **用户身份代号** 就能获取 Matchvs 对应平台的 userID 。比如：身份证号，手机号，qq 号等等。
 
-
-
 #### 为什么要使用第三方绑定？
 
 开发者使用Matchvs服务的时候，每次都要调用 register 接口注册一个 userID，虽然这个 userID 信息会暂时保存在平台的缓存数据中，但是一旦清理掉了，这个 userID 就会变化。如果想长久的使用一个固定的 userID 就需要开发者使用一个 用户身份识别号与 Matchvs 的userID 映射起来。每次开始游戏前获得这个 userID。
 
-为了方便开发者使用，Matchvs 提供了第三方绑定功能。开发者可以直接调用绑定接口，传入 openID  即可获取绑定后的 Matchvs userID 。如果开发者使用绑定接口，则无需再调用注册接口获取 userID。 
-
-
+为了方便开发者使用，Matchvs 提供了第三方绑定功能。开发者可以直接调用绑定接口，传入 openID  即可获取绑定后的 Matchvs userID 。如果开发者使用绑定接口，则无需再调用注册接口获取 userID。
 
 ## 获取 openID
 
@@ -25,11 +21,9 @@ openID 可以理解为一个在某个系统或者软件中用来识别用户身�
 
 **提示：** 如果开发者有自己服务器，并且有服务器开发相关技术，也可以自己实现一套 openID 服务来映射Matchvs 的 userID。
 
-
-
 #### 获取微信平台 openID 示例：
 
-- 调用 `wx.login `接口获取 code 参数。示例代码如下：  
+- 调用 `wx.login `接口获取 code 参数。示例代码如下：
 
 ```JavaScript
 function getUserOpenID(obj) {
@@ -54,25 +48,23 @@ function getUserOpenID(obj) {
 
 ```javascript
 wx.request({
-    url: "这个是您的获取 openID 地址接口",
-    method: "GET",
-    data: {
-        code: wcode//这个是您的接口参数 code 是wx.login 返回的
-    },
-    success: function (res) {
-        console.info("获取到openID 和 session_key");
-    },
-    fail:function(res){
-        console.info("getOpenID failed");
-    }
-});
+  url: '这个是您的获取 openID 地址接口',
+  method: 'GET',
+  data: {
+    code: wcode// 这个是您的接口参数 code 是wx.login 返回的
+  },
+  success(res) {
+    console.info('获取到openID 和 session_key')
+  },
+  fail(res) {
+    console.info('getOpenID failed')
+  }
+})
 ```
 
 获取 openID 可参考 [微信小游戏开发文档](https://developers.weixin.qq.com/minigame/dev/document/open-api/login/wx.login.html) `code2accessToken` 接口和 `wx.login` 接口。
 
 > 注意：微信平台 openID 获取方法以 微信开发者官网的文档为准，这里只是提供示例。
-
-
 
 ## 调用绑定接口
 
@@ -156,7 +148,6 @@ wx.request({
 
 ```
 
-
 这里以 egret 代码请求为例：
 
 ```typescript
@@ -188,7 +179,7 @@ private static bindOpenIDWithUserID(wxUserInfo:any){
     request.open(reqUrl,egret.HttpMethod.POST);
     request.setRequestHeader("Content-Type", "application/json");
     request.send(jsonParam);
-    
+
     request.addEventListener(egret.Event.COMPLETE,(event:egret.Event)=>{
         var request = <egret.HttpRequest>event.currentTarget;
         console.log("bindOpenIDWithUserID get data : ",request.response);
@@ -209,7 +200,7 @@ private static bindOpenIDWithUserID(wxUserInfo:any){
 
 > 注意：调用第三方绑定接口请求参数 userID 传 0，如果是第一次绑定，接口会返回新的Matchvs userID ，如果已经绑定过，接口会返回您绑定了的Matchvs userID 信息。
 
-## thirdBind.do 
+## thirdBind.do
 
 第三方绑定接口，传入您的唯一身份识别号和一个session_key 实现 userID绑定。
 
@@ -283,15 +274,11 @@ statue 非零
 | 7004 | 绑定注册新用户失败     | 整型 |
 | 7005 | 建立第三方绑定关系失败 | 整型 |
 
-
-
 ## 有效信息验证
 
 #### 什么是有效信息安全验证？
 
 在使用第三方绑定接口的使用，参数中传入的 openID 默认是不会做任何的验证，就是是传的 0 也是可以的。我们同样会返回一个有效的 userID。开发者如果想要对这个 openID 进行验证，比如验证这个openID是不是合法的，验证这个openID是不是你这个游戏中的openID。对这个 openID 进行一次检查，把哪些无用的openID 过滤掉。
-
-
 
 #### 如果在 Matchvs 第三方绑定使用安全校验？
 
@@ -310,14 +297,14 @@ statue 非零
 ### 安全校验接口要求如下：
 
 - 请求 method: POST
-- Content-Type: application/json 
+- Content-Type: application/json
 - 请求参数：
 
 ```json
 {
-    "thirdFlag": 1,
-    "openID": "0123456789ABCDEF",
-    "session": "123reqafg9dfa0tja"
+  "thirdFlag": 1,
+  "openID": "0123456789ABCDEF",
+  "session": "123reqafg9dfa0tja"
 }
 ```
 
@@ -325,15 +312,13 @@ statue 非零
 
 ```json
 {
-    "data": {
-        "result": 0
-    },
-    "status": 0
+  "data": {
+    "result": 0
+  },
+  "status": 0
 }
 ```
 
 > 返回参数 data.result = 0 表验证通过，其他值标识验证失败。
 
-
-
-有关第三方绑定使用方法，可以参考我们的 [Demo](https://github.com/matchvs/demo-Egret) 
+有关第三方绑定使用方法，可以参考我们的 [Demo](https://github.com/matchvs/demo-Egret)

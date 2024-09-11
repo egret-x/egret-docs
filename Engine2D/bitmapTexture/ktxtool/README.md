@@ -45,7 +45,6 @@ npx egret-texture-generator --t 资源路径
 	* 高度和宽度必须是2的幂
 	* 必须为正方形，即高度和宽度相等
 
-	
 * --pbpp
 可选，PVRTC格式每像素色彩位数。
     * `2`：2 bits，默认值。
@@ -67,12 +66,10 @@ npx egret-texture-generator --t 资源路径
 [malitc-8]Perceptual PSNR: 81.6949
                 ..............
 
-
 由于PVRTC限制，以下资源在转换成PVRTC格式后会发生变形
 1. 高度和宽度必须是2的幂
 2. 必须为正方形，即高度和宽度相等
 参考：https://en.wikipedia.org/wiki/PVRTC
-
 
 D:\tools\CompressedTextureTool\resource\assets\activity_bg.png
 D:\tools\CompressedTextureTool\resource\assets\bg.jpg

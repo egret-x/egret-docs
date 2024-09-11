@@ -18,13 +18,11 @@ permalink: /docs/egret3d/Egret3DLights/group/
 
 通过`removeLight()`方法向灯光组中移除一个光源。
 
-
 var light:egret3d.PointLight = new egret3d.PointLight();
 
 var lg:egret3d.LightGroup = new egret3d.LightGroup();
 
 lg.addLight( light ); //添加点光源到灯光组
-
 
 如果你需要做一些特殊操作，可以通过LightGroup中的几个属性访问当前灯光组的信息。
 

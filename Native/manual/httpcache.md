@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/3wp55wpd/
 ---
 
-
 * 以下内容仅适用于应用运行过程中下载的资源；assets、预加载目录下的资源不会被runtime更新。
 * index.html 不会被缓存，每次都会从服务器读取.
 * 不想被缓存的资源，可以通过增加随机值的方法来请求
@@ -18,7 +17,6 @@ xhr.open('GET', './manifest.json?v=' + Math.random(), true);
 
 * runtime支持服务器的缓存策略，比如`Cache-Control:max-age=age`，
 runtime下载的资源只有超出了`max-age`设置的过期时间以后，才会向服务器发送资源的更新请求。此外，在过期以后，如果服务器上的资源没有发生变化，runtime不会重新下载这个资源。只有资源发生变化时，才会重新下载。
-
 
 ## 一、支持的http缓存字段
 ### 1.1 Cache-Control字段及取值清单

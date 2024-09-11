@@ -8,8 +8,7 @@ permalink: /docs/1adb457v/
 * Egret Launcher 1.0.62 以上版本
 * 白鹭引擎 5.2.28 以上版本
 * 在电脑中安装 npm：[下载地址](https://www.npmjs.com/)
-* 下载安装调试器和运行时，以及更多快游戏 API 文档，请访问：[快游戏开发者接入指南](https://dev.mi.com/console/doc/detail?pId=1779) 
-
+* 下载安装调试器和运行时，以及更多快游戏 API 文档，请访问：[快游戏开发者接入指南](https://dev.mi.com/console/doc/detail?pId=1779)
 
 ### 二.创建小游戏
 
@@ -25,11 +24,9 @@ permalink: /docs/1adb457v/
 	* 发布：相当于执行命令 `npm run build`，把快游戏工程，编译成 `rpk` 包
 	* 调试：使用 USB 连接手机和电脑后，点击调试，会启动一个 `Chrome` 窗口，可以调试手机中运行的快游戏
 
-
-
 ### 三.使用命令行把白鹭游戏编译成快游戏
 #### 方法1：开发者可以使用命令行来编译和发布小米快游戏：
-	
+
   * dubug 模式： **egret build --target qgame**
   * release 模式： **egret publish --target qgame**
 
@@ -56,7 +53,6 @@ openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out ce
 
 ~~~
 
-
 * 项目代码目录的结构如下
 
 ![](p4.png)
@@ -69,7 +65,6 @@ openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out ce
 	* manifest.js：用来引用所有的 js 代码
 	* manifest.json：快游戏的相关参数设置
 	* resource 文件夹：游戏资源文件
-
 
 * manifest.json 配置说明
 
@@ -93,15 +88,13 @@ openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out ce
 	* icon：应用图标的路径，尺寸为 192x192
 	* orientation：支持的屏幕方向。portrait 为竖屏，landscape 为横屏。该参数会自动从白鹭游戏项目的 index.html 里获取。
 
-
 ### 四.真机调试
-**注意：**一定要使用小米手机才可以调试 
+**注意：**一定要使用小米手机才可以调试
 
 1.在小米手机上安装`小米快应用调试器`和`小米快游戏运行时环境`
 
 2.使用 USB 线连接手机和电脑，把编译好的 `rpk`包上传到手机
 
 3.打开快应用调试器，运行平台选择为 `快应用(com.miui.hybrid)`，然后点击本地安装，选择刚才上传的 `rpk` 包，游戏会运行起来
-
 
 4.在电脑上打开 Chrome，在浏览器里输入`chrome://inspect/#devices`,回车后会在页面里看到 `com.miui.hybrid` 的信息，点击下面的 `inspect`。在弹出的窗口里就可以看到调试信息了。

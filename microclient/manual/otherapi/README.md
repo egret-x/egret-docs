@@ -25,7 +25,6 @@ _launcher.homePageTimeout = xx;
 ```
 ![](a8.png)
 
-
 ## 关闭本地配置文件
 微端默认从网络读取配置信息，您也可以在 Launcher 创建项目的时候把配置信息放在本地。
 如果您不想使用本地的配置文件，可以在工程中关闭。
@@ -58,6 +57,3 @@ iOS如上图所示，在 `[self setExternalInterfaces];` 下面增加一行`[sup
 ![](a6.png)
 
 iOS如上图所示，在 `[self setExternalInterfaces];` 下面增加一行`[self.launcher setWebViewBackgroundTransparent:YES];`
-
-
-

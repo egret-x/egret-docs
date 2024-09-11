@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/cbhugdic/
 ---
-
+
 ## 全新 UI，更加友好的操作体验
 
 我们调整了 Wing 标题栏和菜单栏的配色，使它更加具有整体性，更具代入感。
@@ -45,5 +45,3 @@ permalink: /docs/cbhugdic/
 
 ## 增加新建 TS 文件和 EXML 文件的向导
 方便开发者更方便的创建组件。为后面的 TS 和 EXML 联合编辑做好准备。
-
-

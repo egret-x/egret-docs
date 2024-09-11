@@ -9,7 +9,6 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 
 在 Egret Engine 3.0 中包含了 Egret Engine 3D 和 Egret Engine 2D 两部分，以后会融合在一起，形成完整统一的 Egret Engine。
 
-
 ## Egret Engine 2D
 
 使用 Egret Engine 3.0 的 2D 部分和 Egret Engine 2.5.x 版本的引擎相同。在本次更新中，我们吸收了开发者提供的建议，下面将详细介绍。
@@ -69,4 +68,3 @@ EXML 现在可以解析 `Itemrenderer` 的状态变化。比如可以在`Itemren
 * 修复`eui.Button`设置`enabled`属性之后点击事件`target`不对的问题。
 * 修复销毁之后的纹理赋值给`Bitmap`可能会导致报错的问题。
 * 修正了某些情况下默认主题皮肤比自定义皮肤的优先级高的问题。
-

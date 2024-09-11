@@ -8,10 +8,9 @@ permalink: /docs/bfxyd5m0/
 
 本次更新主要解决声音在内存中占用问题。小游戏平台增加了对 `egret.log` 方法的支持。
 
-## 2D 渲染 - JavaScript 
+## 2D 渲染 - JavaScript
 - **[修复]** 修复 RES 模块不能销毁声音的问题
 - **[优化]** 优化引擎内销毁声音的逻辑
-
 
 ## 微信小游戏 v1.2.10
 - **[新增]** 支持在 `index.html` 里设置 `data-show-log="true"` 后，通过 `egret.log` 方法输出 log 信息

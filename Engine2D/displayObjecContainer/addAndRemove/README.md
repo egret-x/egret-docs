@@ -167,4 +167,3 @@ if( spr.parent ) {
     spr.parent.removeChild( spr );
 }
 ```
-

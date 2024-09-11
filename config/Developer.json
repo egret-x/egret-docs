@@ -1,14 +1,14 @@
 [
   {
-    "children":[
+    "children": [
       {
-        "filename":"/Developer/updateDetail/developers/",
-        "text":"Developer更新日志",
-        "des":"Developer更新日志"
+        "filename": "/Developer/updateDetail/developers/",
+        "text": "Developer更新日志",
+        "des": "Developer更新日志"
       }
     ],
-    "isFolder":true,
-    "text":"更新日志",
-    "des":"更新日志"
+    "isFolder": true,
+    "text": "更新日志",
+    "des": "更新日志"
   }
 ]

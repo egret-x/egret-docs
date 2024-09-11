@@ -18,14 +18,13 @@ KTX (Khronos Texture) 是一种纹理存储格式，大部分移动设备的 GPU
 
 **注：ktx 有很多种格式，如 astc, dxt, pvrtc, etc1，etc2。白鹭引擎在 iOS 平台只支持 pvrtc, 安卓平台只支持 etc1**
 
-我们制作了一个 ktx 转换工具：[下载地址和说明文档](../ktxtool/README.md) 
+我们制作了一个 ktx 转换工具：[下载地址和说明文档](../ktxtool/README.md)
 
 也可以使用其他的转换工具:
 
 - [PowerVRSDK](https://www.imgtec.com/developers/powervr-sdk-tools/)
 - [Mali_Texture_Compression_Tool](https://developer.arm.com/tools-and-software/graphics-and-gaming/graphics-development-tools/mali-texture-compression-tool)
 - [texture-compressor](https://www.npmjs.com/package/texture-compressor)
-
 
 ### 二.如何使用 KTX
 **[KTX 使用示例下载](http://tool.egret-labs.org/DocZip/engine/KTXHello_v2.zip)**
@@ -70,7 +69,6 @@ egret_icon.ktx
 
 使用 `URLLoader` 加载和显示 ktx 纹理 ，[可以参考此示例](http://tool.egret-labs.org/DocZip/engine/KTXURLLoader_v1.0.zip)
 
-
 #### 5.KTX 性能测试
 [纹理提交速度对比测试 v1.3](http://tool.egret-labs.org/DocZip/engine/ktx/CompressedTexturePerformance_v1.3.zip) 点击屏幕，可以对比测试提交 png 与 ktx 纹理的耗时和GPU占用等项目，详细说明请看 demo 里的 readme 说明文档。
 
@@ -83,4 +81,4 @@ egret_icon.ktx
 系统/平台 | 微信小游戏 | 百度小游戏 | 小米快游戏 | OPPO 小游戏| vivo 小游戏
 ------------- | ------------- | -------------| -------------| -------------| -------------
 Android ETC1  | ✅ | ✅| ✅| ✅| ✅
-iOS PVRTC  | ✅ | ❌ | ❌ | ❌ | ❌ 
+iOS PVRTC  | ✅ | ❌ | ❌ | ❌ | ❌

@@ -13,7 +13,6 @@ permalink: /docs/77dzdhap/
 * 增加bloom后斯处理特效
 * 增加草动画特效
 
-
 ### Bug列表
 * 修复URLLoader无法重复加载bug
 * 修复egretwing中使用顶点色会出现颜色异常bug

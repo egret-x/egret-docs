@@ -38,7 +38,6 @@ permalink: /docs/dspbt14t/
 
 点开json文件，可以查看mc数据结构：
 
-
 ```
 MovieClip数据格式标准
 {"mc":{
@@ -46,13 +45,13 @@ MovieClip数据格式标准
 		"frameRate":24,
 		"labels":[
 			{"name":"action1","frame":1,"end":16}
-			
+
 			],
 		"events":[
 			{"name":"@02","frame":2}
 			],
 		"frames":[
-			
+
 			{
 			"res":"FC833473",
 			"x":56,
@@ -80,7 +79,7 @@ MovieClip数据格式标准
 ```
 
 ```
-"mc": MovieClip数据列表, 
+"mc": MovieClip数据列表,
 列表中的每个属性都代表一个MovieClip名字
 "frameRate": 帧率, 【可选属性】，默认值24，可以由开发者通过代码设定
 "labels": 帧标签列表，【可选属性】，如果没有帧标签，可以不加这个属性。

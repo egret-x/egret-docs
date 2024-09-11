@@ -11,5 +11,4 @@ permalink: /docs/cpu9t64o/
 
 ![](./p2.png)
 
-
 具体操作，可以[查看详细文档](http://developer.egret.com/cn/github/egret-docs/Engine2D/getStarted/helloWorld/index.html)

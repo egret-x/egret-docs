@@ -33,7 +33,7 @@ permalink: /docs/Conversion/introduction/
 
 关于EgretConversion：点击打开关于面板，主要用于查看当前EgretConversion版本号。
 
-## 二、工具栏 
+## 二、工具栏
 
 ![](56b1abcdd1b27.jpg)
 
@@ -100,9 +100,9 @@ permalink: /docs/Conversion/introduction/
 ![](56b1abcf53c29.jpg)
 
  日志区实时显示转换项目当前进度，log信息，提示信息等。
- 
+
 ## 五、转换步骤标签页：
- 
+
 ![](56b1abcf709b9.jpg)
 
 转换Flash项目：功能同工具栏->转换按钮

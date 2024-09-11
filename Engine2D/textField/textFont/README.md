@@ -37,7 +37,7 @@ permalink: /docs/egret2d/textField/textFont/
 在示例 demo 的 75 行，通过如下代码映射字体。需要注意，映射前字体必须已经通过RES加载完成。
 
 ```js
-egret.registerFontMapping("myFont",  "resource/assets/myFont.ttf");
+egret.registerFontMapping('myFont', 'resource/assets/myFont.ttf')
 ```
 
 ### 使用 ttf 字体[​](#使用-ttf-字体 "使用 ttf 字体的直接链接")
@@ -45,17 +45,17 @@ egret.registerFontMapping("myFont",  "resource/assets/myFont.ttf");
 在示例 demo 的 139 行，通过如下代码使用 ttf 字体
 
 ```js
-let textfield =  new  egret.TextField();
-textfield.fontFamily  =  "myFont";  //上一步映射的字体
-this.addChild(textfield);
-textfield.alpha  =  0;
-textfield.width  = stageW -  172;
-textfield.textAlign  = egret.HorizontalAlign.CENTER;
-textfield.size  =  24;
-textfield.textColor  =  0xffffff;
-textfield.x  =  172;
-textfield.y  =  135;
-this.textfield  = textfield;
+const textfield = new egret.TextField()
+textfield.fontFamily = 'myFont' // 上一步映射的字体
+this.addChild(textfield)
+textfield.alpha = 0
+textfield.width = stageW - 172
+textfield.textAlign = egret.HorizontalAlign.CENTER
+textfield.size = 24
+textfield.textColor = 0xFFFFFF
+textfield.x = 172
+textfield.y = 135
+this.textfield = textfield
 ```
 
 ### 运行显示效果[​](#运行显示效果 "运行显示效果的直接链接")

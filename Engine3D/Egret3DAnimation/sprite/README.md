@@ -3,12 +3,12 @@ title: UV精灵表动画
 createTime: 2024/09/11 10:50:04
 permalink: /docs/egret3d/Egret3DAnimation/sprite/
 ---
-     
-## 精灵表   
-精灵表是2D常用的一种切帧动画形式。大概来说，就是将动画的每一帧作为一个完整的图像，将所有不同的帧集中到一个大的透明图像中，每一帧都有其对应的起始坐标点及其宽度、高度，这张大的透明图像称为精灵表纹理集。这样在播放动画时，只需要在不同的时间帧，在精灵表纹理集中，取该时间帧对应的动画帧纹理，并显示出来。      
 
-## 呈现UV精灵表动画      
-    // 使用uv 帧动画 
+## 精灵表
+精灵表是2D常用的一种切帧动画形式。大概来说，就是将动画的每一帧作为一个完整的图像，将所有不同的帧集中到一个大的透明图像中，每一帧都有其对应的起始坐标点及其宽度、高度，这张大的透明图像称为精灵表纹理集。这样在播放动画时，只需要在不同的时间帧，在精灵表纹理集中，取该时间帧对应的动画帧纹理，并显示出来。
+
+## 呈现UV精灵表动画
+    // 使用uv 帧动画
     protected uvSpriteAnimation() {
         var mat: egret3d.TextureMaterial = new egret3d.TextureMaterial();
         mat.repeat = true;
@@ -21,9 +21,8 @@ permalink: /docs/egret3d/Egret3DAnimation/sprite/
         mat.diffuseTexture = this.queueLoader.getAsset("resource/doc/test1.png");
 
     }
-          
-本例所用的精灵表纹理集图片为：   
-![image](575cd8fe67128.png)    
 
+本例所用的精灵表纹理集图片为：
+![image](575cd8fe67128.png)
 
 ![](Img_6.gif)

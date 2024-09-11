@@ -8,7 +8,7 @@ permalink: /docs/egret2d/textField/textStyle/
 
 ## 1.字体
 
-设置字体的属性是 `fontFamily` 
+设置字体的属性是 `fontFamily`
 
 示例代码如下：
 
@@ -31,7 +31,6 @@ label.text = "This is a text!";
 ![](56615cbcdc3dc.png)
 
 上面代码的字体名设置的为 “Impact”， 如果设置的字体在浏览器/app中不存在，浏览器/app会自动调用默认字体来代替。
-
 
 ## 2.字号
 
@@ -159,24 +158,24 @@ Egret 提供两种实现方案。
 ```javascript
 interface ITextElement {
      text: string;
-     style: ITextStyle; 
+     style: ITextStyle;
 }
 ```
 
 其中 `ITextStyle` 是所需要定义的各种样式属性的集合，以Object的样式给出，这个Object里的每个元素就是一种样式属性的键值对定义，例如定义文本颜色为红色，那么这个Object就是：
 
 ```json
-{"textColor":0xFF0000}
+{ "textColor": 16711680 }
 ```
 
-`style`属性里，可以包含若干这样的样式组合定义。 
+`style`属性里，可以包含若干这样的样式组合定义。
 
 给一段文字定义红色、字号30样式的代码如下：
 
 ```javascript
 var tx:egret.TextField = new egret.TextField;
 
-tx.textFlow = <Array<egret.ITextElement>>[ 
+tx.textFlow = <Array<egret.ITextElement>>[
 
     { text:"Egret", style:{"textColor":0xFF0000, "size":30} }
 
@@ -230,19 +229,19 @@ tx.width = this._container.stage.stageWidth - 20;
 tx.textFlow = (new egret.HtmlTextParser).parser(
     '<font size=20>Text in </font>'
     + '<font color=0x336699 size=60 strokecolor=0x6699cc stroke=2>Egret</font>'
-    + '<font fontfamily="Impact"> can </font>' 
-    + '<font fontfamily="Times New Roman "><u>be set </u></font>' 
-    + '<font color=0xff0000>to a </font>' 
+    + '<font fontfamily="Impact"> can </font>'
+    + '<font fontfamily="Times New Roman "><u>be set </u></font>'
+    + '<font color=0xff0000>to a </font>'
     + '<font> \n </font>'
-    + '<font color=0x00ff00>variety </font>' 
-    + '<font color=0xf000f0>of </font>' 
-    + '<font color=0x00ffff>styles </font>'  
-    + '<font size=56>with </font>' 
-    + '<font size=16>different </font>' 
-    + '<font size=26>colors, </font>' 
+    + '<font color=0x00ff00>variety </font>'
+    + '<font color=0xf000f0>of </font>'
+    + '<font color=0x00ffff>styles </font>'
+    + '<font size=56>with </font>'
+    + '<font size=16>different </font>'
+    + '<font size=26>colors, </font>'
     + '<font> \n </font>'
-    + '<font color=0x00ff00><i>fonts </i></font>' 
-    + '<font size=26 color=0xf000f0 fontfamily="Quaver">and </font>' 
+    + '<font color=0x00ff00><i>fonts </i></font>'
+    + '<font size=26 color=0xf000f0 fontfamily="Quaver">and </font>'
     + '<font color=0xf06f00><i>sizes</i></font>';
 );
 tx.x = 10;
@@ -281,7 +280,6 @@ label.text = "This is a text!";
 
 纵向布局可以设置文字居顶，垂直居中，居底。
 
-
 ### 7.1.横向布局
 
 设置文本水平对齐方式，使用 `egret.TextFiled` 的 `textAlign` 属性。该属性接受一个string类型，默认值为HorizontalAlign.LEFT。 也就是默认左对齐。
@@ -291,18 +289,17 @@ label.text = "This is a text!";
 修改代码，将文本水平对齐修改为右对齐:
 
 ```javascript
-label.textAlign = egret.HorizontalAlign.RIGHT;
+label.textAlign = egret.HorizontalAlign.RIGHT
 ```
 
 编译并运行，效果如下：
 
 ![](56615db22d801.png)
 
-
 同理，设置为本水平居中对齐:
 
 ```javascript
-label.textAlign = egret.HorizontalAlign.CENTER;
+label.textAlign = egret.HorizontalAlign.CENTER
 ```
 
 编译并运行，效果如下：
@@ -320,7 +317,7 @@ label.textAlign = egret.HorizontalAlign.CENTER;
 修改上面的代码，添加垂直对齐属性，设置纵向的底对齐:
 
 ```javascript
-label.verticalAlign = egret.VerticalAlign.BOTTOM;
+label.verticalAlign = egret.VerticalAlign.BOTTOM
 ```
 
 编译并运行，效果如下：
@@ -330,7 +327,7 @@ label.verticalAlign = egret.VerticalAlign.BOTTOM;
 同理，设置文本居垂直居中对齐:
 
 ```javascript
-label.verticalAlign = egret.VerticalAlign.MIDDLE;
+label.verticalAlign = egret.VerticalAlign.MIDDLE
 ```
 
 编译并运行，效果如下：
@@ -397,23 +394,22 @@ class textEventDemo extends egret.DisplayObjectContainer {
 
 编译运行，打开 console ，当点击上一行文字时，console 即会输出 text event triggered。而点击下一行文字，就不会有任何反应。
 
-### 8.2.打开 URL 
+### 8.2.打开 URL
 
 将上面的 href 对应的字符串修改为 url 即可打开相应的 url。下面代码即可打开 Egret 的首页。
 
 ```javascript
-tx.textFlow = new Array<egret.ITextElement>(
+tx.textFlow = new Array() < egret.ITextElement > (
 
-    { text:"这段文字有链接", style: { "href" : "http://www.egret.com/" } }
+  { text: '这段文字有链接', style: { href: 'http://www.egret.com/' } }
 
-    ,{ text:"\n这段文字没链接", style: {} }
+  , { text: '\n这段文字没链接', style: {} }
 
-);
-tx.touchEnabled = true;
+)
+tx.touchEnabled = true
 ```
 点击上面的有链接的文字效果如下：
 
 ![](569c85528f453.png)
 
 ![](569c8552dd0b0.png)
-

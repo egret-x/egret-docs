@@ -8,7 +8,6 @@ permalink: /docs/ndadvx8a/
 - [Egret Wing 4.1.5 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.1.5.exe?d=0707)
 - [Egret Wing 4.1.5 for Mac OS](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.1.5.dmg?d=0707)
 
-
 ## BUG 修复：
 
 - wing 发布功能移至launcher ，兼容老版本

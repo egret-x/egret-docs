@@ -23,7 +23,7 @@ Egret Engine 3D 在本次更新中主要关注于以下方面：
 
 Egret Engine 3.0是全新的3D渲染引擎，在本次更新中我们吸收了开发者提供的建议，修改了以下内容
 
-* 显示列表优化 新增 Scene3D 
+* 显示列表优化 新增 Scene3D
 	新增Scene3D 场景显示列表管理类，方便拓展场景渲染树
 * billbord 公告板
 	新增的BillBoard 是一个永远面对摄像机的显示对象
@@ -53,4 +53,3 @@ Egret Engine 3.0是全新的3D渲染引擎，在本次更新中我们吸收了�
 在体验的过程中如果遇到任何问题希望您能留下宝贵意见，更欢迎大家在 Egret Engine 3D 论坛交流:[Egret3D 交流贴](http://bbs.egret.com/forum.php?mod=viewthread&tid=15653)。
 
 Egret Engine 3D 官方交流群: 180593985 。
-

@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/egret3d/Egret3DDisp/baseOp/
 ---
 
-
 Egret3D内置了多个常用几何体，我们可以使用这些默认提供的几何体快速制作一个三维场景Demo。
 
 要想正确显示一个3D显示对象，你需要准备三个必要元素。
@@ -51,7 +50,6 @@ cube.rotation = new egret3d.Vector3D(50,30,0);
 
 ![](575cd1b3ce467.png)
 
-
 完整代码如下：
 
 ```
@@ -66,7 +64,6 @@ class ObjectDemo extends LoadingUI {
     private run: egret3d.SkeletonAnimationClip;
     private attack: egret3d.SkeletonAnimationClip;
     public currentAnim: string;
-
 
     public constructor() {
 
@@ -104,15 +101,14 @@ class ObjectDemo extends LoadingUI {
         this._egret3DCanvas.start();
 
         this.CloseLoadingView()
- 
+
         var geom:egret3d.CubeGeometry = new egret3d.CubeGeometry();
         var mater:egret3d.TextureMaterial = new egret3d.TextureMaterial();
         var cube:egret3d.Mesh = new egret3d.Mesh(geom, mater);
         this._view3D.addChild3D( cube );
-        
+
         cube.rotation = new egret3d.Vector3D(50,30,0);
     }
 
-  
-}     
+}
 ```

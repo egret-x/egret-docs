@@ -19,15 +19,11 @@ permalink: /docs/egret2d/cmdExtensionPlugin/teach/
 * 使用ZipPlugin把文件压缩成zip格式
 * 使用TextureMergerPlugin将纹理合并，且用ConvertResConfigFilePlugin修改res.json配置文件
 
-
-
 ## 项目初始化
 
 1. 把index.html中的`data-scale-mode`改成`fixedWidth`
 2. 打开EgretLauncher，将本项目发布成微信小游戏
 3. 打开微信开发者工具
-
-
 
 ## 使用UglifyPlugin压缩代码
 
@@ -53,7 +49,7 @@ if (command == 'build') {
 
             //  压缩插件
             new UglifyPlugin([
-                {	
+                {
                     // 需要被压缩的文件
                     sources: [
                         "libs/modules/egret/egret.js",
@@ -88,9 +84,9 @@ egret build
 打开根目录下的`manifest.js`， 修改一下引用顺序。
 
 ```javascript
-require("js/lib.min.js")
-require("js/main.js")
-require("js/default.thm.js")
+require('js/lib.min.js')
+require('js/main.js')
+require('js/default.thm.js')
 ```
 
 每次编译的时候`manifest.js`都会被重新生成，所以我们使用一个自定义脚本来修改他们的顺序
@@ -99,43 +95,43 @@ require("js/default.thm.js")
 
 ```typescript
 /**
- * 示例自定义插件，您可以查阅 http://developer.egret.com/cn/2d/projectConfig/cmdExtensionPluginin/ 
+ * 示例自定义插件，您可以查阅 http://developer.egret.com/cn/2d/projectConfig/cmdExtensionPluginin/
  * 了解如何开发一个自定义插件
  */
 export class CustomPlugin implements plugins.Command {
-    private buffer
-    constructor() {
-    }
+  private buffer
+  constructor() {
+  }
 
-    async onFile(file: plugins.File) {
-        // 保存manifest.js文件的内容
-        if(file.basename.indexOf('manifest.js') > -1) {
-            this.buffer = file.contents
+  async onFile(file: plugins.File) {
+    // 保存manifest.js文件的内容
+    if (file.basename.includes('manifest.js')) {
+      this.buffer = file.contents
+    }
+    return file
+  }
+
+  async onFinish(commandContext: plugins.CommandContext) {
+    // 把'lib.min.js'移到第一位
+
+    if (this.buffer) {
+      const contents: string = this.buffer.toString()
+      const arr = contents.split('\n')
+      let lib
+      arr.forEach((item, index) => {
+        if (item.includes('lib.min.js')) {
+          lib = item
+          arr.splice(index, 1)
         }
-        return file;
-    }
+      })
+      if (lib != null) {
+        arr.unshift(lib)
+      }
 
-    async onFinish(commandContext: plugins.CommandContext) {
-        // 把'lib.min.js'移到第一位
-        
-        if (this.buffer) {
-            let contents: string = this.buffer.toString()
-            let arr = contents.split('\n')
-            let lib
-            arr.forEach((item, index) => {
-                if (item.indexOf('lib.min.js') > -1) {
-                    lib = item
-                    arr.splice(index, 1)
-                }
-            })
-            if (lib != null) {
-                arr.unshift(lib)
-            }
-
-            let newCont = arr.join('\n')
-            commandContext.createFile('manifest.js', new Buffer(newCont))
-        }
+      const newCont = arr.join('\n')
+      commandContext.createFile('manifest.js', new Buffer(newCont))
     }
+  }
 }
 ```
 
@@ -146,10 +142,6 @@ new ManifestPlugin({ output: 'manifest.js' }),
 // 在manifest.js生成之后调用
 new CustomPlugin()
 ```
-
-
-
-
 
 ## 使用ResSplitPlugin分离资源文件
 
@@ -162,11 +154,12 @@ new CustomPlugin()
 //
 
 new ResSplitPlugin({
-    verbose: false, matchers:
+  verbose: false,
+  matchers:
     [
-        // from 使用glob表达式来匹配文件，  projectName就是项目的名字
-        { from: "resource/art/about/**.**", to: `${projectName}_wxgame_remote` },
-        { from: "resource/art/heros_goods/**.**", to: `${projectName}_wxgame_remote` }
+      // from 使用glob表达式来匹配文件，  projectName就是项目的名字
+      { from: 'resource/art/about/**.**', to: `${projectName}_wxgame_remote` },
+      { from: 'resource/art/heros_goods/**.**', to: `${projectName}_wxgame_remote` }
     ]
 })
 
@@ -183,12 +176,8 @@ egret build
 
 被分离出去的在 Egret 项目根目录中 `egret-eui-demo_wxgame_remote` 文件夹内。
 
-
-
 * *注意 1：* 需要开发者自己写逻辑，判断一下如果是微信游戏时，哪些资源是从远程加载的，哪些是放在本地的
 * *注意 2：* 为了便于调试，我们把资源放在了 Egret 项目根目录中 `egret-eui-demo_wxgame_remote` 文件夹内，正式发布的一般放在 CDN 上
-
-
 
 ## 使用ZipPlugin把文件压缩成zip格式
 
@@ -198,19 +187,19 @@ egret build
 
 ```shell
 //全局安装
-npm install cross-zip -g   
+npm install cross-zip -g
 npm install cross-zip-cli -g
 ```
 安装完成之后，在config.wxgame.ts添加代码：
 
 ```typescript
 new ZipPlugin({
-    mergeSelector: p => {
-        // 如果文件是assets/路径下的， 压缩到assets.zip
-        if (p.indexOf("assets/") >= 0) {
-            return "assets.zip"
-        }
+  mergeSelector: (p) => {
+    // 如果文件是assets/路径下的， 压缩到assets.zip
+    if (p.includes('assets/')) {
+      return 'assets.zip'
     }
+  }
 })
 ```
 
@@ -224,8 +213,6 @@ egret build
 
 执行之后可以在微信开发者工具看到，resource目录下原来的assets文件夹已经被压缩成了assets.zip。
 
-
-
 ## 使用TextureMergerPlugin，ConvertResConfigFilePlugin合并纹理集
 
 项目中使用的图片资源都是单独的png文件，在加载的时候每张图片都会单独请求。我们可以通过合并纹理集的方式把这些图片合成一张图，以减少请求数量。
@@ -237,114 +224,111 @@ egret build
 这里使用第二种方法，使用脚本autoMerger.js：
 
 ```js
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
-var path = require("path");
-var resjsons = ["resource/default.res.json"]; //要扫描的res.json文件
-var targetDir = "resource/TextureMerger"; //输出目录
-var pathNor = path.relative(targetDir, "resource"); //返回一个相对路径
-var tempindex = 0;
-//创建输出文件夹
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
+const fs = require('node:fs')
+const path = require('node:path')
+const resjsons = ['resource/default.res.json'] // 要扫描的res.json文件
+const targetDir = 'resource/TextureMerger' // 输出目录
+const pathNor = path.relative(targetDir, 'resource') // 返回一个相对路径
+let tempindex = 0
+// 创建输出文件夹
 if (resjsons.length > 0) {
-    if (!fs.existsSync(targetDir)) {
+  if (!fs.existsSync(targetDir)) {
+    // var paths = path.normalize(targetDir).split("\\");   //windows 下使用
+    const paths = path.normalize(targetDir).split('\/') // mac linux 下使用
 
-        // var paths = path.normalize(targetDir).split("\\");   //windows 下使用
-        var paths = path.normalize(targetDir).split("\/");   //mac linux 下使用
+    let target = '.'
+    for (let _i = 0, paths_1 = paths; _i < paths_1.length; _i++) {
+      const p = paths_1[_i]
 
-        var target = ".";
-        for (var _i = 0, paths_1 = paths; _i < paths_1.length; _i++) {
-            var p = paths_1[_i];
+      // target += ("\\" + p);  // windows 下使用
+      target += (`\/${p}`) // mac linux 下使用
 
-            // target += ("\\" + p);  // windows 下使用
-            target += ("\/" + p);  // mac linux 下使用
-
-            if (!fs.existsSync(target))
-                // 根据路径创建文件夹
-                fs.mkdirSync(target);
-        }
+      if (!fs.existsSync(target))
+      // 根据路径创建文件夹
+        fs.mkdirSync(target)
     }
+  }
 }
-var _loop_1 = function (resJson) {
-    // 判断是否是res.json文件
-    if (fs.existsSync(resJson) && resJson.indexOf("res.json") > -1) {
-        var defaultJson = fs.readFileSync(resJson, "utf-8");
-        // 解析res.json文件内容
-        var defaultObject = JSON.parse(defaultJson);
-        var groups = defaultObject.groups; //组
-        var resources = defaultObject.resources; //资源
-        var resourcesHash_1 = {}; // 用来存放resources的资源信息
+const _loop_1 = function (resJson) {
+  // 判断是否是res.json文件
+  if (fs.existsSync(resJson) && resJson.includes('res.json')) {
+    const defaultJson = fs.readFileSync(resJson, 'utf-8')
+    // 解析res.json文件内容
+    const defaultObject = JSON.parse(defaultJson)
+    const groups = defaultObject.groups // 组
+    const resources = defaultObject.resources // 资源
+    const resourcesHash_1 = {} // 用来存放resources的资源信息
 
-        // 遍历resources
-        for (var _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
-            var resource = resources_1[_i];
-            resourcesHash_1[resource.name] = resource.url;
-        }
-
-        // 遍历groups
-        for (var _a = 0, groups_1 = groups; _a < groups_1.length; _a++) {
-            var group = groups_1[_a];
-            var tmproject = {}; //用来存放tmproject文件的信息
-            // tmproject文件配置
-            tmproject["options"] = {
-                "layoutMath": "2",
-                "sizeMode": "2n",
-                "useExtension": 1,
-                "layoutGap": 1,
-                "extend": 0
-            };
-            // projectName
-            tmproject["projectName"] = group.name + "_" + tempindex; 
-            // 版本
-            tmproject["version"] = 5;
-            tempindex++;
-
-            // 获取res.json分组的keys, 并分割成数组
-            var oldkeys = group.keys.split(","); 
-            var oldkeysHash = {};
-            // 遍历oldkeys
-            for (var _b = 0, oldkeys_1 = oldkeys; _b < oldkeys_1.length; _b++) {
-                var key = oldkeys_1[_b];
-                // 保存到oldkeysHash对象中
-                oldkeysHash[key] = true;
-            }
-
-            var newKeys = [];
-            // 遍历oldkeys
-            for (var _c = 0, oldkeys_2 = oldkeys; _c < oldkeys_2.length; _c++) {
-                var key = oldkeys_2[_c];
-                if (key.indexOf("json") == -1) {
-                    if (!oldkeysHash[key.replace("png", "json")]) { //粒子和龙骨对应的图集不合图
-                        if (!oldkeysHash[key.replace("png", "fnt")]) //位图字体
-                            newKeys.push(key);
-                    }
-                    else if (key.indexOf("jpg") > -1) {
-                        newKeys.push(key);
-                    }
-                }
-            }
-            oldkeysHash = {};
-            oldkeys = [];
-            // files路径
-            var urls = newKeys.map(function (key) {
-                return path.join(pathNor, resourcesHash_1[key]);
-            });
-            tmproject["files"] = urls;
-            // 根据tmproject写入文件
-            if (urls.length > 0) {
-                fs.writeFileSync(path.join(targetDir, tmproject["projectName"] + ".tmproject"), JSON.stringify(tmproject));
-            }
-            tmproject = {};
-        }
+    // 遍历resources
+    for (let _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
+      const resource = resources_1[_i]
+      resourcesHash_1[resource.name] = resource.url
     }
-};
-//根据数组开始扫描
-for (var _a = 0, resjsons_1 = resjsons; _a < resjsons_1.length; _a++) {
-    var resJson = resjsons_1[_a];
-    _loop_1(resJson);
+
+    // 遍历groups
+    for (let _a = 0, groups_1 = groups; _a < groups_1.length; _a++) {
+      const group = groups_1[_a]
+      let tmproject = {} // 用来存放tmproject文件的信息
+      // tmproject文件配置
+      tmproject.options = {
+        layoutMath: '2',
+        sizeMode: '2n',
+        useExtension: 1,
+        layoutGap: 1,
+        extend: 0
+      }
+      // projectName
+      tmproject.projectName = `${group.name}_${tempindex}`
+      // 版本
+      tmproject.version = 5
+      tempindex++
+
+      // 获取res.json分组的keys, 并分割成数组
+      let oldkeys = group.keys.split(',')
+      let oldkeysHash = {}
+      // 遍历oldkeys
+      for (let _b = 0, oldkeys_1 = oldkeys; _b < oldkeys_1.length; _b++) {
+        var key = oldkeys_1[_b]
+        // 保存到oldkeysHash对象中
+        oldkeysHash[key] = true
+      }
+
+      const newKeys = []
+      // 遍历oldkeys
+      for (let _c = 0, oldkeys_2 = oldkeys; _c < oldkeys_2.length; _c++) {
+        var key = oldkeys_2[_c]
+        if (!key.includes('json')) {
+          if (!oldkeysHash[key.replace('png', 'json')]) { // 粒子和龙骨对应的图集不合图
+            if (!oldkeysHash[key.replace('png', 'fnt')]) // 位图字体
+              newKeys.push(key)
+          }
+          else if (key.includes('jpg')) {
+            newKeys.push(key)
+          }
+        }
+      }
+      oldkeysHash = {}
+      oldkeys = []
+      // files路径
+      const urls = newKeys.map((key) => {
+        return path.join(pathNor, resourcesHash_1[key])
+      })
+      tmproject.files = urls
+      // 根据tmproject写入文件
+      if (urls.length > 0) {
+        fs.writeFileSync(path.join(targetDir, `${tmproject.projectName}.tmproject`), JSON.stringify(tmproject))
+      }
+      tmproject = {}
+    }
+  }
 }
-
-
+// 根据数组开始扫描
+for (let _a = 0, resjsons_1 = resjsons; _a < resjsons_1.length; _a++) {
+  const resJson = resjsons_1[_a]
+  _loop_1(resJson)
+}
 ```
 
 把这个脚本放在scripts文件夹内，这个脚本是根据项目的`default.res.json`文件的内容来生成`tmpropject`文件
@@ -359,7 +343,7 @@ node scripts/autoMerger.js
 现在只需要执行TextureMergerPlugin插件就可以自动合并，这里需要注意TextureMergerPlugin依赖 TextureMerger 1.7 以上的版本，如果不符合请自行安装，并且在运行时TextureMerger需要处于关闭状态。
 
 ```typescript
-new TextureMergerPlugin({textureMergerRoot:[ 'resource']})
+new TextureMergerPlugin({ textureMergerRoot: ['resource'] })
 ```
 
 保存后在终端执行：
@@ -375,14 +359,14 @@ egret build
 编辑config.wxgame.ts：
 
 ```typescript
-new TextureMergerPlugin({textureMergerRoot:[ 'resource']})
+new TextureMergerPlugin({ textureMergerRoot: ['resource'] })
 
 new ConvertResConfigFilePlugin({
-    resourceConfigFiles: [{ filename: "resource/default.res.json", root: "resource/" }],
-    nameSelector: (p) => {
-         return path.basename(p).split(".").join("_")
-    },
-    TM_Verbose: true
+  resourceConfigFiles: [{ filename: 'resource/default.res.json', root: 'resource/' }],
+  nameSelector: (p) => {
+    return path.basename(p).split('.').join('_')
+  },
+  TM_Verbose: true
 })
 ```
 
@@ -402,17 +386,17 @@ egret build
 
 ```typescript
 // 原始数组
-let dataArr:any[] = [
-    {image: 'resource/art/heros_goods/heros01.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false},
-    {image: 'resource/art/heros_goods/heros02.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false},
-    {image: 'resource/art/heros_goods/heros03.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: true},
-    {image: 'resource/art/heros_goods/heros04.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false},
-    {image: 'resource/art/heros_goods/heros05.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false},
-    {image: 'resource/art/heros_goods/heros06.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false},
-    {image: 'resource/art/heros_goods/heros07.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false}
+const dataArr: any[] = [
+  { image: 'resource/art/heros_goods/heros01.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false },
+  { image: 'resource/art/heros_goods/heros02.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false },
+  { image: 'resource/art/heros_goods/heros03.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: true },
+  { image: 'resource/art/heros_goods/heros04.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false },
+  { image: 'resource/art/heros_goods/heros05.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false },
+  { image: 'resource/art/heros_goods/heros06.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false },
+  { image: 'resource/art/heros_goods/heros07.png', name: '亚特伍德', value: '评价: 很特么厉害, 为所欲为', isSelected: false }
 ]
 // 转成eui数据
-let euiArr:eui.ArrayCollection = new eui.ArrayCollection(dataArr)
+const euiArr: eui.ArrayCollection = new eui.ArrayCollection(dataArr)
 // 把list_hero数据源设置成euiArr
 this.list_hero.dataProvider = euiArr
 // 设置list_hero的项呈视器 (这里直接写类名,而不是写实例)
@@ -421,11 +405,8 @@ this.list_hero.itemRenderer = heroList_item
 
 这种引用方式的图片，需要开发者手动在代码中修改，将图片地址修改成纹理集中的图片。
 
-
-
 ## 结语
 
 本文通过使用UglifyPlugin，ResSplitPlugin，ZipPlugin，TextureMergerPlugin，ConvertResConfigFilePlugin插件，使项目发布到微信小程序之后的代码包体积减小，用户发起的请求数变少，且将代码混淆压缩。
 
 使用Egret自带的插件，已经可以满足开发者的基本需求，如果有针对项目的特殊需求，可以选择[自定义插件](../../cmdExtensionPlugin/plugin/README.md)。
-

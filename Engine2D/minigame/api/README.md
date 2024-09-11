@@ -14,7 +14,7 @@ permalink: /docs/xnoqk8v3/
 在 src 下新增 platform.ts，代码如下
 
 ~~~javascript
-    /** 
+    /**
     * 平台数据接口。
     * 由于每款游戏通常需要发布到多个平台上，所以提取出一个统一的接口用于开发者获取平台数据信息
     * 推荐开发者通过这种方式封装平台逻辑，以保证整体结构的稳定
@@ -37,12 +37,9 @@ permalink: /docs/xnoqk8v3/
         }
     }
 
-
     if (!window.platform) {
         window.platform = new DebugPlatform();
     }
-
-
 
     declare let platform: Platform;
 
@@ -62,45 +59,43 @@ permalink: /docs/xnoqk8v3/
 
 我们 platform.js 代码编写如下
 ~~~javascript
-    /**
-    * 请在白鹭引擎的Main.ts中调用 platform.login() 方法调用至此处。
-    */
+/**
+ * 请在白鹭引擎的Main.ts中调用 platform.login() 方法调用至此处。
+ */
 
-    class WxgamePlatform {
+class WxgamePlatform {
+  name = 'wxgame'
 
-        name = 'wxgame'
-
-        login() {
-            return new Promise((resolve, reject) => {
-                wx.login({
-                    success: (res) => {
-                        resolve(res)
-                    }
-                })
-            })
+  login() {
+    return new Promise((resolve, reject) => {
+      wx.login({
+        success: (res) => {
+          resolve(res)
         }
+      })
+    })
+  }
 
-        getUserInfo() {
-            return new Promise((resolve, reject) => {
-                wx.getUserInfo({
-                    withCredentials: true,
-                    success: function (res) {
-                        var userInfo = res.userInfo
-                        var nickName = userInfo.nickName
-                        var avatarUrl = userInfo.avatarUrl
-                        var gender = userInfo.gender //性别 0：未知、1：男、2：女
-                        var province = userInfo.province
-                        var city = userInfo.city
-                        var country = userInfo.country
-                        resolve(userInfo);
-                    }
-                })
-            })
+  getUserInfo() {
+    return new Promise((resolve, reject) => {
+      wx.getUserInfo({
+        withCredentials: true,
+        success(res) {
+          const userInfo = res.userInfo
+          const nickName = userInfo.nickName
+          const avatarUrl = userInfo.avatarUrl
+          const gender = userInfo.gender // 性别 0：未知、1：男、2：女
+          const province = userInfo.province
+          const city = userInfo.city
+          const country = userInfo.country
+          resolve(userInfo)
         }
-    }
+      })
+    })
+  }
+}
 
-
-    window.platform = new WxgamePlatform();
+window.platform = new WxgamePlatform()
 ~~~
 上述代码使用了小游戏的登陆 API，只需要在 Egret 项目中调用 platform.login() 方法即可。
 

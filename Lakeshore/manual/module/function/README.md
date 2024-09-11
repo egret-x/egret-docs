@@ -13,7 +13,6 @@ permalink: /docs/wqwemmx8/
 
 ------------
 
-
 ### 函数条件
 ![](569352fb438f2.png)
 #### 比较函数参数
@@ -30,7 +29,6 @@ permalink: /docs/wqwemmx8/
 ![](569352fb7db59.png)
 
 ------------
-
 
 ### 函数动作
 ![](569352fb09be5.png)

@@ -6,7 +6,6 @@ permalink: /docs/gernezwu/
 ## 概述
 在Egret3D 3.2.4版本中，修复了3.2.2版本中相应的Bug,增加了部分功能
 
-
 ### 新增功能
 
 * 增加模型合并功能(bathing)

@@ -15,12 +15,10 @@ permalink: /docs/k8ortnoh/
 
 ------------
 
-
 ### 精灵条件
 精灵组件无特有条件，适用所有通用条件。参见：[通用条件](../../commonElements/conditions/README.md)
 
 ------------
-
 
 ### 精灵动作
 精灵组件无特有动作，适用所有通用动作。参见：[通用动作](../../commonElements/action/README.md)

@@ -6,7 +6,6 @@ permalink: /docs/nta1nwgt/
 
 将运行时解析exml修改为编译时解析,eui加载提速10倍以上
 
-
 准备工作:
 ---
 	安装最新版本node 或将node升级到最新版本
@@ -28,7 +27,6 @@ euibooster [-i] <egretProjectDir> <egretPublishDir> [ -out <outDir> ] [--fixedCo
 ```
 
 说明：
-
 
 `egretProjectDir` 游戏目录,必要参数,绝对路径或相对于当前工作路径(pwd)的相对路径 可以使用 . 或 ../ 格式
 
@@ -55,7 +53,6 @@ euibooster [-i] <egretProjectDir> <egretPublishDir> [ -out <outDir> ] [--fixedCo
 ```
 euibooster clean <egretProjectDir> <egretPublishDir> [ -out <outDir> ]
 ```
-
 
 ---
 _注：若确定使用加速模式运行则可以不再运行euibooster clean命令，仅用于从非稳定版本导致问题后对项目的恢复，同时支持对制定了输出目录的恢复_

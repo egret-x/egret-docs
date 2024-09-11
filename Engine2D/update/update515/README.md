@@ -5,12 +5,9 @@ permalink: /docs/exgxsrx6/
 ---
 # 白鹭引擎 5.1.5 发布日志
 
-
 ---
 
 白鹭引擎在 2017年 12 月份正式发布了 5.1 版本。本次版本是 5.1 版本的一次集中性缺陷修复，主要目标是完善微信小游戏、QQ玩一玩、AssetsManager 的稳定性。
-
-
 
 ## 微信小游戏
 
@@ -30,9 +27,7 @@ permalink: /docs/exgxsrx6/
 * 修复 localToGlobal / getBounds 等函数导致的问题
 * 优化 Graphics 的性能
 * 修复 Socket 相关 BUG
-* 修复 HTTP 请求相关 BUG 
-
-
+* 修复 HTTP 请求相关 BUG
 
 ## AssetsManager
 

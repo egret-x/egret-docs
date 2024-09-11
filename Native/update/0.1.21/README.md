@@ -13,5 +13,4 @@ permalink: /docs/inrjiwr6/
 - **[修正]** nativeRender:模式文字过多可能被拉伸
 - **[修正]** nativeRender:自动换行的文本可能丢失部分文字
 
-
 **【发布日期】：2019-11-27**

@@ -24,5 +24,3 @@ permalink: /docs/egret3d/Egret3DLights/model/
 `diffuse`：慢反射颜色。
 
 `specular`：灯光在照射到物体时，其镜面高光的反射颜色。
-
-

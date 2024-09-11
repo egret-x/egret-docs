@@ -3,20 +3,19 @@
  */
 
 function trimLeft(str) {
-    return str.replace(/^(\s)*/, "");
+  return str.replace(/^(\s)*/, '')
 }
 
 function trimRight(str) {
-    return str.replace(/(\s)*$/, "");
+  return str.replace(/(\s)*$/, '')
 }
 
 function trimAll(str) {
-    return trimRight(trimLeft(str));
+  return trimRight(trimLeft(str))
 }
 
+exports.trimLeft = trimLeft
 
-exports.trimLeft = trimLeft;
+exports.trimRight = trimRight
 
-exports.trimRight = trimRight;
-
-exports.trimAll = trimAll;
+exports.trimAll = trimAll

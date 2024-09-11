@@ -3,7 +3,6 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/qk58ed8q/
 ---
-
 
 在 Egret Wing 3.0.4 这个版本中，我们主要做了以下改进
 
@@ -37,13 +36,11 @@ permalink: /docs/qk58ed8q/
     - 商城窗口不应该被打开多次
     - 图层面板拖动到其他位置后，所有图层内的内容可能会消失
     - 修改属性面板 切换属性面板 `DataGrid` 布局错误
-    
+
 下载地址
 
 - [Egret Wing 3.0.4 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v3.0.4.exe?t=2016042620 "Windows")
 - [Egret Wing 3.0.4 for Mac OS](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v3.0.4.dmg?t=2016042620 "Mac OS")
-
-
 
 路线图
 - RES 自动生成
@@ -54,7 +51,6 @@ permalink: /docs/qk58ed8q/
 已知问题
 - 属性面板中，可能会出现文本输入框与滚动位置不同步的情况
 
-
 ## RES 资源编辑器
 RES 资源编辑器的大部分功能已经移植到 Wing 3.0 中，并对一些细节进行了优化。
 
@@ -64,13 +60,11 @@ RES 资源编辑器的大部分功能已经移植到 Wing 3.0 中，并对一些
 
 ![RES](571f43774fc4e.png)
 
-
 ## 添加常用文件的 icon
 
 Wing 3.0 为常用文件添加了 icon 文件识别更加准确
 
 ![icon](571f437742a2d.png)
-
 
 ## 添加资源管理器的文件预览功能
 
@@ -96,12 +90,4 @@ Wing 3.0 为常用文件添加了 icon 文件识别更加准确
 
 具体使用方法请参考示例项目（创建项目，选择 Extension: WebView）
 
-
 ![icon](571f43776f77b.png)
-
-
-
-
-
-
-

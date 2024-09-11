@@ -3,9 +3,9 @@ title: 时间控制
 createTime: 2024/09/11 10:50:04
 permalink: /docs/egret2d/timeControl/timeControl/
 ---
-## 1.Timer 计时器 
+## 1.Timer 计时器
 
-假设有这样一个需求：游戏中设计一个倒计时功能，要求玩家在30秒内进行游戏操作，并达到一定要求方可过关。 
+假设有这样一个需求：游戏中设计一个倒计时功能，要求玩家在30秒内进行游戏操作，并达到一定要求方可过关。
 
 在这个需求中，需要一个倒计时功能，在Egret中提供了计时器 `Timer` 来实现类似功能。
 
@@ -65,7 +65,7 @@ class startTickerTest extends egret.DisplayObjectContainer {
     private speed:number = 0.05;
 
     private time:number = 0;
-    
+
     private onLoad(event:egret.Event) {
         var star:egret.Bitmap = new egret.Bitmap(RES.getRes("star"));
         this.addChild(star);
@@ -125,13 +125,13 @@ class startTickerTest extends egret.DisplayObjectContainer {
         this.once(egret.Event.ADDED_TO_STAGE,this.onLoad,this);
     }
     private timeOnEnterFrame:number = 0;
-    
+
     private onLoad(event:egret.Event) {
         this.addEventListener(egret.Event.ENTER_FRAME,this.onEnterFrame,this);
         this.timeOnEnterFrame = egret.getTimer();
     }
-    
-    private  onEnterFrame(e:egret.Event){  
+
+    private  onEnterFrame(e:egret.Event){
         var now = egret.getTimer();
         var time = this.timeOnEnterFrame;
         var pass = now - time;
@@ -144,7 +144,6 @@ class startTickerTest extends egret.DisplayObjectContainer {
 修改不同的帧率，结果不同:
 
 ![](56d7f314a338f.png)
-
 
 在 `ENTER_FRAME` 的回调函数中修改显示对象的参数，即可完成简单的动画效果。
 

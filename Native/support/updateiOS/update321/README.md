@@ -11,9 +11,8 @@ permalink: /docs/g5shueje/
 * [修复] 修复设置音频播放起始时间有延迟的问题；
 * [改进] 提高稳定性。
 
-
 	关闭优化方法：
-	
+
 	~~~
 /* native_require.js */
 egret_native.egretInit = function () {

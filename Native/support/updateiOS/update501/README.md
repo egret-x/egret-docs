@@ -12,7 +12,6 @@ permalink: /docs/sp7q8atf/
 * [修复] 断网或者切换网络环境时主动关闭webSocket；
 * [改进] 提高稳定性。
 
-
 ### 下载地址
 
 [http://tool.egret-labs.org/ios-support/egret-ios-support-5.0.1.zip](http://tool.egret-labs.org/ios-support/egret-ios-support-5.0.1.zip)

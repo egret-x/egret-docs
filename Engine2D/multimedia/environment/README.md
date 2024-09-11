@@ -45,8 +45,6 @@ Egret 项目可以运行在支持HTML5的桌面浏览器和各种移动浏览器
 |runtime2| egret.RuntimeType.RUNTIME2 | 运行在第二代原生项目上|
 |wxgame| egret.RuntimeType.WXGAME | 运行在微信小游戏上|
 
-
-
 ### 1.2.示例
 获得系统信息可以参考下面的代码：
 
@@ -122,14 +120,13 @@ class DeviceOrientationExample extends egret.DisplayObjectContainer {
 
 * `gamma` 表示设备绕 Y 轴的角度，单位是 角度 范围是 -90 到 90.这个值表示设备从左到右的旋转状态。
 
-
 ## 3.地理位置
 
 很多原生应用和游戏通过移动设备的硬件支持来获取用户的位置信息，Egret 也支持获取位置信息。
 
 通过 Egret 的 `Geolocation`类来获取设备的当前位置。当开始监听位置改变信息时将派发`CHANGE`事件，并将改变的位置信息传递给回调函数。通过`GeolocationEvent`类型的回调参数可以获取到相应的经纬度，速度，海拔等信息。
 
-### 3.1.获取位置信息 
+### 3.1.获取位置信息
 
 示例代码如下：
 
@@ -181,8 +178,8 @@ class GeolocationTest extends egret.DisplayObjectContainer {
 
 在我们上面的构造函数里添加gps的监听：
 ```javascript
-//监听用户拒绝事件
-gps.once(egret.GeolocationEvent.PERMISSION_DENIED,this.userDenied,this);
+// 监听用户拒绝事件
+gps.once(egret.GeolocationEvent.PERMISSION_DENIED, this.userDenied, this)
 ```
 并给在 `GeolocationTest` 里添加处理函数，将该信息提示给用户：
 
@@ -196,8 +193,8 @@ private userDenied(e:egret.GeolocationEvent){
 如果由于其他原因未能获取位置信息，将抛出`GeolocationEvent`的`UNAVAILABLE`事件。这里完善上面的程序，添加不能获取信息时的处理：
 
 ```javascript
-//监听失败事件
-gps.addEventListener(egret.GeolocationEvent.UNAVAILABLE,this.unAvailable,this);
+// 监听失败事件
+gps.addEventListener(egret.GeolocationEvent.UNAVAILABLE, this.unAvailable, this)
 ```
 
 在`GeolocationTest` 里添加处理函数，将该信息提示给用户：
@@ -211,4 +208,3 @@ private unAvailable (e:egret.GeolocationEvent) {
 ```
 
 这里的`errorMessage`表示获取位置信息失败的具体信息，`errorType`表示错误的类型。
-

@@ -12,5 +12,4 @@ permalink: /docs/tnlj3i8c/
 - **[修正]** nativeRender: 支持在未初始化egret引擎时创建DisplayObject
 - **[修正]** iOS: nativeRender: 启用NativeRender时Promise回调中执行DisplayObject属性修改可能导致显示错误
 
-
 **【发布日期】：2019-12-30**

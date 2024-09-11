@@ -35,8 +35,6 @@ b3.texture = texture;
 b3.x = 440;
 this.addChild(b3)
 
-
 b2.zIndex = 3;//将第二个图片设置到顶部
 ```
 ![](./p1.png)
-

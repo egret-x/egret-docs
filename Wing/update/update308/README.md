@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/dc1vhbnz/
 ---
-
+
 这个版本中我们主要进行了以下改进
 
 - EUI 编辑器优化
@@ -16,7 +16,7 @@ permalink: /docs/dc1vhbnz/
     - json 文件格式错误提示。
 - Extension API
     - 添加项目模板 API
-    - 添加新建文件模板 API 
+    - 添加新建文件模板 API
     - 添加 popup form 数据验证 API
 - 调整新建项目向导的展现方式，更方便的支持项目模板插件。
 - 优化用户反馈的展现方式，避免误操作引起的覆盖。
@@ -46,9 +46,8 @@ permalink: /docs/dc1vhbnz/
 ![](574d6dbf895ff.jpg)
 
 ## Extension API
-- 添加项目模板 API 
-- 添加新建文件模板 API 
+- 添加项目模板 API
+- 添加新建文件模板 API
 - 添加 popup form 数据验证 API
 通过模板 API 开发者能够定制“新建项目”和“新建模板文件”中的模板，加速开发过程。
 新添加的数据验证 API，能够允许开发者对 Popup form 中的数据进行实时验证，体验更加友好。
-

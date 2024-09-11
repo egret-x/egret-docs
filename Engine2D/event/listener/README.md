@@ -15,7 +15,6 @@ Egret中，事件的侦听器必须是一个函数。事件的发送者必须是
 public addEventListener(type:string, listener:Function, thisObject:any, useCapture:boolean = false, priority:number = 0)
 ```
 
-
 * `type`：事件类型，必选。
 
 * `listener`：用来处理事件的侦听器，必选。
@@ -41,13 +40,13 @@ listenerName(evt:Event):void {...}
 注册侦听器
 
 ```javascript
-事件发送者.addEventListener(事件类型, 侦听器, this);
+事件发送者.addEventListener(事件类型, 侦听器, this)
 ```
 
 移除侦听器
 
 ```javascript
-事件发送者.removeEventListener(事件类型, 侦听器, this);
+事件发送者.removeEventListener(事件类型, 侦听器, this)
 ```
 
 ### 3.检测侦听器
@@ -57,7 +56,7 @@ listenerName(evt:Event):void {...}
 如果该事件类型已经被注册过，返回 `true`，如果没有被注册过，返回 `false`。
 
 ```javascript
-事件发送者.hasEventListener(事件类型);
+事件发送者.hasEventListener(事件类型)
 ```
 
 ### 4.TouchEvent的启动开关
@@ -66,5 +65,5 @@ TouchEvent的启动开关 `touchEnabled` 指定此对象是否接收触摸或其
 
 实际使用过程，如果某些显示对象需要侦听TouchEvent，请先打开：
 ```javascript
-显示对象实例.touchEnabled = true;
+显示对象实例.touchEnabled = true
 ```

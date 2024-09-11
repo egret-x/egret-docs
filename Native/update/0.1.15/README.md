@@ -17,5 +17,4 @@ permalink: /docs/l406g4h7/
 - **[修正]** iOS: 支持query中带有中文的webSocket地址
 - **[修正]** iOS: 避免了http头中包含etag或last-modified时重复下载资源
 
-
 **【发布日期】：2019-3-4**

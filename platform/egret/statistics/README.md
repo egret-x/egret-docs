@@ -3,7 +3,7 @@ title: README
 createTime: 2024/09/11 10:50:04
 permalink: /docs/a32pcx94/
 ---
-Egret 统计接入根据游戏是否是用Egret 引擎开发分两种，遇到问题请加QQ群:386278100 
+Egret 统计接入根据游戏是否是用Egret 引擎开发分两种，遇到问题请加QQ群:386278100
 
 ## 一、Egret 引擎开发的游戏
 
@@ -16,14 +16,14 @@ Egret 统计接入根据游戏是否是用Egret 引擎开发分两种，遇到�
 {
 	"name": "egretsa",
 	"path": "../libsrc"
-}  
+}
 ```
 
 4、如何调用
 1）===初始化打开游戏暂未加载资源时调用===
 
 ```javascript
-esa.EgretSA.init({"gameId":XXXXXXX,"chanId":XXXX,"debug":false});	
+esa.EgretSA.init({ gameId: XXXXXXX, chanId: XXXX, debug: false })
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -42,9 +42,9 @@ debug：true or false //当值为true 时 不发送日志数据，建议在游�
 `都必须执行的过程不要打点`
 
 ```javascript
-esa.EgretSA.loadingSet(loadingIndex, loadingName); 
-//示例：
-esa.EgretSA.loadingSet(1, "开始加载"); // 记录开始加载过程，加载顺序为1
+esa.EgretSA.loadingSet(loadingIndex, loadingName)
+// 示例：
+esa.EgretSA.loadingSet(1, '开始加载') // 记录开始加载过程，加载顺序为1
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -69,13 +69,12 @@ esa.EgretSA.player.init({	})
 |  age |年龄|允许为空，类型int|
 | gender |性别 |默认1，1男 2女，类型int|
 
-
 ```javascript
-//说明：单独对帐户的某种信息做修改，可以单独调用以下对应方法
-esa.EgretSA.player.setLevel(10); // 设置等级
-esa.EgretSA.player.setPlayerName("昵称"); // 设置昵称
-esa.EgretSA.player.setDiamond(300); // 设置钻石
-esa.EgretSA.player.setGold(1000); // 设置金币
+// 说明：单独对帐户的某种信息做修改，可以单独调用以下对应方法
+esa.EgretSA.player.setLevel(10) // 设置等级
+esa.EgretSA.player.setPlayerName('昵称') // 设置昵称
+esa.EgretSA.player.setDiamond(300) // 设置钻石
+esa.EgretSA.player.setGold(1000) // 设置金币
 ```
 
 4）=== 设置新手引导 ===
@@ -83,24 +82,23 @@ esa.EgretSA.player.setGold(1000); // 设置金币
 `每个玩家都必须执行的引导不要打点`
 
 ```javascript
-esa.EgretSA.newUsersGuideSet(guideIndex, guideName); 
-//示例：
-esa.EgretSA.newUsersGuideSet(1, "完成招募将领"); // 完成完成招募将领新手引导，新手引导顺序为1
+esa.EgretSA.newUsersGuideSet(guideIndex, guideName)
+// 示例：
+esa.EgretSA.newUsersGuideSet(1, '完成招募将领') // 完成完成招募将领新手引导，新手引导顺序为1
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 | guideIndex |新手引导顺序| 格式为从1开始自增数字，类型int  |
 | guideName | 新手引导名称|最多32个字符，类型string|
 
-
 5）=== 游戏任务 ===
 
 `说明：统计游戏内任务完成的次数和主要处于那个等级段`
 
 ```javascript
-esa.EgretSA.onTaskCompleted(type, taskName); // 完成任务
-//示例：
-esa.EgretSA.onTaskCompleted(1, "通过关卡第一章"); // 完成主线任务，通过关卡第一章
+esa.EgretSA.onTaskCompleted(type, taskName) // 完成任务
+// 示例：
+esa.EgretSA.onTaskCompleted(1, '通过关卡第一章') // 完成主线任务，通过关卡第一章
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -112,25 +110,23 @@ esa.EgretSA.onTaskCompleted(1, "通过关卡第一章"); // 完成主线任务�
 `说明：统计游戏内首次完成某一个关卡的次数和处于那个等级段`
 
 ```javascript
-esa.EgretSA.onLevelDesignCompleted(type, levelDesignName); // 关卡成功
-esa.EgretSA.onLevelDesignFailed(type, levelDesignName); // 关卡失败
-//示例：
-esa.EgretSA.onLevelDesignCompleted(1, "关卡1"); // 完成主线关卡1
-esa.EgretSA.onLevelDesignFailed(1, "关卡1"); // 通过主线关卡1失败
+esa.EgretSA.onLevelDesignCompleted(type, levelDesignName) // 关卡成功
+esa.EgretSA.onLevelDesignFailed(type, levelDesignName) // 关卡失败
+// 示例：
+esa.EgretSA.onLevelDesignCompleted(1, '关卡1') // 完成主线关卡1
+esa.EgretSA.onLevelDesignFailed(1, '关卡1') // 通过主线关卡1失败
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 |type |关卡类型 | 1主线 2支线 3副本 4其它，类型int  |
 |levelDesignName |关卡名称|不允许为空，最多32个字符，类型string	|
 
-
 7）=== 统计游戏内钻石消耗、赠予分布 ===
 
 ```javascript
-esa.EgretSA.onDiamondUse(item, itemNumber, priceInDiamond);
-//示例：
-esa.EgretSA.onDiamondUse("重置副本", 1, 20); // 重置1次副本，重置副本单价20钻石
-
+esa.EgretSA.onDiamondUse(item, itemNumber, priceInDiamond)
+// 示例：
+esa.EgretSA.onDiamondUse('重置副本', 1, 20) // 重置1次副本，重置副本单价20钻石
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -141,11 +137,10 @@ esa.EgretSA.onDiamondUse("重置副本", 1, 20); // 重置1次副本，重置副
 `说明：item 值最多不可超过100个，如开宝箱有4种类型1000个宝箱，item 要写成 类型1宝箱，而不`
 `要写成开宝箱1001这样`
 
-
 ```javascript
-esa.EgretSA.onDiamondReward(num, reason);
-//示例：
-esa.EgretSA.onDiamondReward(100, "任务奖励"); // 任务奖励得到100钻石
+esa.EgretSA.onDiamondReward(num, reason)
+// 示例：
+esa.EgretSA.onDiamondReward(100, '任务奖励') // 任务奖励得到100钻石
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -155,10 +150,9 @@ esa.EgretSA.onDiamondReward(100, "任务奖励"); // 任务奖励得到100钻石
 8）=== 统计游戏内金币消耗、获取分布 ===
 
 ```javascript
-esa.EgretSA.onGoldOutput(num, reason);
-//示例：
-esa.EgretSA.onGoldOutput(10, "任务奖励"); // 完成某一个任务奖励10个金币
-
+esa.EgretSA.onGoldOutput(num, reason)
+// 示例：
+esa.EgretSA.onGoldOutput(10, '任务奖励') // 完成某一个任务奖励10个金币
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -166,10 +160,9 @@ esa.EgretSA.onGoldOutput(10, "任务奖励"); // 完成某一个任务奖励10�
 |reason|理由|不允许为空,最多32个字符，类型string|
 
 ```javascript
-esa.EgretSA.onGoldUse(item, itemNumber, priceInGold);
-//示例：
-esa.EgretSA.onGoldUse("重置副本", 1, 200); // 重置1次副本，重置副本单价200金币
-
+esa.EgretSA.onGoldUse(item, itemNumber, priceInGold)
+// 示例：
+esa.EgretSA.onGoldUse('重置副本', 1, 200) // 重置1次副本，重置副本单价200金币
 ```
 `说明：item 值最多不可超过100个，如重置副本有4种类型1000个重置副本，item 要写成 类型1重置`
 `副本，而不要写成重置副本1001这样`
@@ -183,23 +176,20 @@ esa.EgretSA.onGoldUse("重置副本", 1, 200); // 重置1次副本，重置副�
 9）=== 统计游戏内活动参加的次数 ===
 
 ```javascript
-esa.EgretSA.onJoinActivity(item);
-//示例：
-esa.EgretSA.onJoinActivity("魔王活动"); // 参加魔王活动
+esa.EgretSA.onJoinActivity(item)
+// 示例：
+esa.EgretSA.onJoinActivity('魔王活动') // 参加魔王活动
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 |item |活动编号或名称 | 不允许为空，最多32个字符，类型string|
 
-
 10）=== 离开游戏 ===
 
 ```javascript
-esa.EgretSA.onLeave();
-//在玩家退出游戏页面的时候调用，此方法如果游戏监测不到离开游戏可以不用调用
+esa.EgretSA.onLeave()
+// 在玩家退出游戏页面的时候调用，此方法如果游戏监测不到离开游戏可以不用调用
 ```
-
-
 
 如何判断统计是否接入成功?
 查看 浏览器审查元素里 loadingStat.php 返回值 {"code":0,"msg":"ok"} 表示接入成功否则返回失败原因
@@ -207,19 +197,17 @@ esa.EgretSA.onLeave();
 
 ## 二、非Egret 引擎开发的游戏
 
-
 1、[下载](http://open.egret.com/misc/doc/egretSA.zip "下载")统计接入文档
 2、加载游戏统计js &lsaquo;script src="http://gameanalysis.egret.com/js/egretSA.js" &rsaquo;&lsaquo;/script&rsaquo;
 3、开始对接
 1）===初始化打开游戏暂未加载资源时调用===
 ```javascript
-EgretSA.init({"gameId":XXXXXXX,"chanId":XXXX,"debug":false});	
+EgretSA.init({ gameId: XXXXXXX, chanId: XXXX, debug: false })
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 |  gameId |游戏统计id   | 和游戏id不同，从游戏总览里获取  |
 |  chanId | 渠道id|会在打开游戏网址的时候作为参数传入，获取 egret.runtime.spid 如果没有值获取|
-
 
 测试渠道9166 请在测试网址上加 egret.runtime.spid=9166 调试
 
@@ -234,9 +222,9 @@ EgretSA.init({"gameId":XXXXXXX,"chanId":XXXX,"debug":false});
 `都必须执行的过程不要打点`
 
 ```javascript
-EgretSA.loadingSet(loadingIndex, loadingName); 
-//示例：
-EgretSA.loadingSet(1, "开始加载"); // 记录开始加载过程，加载顺序为1
+EgretSA.loadingSet(loadingIndex, loadingName)
+// 示例：
+EgretSA.loadingSet(1, '开始加载') // 记录开始加载过程，加载顺序为1
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -261,13 +249,12 @@ EgretSA.player({	})
 |  age |年龄|允许为空，类型int|
 | gender |性别 |默认1，1男 2女，类型int|
 
-
 ```javascript
-//说明：单独对帐户的某种信息做修改，可以单独调用以下对应方法
-EgretSA.player.setLevel(10); // 设置等级
-EgretSA.player.setPlayerName("昵称"); // 设置昵称
-EgretSA.player.setDiamond(300); // 设置钻石
-EgretSA.player.setGold(1000); // 设置金币
+// 说明：单独对帐户的某种信息做修改，可以单独调用以下对应方法
+EgretSA.player.setLevel(10) // 设置等级
+EgretSA.player.setPlayerName('昵称') // 设置昵称
+EgretSA.player.setDiamond(300) // 设置钻石
+EgretSA.player.setGold(1000) // 设置金币
 ```
 
 4）=== 设置新手引导 ===
@@ -275,24 +262,23 @@ EgretSA.player.setGold(1000); // 设置金币
 `每个玩家都必须执行的引导不要打点`
 
 ```javascript
-EgretSA.newUsersGuideSet(guideIndex, guideName); 
-//示例：
-EgretSA.newUsersGuideSet(1, "完成招募将领"); // 完成完成招募将领新手引导，新手引导顺序为1
+EgretSA.newUsersGuideSet(guideIndex, guideName)
+// 示例：
+EgretSA.newUsersGuideSet(1, '完成招募将领') // 完成完成招募将领新手引导，新手引导顺序为1
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 | guideIndex |新手引导顺序| 格式为从1开始自增数字，类型int  |
 | guideName | 新手引导名称|最多32个字符，类型string|
 
-
 5）=== 游戏任务 ===
 
 `说明：统计游戏内任务完成的次数和主要处于那个等级段`
 
 ```javascript
-EgretSA.onTaskCompleted(type, taskName); // 完成任务
-//示例：
-EgretSA.onTaskCompleted(1, "通过关卡第一章"); // 完成主线任务，通过关卡第一章
+EgretSA.onTaskCompleted(type, taskName) // 完成任务
+// 示例：
+EgretSA.onTaskCompleted(1, '通过关卡第一章') // 完成主线任务，通过关卡第一章
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -304,25 +290,23 @@ EgretSA.onTaskCompleted(1, "通过关卡第一章"); // 完成主线任务，通
 `说明：统计游戏内首次完成某一个关卡的次数和处于那个等级段`
 
 ```javascript
-EgretSA.onLevelDesignCompleted(type, levelDesignName); // 关卡成功
-EgretSA.onLevelDesignFailed(type, levelDesignName); // 关卡失败
-//示例：
-EgretSA.onLevelDesignCompleted(1, "关卡1"); // 完成主线关卡1
-EgretSA.onLevelDesignFailed(1, "关卡1"); // 通过主线关卡1失败
+EgretSA.onLevelDesignCompleted(type, levelDesignName) // 关卡成功
+EgretSA.onLevelDesignFailed(type, levelDesignName) // 关卡失败
+// 示例：
+EgretSA.onLevelDesignCompleted(1, '关卡1') // 完成主线关卡1
+EgretSA.onLevelDesignFailed(1, '关卡1') // 通过主线关卡1失败
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 |type |关卡类型 | 1主线 2支线 3副本 4其它，类型int  |
 |levelDesignName |关卡名称|不允许为空，最多32个字符，类型string	|
 
-
 7）=== 统计游戏内钻石消耗、赠予分布 ===
 
 ```javascript
-EgretSA.onDiamondUse(item, itemNumber, priceInDiamond);
-//示例：
-EgretSA.onDiamondUse("重置副本", 1, 20); // 重置1次副本，重置副本单价20钻石
-
+EgretSA.onDiamondUse(item, itemNumber, priceInDiamond)
+// 示例：
+EgretSA.onDiamondUse('重置副本', 1, 20) // 重置1次副本，重置副本单价20钻石
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -333,11 +317,10 @@ EgretSA.onDiamondUse("重置副本", 1, 20); // 重置1次副本，重置副本�
 `说明：item 值最多不可超过100个，如开宝箱有4种类型1000个宝箱，item 要写成 类型1宝箱，而不`
 `要写成开宝箱1001这样`
 
-
 ```javascript
-EgretSA.onDiamondReward(num, reason);
-//示例：
-EgretSA.onDiamondReward(100, "任务奖励"); // 任务奖励得到100钻石
+EgretSA.onDiamondReward(num, reason)
+// 示例：
+EgretSA.onDiamondReward(100, '任务奖励') // 任务奖励得到100钻石
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -347,10 +330,9 @@ EgretSA.onDiamondReward(100, "任务奖励"); // 任务奖励得到100钻石
 8）=== 统计游戏内金币消耗、获取分布 ===
 
 ```javascript
-EgretSA.onGoldOutput(num, reason);
-//示例：
-EgretSA.onGoldOutput(10, "任务奖励"); // 完成某一个任务奖励10个金币
-
+EgretSA.onGoldOutput(num, reason)
+// 示例：
+EgretSA.onGoldOutput(10, '任务奖励') // 完成某一个任务奖励10个金币
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
@@ -358,10 +340,9 @@ EgretSA.onGoldOutput(10, "任务奖励"); // 完成某一个任务奖励10个金
 |reason|理由|不允许为空,最多32个字符，类型string|
 
 ```javascript
-EgretSA.onGoldUse(item, itemNumber, priceInGold);
-//示例：
-EgretSA.onGoldUse("重置副本", 1, 200); // 重置1次副本，重置副本单价200金币
-
+EgretSA.onGoldUse(item, itemNumber, priceInGold)
+// 示例：
+EgretSA.onGoldUse('重置副本', 1, 200) // 重置1次副本，重置副本单价200金币
 ```
 `说明：item 值最多不可超过100个，如重置副本有4种类型1000个重置副本，item 要写成 类型1重置`
 `副本，而不要写成重置副本1001这样`
@@ -375,23 +356,20 @@ EgretSA.onGoldUse("重置副本", 1, 200); // 重置1次副本，重置副本单
 9）=== 统计游戏内活动参加的次数 ===
 
 ```javascript
-EgretSA.onJoinActivity(item);
-//示例：
-EgretSA.onJoinActivity("魔王活动"); // 参加魔王活动
+EgretSA.onJoinActivity(item)
+// 示例：
+EgretSA.onJoinActivity('魔王活动') // 参加魔王活动
 ```
 | 字段名  | 字段描述  | 备注  |
 | ------------ | ------------ | ------------ |
 |item |活动编号或名称 | 不允许为空，最多32个字符，类型string|
 
-
 10）=== 离开游戏 ===
 
 ```javascript
-EgretSA.onLeave();
-//在玩家退出游戏页面的时候调用，此方法如果游戏监测不到离开游戏可以不用调用
+EgretSA.onLeave()
+// 在玩家退出游戏页面的时候调用，此方法如果游戏监测不到离开游戏可以不用调用
 ```
-
-
 
 如何判断统计是否接入成功?
 查看 浏览器审查元素里 loadingStat.php 返回值 {"code":0,"msg":"ok"} 表示接入成功否则返回失败原因
@@ -400,4 +378,3 @@ EgretSA.onLeave();
 ## 三、常见问题
 
 1）编译不能通过 Cannot find name 'esa' ，编译项目的时候用 egret build -e 把引擎和项目一起编译一下。
-

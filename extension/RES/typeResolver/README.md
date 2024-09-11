@@ -72,5 +72,3 @@ console.log( "JPEG SOI:", baImage.readUnsignedShort().toString(16) );
 接着用无符号短整型方式读取ByteArray数据，即可得到我们需要的SOI标记。
 
 >注意，该方式暂不支持Runtime/Native环境。
-
-

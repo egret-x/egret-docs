@@ -4,15 +4,13 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/5gf0f4em/
 ---
 
-
-
 [组队示例](http://demo.matchvs.com/RombBoy/)
 
 当前页面是组队相关的API说明。我们同样是以 MatchvsEngine 和 MatchvsResponse 的对象 engine 和 response 来说明。
 
 Response 是发起方在调用接口后，自己收到的回调；Notify是发起方调用接口后，小队其他成员收到的通知。
 
-组队匹配信息可以使用getRoomDetail 接口查看房间是否有组队。请求接口返回码可以参考 [错误码说明](https://doc.matchvs.com/APIDoc/erroCode) 
+组队匹配信息可以使用getRoomDetail 接口查看房间是否有组队。请求接口返回码可以参考 [错误码说明](https://doc.matchvs.com/APIDoc/erroCode)
 
 ## 名词概念
 
@@ -49,18 +47,12 @@ Response 是发起方在调用接口后，自己收到的回调；Notify是发�
 | -12    | 正在加入观战房间                   |
 | -13    | 队伍正在匹配中                     |
 
-
-
-
-
 ## 创建队伍
 
 组队匹配需要调用这个接口先创建一支队伍。
 
 - 请求接口：createTeam
 - 回调接口：createTeamResponse
-
-
 
 开发者可以创建一个带密码的小队，并指定小队的人数上限（如5v5，则小队人数上限为5，玩家可以再邀请4个好友一起组成小队）。
 
@@ -98,25 +90,21 @@ Response 是发起方在调用接口后，自己收到的回调；Notify是发�
     createTeamResponse(rps:any):void
 ```
 
-
-
 #### 示例代码
 
 ```javascript
-var req = {
-    password:"ok",
-    capacity:2,
-    mode:0,
-    visibility:1,
-    userProfile:"temamode"
-};
+const req = {
+  password: 'ok',
+  capacity: 2,
+  mode: 0,
+  visibility: 1,
+  userProfile: 'temamode'
+}
 engine.createTeam(req)
-response.createTeamResponse = function(rsp){
-    console.log("[RSP]createTeamResponse:"+JSON.stringify(rsp));
-};
+response.createTeamResponse = function (rsp) {
+  console.log(`[RSP]createTeamResponse:${JSON.stringify(rsp)}`)
+}
 ```
-
-
 
 ## 加入队伍
 
@@ -124,8 +112,6 @@ response.createTeamResponse = function(rsp){
 
 - 请求接口：joinTeam
 - 回调接口：joinTeamResponse, joinTeamNotify
-
-
 
 加入小队时，可以携带头像、昵称等信息。
 
@@ -142,8 +128,6 @@ response.createTeamResponse = function(rsp){
      */
     joinTeam(teaminfo:MVS.MsJoinTeamInfo):number
 ```
-
-
 
 #### joinTeamResponse
 
@@ -181,27 +165,23 @@ response.createTeamResponse = function(rsp){
     leaveTeamNotify (notify):void
 ```
 
-
-
 #### 示例代码
 
 ```javascript
-response.joinTeamResponse = function(rsp){
-	console.log("[RSP]joinTeamResponse:"+JSON.stringify(rsp));
-};
+response.joinTeamResponse = function (rsp) {
+  console.log(`[RSP]joinTeamResponse:${JSON.stringify(rsp)}`)
+}
 
-response.joinTeamNotify = function(rsp){
-	console.log("[RSP]joinTeamNotify:"+JSON.stringify(rsp));
-};
-var req ={
-    teamID: PutIn("teamID"),
-    password: PutIn("teamPwd"),
-    userProfile:"i come team 哈哈"
-};
-console.log("[REQ]STJoinTeam:"+engine.joinTeam(req));
+response.joinTeamNotify = function (rsp) {
+  console.log(`[RSP]joinTeamNotify:${JSON.stringify(rsp)}`)
+}
+const req = {
+  teamID: PutIn('teamID'),
+  password: PutIn('teamPwd'),
+  userProfile: 'i come team 哈哈'
+}
+console.log(`[REQ]STJoinTeam:${engine.joinTeam(req)}`)
 ```
-
-
 
 ## 离开队伍
 
@@ -221,8 +201,6 @@ console.log("[REQ]STJoinTeam:"+engine.joinTeam(req));
     leaveTeam():number
 ```
 
-
-
 #### leaveTeamResponse
 
 ```typescript
@@ -237,8 +215,6 @@ console.log("[REQ]STJoinTeam:"+engine.joinTeam(req));
      */
     leaveTeamResponse(rsp:any):void
 ```
-
-
 
 #### leaveTeamNotify
 
@@ -256,21 +232,17 @@ console.log("[REQ]STJoinTeam:"+engine.joinTeam(req));
     leaveTeamNotify(notify:any):void
 ```
 
-
-
 #### 示例代码
 
 ```javascript
-response.leaveTeamResponse = function(rsp){
-	console.log("[RSP]leaveTeamResponse:"+JSON.stringify(rsp));
-};
-response.leaveTeamNotify = function(notify){
-	console.log("[RSP]leaveTeamNotify:"+JSON.stringify(notify));
-};
-console.log("[REQ]STLeaveTeam:"+engine.leaveTeam());
+response.leaveTeamResponse = function (rsp) {
+  console.log(`[RSP]leaveTeamResponse:${JSON.stringify(rsp)}`)
+}
+response.leaveTeamNotify = function (notify) {
+  console.log(`[RSP]leaveTeamNotify:${JSON.stringify(notify)}`)
+}
+console.log(`[REQ]STLeaveTeam:${engine.leaveTeam()}`)
 ```
-
-
 
 ##队伍与队伍匹配
 
@@ -371,8 +343,6 @@ info 是 MVS.MsTeamMatchInfo 类型。
     teamMatchStartNotify(rsp:any):void
 ```
 
-
-
 #### teamMatchResultNotify
 
 队伍匹配结果通过这个接口通知队伍中的所有人。**注意：匹配成功但并不是加入了房间，收到匹配成功后，马上给其他玩家发送消息是不可行的。**匹配成功后SDK会自动处理加入房间的逻辑，开发者不用额外的调用加入房间接口，只需要处理，joinRoomResponse 接口和 joinRoomNotify 接口即可，通过这个两个接口判断是否所有人都加入了房间，如果需要检查谁掉线了可以处理 networkStateNotify 接口。
@@ -391,8 +361,6 @@ info 是 MVS.MsTeamMatchInfo 类型。
      */
     teamMatchResultNotify(rsp:any):void
 ```
-
-
 
 数据示例：
 
@@ -434,39 +402,34 @@ info 是 MVS.MsTeamMatchInfo 类型。
     "owner": 388138,
     "state": 0
   }
-} 
+}
 ````
 
 #### 示例代码
 
 ```javascript
-response.teamMatchResponse = function(rsp){
-    console.log("[RSP]teamMatchResponse:"+JSON.stringify(rsp));
-};
-response.teamMatchResultNotify = function(notify){
-    console.log("[RSP]TeamMatchResultNotify:"+JSON.stringify(notify));
-};
-response.teamMatchStartNotify = function(notify){
-    console.log("[RSP]TeamMatchStartNotify:"+JSON.stringify(notify));
-};
+response.teamMatchResponse = function (rsp) {
+  console.log(`[RSP]teamMatchResponse:${JSON.stringify(rsp)}`)
+}
+response.teamMatchResultNotify = function (notify) {
+  console.log(`[RSP]TeamMatchResultNotify:${JSON.stringify(notify)}`)
+}
+response.teamMatchStartNotify = function (notify) {
+  console.log(`[RSP]TeamMatchStartNotify:${JSON.stringify(notify)}`)
+}
 
-var cond ={
-    teamNum:2,
-    MemberNum:2,
-    timeout:15,
-    weight:15,
-    weightRange:5,
-    weightRule:0,
-    full:0
-};
-var info = new MVS.MsTeamMatchInfo("STTeamMatch", 10, 1, 0,1,"STTeamMatch",
-           new MVS.MsTeamMatchCond(cond.teamNum, cond.MemberNum, cond.timeout, cond.weight, cond.weightRange, cond.weightRule, cond.full), 
-           new MVS.MsWatchSet(600000, 3, 60000, true)
-);
-console.log("[REQ]STTeamMatch:"+engine.teamMatch(info));
+const cond = {
+  teamNum: 2,
+  MemberNum: 2,
+  timeout: 15,
+  weight: 15,
+  weightRange: 5,
+  weightRule: 0,
+  full: 0
+}
+const info = new MVS.MsTeamMatchInfo('STTeamMatch', 10, 1, 0, 1, 'STTeamMatch', new MVS.MsTeamMatchCond(cond.teamNum, cond.MemberNum, cond.timeout, cond.weight, cond.weightRange, cond.weightRule, cond.full), new MVS.MsWatchSet(600000, 3, 60000, true))
+console.log(`[REQ]STTeamMatch:${engine.teamMatch(info)}`)
 ```
-
-
 
 #### cancelTeamMatch
 
@@ -500,7 +463,7 @@ console.log("[REQ]STTeamMatch:"+engine.teamMatch(info));
 ```typescript
     /**
      * 取消组队匹配时
-     * @param {any} notify 
+     * @param {any} notify
      * @param {number} notify.userID 取消组队匹配的玩家ID
      * @param {string} notify.teamID 当前的队伍号
      * @param {string} notify.cpProto 取消时附带的消息
@@ -511,13 +474,13 @@ console.log("[REQ]STTeamMatch:"+engine.teamMatch(info));
 示例代码
 
 ```javascript
-response.cancelTeamMatchResponse = function(rsp){
-    console.log("[RSP]cancelTeamMatchResponse:"+JSON.stringify(rsp));
-};
-response.cancelTeamMatchNotify = function(notify){
-    console.log("[RSP]cancelTeamMatchNotify:"+JSON.stringify(notify));
-};
-engine.cancelTeamMatch({cpProto:"cancel team match"});
+response.cancelTeamMatchResponse = function (rsp) {
+  console.log(`[RSP]cancelTeamMatchResponse:${JSON.stringify(rsp)}`)
+}
+response.cancelTeamMatchNotify = function (notify) {
+  console.log(`[RSP]cancelTeamMatchNotify:${JSON.stringify(notify)}`)
+}
+engine.cancelTeamMatch({ cpProto: 'cancel team match' })
 ```
 
 ## 组队对内管理
@@ -559,7 +522,7 @@ engine.cancelTeamMatch({cpProto:"cancel team match"});
 ```typescript
     /**
      * 收到踢人通知，当队伍中有人触发踢人接口，其他人就会收到这个接口的通知
-     * @param {any} notify 
+     * @param {any} notify
      * @param {string} notify.teamID 当前队伍号
      * @param {number} notify.userID 当前发起踢人的玩家号
      * @param {number} notify.dstUserID 被踢的玩家号
@@ -573,13 +536,13 @@ engine.cancelTeamMatch({cpProto:"cancel team match"});
 #### 示例代码
 
 ```javascript
-response.kickTeamMemberResponse = function(rsp){
-    console.log("[RSP]kickTeamMemberResponse:"+JSON.stringify(rsp));
-};
-response.kickTeamMemberNotify = function(notify){
-    console.log("[RSP]kickTeamMemberNotify:"+JSON.stringify(notify));
-};
-engine.kickTeamMember({userID:userid, cpProto:"kick team member"});
+response.kickTeamMemberResponse = function (rsp) {
+  console.log(`[RSP]kickTeamMemberResponse:${JSON.stringify(rsp)}`)
+}
+response.kickTeamMemberNotify = function (notify) {
+  console.log(`[RSP]kickTeamMemberNotify:${JSON.stringify(notify)}`)
+}
+engine.kickTeamMember({ userID: userid, cpProto: 'kick team member' })
 ```
 
 ## 小对内通信
@@ -632,16 +595,14 @@ engine.kickTeamMember({userID:userid, cpProto:"kick team member"});
 #### 示例代码
 
 ```javascript
-response.sendTeamEventResponse = function(rsp){
-    console.log("[RSP]sendTeamEventResponse:"+JSON.stringify(rsp));
-};
-response.sendTeamEventNotify = function(notify){
-    console.log("[RSP]sendTeamEventNotify:"+JSON.stringify(notify));
-};
-engine.sendTeamEvent({msgType:0, dstType:1, data:data, dstUserIDs:[]});
+response.sendTeamEventResponse = function (rsp) {
+  console.log(`[RSP]sendTeamEventResponse:${JSON.stringify(rsp)}`)
+}
+response.sendTeamEventNotify = function (notify) {
+  console.log(`[RSP]sendTeamEventNotify:${JSON.stringify(notify)}`)
+}
+engine.sendTeamEvent({ msgType: 0, dstType: 1, data, dstUserIDs: [] })
 ```
-
-
 
 ## 队伍属性
 
@@ -746,7 +707,7 @@ teamNetworkStateNotify(notify:any);
      * @param {number} timeout 单位秒
      */
     setTeamReconnectTimeout (timeout:number):number;
-    
+
     /**
      * @see setTeamReconnectTimeout
      * @param {number} status 200表示成功

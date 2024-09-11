@@ -30,11 +30,10 @@ default.thm.json:
 主题配置文件就是一个标准的JSON文件，
 
 * `skins` 指定组件的默认皮肤，其中键是组件的类名，值是需要赋值给这个组件skinName属性的值。可以是exml文件路径，也可以是EXML文件上注册的类名（根节点上的class属性）。
-   
+
 * `exmls` 表示需要主题预加载的 EXML 文件列表。Theme 文件加载之后，它会优先加载这个列表中的EXML文件，由于 EXML 可能会存在相互依赖，所以 Theme 会**按照列表中的顺序**编译 EXML。可以监听 `egret.Event.COMPLETE` 来确认该列表中的EXML已经加载完成。
 
 * `autoGenerateExmlsList` 表示是否需要使用命令行工具自动生成 EXML 列表。
-
 
 这里需要注意的是，引擎只会识别 `xxx.thm.json` 文件作为 theme 文件.
 

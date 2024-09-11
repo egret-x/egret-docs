@@ -10,15 +10,13 @@ permalink: /docs/p7llyjps/
 
 通过使用白鹭引擎，开发者可以尽可能的不用关注浏览器的底层实现，解决HTML5游戏性能问题及碎片化问题，灵活地满足开发者开发2D或3D游戏的需求。
 
-
-
 ## 更新内容
 
 * 命令行
     * 参与编译的 TypeScript 文件列表由 tsconfig.json 进行开发者自由指定，与标准 TypeScript 项目行为一致
     * 完善项目的文件结构，如果第三方库已经在项目中，不会重复拷贝至 libs/modules 文件夹中
-    * 修复一个由复杂文件排序引发的构建 BUG 
-    * 修复了 egret publish 后， DEBUG 枚举仍然为 true 的 BUG 
+    * 修复一个由复杂文件排序引发的构建 BUG
+    * 修复了 egret publish 后， DEBUG 枚举仍然为 true 的 BUG
     * 精简命令行体积，从 21mb 降低至 18mb，并重构内部逻辑，为未来进一步扩展做准备
     * 新项目模板默认添加 Promise 支持
     * 使用 egret upgrade 命令升级至 4.0.1 会为项目添加 Promise 支持
@@ -31,15 +29,14 @@ permalink: /docs/p7llyjps/
     * 略微提升整体性能，大约有 5% - 10% 的性能提升
     * Unity 导出插件更新至最新版本
     * 采用 TypeScript 2.1.4 编译
-    * 创建新的 3D 项目采用白鹭引擎的资源管理框架以及 2D UI 
+    * 创建新的 3D 项目采用白鹭引擎的资源管理框架以及 2D UI
 
 * 资源管理框架
-    * 修复加载 BitmapFont 类型文件可能报错的 BUG  
+    * 修复加载 BitmapFont 类型文件可能报错的 BUG
     * 完善多处 ```res```命令行和运行时的报错信息，提供更友好的错误提示
     * 修复 ```res build```在文件删除之后，资源配置文件不会正确同步删除的BUG
     * 在创建项目时允许创建资源管理框架的示例项目
     * 完善文档
-
 
 ## 升级策略
 
@@ -60,15 +57,12 @@ permalink: /docs/p7llyjps/
 > ```
 > 预计在下的版本（4.0.2）中，源代码也将可以放置于任意文件夹
 
-
 * 如果第三方库的路径在项目中，则不再将项目拷贝至 ```libs/modules``` 文件夹中，这一方面是为了确保不会因为上一条改变带来重复编译文件，另一方面也降低开发者的项目复杂度。
 * 如果开发者由于特定原因，手动将引擎版本从 4.0.1 降级至 3.x，请在降级后**手动**删除```tsconfig.json```中的```lib```字段。
-
 
 ## 已知问题
 
 * 修改 ```tsconfig.json```后，执行 ``` egret build ``` 不会生效，需执行 ``` egret clean ```
-
 
 ## 路线图
 
@@ -85,4 +79,3 @@ permalink: /docs/p7llyjps/
 * 白鹭引擎4.0 需要最新的 Egret Wing 4.0 配合，或将 WebStrom 等其他开发工具升级至较新版本以支持 TypeScript 2.1
 * 骨骼动画的白鹭极速模式需要开发者将 DragonBonesPro 升级至4.8版本以上，建议使用最新的 5.0 版本
 * 使用白鹭引擎开发原生游戏的工具（ egret-ios-support / egret-android-support ）将会很快以 Egret-Native的全新面貌发布
-

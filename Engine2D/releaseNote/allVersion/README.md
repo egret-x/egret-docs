@@ -62,9 +62,7 @@ permalink: /docs/ozatpczf/
 | egret-core-1.5.4 | [更新详解](https://github.com/egret-labs/egret-core/blob/master/docs/cn/1.5.4_ReleaseNotes.md) | [下载地址](http://sedn.egret.com//soft/egret/egret-core-1.5.4.zip) | 2015-02-06 |
 | egret-core-1.5.3 | [更新详解](https://github.com/egret-labs/egret-core/blob/master/docs/cn/1.5.3_ReleaseNotes.md) | [下载地址](http://sedn.egret.com//soft/egret/egret-core-1.5.3.zip) | 2015-01-23 |
 
-
 #### Egret 2.4 分支版本列表
-
 
 | 版本 | 更新详解 | 下载地址 | 日期 |
 | -- | -- | -- | -- |
@@ -72,7 +70,6 @@ permalink: /docs/ozatpczf/
 | egret-core-2.4.2 | [更新详解](https://github.com/egret-labs/egret-core/blob/master/docs/cn/2.4.2_ReleaseNotes.md) | [下载地址](http://sedn.egret.com//soft/egret/egret-core-2.4.2.zip) | 2015-08-28 |
 | egret-core-2.4.1 | [更新详解](https://github.com/egret-labs/egret-core/blob/master/docs/cn/2.4.1_ReleaseNotes.md) | [下载地址](http://sedn.egret.com//soft/egret/egret-core-2.4.1.zip) | 2015-08-13 |
 | egret-core-2.4.0 | [更新详解](https://github.com/egret-labs/egret-core/blob/master/docs/cn/2.4.0_ReleaseNotes.md) | [下载地址](http://sedn.egret.com//soft/egret/egret-core-2.4.0.zip) | 2015-07-31 |
-
 
 >点击下载地址可以下载Egret Engine 的各个 Release 版本。在 EgretEngine 2.5 管理程序中可以方便切换引擎的版本。
 >使用方法可以点击 [启动器](../../../Engine2D/projectConfig/launcherManager/README.md)

@@ -27,7 +27,7 @@ class LookAtDemo extends LoadingUI
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.canvas.start();
-        
+
         this._view = new egret3d.View3D(0,0,window.innerWidth,window.innerHeight);
         this.canvas.addView3D(this._view);
         this.createCub();
@@ -43,7 +43,7 @@ class LookAtDemo extends LoadingUI
         this.cube = new egret3d.Mesh(go, mat);
         this._view.addChild3D(this.cube);
     }
-    
+
 }
 ```
 
@@ -90,7 +90,6 @@ this.ctl.rotationY = 120;
 
 ![](575cd289cae6a.png)
 
-
 完整示例代码如下：
 
 ```
@@ -110,7 +109,7 @@ class LookAtDemo extends LoadingUI
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.canvas.start();
-        
+
         this._view = new egret3d.View3D(0,0,window.innerWidth,window.innerHeight);
         this.canvas.addView3D(this._view);
 
@@ -129,7 +128,7 @@ class LookAtDemo extends LoadingUI
         this.cube = new egret3d.Mesh(go, mat);
         this._view.addChild3D(this.cube);
     }
-    
+
     private ctl:egret3d.LookAtController
     private initLookAt()
     {
@@ -138,7 +137,7 @@ class LookAtDemo extends LoadingUI
         this.ctl.rotationX = 50;
 this.ctl.rotationY = 120;
     }
-    
+
     private update(evt:egret3d.Event3D)
     {
         this.ctl.update();

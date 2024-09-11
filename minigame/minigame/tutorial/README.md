@@ -35,7 +35,6 @@ permalink: /docs/minigame/minigame/tutorial/
 
 ![](x12.jpg)
 
-
 开发者也可以使用命令行：
   * 发布小游戏 ```egret publish --target wxgame``` 命令发布。
   * 用微信开发者工具打开 ```egret run --target wxgame``` 命令。<br/>

@@ -9,7 +9,6 @@ permalink: /docs/mu9fmnvq/
 
 Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及全新打造的[3D引擎](https://github.com/egret-labs/egret-3d)，它解决了HTML5性能问题及碎片化问题，灵活地满足开发者开发2D或3D游戏的需求，并有着极强的跨平台运行能力。
 
-
 本次更新内容汇总了从引擎 3.1.8 到 3.2.0 的改动。
 
 * 新增 canvas 模式支持发光和投影滤镜
@@ -17,7 +16,6 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 * 修复 RES.hasRes 判断异常问题
 * 修复滤镜和遮罩同时使用显示异常问题
 * 修复 BitmapText 字间距测量不准确问题
-
 
 ### DragonBones 白鹭极速格式
 DragonBones 4.7 引入了一套精简的动画模式 **白鹭极速格式**，目的在进一步优化骨骼动画（元件动画，区别与序列帧动画）在 H5 上的性能和内存问题。
@@ -33,7 +31,7 @@ DragonBones 4.7 引入了一套精简的动画模式 **白鹭极速格式**，�
 * [白鹭极速格式](http://developer.egret.com/cn/article/index/id/1045)
 
 #### Armature 和 白鹭极速格式 的使用对比
-* 使用 Armature ： 
+* 使用 Armature ：
 
 ```
 dragonBones.EgretFactory.factory.parseDragonBonesData(RES.getRes("dragonBonesData")); // 解析骨骼动画数据
@@ -57,7 +55,6 @@ this.addChild(movie); // 添加 Movie 到显示列表
 
 ### 导出二进制数据
 使用 DragonBonesPro(4.8版本以后) 支持导出**白鹭极速格式**使用的二进制数据格式。
-
 
 #### 路线图
 * 优化滤镜性能

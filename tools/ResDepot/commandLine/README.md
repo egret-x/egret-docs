@@ -13,7 +13,6 @@ permalink: /docs/mltnfq61/
     * pack_config_path  打包配置文件的绝对路径，该文件由ResDepot手动打包过程中可以编辑和生成。
     * root_directory  资源根目录，该目录用于与资源配置内的相对路径拼成绝对路径用的。
 
-
 #### 用法
 
 ResDepot 的命令行是需要打包的配置文件支持的，而该文件只能由ResDepot生成。 所以如果想确保命令行可以打包成功，首先在软件中要能够打包成功，并生成配置文件。

@@ -5,14 +5,11 @@ permalink: /docs/xjqkdxss/
 ---
 # 白鹭引擎 5.2.4 发布日志
 
-
 ---
-
 
 白鹭引擎在 2018年5月25日 正式发布了 5.2 稳定版本。在 2018年7月2日，我们将发布 5.2.4 稳定版本。本次版本是 5.2 版本的一次集中性缺陷修复
 
-
-## 2D 渲染 - JavaScript 
+## 2D 渲染 - JavaScript
 
 * 修复对 graphics 设置 cacheAsBitmap 后绘制异常问题（感谢开发者 陪笑）
 * 修复 RenderTexture 设置缩放后绘制异常问题（感谢开发者 陪笑）

@@ -45,15 +45,15 @@ class GridSprite extends egret.Sprite
         this.graphics.beginFill( 0x0000ff );
         this.graphics.drawRect( 0, 0, 50,50 );
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0x0000ff );
         this.graphics.drawRect( 50, 50, 50, 50);
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0xff0000 );
         this.graphics.drawRect( 50, 0, 50,50 );
         this.graphics.endFill();
-        
+
         this.graphics.beginFill( 0xff0000 );
         this.graphics.drawRect( 0, 50, 50,50 );
         this.graphics.endFill();
@@ -64,11 +64,10 @@ class GridSprite extends egret.Sprite
 在文档类中，我们实例化 `GridSprite` 即可。
 
 ```
-var _myGrid:GridSprite = new GridSprite();  
+var _myGrid:GridSprite = new GridSprite();
 this.addChild( _myGrid );
 ```
 
 编译运行效果如下：
 
 ![](5565355e688c7.png)
-

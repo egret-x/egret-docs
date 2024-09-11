@@ -11,7 +11,7 @@ permalink: /docs/tk4nmgqf/
 开发者可以在微信小游戏里直接调用API，就可以操作数据库的读写存储等功能，无需搭建服务器。提高开发效率，节约成本。
 [云开发介绍](https://developers.weixin.qq.com/minigame/dev/wxcloud/basis/getting-started.html) [数据库操作API](https://developers.weixin.qq.com/minigame/dev/wxcloud/reference-client-api/database/)
 
-### 一.使用前准备：开通云开发功能   
+### 一.使用前准备：开通云开发功能
 * 1.创建一个新的小游戏项目，勾选 `小程序.云开发`。 **注意：不能使用测试号**
 
 ![](p1.png)
@@ -34,14 +34,12 @@ permalink: /docs/tk4nmgqf/
 * 4.切换到 `权限设置`面板，把权限设置为 `所有用户可读，仅创建者可读写`
 ![](p5.png)
 
-
 ### 三.创建云函数
 因为数据库的权限问题，普通用户要想写入数据，必须使用云函数
 
 * 1.首先在微信小游戏项目中创建一个 `cloudfunction` 文件夹，就是我们刚才在 `project.config.json` 中配置的。然后在微信开发者工具中右键单击这个文件夹,选择 `新建 Node.js 云函数`，然后创建一个名为 `addLog` 的云函数文件夹
 
 ![](p6.png)
-
 
 * 2.将 `addLog` 文件夹内的 `index.js` 代码修改如下：
 
@@ -51,28 +49,25 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let newValue = event.value;
-  //获取数据库的引用
+  const newValue = event.value
+  // 获取数据库的引用
   const db = cloud.database()
-  //获取数据库中的数组
-  let oldData = await db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').get()
-  //获取内容的数组
-  let content = oldData.data.content
-  //加入新的数据
+  // 获取数据库中的数组
+  const oldData = await db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').get()
+  // 获取内容的数组
+  const content = oldData.data.content
+  // 加入新的数据
   content.push(newValue)
-  //更新服务器上的数据
-  let newData = await db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').update({
-    data:{
-      content:content
+  // 更新服务器上的数据
+  const newData = await db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').update({
+    data: {
+      content
     }
   })
   return newData
 }
 ~~~
 * 3.右键在 `addLog` 文件夹上点击 `上传并部署：云端安装依赖`
-
-
-
 
 ### 四.代码调用
 * 1.增加服务器上的数据，只要调用刚才创建的 `addLog` 云函数就可以了。
@@ -96,13 +91,12 @@ wx.cloud.callFunction({
 ~~~javascript
 const db = wx.cloud.database()
 
-db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').get().then(res => {
-    console.log('获取数据', res.data.content)
+db.collection('logs').doc('9390f2ff-0318-4826-87d8-78bf31568cab').get().then((res) => {
+  console.log('获取数据', res.data.content)
 })
 ~~~
 
 本示例演示了如何增加和查询数据，前端调用 API 即可，不需要后端的开发工作，简化了开发流程。
-
 
 访问官网查询更多的[数据库操作API](https://developers.weixin.qq.com/minigame/dev/wxcloud/reference-client-api/database/)
 

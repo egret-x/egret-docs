@@ -12,7 +12,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 ### 更新内容
 
 * 增加 [VideoTexture](http://developer.egret.com/cn/apidoc/index/name/egret3d.VideoTexture)
-    
+
 	使用 VideoTexture 可以通过 Video 标签采集视频。使用时需要注意设置贴图的宽度和高度必须为2的N次方。
 
 * 增加 HUD 可自定义 shader
@@ -26,7 +26,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 	离屏渲染框架，GPU 在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。
 
 * 增加多 [Pass](http://developer.egret.com/cn/apidoc/index/name/egret3d.MaterialPass) 混合渲染框架.
-   
+
    材质渲染 Pass 根据 Mesh 数据、模型的材质还有灯光数据的不同。以不同的渲染方法，会组成相应的 shader 内容，然后渲染出不同的效果。
 
 ### 工具

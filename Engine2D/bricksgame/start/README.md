@@ -7,7 +7,6 @@ permalink: /docs/h6rr70tl/
 
 [新手教程](#新手教程)
 
-
 - [什么是玩一玩平台](#什么是玩一玩平台)
 
 - [如何将白鹭游戏引擎制作的游戏发布到玩一玩平台](#如何将白鹭游戏引擎制作的游戏发布到玩一玩平台)
@@ -18,7 +17,6 @@ permalink: /docs/h6rr70tl/
 
 - [已知问题](#已知问题)
 
-
 <br>
 
 ## 什么是玩一玩平台
@@ -28,13 +26,11 @@ permalink: /docs/h6rr70tl/
 
 ![bricksEngine](./bricksEngine.png)
 
-
 目前白鹭引擎已经添加了对于玩一玩开发的支持，您只要使用白鹭引擎开发，就可以将游戏发布至 QQ 玩一玩平台上。其技术原理如下：
 
 ![egret_to_wanyiwan](./egret_to_wanyiwan.png)
 
 通过这种方式，开发者只需要使用白鹭引擎的最新版本，通过使用白鹭引擎完整工具流，就可以快速创建、开发与发布玩一玩小游戏，而无需过多的关注底层技术细节。
-
 
 ## 如何将白鹭游戏引擎制作的游戏发布到玩一玩平台
 
@@ -64,7 +60,6 @@ permalink: /docs/h6rr70tl/
 
 * 注：目前玩一玩只支持 MacOS 开发，我们正在和玩一玩团队共同努力，争取尽快提供 Windows 下的开发调试环境。
 * 目前执行 egret run --target bricks 命令会提示编译项目失败，但只是显示问题，并不影响开发。该问题会在下个版本中修复。
-
 
 ## 其他版本引擎发布
 
@@ -114,7 +109,7 @@ export class BricksPlugin implements plugins.Command {
 同时，在`./scripts/config.ts`，在其中添加如下代码：
 
 ```javascript
-import { BricksPlugin } from './bricks/bricks';
+import { BricksPlugin } from './bricks/bricks'
 ```
 ```javascript
         if (target == 'bricks') {
@@ -131,7 +126,6 @@ import { BricksPlugin } from './bricks/bricks';
         }
 ```
 之后，您就可以按照上面介绍的[如何将白鹭游戏引擎制作的游戏发布到玩一玩平台](#如何将白鹭游戏引擎制作的游戏发布到玩一玩平台)的方法发布游戏了。
-
 
 # 更新内容
 
@@ -152,14 +146,14 @@ import { BricksPlugin } from './bricks/bricks';
 # 已知问题
 白鹭引擎目前尚有以下功能尚未支持玩一玩平台
 
-* 渲染相关 
+* 渲染相关
   * 不规则遮罩
   * 动态截屏
   * 位图缓存
-* 触摸相关 
+* 触摸相关
   * 像素级碰撞检测
   * 点击穿透
-* 调试相关 
+* 调试相关
   * 脏矩形调试显示
   * fps监视器
   * 屏幕调试日志

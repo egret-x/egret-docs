@@ -36,25 +36,22 @@ permalink: /docs/2xmgy41r/
 
 ![](2.png)
 
-
 #### Tips:
-
 
 - Egret游戏正式地址登录白鹭开放平台(http://open.egret.com)，按照下面的路径可以拿到：渠道商 -> 渠道 -> 游戏中心 -> 已上架游戏 -> 游戏详情。
 形如： http://api.egret-labs.org/v2/game/[chanId]/[gameId]， [] 表示其在白鹭开放平台上的对应id。
 
 	例: 假如您在白鹭开放平台上注册的渠道Id是12345，您要上线的游戏的Id是88888，则该游戏的游戏地址为： [http://api.egret-labs.org/v2/game/12345/88888](http://api.egret-labs.org/v2/game/12345/88888)
 
-
 - 渠道方若想使用自己的用户体系登录游戏，只需要在Egret游戏地址后面，拼接上渠道方的用户信息即可。
 
 	例: 假如在渠道的用户体系内有一个用户信息如下，
 
-	用户id：54321， 
-	用户昵称：张三， 
+	用户id：54321，
+	用户昵称：张三，
 	用户头像：http://img.baidu.com/54321.jpg，
-	玩家性别：男。 
-	
+	玩家性别：男。
+
 	只需要把用户的信息用GET方式请求 Tips 1中的Egret游戏地址即可, 如下：
 
 	http://api.egret-labs.org/v2/game/12345/88888?userId=54321&userName=张三&userSex=1&userImg=http%3a%2f%2fimg.baidu.com%2f54321.jpg&channelExt=&time=1470109186&sign=0ca175b9c0f726a831d895e269332461。
@@ -83,7 +80,6 @@ GET
 | channelExt | 否 | 渠道透传的参数，此参数在用户支付时会原样回传给渠道的支付页面 |
 | time | 是 | Unix时间戳（精确到秒） |
 | sign | 是 | 验证签名，该接口签名方式：md5(“appId=[appId]time=[time]userId=[userId][appKey]”); [appId]代表appId的值， appId, appKey有Egret开放平台提供 （appId即为Egret开放平台上的渠道id），sign 值应是数字和小写字母组成的字符串 |
-
 
 请求样例：
 http://api.egret-labs.org/v2/game/12345/88888?userId=54321&userName=张三&userSex=1&userImg=http%3a%2f%2fimg.baidu.com%2f54321.jpg&channelExt=&time=1470109186&sign=0ca175b9c0f726a831d895e269332461。
@@ -223,4 +219,3 @@ function createSign($params, $appkey){
 参考链接： [http://blog.csdn.net/ahence/article/details/51317814](http://blog.csdn.net/ahence/article/details/51317814)
 
 ![](5.jpg)
-

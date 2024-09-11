@@ -16,7 +16,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 3. 修复骨骼动画回调的问题。
 4. 修改 Input 内部事件注册方式。
 5. 修改 canvas 的 zIndex 使 Egret Engine 3D 和 Egret Engine 2D 能够一起正常显示。
-   
+
 #### 联系我们
 
 获取 Egret Engine 3D 的源码: [Egret Engine 3D](https://github.com/egret-labs/egret-3d)。

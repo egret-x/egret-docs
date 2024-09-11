@@ -15,7 +15,6 @@ permalink: /docs/lgwyzofn/
 - 主域可以向子域自由发送数据，但是子域向主域发送数据的能力受到限制。
 - 子域内只提供绘制交互必须的 API，其余 JSAPI 均不支持。
 
-
 ### 子域的限制和可以使用的 API
 
 * 主域和子域是同一个线程内的两个隔离的 JS 作用域，相互之间不可访问彼此的变量。因此如果子域也需要引入游戏引擎，那么引擎文件必须和子域入口文件 sub.js 位于同一目录下。
@@ -28,7 +27,7 @@ permalink: /docs/lgwyzofn/
 - setInterval
 - clearInterval
 
-##### 触摸事件 
+##### 触摸事件
 - [wx.onTouchStart]()
 - [wx.onTouchMove]()
 - [wx.onTouchEnd]()
@@ -52,7 +51,6 @@ permalink: /docs/lgwyzofn/
 - [postMessage]()
 - [onMessage]()
 
-
 ### 使用子域所需的配置
 
 开发者需要在 `game.json` 中指定子域目录。子域的入口文件是 sub.js 必须位于该目录中，且该目录下的 js 文件只能 require 该目录下的其他 js 文件。
@@ -68,15 +66,14 @@ permalink: /docs/lgwyzofn/
 
 #### 交互
 
-sharedCanvas 虽然是离屏画布，但是在 adapter（[什么是adapter]()）中做了处理，将通过 wx.onTouchStart 监听的屏幕触摸事件透传给了 sharedCanvas。需要注意的是，这里的触摸事件是屏幕触摸事件，该触摸点是否落在画布内还需要开发者自行判断。  
-
+sharedCanvas 虽然是离屏画布，但是在 adapter（[什么是adapter]()）中做了处理，将通过 wx.onTouchStart 监听的屏幕触摸事件透传给了 sharedCanvas。需要注意的是，这里的触摸事件是屏幕触摸事件，该触摸点是否落在画布内还需要开发者自行判断。
 
 ### 数据
 
 每个用户在游戏中的数据分为两部分：
 
 - 微信数据：包括该用户的 openId、昵称、头像
-- 游戏数据：包括该用户在游戏中的段位、战绩、属性、宠物等信息，有着自己的结构。  
+- 游戏数据：包括该用户在游戏中的段位、战绩、属性、宠物等信息，有着自己的结构。
 微信数据和游戏数据需要一一对应，由于微信数据不能在主域获取且不会暴露到主域，因此需要开发者将需要和微信数据一并展示的游戏数据托管在微信后台。我们提供了以下接口：
 
 |                           接口                          |         说明         |      域限制      |
@@ -96,7 +93,7 @@ sharedCanvas 虽然是离屏画布，但是在 adapter（[什么是adapter]()）
 
 ### 通信
 
-小游戏提供了 [postMessage]() 和 [onMessage]() 
+小游戏提供了 [postMessage]() 和 [onMessage]()
 
 #### 主域向子域发送消息
 
@@ -131,7 +128,7 @@ wx.onMessage((message) => {
 需要将关系链中的用户信息给到开发者，通常是当前用户与某位用户发生了战斗、邀请等交互的时候。action 用来描述两个用户之间发生的交互，其的合法值需要开发者在 game.json 中提前定义。
 
 ```json
-/** game.json **/
+/** game.json */
 {
   "actions": ["invite", "fight", "send_gift"]
 }
@@ -147,7 +144,7 @@ wx.onShow((options) => {
   if (options.scene === 1044) {
     wx.getGroupUserGameData({
       success: (res) => {
-        let openId = res.data[0].openId
+        const openId = res.data[0].openId
 
         wx.postMessage({
           content: '确认邀请该玩家吗?',
@@ -178,7 +175,6 @@ wx.onMessage((message) => {
 1. 子域执行 onMessage 中的代码
 2. 主域接着执行 postMessage 调用之后的代码
 
-
 ** 示例代码 **
 
 主域代码
@@ -190,13 +186,13 @@ console.log(123)
 子域代码
 ```javascript
 wx.onMessage((message) => {
-  var n = 456
+  const n = 456
   console.log(message.number + n)
 })
 ```
 
-输出结果为：  
-子域：579  
-主域：123  
+输出结果为：
+子域：579
+主域：123
 
 反之子域调用 postMessage 向主域发送消息也如此。

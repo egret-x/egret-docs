@@ -19,7 +19,7 @@ spr.graphics.endFill();
 上面的代码就是建立显示对象的过程，测试程序，在舞台中看不到任何内容。将 spr 添加到显示列表中，代码如下：
 
 ```javascript
-this.addChild( spr );
+this.addChild(spr)
 ```
 
 添加这句代码之后，再次编译运行程序，浏览器中看到效果如图：
@@ -37,7 +37,7 @@ this.addChild( spr );
 使用 `removeChild()` 方法可删除显示对象，代码如下：
 
 ```javascript
-this.removeChild( spr );
+this.removeChild(spr)
 ```
 
 执行删除操作与添加显示对象操作类似，将被删除的显示对象作为参数传递给 `removeChild` 方法。示例中 `spr` 就是被删除的显示对象，而 `this` 则是 `spr` 的父级。
@@ -115,7 +115,7 @@ spr.y = 10
 添加到文档类的显示容器中：
 
 ```javascript
-this.addChild( spr );
+this.addChild(spr)
 ```
 
 运行效果：
@@ -125,7 +125,7 @@ this.addChild( spr );
 添加到sprcon1绿色容器中：
 
 ```javascript
-sprcon1.addChild( spr );
+sprcon1.addChild(spr)
 ```
 
 运行效果：
@@ -135,7 +135,7 @@ sprcon1.addChild( spr );
 添加到sprcon2红色容器中：
 
 ```javascript
-sprcon2.addChild( spr );
+sprcon2.addChild(spr)
 ```
 
 运行效果：
@@ -161,8 +161,7 @@ sprcon2.addChild( spr );
 避免这种问题的处理方法是：每次removeChild之前，对即将要被删除的显示对象做一次判断，判断它是否拥有父级。判断的代码如下：
 
 ```javascript
-if( spr.parent ) {
-    spr.parent.removeChild( spr );
+if (spr.parent) {
+  spr.parent.removeChild(spr)
 }
 ```
-

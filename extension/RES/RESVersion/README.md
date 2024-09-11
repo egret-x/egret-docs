@@ -83,7 +83,6 @@ else if (command == 'publish') {
 
 解析代码主要分为三部分，第一部分是加载version.json的配置，后续文件加载都会通过这个配置去寻找，第二部分是依据配置删除原有的缓存文件，最后一部分是运行时的资源路径的替换。这样开发者在使用的时候只需要修改版本号就能控制资源的维护。
 
-
 ```
 init(): Promise<any> {
     if (RELEASE) {//发布模式
@@ -98,12 +97,10 @@ init(): Promise<any> {
 }
 ```
 
-
 上面代码兼容了发布模式和开发模式。
 
 * 在开发模式下，不走版本控制的逻辑，还是用`resource/assets/bg.jpg`这种方式加载资源，便于替换资源调试项目。
 * 在发布模式下，会用`resource/assets/edb6dd7b.jpg`这种方式加载，进行版本控制。
-
 
 ```
 // 下面主要是对各种运行时的版本控制，
@@ -114,7 +111,6 @@ if (egret.Capabilities.runtimeType == egret.RuntimeType.WXGAME) {
 }
 ```
 上面的示例代码兼容了网页模式和微信小游戏，这样一套代码就可以处理不同环境下的资源管理逻辑。
-
 
 ### 最终效果
 

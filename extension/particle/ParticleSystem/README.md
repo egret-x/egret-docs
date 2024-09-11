@@ -66,7 +66,7 @@ ParticleSystem 提供了粒子系统所必须的一些方法，如：开始、�
 
 ```
  @brief 停止创建粒子  @param clear {boolean} 是否清除掉现有粒子
-``` 
+```
 
 ** public changeTexture(texture:egret.Texture):void **
 

@@ -65,7 +65,6 @@ $ mkdir projects
 
 ![](566649898fba5.png)
 
-
 ### 下载Egret的iOS支持包
 
 创建Egret Support文件夹
@@ -94,7 +93,6 @@ $ egret create ACoolHtmlGame
 
 ![](5666498a4f6be.png)
 
-
 ### 编写你的游戏项目
 
 接下来要做的事情就是编写你的游戏项目逻辑。这里我们不进行操作，使用默认的项目来进行演示。
@@ -121,7 +119,6 @@ $ egret create_app ACoolIosGame -f ACoolHtmlGame -t ../egret-support/egret-ios-s
 ![](5666498a7cff0.png)
 
 运行命令后，你将看到新生成的ACooliosGame项目文件夹，该文件夹结构如下：
-
 
 ![](5666498aa996b.png)
 

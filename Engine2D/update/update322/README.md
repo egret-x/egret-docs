@@ -9,7 +9,6 @@ permalink: /docs/d907jzhs/
 
 Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及全新打造的[3D引擎](https://github.com/egret-labs/egret-3d)，它解决了HTML5性能问题及碎片化问题，灵活地满足开发者开发2D或3D游戏的需求，并有着极强的跨平台运行能力。
 
-
 本次更新内容汇总了从引擎 3.2.1 到 3.2.2 的改动。
 
 * 命令行脚本支持 TypeScript2.0.3
@@ -24,12 +23,10 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 #### 路线图
 * 优化滤镜性能
 
-
 ### 命令行脚本支持 TypeScript2.0.3
 
 在命令行（build\publish\run等所有的）中增加 `-exp`，可以开启 tsc 编译实验室功能。增加文件排序准确性，小幅度提升编译速度
 例如：`egret build -exp`
-
 
 ### 第三方库新增键盘事件库
 
@@ -68,7 +65,6 @@ class Main extends egret.DisplayObjectContainer {
         // }
 
     }
-
 
 }
 ~~~

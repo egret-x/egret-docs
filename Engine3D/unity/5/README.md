@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/veenl11y/
 ---
 
-
 	1）前面的教程已经详细的介绍插件各种导出功能，本教程将导出一个烘培过的地形场景。
 	2）我们打开Example文件夹下的Example_5场景文件，目录位置如图所示：
 
@@ -13,7 +12,7 @@ permalink: /docs/veenl11y/
 	3）场景内容如图示：
 
 ![](Img_2.png)
-	
+
 		a) Tow_Crystal1节点：
 			该节点为一个属性动画节点，节点包含一个旋转动画控制水晶旋转。该对象导出后会导出一个epa后缀文件保存属性动画信息，当前版本的暂时只支持animator动画
 			组件，支持循环动画和自动播放。其中循环播放需要勾选下图中的选项：
@@ -32,7 +31,7 @@ permalink: /docs/veenl11y/
 			修改，导出参数设置可以参考Mesh导出和Material设置部分教程。
 
 ![](Img_6.png)
-			
+
 		d) Fx_Portals_01 和 Fx_TowerExplode_01 节点
 			这两个节点都是特效组节点，可以作为特效组被场景导出，也可以作为单独特效进行导出。这里为了方便控制我们分别为其添加了特效组导出脚本，详细导出步
 			骤可以参看EffectGroup导出教程部分。
@@ -45,7 +44,7 @@ permalink: /docs/veenl11y/
 ![](Img_8.png)
 
 	4）然后我们选择菜单栏Egret3D-->Export-->Scene步骤打开导出场景功能块，这里我们勾选了Using Batching来对场景内的静态内容进行优化。
-	
+
 ![](Img_9.png)
 
 	5）点击Export开始导出，导出完毕后，我们将会获取到一个压缩格式和非压缩格式的场景文件。

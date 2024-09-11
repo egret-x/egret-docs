@@ -7,12 +7,9 @@ permalink: /docs/6r5xrtwo/
 MatchvsSDK 主要是由 MatchvsEngine（接口请求） 类，和 MatchvsResponse（接口回调） 类控制。先new这两个类的对象作为全局使用。例如：
 
 ```typescript
-let engine = new MatchvsEngine();
-let response = new MatchvsResponse();
+const engine = new MatchvsEngine()
+const response = new MatchvsResponse()
 ```
-
-
-
 
 ## 初始化
 
@@ -20,7 +17,7 @@ let response = new MatchvsResponse();
 
 **如果 Matchvs 服务正在升级，init 接口会放回 510 错误码，开发者可以选择是否需要展示“服务升级”的提示。**
 
-如果游戏属于调试阶段则连接至测试环境，游戏调试完成后即可发布到正式环境运行。  
+如果游戏属于调试阶段则连接至测试环境，游戏调试完成后即可发布到正式环境运行。
 
 - 请求接口：init、premiseInit
 - 回调接口：initResponse
@@ -100,23 +97,22 @@ response.initResponse(status:number);
 
 ```typescript
 class MsEngine {
-    private static engine = new MatchvsEngine();
-	private static response = new MatchvsResponse();
-    
-    private init(){
-        this.response.initResponse = (status:number)=>{
-            if(status == 200){
-                //成功
-            }else{
-                //失败
-            }
-        }
-        this.engine.init(this.response, "Matchvs", "alpha", 123456, "xxxxappkey", 1);
+  private static engine = new MatchvsEngine()
+  private static response = new MatchvsResponse()
+
+  private init() {
+    this.response.initResponse = (status: number) => {
+      if (status == 200) {
+        // 成功
+      }
+      else {
+        // 失败
+      }
     }
+    this.engine.init(this.response, 'Matchvs', 'alpha', 123456, 'xxxxappkey', 1)
+  }
 }
 ```
-
-
 
 ## 反初始化
 
@@ -200,8 +196,6 @@ class MsEngine {
 }
 ```
 
-
-
 ## 登录
 
 登录Matchvs服务端，与Matchvs建立连接。服务端会校验游戏信息是否合法，保证连接的安全性。如果一个账号在两台设备上登录，则后登录的设备会连接失败，提示403错误。如果用户加入房间之后掉线，再重新登录进来，则roomID为之前加入的房间的房间号。
@@ -267,8 +261,6 @@ class MsEngine {
 }
 ````
 
-
-
 ## 登出
 
 退出登录，断开与Matchvs的连接。
@@ -307,8 +299,6 @@ response.logoutResponse(status:number);
 | 参数   | 类型   | 描述                            | 示例值 |
 | ------ | ------ | ------------------------------- | ------ |
 | status | number | 状态返回，200表示成功 ；500 服务器内部错误 | 200    |
-
-
 
 ## 加入房间
 
@@ -517,7 +507,7 @@ response.joinRoomResponse(status:number, roomUserInfoList:Array<MsRoomUserInfo>,
 | userID      | number | 用户ID   | 32322  |
 | userProfile | string | 玩家简介 | ""     |
 
-#### MsRoomInfo 的属性	
+#### MsRoomInfo 的属性
 
 | 属性         | 类型   | 描述               | 示例值 |
 | ------------ | ------ | ------------------ | ------ |
@@ -535,7 +525,7 @@ response.joinRoomResponse(status:number, roomUserInfoList:Array<MsRoomUserInfo>,
 response.joinRoomNotify(roomUserInfo:MsRoomUserInfo);
 ```
 
-#### 参数 
+#### 参数
 
 | 参数         | 类型           | 描述                 | 示例值 |
 | ------------ | -------------- | -------------------- | ------ |
@@ -564,8 +554,6 @@ class MsEngine {
     }
 }
 ```
-
-
 
 ## 关闭房间
 
@@ -624,7 +612,7 @@ response.joinOverResponse(rsp:MsJoinOverRsp);
 response.joinOverNotify(notifyInfo:MsJoinOverNotifyInfo);
 ```
 
-#### 参数 MsJoinOverNotifyInfo 的属性 
+#### 参数 MsJoinOverNotifyInfo 的属性
 
 | 属性      | 类型   | 描述               | 示例值 |
 | --------- | ------ | ------------------ | ------ |
@@ -652,8 +640,6 @@ class MsEngine {
     }
 }
 ````
-
-
 
 ## 离开房间
 
@@ -744,8 +730,6 @@ class MsEngine {
     }
 }
 ````
-
-
 
 ## 获取房间列表
 
@@ -849,24 +833,24 @@ engine.getRoomListEx(filter:MsRoomFilterEx);
 获取房间列表参数必须和 `createRoom` 接口创建的房间参数一致而且 `createRoom` 中的参数 `visibility`  必须设置为1(可见)。比如：`createRoom` 参数结构 如下：
 
 ```typescript
-var createRoomInfo = new MsCreateRoomInfo("Matchvs",3, 0, 0, 1, "mapA")
+const createRoomInfo = new MsCreateRoomInfo('Matchvs', 3, 0, 0, 1, 'mapA')
 ```
 
 那么getRoomList 参数结构应该如下：
 
 ```typescript
-var filter = new MsRoomFilterEx(
-	    createRoomInfo.maxPlayer, 		//maxPlayer
-        createRoomInfo.mode,		    //mode
-        createRoomInfo.canWatch,		//canWatch
-        createRoomInfo.roomProperty,    //roomProperty
-        0, 	//full 0-未满
-        1,  //state 0-全部，1-开放 2-关闭
-        0,  //sort 0-不排序 1-创建时间排序 2-玩家数量排序 3-状态排序 都可以
-        0,  //order 0-ASC  1-DESC 都可以
-        0,  //pageNo 从0开始 0为第一页
-        3,  //pageSize 每页数量 大于0
-        );
+const filter = new MsRoomFilterEx(
+  createRoomInfo.maxPlayer, // maxPlayer
+  createRoomInfo.mode, // mode
+  createRoomInfo.canWatch, // canWatch
+  createRoomInfo.roomProperty, // roomProperty
+  0, // full 0-未满
+  1, // state 0-全部，1-开放 2-关闭
+  0, // sort 0-不排序 1-创建时间排序 2-玩家数量排序 3-状态排序 都可以
+  0, // order 0-ASC  1-DESC 都可以
+  0, // pageNo 从0开始 0为第一页
+  3, // pageSize 每页数量 大于0
+)
 ```
 
 ### getRoomListExResponse
@@ -883,7 +867,7 @@ response.getRoomListExResponse(rsp:MsGetRoomListExRsp);
 | total     | number                 | 房间总数量    | 2      |
 | roomAttrs | Array | 房间信息列表  | []     |
 
-#### 参数 MsRoomAttribute 的属性 
+#### 参数 MsRoomAttribute 的属性
 
 | 参数         | 类型   | 描述                         | 示例值         |
 | ------------ | ------ | ---------------------------- | -------------- |
@@ -920,8 +904,6 @@ class MsEgine {
 }
 ```
 
-
-
 ## 获取房间详情
 
 在获取房间列表扩展接口会返回房间一些信息，但是在房间里面后房间信息可能会有变动，或者在显示房间列表后想查看更多信息，可以使用获取房间详情接口。只可获取 createRoom 接口创建的房间。
@@ -951,7 +933,6 @@ engine.getRoomDetail(roomID:string)
 | -4     | 未登陆       |
 | -7     | 正在加入房间 |
 | -3     | 正在初始化   |
-
 
 ## getRoomDetailResponse
 
@@ -1009,16 +990,14 @@ response.getRoomDetailResponse(rsp:MsGetRoomDetailRsp);
 | owner      | number        | 队长       | 123456                |
 | playerList | Array | 队伍成员   |                       |
 
-
-
 ## 设置房间属性
 
 创建房间时需要传入房间属性参数，当房间创建好后可以调用 `setRoomProperty` 接口修改房间的属性。比如：房间地图，房间人员的等级要求等等。
 
-- 请求接口：setRoomProperty 
+- 请求接口：setRoomProperty
 - 回调接口：setRoomPropertyResponse，setRoomPropertyNotify
 
-### setRoomProperty 
+### setRoomProperty
 
 ```typescript
 engine.setRoomProperty(roomID:string, roomProperty:string):number
@@ -1092,14 +1071,12 @@ class MsEngine{
         this.response.setRoomPropertyNotify = (notify:MsRoomPropertyNotifyInfo)=>{
             //notify.userID 有人修改了房间的属性，属性值为 notify.roomProperty
         }
-        
+
         this.engine.setRoomProperty(roomID,"属性A");
     }
     ......
 }
 ```
-
-
 
 ## 消息发送
 
@@ -1122,8 +1099,6 @@ class MsEngine{
      */
     sendEvent(data:string|Uint8Array,isBinary?:boolean):any
 ```
-
-
 
 #### 返回值
 
@@ -1151,13 +1126,11 @@ class MsEngine{
 
 ### sendEventEx
 
- `sendEvent` 是 `sendEventEx` 接口的二次封装，只是 `sendEvent` 接口默认把消息发送给了房间其他人。如果需要把消息发送房间指定人员，或者只想把消息发送给 `gameServer` 那么就需要使用 `sendEventEx` 这个接口。想了解 `gameServer` 查看 [gameServer 文挡](https://doc.matchvs.com/QuickStart/gsQuickStart) 
+ `sendEvent` 是 `sendEventEx` 接口的二次封装，只是 `sendEvent` 接口默认把消息发送给了房间其他人。如果需要把消息发送房间指定人员，或者只想把消息发送给 `gameServer` 那么就需要使用 `sendEventEx` 这个接口。想了解 `gameServer` 查看 [gameServer 文挡](https://doc.matchvs.com/QuickStart/gsQuickStart)
 
 ```typescript
 engine.sendEventEx(msgType:number, data:string, destType:number, userIDs:Array <number> ):any
 ```
-
-
 
 > 提示：senEventEx 参数示例说明
 >
@@ -1258,7 +1231,7 @@ class MsEngine{
                 //发送失败
             }
         };
-        
+
         this.response.sendEventNotify = (eventInfo:MsSendEventNotify)=>{
             //eventInfo.srcUserID 发送数据 eventInfo.cpProto
         };
@@ -1274,8 +1247,6 @@ class MsEngine{
 }
 ```
 
-
-
 ## 玩家断线错误提示
 
 在游戏中如果自己断线了就会收到 errorResponse 的错误码为1001的消息，如果是其他玩家掉线了就会收到 networkStateNotify 的回调消息。通过这个接口就可以知道其他玩家的网络状态啦。断线后会有20秒内还可以调用 reconnect 接口重新连接进入房间。
@@ -1290,7 +1261,7 @@ class MsEngine{
 response.errorResponse(errCode:number, errMsg:string)
 ```
 
-#### 参数 
+#### 参数
 
 | 参数    | 类型   | 描述     | 示例值   |
 | ------- | ------ | -------- | -------- |
@@ -1329,15 +1300,13 @@ class MsEngine{
                 //netnotify.userID 用户已经退出房间了
             }
         };
-        
+
         this.response.errorResponse = (errCode:number, errMsg:string)=>{
             //发生错误 errCode + errMsg
         };
     }
 }
 ```
-
-
 
 ## 踢除玩家
 
@@ -1414,7 +1383,7 @@ class MsEngine{
                 //用户踢除失败
             }
         };
-        
+
         this.response.kickPlayerNotify = (knotify:MsKickPlayerNotify)=>{
             //srcUserID 把userID 踢掉了
         };
@@ -1425,8 +1394,6 @@ class MsEngine{
     }
 }
 ````
-
-
 
 ## 分组订阅
 
@@ -1494,8 +1461,6 @@ class MsEngine{
     }
 }
 ```
-
-
 
 ## 分组订阅消息发送
 
@@ -1586,8 +1551,6 @@ class MsEngine{
 }
 ```
 
-
-
 ## 帧同步
 
 Matchvs提供了帧同步的功能，开发者可以让房间内的玩家保持帧同步。 Matchvs 所提供的帧同步能力，让您可以根据游戏需要，直接设置同步帧率，比如10帧每秒，然后您可以调用发送帧同步数据的接口来发送逻辑帧数据。 Matchvs 会缓存每100毫秒的数据，将这100毫秒的数据作为一帧发给各个客户端。
@@ -1659,8 +1622,6 @@ response.setFrameSyncNotify(rsp:MVS.MsSetFrameSyncNotify);
 | timestamp    | string | 时间戳                                                       |        |
 | enableGS     | number | 是否启用gameServer帧同步 0-启用 1-不启用                     | 0      |
 | cacheFrameMS | number | 断线后缓存帧数据的时间，只有帧同步有效，单位毫秒，最多有效一个小时 | 10000  |
-
-
 
 ### sendFrameEvent
 
@@ -1762,8 +1723,6 @@ class MsEngine{
 }
 ````
 
-
-
 ## 断线重连
 
 用户断线后可以调用次接口进行重连，重连具体教程可以参考 [断线重连详细文档](../Advanced/reconnect) 。
@@ -1854,7 +1813,6 @@ setReconnectTimeout(timeout:number):number
 | -27    | timeout 超出范围  0=< timeout <=600 |
 | -30    | 设置的 rType 值与当前模式冲突。     |
 
-
 ### setReconnectTimeoutResponse
 
 设置重连时间回调
@@ -1902,8 +1860,6 @@ response.getOffLineDataResponse(rsp)
 | frameCount | number | 当前游戏帧索引号 | 10     |
 | msgCount   | number | 消息数量         | 20     |
 
-
-
 ## 重新打开房间
 
 - 请求接口：joinOpen
@@ -1947,13 +1903,12 @@ declare class MsReopenRoomNotify{
 	constructor(roomID:string,userID:number, cpProto:string)
 }
 
-	
  /**
  * 允许房间加人的通知
  * @param {MsReopenRoomNotify} data
  */
 joinOpenNotify(data:MsReopenRoomNotify);
-	
+
  /**
  * 设置允许房间加人的结果
  * @param {MsReopenRoomResponse} data
@@ -1978,32 +1933,32 @@ joinOpenResponse(data:MsReopenRoomResponse);
 
 #### 示例代码
 ```javascript
- 		var checkbox = new eui.CheckBox();
-        checkbox.label = "允许加入";
-        checkbox.addEventListener(egret.Event.CHANGE, e => {
-            checkbox.label = checkbox.selected ? "允许加入" : "不允许加入";
-            checkbox.selected ? GameData.engine.joinOpen("x") : GameData.engine.joinOver("x");
-        }, this);
-        checkbox.x = 50;
-        checkbox.y = 50;
-        this.addChild(checkbox);
+const checkbox = new eui.CheckBox()
+checkbox.label = '允许加入'
+checkbox.addEventListener(egret.Event.CHANGE, (e) => {
+  checkbox.label = checkbox.selected ? '允许加入' : '不允许加入'
+  checkbox.selected ? GameData.engine.joinOpen('x') : GameData.engine.joinOver('x')
+}, this)
+checkbox.x = 50
+checkbox.y = 50
+this.addChild(checkbox)
 
-        GameData.response.joinOpenNotify = function (d) {
-            Toast.show(d.userID + " 设置了允许房间加人");
-            checkbox.selected = true;
-        }
-        GameData.response.joinOpenResponse = function (d) {
-            Toast.show(" 设置允许房间加人 " + (d.status == 200 ? "success" : "fail"));
-            checkbox.selected = ((d.status == 200)?true:checkbox.selected);
-        }
-        GameData.response.joinOverNotify = function (d) {
-            Toast.show(d.srcUserID + " 设置了不允许房间加人");
-            checkbox.selected = false;
-        }
-        GameData.response.joinOverResponse = function (d) {
-            Toast.show(" 设置不允许房间加人 " + (d.status == 200 ? "success" : "fail"));
-            checkbox.selected = ((d.status == 200)?false:checkbox.selected);
-        }
+GameData.response.joinOpenNotify = function (d) {
+  Toast.show(`${d.userID} 设置了允许房间加人`)
+  checkbox.selected = true
+}
+GameData.response.joinOpenResponse = function (d) {
+  Toast.show(` 设置允许房间加人 ${d.status == 200 ? 'success' : 'fail'}`)
+  checkbox.selected = ((d.status == 200) ? true : checkbox.selected)
+}
+GameData.response.joinOverNotify = function (d) {
+  Toast.show(`${d.srcUserID} 设置了不允许房间加人`)
+  checkbox.selected = false
+}
+GameData.response.joinOverResponse = function (d) {
+  Toast.show(` 设置不允许房间加人 ${d.status == 200 ? 'success' : 'fail'}`)
+  checkbox.selected = ((d.status == 200) ? false : checkbox.selected)
+}
 ```
 
 ## 获取观战房间列表
@@ -2084,7 +2039,7 @@ class MsEngine {
                 });
             }
         }
-        
+
         var filter = new MsRoomFilterEx(3, 0, 1, "roomProperty", 0, 1, 0, 0, 0, 3);
         engine.getWatchRoomList(filter);
     }
@@ -2208,7 +2163,7 @@ class MsEngine{
             console.log("用户加入观战：",user.userID);
             console.log("用户加入观战时附带的信息：",user.userProfile);
         }
-        
+
         let resNo = this.engine.joinWatchRoom("12345678900000000", "nickName+avatar");
         if(resNo = 0){
             console.log("OK");
@@ -2306,21 +2261,20 @@ class MsEngine{
                 console.log("设置观战数据偏移位置成功");
             }
         }
-        
+
         this.response.liveFrameUpdate = (data)=>{
             var i = 0;
             while ( i < data.frameItems.length){
                 console.log("[Rsp]liveFrameUpdate cpProto:"+ data.frameItems[i++].cpProto );
             }
         }
-        
+
         var resNo = this.engine.setLiveOffset(-1);
         if(resNo == 0){
             console.log("OK");
         }
     }
 }
-
 
 ```
 
@@ -2478,13 +2432,13 @@ class MsEngine{
             console.log("用户离开观战：",user.userID)；
             console.log("用户离开时附带的信息：",user.userProfile)
         }
-        
+
         this.response.leaveWatchRoomResponse = (status)=>{
             if(status == 0){
                 console.log("退出观战房间成功");
             }
         }
-        
+
         let resNo = this.engine.leaveWatchRoom("leaveWatchRoom");
         if(resNo == 0){
             console.log("ok");
@@ -2492,8 +2446,6 @@ class MsEngine{
     }
 }
 ```
-
-
 
 ## 日志开关
 
@@ -2505,9 +2457,7 @@ class MsEngine{
 
 打开Matchvs日志输出。
 
-
-
-## 
+##
 
 ## CHANGELOG
 
@@ -2543,7 +2493,6 @@ TSSDK版本：v1.6.202
 6. 修复被kickPlayer后不能进入房间,返回-8或-10的问题.
 7. 代码优化,减少代码体积
 ```
-
 
 时间：2018.05.02
 
@@ -2600,5 +2549,3 @@ TSSDK版本：JSSDK_v1.4.x
 7、优化 .d.ts 文件 中 sendEventGroupNotify 返回参数与 js文件不一致问题。
 8、新增接口调用错误码返回
 ```
-
-

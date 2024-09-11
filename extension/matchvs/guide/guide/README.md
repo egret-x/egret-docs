@@ -4,8 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/ztumpndf/
 ---
 
-
-
 ## 阅读前
 
 在阅读我们文档之前，请确保你已经阅读了我们的 [新手入门](../../demo/duck) 文档，并且了解了我们 Matchvs SDK的 使用流程，SDK 接口调用是需要安装相应的顺序才能成功调用。下面是介绍一个普通的游戏如何接入我们Matchvs SDK 。
@@ -14,29 +12,28 @@ permalink: /docs/ztumpndf/
 
 ![](http://imgs.matchvs.com/static/%E6%97%B6%E5%BA%8F%E5%9B%BE.jpg)
 
-MatcvhsSDK 库文件可到 [官网下载](http://www.matchvs.com/serviceDownload) 
+MatcvhsSDK 库文件可到 [官网下载](http://www.matchvs.com/serviceDownload)
 
 MatcvhsSDK库 `matchvs`文件夹包括以下三个文件：
 
 - matchvs.js： MatchvsSDK  JavaScript 源代码代码文件。
 - matchvs.d.ts：MatchvsSDK  TypScript 定义文件。
-- matchvs.min.js：MatchvsSDK  JavaScript 源码压缩文件。 
+- matchvs.min.js：MatchvsSDK  JavaScript 源码压缩文件。
 
 Matchvs SDK 接口服务分为 **请求服务** 和 **回调服务** ， 使用是以简单的接口调用和接口返回的方式实现相关联网操作。比如随机加入房间只需要调用`joinRandRoom接口`，加入房间结果就以接口 `joinRoomResponse` 返回。在整个使用过程中，开发者只需要关心`MatchvsEngine`(接口请求调用对象)和 `MatchvsResponse`(接口调用返回对象)。接口请求使用 `MatchvsEngine`对象实例，接口返回使用 `MatchvsResponse` 对象实例。先获取这两个类的对象作为全局使用。例如：
 
 ```typescript
 class MsEngine {
-    private static engine = new MatchvsEngine();
-    private static response = new MatchvsResponse();
+  private static engine = new MatchvsEngine()
+  private static response = new MatchvsResponse()
 }
-
 ```
 
 ##初始化
 
 在连接至 Matchvs前须对SDK进行初始化操作。此时选择连接测试环境（alpha）还是正式环境（release）。[环境说明](../Advanced/EnvGuide) 。
 
-如果游戏属于调试阶段则连接至测试环境，游戏调试完成后即可发布到正式环境运行。  
+如果游戏属于调试阶段则连接至测试环境，游戏调试完成后即可发布到正式环境运行。
 
 - 请求接口：init
 - 回调接口：initResponse
@@ -53,7 +50,6 @@ response 中设置一些回调方法，在执行注册、登录、发送事件�
 
 > **注意** 发布之前须到官网控制台申请“发布上线”，申请通过后在调用init方法时传“release”才会生效，否则将不能使用release环境。
 
-
 ### initResponse
 
 initResponse是 MatchvsResponse对象属性，在 engine.init 方法中传入的对象，init初始化完成之后，会异步回调 initResponse方法。
@@ -66,28 +62,28 @@ response.initResponse(status:number);
 
 ```typescript
 class MsEngine {
-    private static engine = new MatchvsEngine();
-	private static response = new MatchvsResponse();
-    
-    private init(){
-        this.response.initResponse = (status:number)=>{
-            if(status == 200){
-                //成功
-            }else{
-                //失败
-            }
-        }
-        this.engine.init(this.response, "Matchvs", "alpha", 123456,"xxxxappkey", 1);
+  private static engine = new MatchvsEngine()
+  private static response = new MatchvsResponse()
+
+  private init() {
+    this.response.initResponse = (status: number) => {
+      if (status == 200) {
+        // 成功
+      }
+      else {
+        // 失败
+      }
     }
+    this.engine.init(this.response, 'Matchvs', 'alpha', 123456, 'xxxxappkey', 1)
+  }
 }
 ```
-
 
 ## 注册用户
 
 Matchvs提供的 `userID` 被用于在各个服务中校验连接的有效性，调试前开发者需要先获取到一个合法的`userID`。调用registerUser接口获取，在registerResponse回调返回。
 
-每次调用 registerUser 接口都会生成新的 `userID` 为了节省资源消耗， `userID`和 `token` 有需要的可以缓存起来，在之后的应用启动中不必重复获取。如果你有自己的用户系统，可以将Matchvs 提供的 userID 和用户系统进行映射。可以参考 [Matchvs 第三方账号绑定](../Advanced/ThirdAccount)，让您的用户唯一对应一个userID，以节省资源。[可参考多开说明](../Advanced/MultipleIdentities) 
+每次调用 registerUser 接口都会生成新的 `userID` 为了节省资源消耗， `userID`和 `token` 有需要的可以缓存起来，在之后的应用启动中不必重复获取。如果你有自己的用户系统，可以将Matchvs 提供的 userID 和用户系统进行映射。可以参考 [Matchvs 第三方账号绑定](../Advanced/ThirdAccount)，让您的用户唯一对应一个userID，以节省资源。[可参考多开说明](../Advanced/MultipleIdentities)
 
 为了资源节省，我们在registerUserResponse 回调前把userID信息缓存在本地，数据会暂存在浏览器中。所以使用同一个浏览器调用 registerUser 接口会返回相同的 userID信息。如果需要清除缓存的用户信息请调用 。`LocalStore_Clear()` 接口。
 
@@ -126,8 +122,6 @@ class MsEngine {
     }
 }
 ```
-
-
 
 ## 登录
 
@@ -291,8 +285,7 @@ class MsEngine {
 ```typescript
 engine.sendEvent(data:string):any
 ```
-sendEventResponse 也会收到 sequence 标识，通过此标识来确定这个sendEventResponse 是由哪次sendEvent 发送的。主要用于在游戏中做信息同步的时候，网络传输都有延迟会出现sendEvent与sendEventResponse 收到顺序不同。 
-
+sendEventResponse 也会收到 sequence 标识，通过此标识来确定这个sendEventResponse 是由哪次sendEvent 发送的。主要用于在游戏中做信息同步的时候，网络传输都有延迟会出现sendEvent与sendEventResponse 收到顺序不同。
 
 消息会发给房间里**除自己外** 其他所有成员。同一客户端多次调用 `sendEvent` 方法时，每次返回的 `sequence`都是唯一的。但同一房间的不同客户端调用 `sendEven` t时生成的 `sequence` 之间会出现重复。可以发送二进制数据，开发者可以将数据用json、pb等工具先进行序列化，然后将序列化后的数据通过SendEvent的一系列接口发送。
 
@@ -325,7 +318,7 @@ class MsEngine{
                 //发送失败
             }
         };
-        
+
         this.response.sendEventNotify = (eventInfo:MsSendEventNotify)=>{
             //eventInfo.srcUserID 发送数据 eventInfo.cpProto
         };
@@ -389,7 +382,6 @@ class MsEngine {
 }
 ```
 
-
 ## 登出
 
 退出游戏时要退出登录，断开与Matchvs的连接。
@@ -411,4 +403,4 @@ response.logoutResponse(status:number);
 
 ### 错误码说明:[错误码](https://doc.matchvs.com/APIDoc/erroCode)
 
-### 更多接口调用和说明请看 [接口使用说明](../APIDoc/TypeScript) 
+### 更多接口调用和说明请看 [接口使用说明](../APIDoc/TypeScript)

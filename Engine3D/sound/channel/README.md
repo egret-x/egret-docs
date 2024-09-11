@@ -18,7 +18,6 @@ Channel 类控制应用程序中的声音，对声音执行更精细的控制。
 但是必须在初始化的时候设置，或者在play之前设置。
 ## 2、Channel方法
 
-	
 * `Channel ( sound :egret3d.Sound, options :any )` 创建一个新的 Channel 对象
 * `getDuration ( ):number` 音频持续时间
 * `isPlaying ( ):boolean` 是否正在播放
@@ -43,4 +42,3 @@ Channel 类控制应用程序中的声音，对声音执行更精细的控制。
     }
 ```
 使用`F5`调试即可播放。
-

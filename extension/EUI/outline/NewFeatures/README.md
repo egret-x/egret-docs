@@ -46,24 +46,24 @@ permalink: /docs/extension/EUI/outline/NewFeatures/
 之前的GUI库里必须将皮肤声明为一个独立的EXML文件，再引用它。对于需要复用的皮肤，这种方式比较理想。而对于只用一次的外观，则会比较不便，显得文件也特别多。现在EUI里已经支持EXML的内部类定义方式，可以直接嵌套写在节点内。通常有两种节点支持作为内部类：Skin和ItemRenderer，如下：
 
 ~~~ typescript
-<?xml version='1.0' encoding='utf-8'?> 
-<e:Skin class="skins.DemoSkin" xmlns:e="http://ns.egret.com/eui" minHeight="230" minWidth="470"> 
-	<e:Button label="按钮"> 
-		<e:Skin states="up,over,down,disable"> 
-			<e:Image source="image/button_up.png" includeIn="up" width="100%" height="100%" /> 
-			<e:Image source="image/button_down.png" includeIn="down" width="100%" height="100%" /> 
-			<e:Label id="LabelDisplay" left="20" right="20" top="10" text="{data.label}" /> 
-		</e:Skin> 
-	</e:Button> 
-	<e:List id="list" cacheAsBitmap="false"> 
-		<e:itemRendererSkinName> 
-			<e:Skin states="up,down"> 
-				<e:Image source="image/button_up.png" includeIn="up" width="100%" height="100%" /> 
-				<e:Image source="image/button_down.png" includeIn="down" width="100%" height="100%" /> 
-				<e:Label id="LabelDisplay" left="20" right="20" top="10" text="{data.label}" /> 
-			</e:Skin> 
-		</e:itemRendererSkinName> 
-	</e:List> 
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.DemoSkin" xmlns:e="http://ns.egret.com/eui" minHeight="230" minWidth="470">
+	<e:Button label="按钮">
+		<e:Skin states="up,over,down,disable">
+			<e:Image source="image/button_up.png" includeIn="up" width="100%" height="100%" />
+			<e:Image source="image/button_down.png" includeIn="down" width="100%" height="100%" />
+			<e:Label id="LabelDisplay" left="20" right="20" top="10" text="{data.label}" />
+		</e:Skin>
+	</e:Button>
+	<e:List id="list" cacheAsBitmap="false">
+		<e:itemRendererSkinName>
+			<e:Skin states="up,down">
+				<e:Image source="image/button_up.png" includeIn="up" width="100%" height="100%" />
+				<e:Image source="image/button_down.png" includeIn="down" width="100%" height="100%" />
+				<e:Label id="LabelDisplay" left="20" right="20" top="10" text="{data.label}" />
+			</e:Skin>
+		</e:itemRendererSkinName>
+	</e:List>
 </e:Skin>
 ~~~
 
@@ -79,23 +79,21 @@ XML的文件结构描述显示列表有着天然的优势。在之前的GUI库�
 减少中间转换过程，降低调试难度。也可以直接在编辑器编辑后拷贝EXML内容到代码中粘贴解析。
 由于之前编译器只为TS开发者设计的，现在不再依赖命令行，JS开发者也能直接使用EXML文件。
 
-
 不过不用担心性能问题，运行解析并不是每次实例化皮肤都解析一次，而是只有第一次解析，会将EXML编译为JS代码，然后使用eval()方法转换为标准的类定义。之后都直接调用类定义快速创建。
 
 另外，之前EXML的模块名是根据所在文件夹路径生成的，现在由于EXML文件变成了运行时解析，有可能只有文本内容，并没有路径信息，因此包名也不再依赖文件路径。我们提供了另一种声明类名的方式：在EXML根节点上设置class属性，class属性的值会被解析并注册为全局类名。若不声明，这个EXML文件解析的类定义会被解析器作为一个临时变量返回。声明方式如下图：
 
 ~~~ typescript
-<?xml version="1.0" encoding="utf-8" ?> 
-<e:Skin class="skins.ButtonSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui"> 
-	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="up" source="button_up_png" /> 
-	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="down" source="button_down_png" /> 
-	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="disabled" source="button_disable_png" /> 
-	<e:Label id="labelDisplay" top="10" bottom="10" left="20" right="20" verticalCenter="0" horizontalCenter="0"/> 
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="up" source="button_up_png" />
+	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="down" source="button_down_png" />
+	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" includeIn="disabled" source="button_disable_png" />
+	<e:Label id="labelDisplay" top="10" bottom="10" left="20" right="20" verticalCenter="0" horizontalCenter="0"/>
 </e:Skin>
 ~~~
 
 ## EXML描述非皮肤对象
-
 
 之前版本的GUI库里，EXML的根节点被限制为Skin皮肤节点，只能用于描述皮肤，实际上还有较多显示列表初始化需求，是直接使用Group等不可定义皮肤组件作为根容器初始化的。这样的情况就只能使用代码方式手动编写显示列表初始化代码，而不能使用EXML这种更加简便的描述方式。现在这部分代码，在EUI里也可以直接用EXML描述了。EXML的根节点不再必须是Skin，可以为任意组件。这个特性全面提升了EXML的适用范围，能够简化普通容器的显示列表创建过程。解析后的对象是一个继承自根节点的自定义类。定义了ID的节点，会在自定义类上以ID名声明一个成员变量持有该节点的引用。
 
@@ -114,5 +112,3 @@ text="{data.label}"
 ### 自动布局兼容旋转缩放
 
 这个特性也相当有用，之前版本的GUI库里，如果组件设置了旋转或缩放，自动布局的时候，依然是按照未变换之前的矩形来计算的，会造成诸多不便。现在EUI里对这部分也实现了完美兼容，不仅旋转缩放，对EUI组件使用Matrix进行的任意变换，都可以按照实际显示的矩形区域被正确测量和布局。
-
-

@@ -7,9 +7,8 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 在 Egret Engine 的本次更新中，我们队引擎的性能进行了优化，同时也提供了若干新功能。下面介绍 Egret Engine 3.0.7 到 Egret Engine 3.0.8 之间的更新详情。
 
-
 ## Egret Engine 2D
- 
+
 在 Egret Engine 2D 的本次更新中，我们关注引擎性能的优化，同时吸收开发者的意见提供了新的功能并修复一些问题。下面列出的是 3.0.7 到 3.0.8 的更新详情。
 
 ### 性能优化
@@ -38,7 +37,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 在上面的对比实测中绘制了 50 个序列帧动画并播放，可以看到动画的性能提升显著。
 
-### 新增功能 
+### 新增功能
 
 #### 全新的游戏项目模板
 
@@ -99,7 +98,3 @@ Windows 安装包下载地址：[点击这里](http://tool.egret-labs.org/EgretE
 Mac 安装包下载地址：     [点击这里](http://tool.egret-labs.org/EgretEngine/EgretEngine-v3.0.8.dmg)
 Egret Engine 2D 源码地址：[点击这里](https://github.com/egret-labs/egret-core/tree/v3.0.8)
 Egret Engine 3D 源码地址：[点击这里](https://github.com/egret-labs/egret-3d)
-
-
-
-

@@ -10,8 +10,8 @@ permalink: /docs/extension/game/timeoutTrigger/
 Egret提供的`egret.setTimeout`可实现上述功能。该函数原型为：
 
 ~~~ typescript
-function setTimeout(listener: Function, thisObject: any, delay: number, ...args: any[]): number;
-~~~ 
+function setTimeout(listener: Function, thisObject: any, delay: number, ...args: any[]): number
+~~~
 
 * `listener`是待执行的回调函数
 * `thisObject`设置为`this`即可
@@ -21,16 +21,12 @@ function setTimeout(listener: Function, thisObject: any, delay: number, ...args:
 下面示例演示超时触发器的使用方法：
 
 ~~~ typescript
-var idTimeout:number = egret.setTimeout( function( arg ){
+const idTimeout: number = egret.setTimeout((arg) => {
+  console.log('timeout:', arg)
+}, this, 3000, 'egret')
 
-        console.log( "timeout:", arg );
-
-    }, this, 3000, "egret"
-
-);
-
-console.log( "start setTimeout" );
-~~~ 
+console.log('start setTimeout')
+~~~
 
 编译运行，首先输出"start setTimeout"，等待3秒后，将会出现"timeout: egret"，证实触发器准确运行。
 
@@ -39,8 +35,8 @@ console.log( "start setTimeout" );
 超时等待阶段，可能会有需求，停止超时触发器，接着上述示例，如果在超时结束前用户触摸对话框的关闭或确定按钮，就需要取消超时触发器。Egret 提供 `egret.clearTimeout` 取消超时触发器。在 `egret.setTimeout` 执行时返回一个 `id：idTimeout` ，这个id就是用来取消超时触发器的：
 
 ~~~ typescript
-egret.clearTimeout( idTimeout );
-~~~ 
+egret.clearTimeout(idTimeout)
+~~~
 
 在超时等待结束前，执行该语句，将会停止超时触发器，回调函数将不再会执行。
 

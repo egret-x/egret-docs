@@ -8,13 +8,13 @@ permalink: /docs/c0j7stn7/
 	* 通过采样贴图中的red的数值r，将这个r值作为最终输出像素颜色值的alpha相乘，获得alpha通道的遮罩效果。
 	* 你可以继续追加一个uv滚动效果在这个alpha遮罩上面，获得具有流动效果的alpha遮罩。
 	* 可以用于水流/天光等类型效果的模拟实现。
- 
+
 ----------
 
     class AlphaMaskMethod {
 	    protected _material: egret3d.TextureMaterial;
 	    protected onInit3D(): void {
-	
+
 	        this._material = new egret3d.TextureMaterial();
 	        var maskmapMethod: egret3d.AlphaMaskMethod = new egret3d.AlphaMaskMethod();
 	        this._material.diffusePass.addMethod(maskmapMethod);
@@ -22,24 +22,22 @@ permalink: /docs/c0j7stn7/
 	    }
 	}
 
-	
 示例展示为贴图A叠加以贴图B为alphaMask后得到运行结果C：
 
 ![](alphaMask.png)
 
 ----------
 
-
 * AOMapMethod的使用：
 	* 采样aoTexture中的rgb的数值，将这个颜色值和最终输出像素颜色值的相乘。AO贴图为通过第三方渲染工具渲染出的素材。
 	* 主要用于模拟自然环境遮挡效果，增强真实感。
- 
+
 ----------
 
     class AOMapMethod {
 	    protected _material: egret3d.TextureMaterial;
 	    protected onInit3D(): void {
-	
+
 	        //注：AOMapMethod使用到了另外一个uv数据，该数据为第三方软件中预渲染好的。
 	        this._material = new egret3d.TextureMaterial();
 	        var maskmapMethod: egret3d.AOMapMethod = new egret3d.AOMapMethod();
@@ -54,8 +52,6 @@ permalink: /docs/c0j7stn7/
 
 ----------
 
-
- 
 * 颜色渐变叠加（ColorGradientsMethod）的使用：
 	* 通过参数控制相对屏幕位置的高度min和max和颜色color，获得渐变效果；
 	* 小于min的部分保持原来的颜色，介于min和max之间的部分，用渐变过度改变颜色，高于max的部分，使用颜色和原来的颜色值做alpha混合；
@@ -69,7 +65,7 @@ permalink: /docs/c0j7stn7/
 		protected span:number = 10;
 
 	    protected onInit3D(): void {
-	
+
 	        this.method = new ColorGradientsMethod();
             this.color = new Color(0, 1, 0, 0.8);
             this.method.setStartData(-this.span, this.span, this.color);
@@ -78,9 +74,7 @@ permalink: /docs/c0j7stn7/
             _material.diffusePass.addMethod(this.method);
 	    }
 	}
-           
 
-            
 ![](gradient.gif)
 
 ----------
@@ -91,25 +85,23 @@ permalink: /docs/c0j7stn7/
 
 ----------
     class FogMethod {
-	    
+
 	    protected onInit3D(): void {
 			var material: egret3d.TextureMaterial = new egret3d.TextureMaterial();
 	        var method: egret3d.FogMethod = new egret3d.FogMethod();
 	        material.diffusePass.addMethod(method);
-	
+
 	        method.fogAlpha = 0.5;
 	        method.fogColor = 0xff00ff;
 	        method.fogHeight = 1000;
 	        method.fogStartDistance = 500;
 	        method.globalDensity = 1;
-	       
+
 	    }
 	}
 
-           
-
 示例图片为高度雾在场景中物件上生效后的显示。
-            
+
 ![](fog.png)
 
 ----------
@@ -128,7 +120,7 @@ permalink: /docs/c0j7stn7/
 		private texture:Itexture;
 		private lightTexture:ITexture;
 	    protected onInit3D(): void {
-	
+
             var material: TextureMaterial = new TextureMaterial(texture);
             material.diffuseTexture = texture;
             var plane: Mesh = new Mesh(new PlaneGeometry(), material);
@@ -159,12 +151,12 @@ permalink: /docs/c0j7stn7/
 		private texture:Itexture;
 
 	    protected onInit3D(): void {
-	
+
             var material: TextureMaterial = new TextureMaterial();
             material.diffuseTexture = texture;
 
             material.repeat = true;
-            material.blendMode = BlendMode.ADD; 
+            material.blendMode = BlendMode.ADD;
             this.plane = new Mesh(new PlaneGeometry(1000,1000,100,100,1,1), material);
             this.view1.addChild3D(this.plane);
 
@@ -179,13 +171,12 @@ permalink: /docs/c0j7stn7/
             this.view1.addChild3D(plane);
 	    }
 	}
-            
+
 示例展示为uv滚动动画
 
 ![](uvRoll.gif)
 
 ----------
-
 
 * 序列帧动画：逻辑循环内，跳跃式改变uv坐标来实现动画的效果；
 	* 相比UV动画，该功能为跳跃式的改变uv坐标到指定的起始位置和范围，达到用一张贴图，实现了逐帧播放的效果；
@@ -198,12 +189,12 @@ permalink: /docs/c0j7stn7/
 		private texture:Itexture;
 
 	    protected onInit3D(): void {
-	
+
             var material: TextureMaterial = new TextureMaterial();
             material.diffuseTexture = texture;
 
             material.repeat = true;
-            material.blendMode = BlendMode.ADD; 
+            material.blendMode = BlendMode.ADD;
             this.plane = new Mesh(new PlaneGeometry(1000,1000,100,100,1,1), material);
             this.view1.addChild3D(this.plane);
 
@@ -216,13 +207,12 @@ permalink: /docs/c0j7stn7/
             this.view1.addChild3D(plane);
 	    }
 	}
-            
+
 示例展示为uv序列帧动画
 
 ![](uvSheet.gif)
 
 ----------
-
 
 * 流光特效(StreamerMethod)
 	* 用来实现UV流光滚动效果的渲染方法；
@@ -236,12 +226,12 @@ permalink: /docs/c0j7stn7/
 		private texture:Itexture;
 
 	    protected onInit3D(): void {
-	
+
             var material: TextureMaterial = new TextureMaterial();
             material.diffuseTexture = texture;
 
             material.repeat = true;
-            material.blendMode = BlendMode.ADD; 
+            material.blendMode = BlendMode.ADD;
             this.plane = new Mesh(new PlaneGeometry(1000,1000,100,100,1,1), material);
             this.view1.addChild3D(this.plane);
 
@@ -255,14 +245,11 @@ permalink: /docs/c0j7stn7/
             plane.material.cutAlpha = 0;
             this.view1.addChild3D(plane);
 
-
 	    }
 	}
-            
+
 示例展示为uv流光滚动效果
 
 ![](streamerAnim.gif)
 
 ----------
-
-	

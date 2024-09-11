@@ -37,9 +37,9 @@ class GraphicsTest extends egret.DisplayObjectContainer
 这段代码中核心绘图代码是下面这三行:
 
 ```javascript
-shp.graphics.beginFill( 0xff0000, 1); 
-shp.graphics.drawRect( 0, 0, 100, 200 ); 
-shp.graphics.endFill();
+shp.graphics.beginFill(0xFF0000, 1)
+shp.graphics.drawRect(0, 0, 100, 200)
+shp.graphics.endFill()
 ```
 
 访问 `shp` 的 `graphics` 属性会返回一个 `Graphics` 对象，操作此对象中的绘图方法即可实现绘图。
@@ -57,7 +57,7 @@ shp.graphics.endFill();
 为绘图代码添加一行:
 
 ```javascript
-shp.graphics.lineStyle( 10, 0x00ff00 );
+shp.graphics.lineStyle(10, 0x00FF00)
 ```
 
 修改后的代码如下：
@@ -140,7 +140,7 @@ lineTo( x:number, y:number): void
 在绘图直线前，需要先制定线条的样式，设置 `lineStyle()` 方法：
 
 ```javascript
-shp.graphics.lineStyle( 2, 0x00ff00 );
+shp.graphics.lineStyle(2, 0x00FF00)
 ```
 
 然后使用 `moveTo()` 来设定线条的起始点，使用 `lineTo()` 来设定线条的终点。完整代码如下：
@@ -366,7 +366,7 @@ private getSectorProgress():egret.Shape {
 
         return true;
     }, this);
-    
+
     return shape;
 
     function changeGraphics(angle) {
@@ -443,7 +443,6 @@ private drawBorderProgress():egret.DisplayObjectContainer {
 
 ![](569f036ba015a.png)   ![](569f036bbe628.png)
 
-
 > `mask` 很消耗 cpu，建议少用不停修改 `mask` 的方式做动画。
 
 ## 7.多个形状的绘制
@@ -451,21 +450,21 @@ private drawBorderProgress():egret.DisplayObjectContainer {
 以下代码在一个 `Shape` 对象中绘制4个小格子，互相紧邻，并且红蓝相间。
 
 ```javascript
-this.graphics.beginFill( 0x0000ff );
-this.graphics.drawRect( 0, 0, 50,50 );
-this.graphics.endFill();
+this.graphics.beginFill(0x0000FF)
+this.graphics.drawRect(0, 0, 50, 50)
+this.graphics.endFill()
 
-this.graphics.beginFill( 0x0000ff );
-this.graphics.drawRect( 50, 50, 50, 50);
-this.graphics.endFill();
+this.graphics.beginFill(0x0000FF)
+this.graphics.drawRect(50, 50, 50, 50)
+this.graphics.endFill()
 
-this.graphics.beginFill( 0xff0000 );
-this.graphics.drawRect( 50, 0, 50,50 );
-this.graphics.endFill();
+this.graphics.beginFill(0xFF0000)
+this.graphics.drawRect(50, 0, 50, 50)
+this.graphics.endFill()
 
-this.graphics.beginFill( 0xff0000 );
-this.graphics.drawRect( 0, 50, 50,50 );
-this.graphics.endFill();
+this.graphics.beginFill(0xFF0000)
+this.graphics.drawRect(0, 50, 50, 50)
+this.graphics.endFill()
 ```
 
 将该 `Shape` 对象放到显示列表，编译运行，得到如图效果：
@@ -474,11 +473,10 @@ this.graphics.endFill();
 
 >注意：多个形状绘制，互相是独立的，每一次绘制填充，都必须以 `endFill()` 结束，才能开始下一次绘制。
 
-
 ## 8.清空绘图
 
 清空绘图操作是将已经绘制的图像全部清空，可以执行 `Graphics` 中的 `clear()` 方法，代码如下：
 
 ```javascript
-shp.graphics.clear();
+shp.graphics.clear()
 ```

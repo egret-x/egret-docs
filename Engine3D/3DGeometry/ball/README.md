@@ -68,9 +68,7 @@ class SphereDemo extends LoadingUI {
      */
     public currentAnim: string;
 
-
     public constructor() {
-        
 
         super();
 
@@ -110,15 +108,14 @@ class SphereDemo extends LoadingUI {
 
         this.OnInitLoadingView(5);
 
-
         ///设置window resize事件
         egret3d.Input.addEventListener(egret3d.Event3D.RESIZE,this.OnWindowResize,this);
-        
+
         this.createCube();
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 窗口尺寸变化事件
     * @version Egret 3.0
     * @platform Web,Native
@@ -132,7 +129,7 @@ class SphereDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 初始化相机控制
     * @version Egret 3.0
     * @platform Web,Native
@@ -147,7 +144,7 @@ class SphereDemo extends LoadingUI {
     }
 
     /**
-    * @language zh_CN        
+    * @language zh_CN
     * 模型加载回调
     * @param e: egret3d.URLLoader 加载器对象
     * @version Egret 3.0
@@ -170,11 +167,10 @@ class SphereDemo extends LoadingUI {
 
     }
 
-
     public update(e: egret3d.Event3D) {
         this.cameraCtl.update();
     }
-}     
+}
 ```
 
 编译并运行，效果如图：

@@ -13,29 +13,29 @@ EUI 中已经提供了一个组件：Scroller。开发者只需要创建一个 S
 
 下面的示例中我们使用一张比较大的图片，手机屏幕显示不下，然后用 Scroller 处理：
 
-~~~ typescript 
+~~~ typescript
 class ScrollerDemo extends eui.Group {
-    constructor() {
-        super();
-    }
-    protected createChildren() {
-        super.createChildren();
-        //创建一个容器，里面包含一张图片
-        var group = new eui.Group();
-        var img = new eui.Image("resource/bg.jpg");
-        group.addChild(img);
-        //创建一个Scroller
-        var myScroller = new eui.Scroller();
-        //注意位置和尺寸的设置是在Scroller上面，而不是容器上面
-        myScroller.width = 200;
-        myScroller.height = 200;
-        //设置viewport
-        myScroller.viewport = group;
-        this.addChild(myScroller);
-    }
-}
+  constructor() {
+    super()
+  }
 
-~~~ 
+  protected createChildren() {
+    super.createChildren()
+    // 创建一个容器，里面包含一张图片
+    const group = new eui.Group()
+    const img = new eui.Image('resource/bg.jpg')
+    group.addChild(img)
+    // 创建一个Scroller
+    const myScroller = new eui.Scroller()
+    // 注意位置和尺寸的设置是在Scroller上面，而不是容器上面
+    myScroller.width = 200
+    myScroller.height = 200
+    // 设置viewport
+    myScroller.viewport = group
+    this.addChild(myScroller)
+  }
+}
+~~~
 > 注意位置和尺寸的约束应该是在 Scroller 上面，而不是容器上面。
 
 实现效果：
@@ -44,10 +44,10 @@ class ScrollerDemo extends eui.Group {
 
 ## 定位滚动位置
 除了通过手指控制 Scroller , 通过代码也可以获取和控制滚动的位置
-~~~ typescript 
+~~~ typescript
 Scroller.viewport.scrollV  纵向滚动的位置
 Scroller.viewport.scrollH  横向滚动的位置
-~~~  
+~~~
 改变这2个值，就可以改变滚动的位置。
 下面是一个滚动的示例，初始化以后就会改变 Scroller 里列表的位置，点击按钮也会移动列表。
 ~~~ TypeScript
@@ -109,7 +109,7 @@ private moveScroller(): void {
     //停止正在滚动的动画
     sc.stopAnimation();
 }
-~~~ 
+~~~
 
 在滚动的过程中点击按钮就可以立即停止滚动动画。
 
@@ -125,20 +125,20 @@ private moveScroller(): void {
     <e:HScrollBar id="horizontalScrollBar" width="100%" bottom="0" autoVisibility = "false" visible="false"/>
     <e:VScrollBar id="verticalScrollBar" height="100%" right="0" autoVisibility = "false" visible="false"/>
 </e:Skin>
-~~~ 
+~~~
 
 当添加该滚动条到舞台以后可发现不会再显示垂直方向的滚动条:
 
 ~~~ typescript
-var scroller = new eui.Scroller();
+const scroller = new eui.Scroller()
 
-var list = new eui.List();
-list.dataProvider = new eui.ArrayCollection([1,2,3,4,5,6,7]);
-scroller.viewport = list;
-scroller.height = 200;
+const list = new eui.List()
+list.dataProvider = new eui.ArrayCollection([1, 2, 3, 4, 5, 6, 7])
+scroller.viewport = list
+scroller.height = 200
 
-this.addChild(scroller);
-~~~ 
+this.addChild(scroller)
+~~~
 
 效果如下图所示:
 
@@ -147,15 +147,15 @@ this.addChild(scroller);
 当然也可以在 TS 代码中直接修改 `autoVisibility`属性如下:
 
 ~~~ typescript
-var scroller = new eui.Scroller();
+const scroller = new eui.Scroller()
 
-var list = new eui.List();
-list.dataProvider = new eui.ArrayCollection([1,2,3,4,5,6,7]);
-scroller.viewport = list;
-scroller.height = 200;
+const list = new eui.List()
+list.dataProvider = new eui.ArrayCollection([1, 2, 3, 4, 5, 6, 7])
+scroller.viewport = list
+scroller.height = 200
 
-this.addChild(scroller);
-//需要在scroller添加到舞台上面之后再访问verticalScrollBar
-scroller.verticalScrollBar.autoVisibility = false;
-scroller.verticalScrollBar.visible = false;
-~~~ 
+this.addChild(scroller)
+// 需要在scroller添加到舞台上面之后再访问verticalScrollBar
+scroller.verticalScrollBar.autoVisibility = false
+scroller.verticalScrollBar.visible = false
+~~~

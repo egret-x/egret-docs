@@ -10,7 +10,6 @@ permalink: /docs/fgbgzs7g/
 
 通过使用白鹭引擎，开发者可以尽可能的不用关注浏览器的底层实现，解决HTML5游戏性能问题及碎片化问题，灵活地满足开发者开发2D或3D游戏的需求。
 
-
 ## 更新内容
 
 * 命令行
@@ -31,28 +30,25 @@ permalink: /docs/fgbgzs7g/
     * 添加 watch 命令功能，命令开启后，修改资源文件会自动更新 default.res.json 以及 config.json 文件
 
     	~~~
-    	res watch    
+    	res watch
     	~~~
-    
 
 * Egret3D
     * 修复透明物体渲染bug
     * 优化包围盒线框渲染逻辑
     * 导出插件支持 MacOS 版本，重构部分业务逻辑， 插件下载地址：[http://tool.egret-labs.org/egret3D/egret3d_unity_plugin_0.0.3.unitypackage](http://tool.egret-labs.org/egret3D/egret3d_unity_plugin_0.0.3.unitypackage)
     * 增加 debug 模式性能监控面板
-    
+
     ~~~
     egret3d.Egret3DEngine.instance.debug = true;
     ~~~
 
     ![image](1.png)
-		
-	
+
 ## 已知问题
 
 * 修改 ```tsconfig.json```后，执行 ``` egret build ``` 不会生效，需执行 ``` egret clean ```
 * 使用 egret build 编译 JavaScript 第三方库，编译结果为空
-
 
 ## 路线图
 
@@ -65,9 +61,7 @@ permalink: /docs/fgbgzs7g/
 * 与 Egret Wing 配合，进一步完善 EXML / EUI 的机制，帮助开发者提升 UI 的开发与渲染效率。
 * 重点解决开发者在2016年集中反馈的问题，具体链接参见[这里](http://bbs.egret.com/thread-25005-1-1.html)
 
-
 ## 相关其他内容
 * 白鹭引擎4.0 需要最新的 Egret Wing 4.0 配合，或将 WebStrom 等其他开发工具升级至较新版本以支持 TypeScript 2.1
 * 骨骼动画的白鹭极速模式需要开发者将 DragonBonesPro 升级至4.8版本以上，建议使用最新的 5.0 版本
 * 使用白鹭引擎开发原生游戏的工具（ egret-ios-support / egret-android-support ）将会很快以 Egret-Native的全新面貌发布
-

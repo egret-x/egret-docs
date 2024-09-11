@@ -5,41 +5,42 @@ permalink: /docs/extension/EUI/skin/customizeSkin/
 ---
 对于一个自定义的皮肤，名称为**testSkin.exml**，有两种方式使用它
 ~~~ typescript
-<?xml version="1.0" encoding="utf-8"?> 
-<e:Skin class="mySkin.TestSkin" xmlns:e="http://ns.egret.com/eui"> 
-	<e:DataGroup> 
-		<e:itemRendererSkinName> 
-			<e:Skin> 
-				<e:Label textColor="0xfd0000" text="{data.label}"/> 
-			</e:Skin> 
-		</e:itemRendererSkinName> 
-		<e:ArrayCollection> 
-			<e:Array> 
-				<e:Object label="item1"/> 
-				<e:Object label="item2"/> 
-				<e:Object label="item3"/> 
-			</e:Array> 
-		</e:ArrayCollection> 
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="mySkin.TestSkin" xmlns:e="http://ns.egret.com/eui">
+	<e:DataGroup>
+		<e:itemRendererSkinName>
+			<e:Skin>
+				<e:Label textColor="0xfd0000" text="{data.label}"/>
+			</e:Skin>
+		</e:itemRendererSkinName>
+		<e:ArrayCollection>
+			<e:Array>
+				<e:Object label="item1"/>
+				<e:Object label="item2"/>
+				<e:Object label="item3"/>
+			</e:Array>
+		</e:ArrayCollection>
 	</e:DataGroup>
 </e:Skin>
 ~~~
 
-
 ## 方式1 加载文件
 ~~~ typescript
 class TestSkin extends eui.Component {
-    constructor() {
-        super();
-        this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this);
-        this.skinName = "resource/testSkin.exml";
-    }
-    protected createChildren() {
-        super.createChildren();
-        console.log("createChildren")
-    }
-    private onComplete():void{
-        console.log("onComplete");
-    }
+  constructor() {
+    super()
+    this.addEventListener(eui.UIEvent.COMPLETE, this.onComplete, this)
+    this.skinName = 'resource/testSkin.exml'
+  }
+
+  protected createChildren() {
+    super.createChildren()
+    console.log('createChildren')
+  }
+
+  private onComplete(): void {
+    console.log('onComplete')
+  }
 }
 ~~~
 直接把**skinName**设置为exml文件的路径。这种方式要注意的是，在 createChildren 的时候，是获取不到内部组件的，因为此时 exml 文件还没有加载完成，要通过监听 **eui.UIEvent.COMPLETE** 这个事件获取组件创建完成的消息。
@@ -59,10 +60,9 @@ egret create euiDemo --type eui
 另外因为在 exml 中定义了 **class="mySkin.TestSkin"**,所以还可以像下面这样使用
 ~~~ typescript
 class TestSkin extends eui.Component {
-    constructor() {
-        super();
-        this.skinName = "mySkin.TestSkin";
-    }
+  constructor() {
+    super()
+    this.skinName = 'mySkin.TestSkin'
+  }
 }
 ~~~
-

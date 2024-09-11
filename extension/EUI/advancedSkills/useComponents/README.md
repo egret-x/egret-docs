@@ -8,15 +8,14 @@ permalink: /docs/extension/EUI/advancedSkills/useComponents/
 之前例子中用到的节点都是EUI标准库中的组件，此外 EUI 可以自定义组件。例如有一个自定义的按钮类：`control.MyButton` ,在EXML中描述自定义组件的方式如下：
 
 ~~~ typescript
-<e:Group class="skins.MyGroup" xmlns:e="http://ns.egret.com/eui" con="control.*"> 
-    <con:MyButton/> 
+<e:Group class="skins.MyGroup" xmlns:e="http://ns.egret.com/eui" con="control.*">
+    <con:MyButton/>
 </e:Group>
-~~~ 
+~~~
 
 首先我们要在根节点添加一个自定义的命名空间：`con="control.*"` ，等号之前的 `con` 表示命名空间前缀，这个可以随意写，只要不跟现有的前缀重名即可。等号后面的部分 `control.*` 表示在`control`这个模块名下的类。
 声明了命名空间后，就可以合法地引用自定义组件：`<con:MyButton/>` 表示的类就是 `control.MyButton`。
 要是类不在任何模块下，可以直接声明命名空间为：`local="*"`，同理前缀是可以随意起的，等号后面只需要一个`*`即表示不含模块名。
-
 
 ## 自定义组件规范
 
@@ -39,5 +38,3 @@ permalink: /docs/extension/EUI/advancedSkills/useComponents/
 * 4.组件的构造函数内不应该有对外部业务逻辑依赖的代码，这部分代码可以转移到组件被添加到舞台的时候启动而不是实例化时。
 
 其中注意一下：虽然解析器可能无法实例化组件，但是你在EXML中其实并没有使用到它自身定义的属性，而是只用到了继承自框架组件的属性，这种情况其实应该可以忽略。因此为了最大限度确保显示正常，防止程序中断，解析器对这个报错进行了屏蔽，只会输出一些警告。例如当看到#2104号警告时，就是提示你自定义组件无法单独实例化。
-
-

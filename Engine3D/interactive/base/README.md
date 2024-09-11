@@ -15,5 +15,3 @@ permalink: /docs/egret3d/interactive/base/
 * 射线碰撞 egret3d.Ray，检测射线是否与一个模型相交。
 
 * 模型碰撞  egret3d.Bound，检测模式与模型是否相交。
-
-

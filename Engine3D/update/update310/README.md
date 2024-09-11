@@ -13,7 +13,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 ### 更新内容
 
-* [LightMap](http://edn.egret.com/cn/apidoc/index/name/egret3d.LightmapMethod) 
+* [LightMap](http://edn.egret.com/cn/apidoc/index/name/egret3d.LightmapMethod)
 
 	三维软件里实现打好光，然后渲染把场景各表面的光照输出到贴图上.然后使用模型的第 2UV，渲染出 Lightmap 效果。
 
@@ -36,7 +36,7 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 * 修复粒子系统生命周期的 BUG。
 * 修复粒子系统跟随 BUG。
 * 修复粒子系统较高的发射速率 BUG。
-* 修复材质系统 gloss 值失效。 
+* 修复材质系统 gloss 值失效。
 * 修复材质系统 specularLevel 值失效。
 * 修复材质系统 BlendModle.NORMAL 透明乱序。
 * 修复 DirectLight 高光显示错误。
@@ -49,4 +49,3 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 您可以从入门教程开始学习：[Egret3D入门](http://edn.egret.com/cn/docs/page/906)
 
 更深入的API学习可以点击：[Egret3D API](http://edn.egret.com/cn/apidoc/index/name/egret3d.AlphaMaskMethod)
-

@@ -53,7 +53,7 @@ private myFunc():void{
    var isManager:Function = function (element:any,index:number,arr:Array<any>):boolean
    {
       return true;
-   }; 
+   };
    employees.filter(isManager);
 }
 ```
@@ -133,7 +133,6 @@ public class ExtendCls extends BaseCls
 }
 ExtendCls.TYPE_static_ExtendCls = "red";
 ```
-
 
 * get set方法在ts中不可调用super，需要手动修改。
 

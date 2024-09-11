@@ -21,11 +21,9 @@ permalink: /docs/ran6drps/
 ![](p3.png)
 	* 编译游戏代码到小游戏：相当于执行命令 `egret build --target qqgame`，把游戏的代码编译到小游戏的项目里
 
-
-
 ### 三.使用命令行把白鹭游戏编译到小游戏项目
 #### 方法1：开发者可以使用命令行来编译和发布到 qq 小游戏项目中：
-	
+
   * dubug 模式： ```egret build --target qqgame```
   * release 模式： ```egret publish --target qqgame```
 

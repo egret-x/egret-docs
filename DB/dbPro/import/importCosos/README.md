@@ -15,5 +15,3 @@ permalink: /docs/db/dbPro/import/importCosos/
 项目位置默认为“我的文档”+项目名称。DragonBones Professional会记住上一次用户选择的路径，勾选了“使用默认位置”的话，DragonBones Professional 会默认使用上一次用户选择的路径。 不勾选“使用默认位置“的话，用户可以手动指定项目保存的位置。
 
 如果图片目录上找不到皮肤，完成按钮也是亮起的，可以点击。以保证用户可以导入不包含图片的项目文件。
-
-

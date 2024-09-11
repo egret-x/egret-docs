@@ -8,53 +8,55 @@ permalink: /docs/extension/EUI/dataCollection/itemRenderer/
 
 ~~~ typescript
 class ItemRendererDemo extends eui.Group {
-    public constructor() {
-        super();
+  public constructor() {
+    super()
+  }
+
+  protected createChildren(): void {
+    // 先创建一个数组
+    const sourceArr: any[] = []
+    for (let i: number = 1; i < 5; i++) {
+      // 给数据中添加一个含有"label"属性的对象
+      sourceArr.push({ label: `item${i}` })
     }
-    protected createChildren():void {
-        //先创建一个数组
-        var sourceArr:any[] = [];
-        for (var i:number = 1; i < 5; i++){
-        	//给数据中添加一个含有"label"属性的对象
-            sourceArr.push({label:"item"+i});
-        }
-        //用ArrayCollection包装
-        var myCollection:eui.ArrayCollection = new eui.ArrayCollection(sourceArr);
+    // 用ArrayCollection包装
+    const myCollection: eui.ArrayCollection = new eui.ArrayCollection(sourceArr)
 
-        var dataGroup:eui.DataGroup = new eui.DataGroup();
-        dataGroup.dataProvider = myCollection;
-        this.addChild(dataGroup);
+    const dataGroup: eui.DataGroup = new eui.DataGroup()
+    dataGroup.dataProvider = myCollection
+    this.addChild(dataGroup)
 
-        var exml = `
-        <e:Skin xmlns:e="http://ns.egret.com/eui"> 
-            <e:Image source="resource/assets/Panel/border.png"/> 
-            <e:Label textColor="0xfd0000" text="{data.label}"/> 
-        </e:Skin>`;
+    const exml = `
+        <e:Skin xmlns:e="http://ns.egret.com/eui">
+            <e:Image source="resource/assets/Panel/border.png"/>
+            <e:Label textColor="0xfd0000" text="{data.label}"/>
+        </e:Skin>`
 
-        dataGroup.itemRenderer = LabelRenderer;
-        //dataGroup.itemRendererSkinName = exml;//也可以直接设置 exml 文件做为 ItemRenderer
-    }
+    dataGroup.itemRenderer = LabelRenderer
+    // dataGroup.itemRendererSkinName = exml;//也可以直接设置 exml 文件做为 ItemRenderer
+  }
 }
 ~~~
-~~~ typescript 
+~~~ typescript
 class LabelRenderer extends eui.ItemRenderer {
-	private labelDisplay:eui.Label;
-    public constructor(){
-        super();
-        //自定义的 ItemRenderer
-        this.touchChildren = true;
-        var bg = new eui.Image("resource/assets/Panel/border.png");
-        this.labelDisplay = new eui.Label();
-        this.labelDisplay.textColor = 0xfd0000;
-        this.addChild( this.labelDisplay );
-    }
-    protected dataChanged():void{
-    	//数据改变时，会自动调用 dataChanged 这个方法
-        //显示数据中的 label 值
-        this.labelDisplay.text = this.data.label;
-    }
+  private labelDisplay: eui.Label
+  public constructor() {
+    super()
+    // 自定义的 ItemRenderer
+    this.touchChildren = true
+    const bg = new eui.Image('resource/assets/Panel/border.png')
+    this.labelDisplay = new eui.Label()
+    this.labelDisplay.textColor = 0xFD0000
+    this.addChild(this.labelDisplay)
+  }
+
+  protected dataChanged(): void {
+    // 数据改变时，会自动调用 dataChanged 这个方法
+    // 显示数据中的 label 值
+    this.labelDisplay.text = this.data.label
+  }
 }
-~~~ 
+~~~
 显示效果：
 ![](5604f86edd6d2.png)
 在上面的代码示例中，继承自 `eui.ItemRenderer` 的 LabelRenderer 类中，有一个文本行 labelDisplay 。
@@ -65,32 +67,33 @@ class LabelRenderer extends eui.ItemRenderer {
 另外，像上面这个创建显示 DataGroup 的示例，也完全可以用一个 exml 文件实现，不需要写这么多代码。
 ~~~ typescript
 class ItemRendererDemo extends eui.Group {
-    constructor() {
-        super();
-    }
-    protected createChildren() {
-        super.createChildren();
-        var exml = `
-        <e:Skin xmlns:e="http://ns.egret.com/eui"> 
-            <e:DataGroup> 
-                <e:itemRendererSkinName> 
-                    <e:Skin> 
-                        <e:Image source="resource/assets/Panel/border.png"/> <e:Label textColor="0xfd0000" text="{data.label}"/> 
-                    </e:Skin> 
-                </e:itemRendererSkinName> 
-                <e:ArrayCollection> 
-                    <e:Array> 
-                        <e:Object label="item1"/> 
-                        <e:Object label="item2"/> 
-                        <e:Object label="item3"/> 
-                        <e:Object label="item4"/> 
-                    </e:Array> 
-                </e:ArrayCollection> 
-            </e:DataGroup> 
-        </e:Skin>`;
-        var component = new eui.Component();
-        component.skinName = exml;
-        this.addChild(component);
-    }
+  constructor() {
+    super()
+  }
+
+  protected createChildren() {
+    super.createChildren()
+    const exml = `
+        <e:Skin xmlns:e="http://ns.egret.com/eui">
+            <e:DataGroup>
+                <e:itemRendererSkinName>
+                    <e:Skin>
+                        <e:Image source="resource/assets/Panel/border.png"/> <e:Label textColor="0xfd0000" text="{data.label}"/>
+                    </e:Skin>
+                </e:itemRendererSkinName>
+                <e:ArrayCollection>
+                    <e:Array>
+                        <e:Object label="item1"/>
+                        <e:Object label="item2"/>
+                        <e:Object label="item3"/>
+                        <e:Object label="item4"/>
+                    </e:Array>
+                </e:ArrayCollection>
+            </e:DataGroup>
+        </e:Skin>`
+    const component = new eui.Component()
+    component.skinName = exml
+    this.addChild(component)
+  }
 }
 ~~~

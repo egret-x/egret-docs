@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/tjn23w4t/
 ---
 
-
 通过接入 Matchvs SDK ，我们已经可以实现多人在线联网游戏。但对于部分复杂度比较高的游戏，往往需要在服务器端进行个性化的功能实现，如客户端之间的安全性校验、数据校验、结果仲裁、随机道具生成等功能。这时，Matchvs 推荐您使用 gameServer 框架。
 
 ## 一个例子
@@ -30,8 +29,6 @@ gameServer 远不止用于实现以上示例机制，更多丰富的游戏内逻
 **大逃杀游戏里，枪支装备生成，毒圈范围变化，伤害判断等功能；**
 
 **IO类游戏里，食物生成，边界判定，吞噬仲裁等功能。**
-
-
 
 ## 代码托管
 
@@ -59,8 +56,6 @@ Matchvs 提供了一系列 gameServer 管理功能，您可以点击 gameServer 
 
 10 min 内，已经在 旧版本 gameServer 上的玩家不受影响，新的玩家会被调度到新的 gameServer。
 
-
-
 ## 数据库
 
 Matchvs 提供了数据存储功能，详情可以参考[数据存储教程](https://doc.matchvs.com/APIDoc/dataStore)。如果您觉得不够用，则可以使用自己的数据库。
@@ -71,21 +66,15 @@ Matchvs 提供了数据存储功能，详情可以参考[数据存储教程](htt
 
 前往 gameServer 访问授权页面设置：
 
-
-
 ![](http://imgs.matchvs.com/static/Doc-img/gamePub/GameServerImg/进入访问授权页面.png)
 
 新增访问授权：
 
 ![](http://imgs.matchvs.com/static/Doc-img/gamePub/GameServerImg/新增访问授权.png)
 
-
-
 等待访问授权审核通过：
 
 ![](http://imgs.matchvs.com/static/Doc-img/gamePub/GameServerImg/访问授权待审核.png)
-
-
 
 访问授权审核通过：
 

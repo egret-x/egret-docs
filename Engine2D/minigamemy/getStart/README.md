@@ -8,7 +8,6 @@ permalink: /docs/a4wwa3oc/
 * Egret Launcher 1.1.4 以上版本
 * 白鹭引擎 5.2.33 以上版本
 
-
 ### 二.创建小游戏和可视化编译打包小游戏
 
 1. 使用最新的 Egret Launcher 创建一个 Egret 游戏项目，引擎使用 5.2.33 以上版本。
@@ -22,11 +21,9 @@ permalink: /docs/a4wwa3oc/
 	* Debug: 相当于执行命令 `egret build --target mygame`
 	* Release: 相当于执行命令 `egret publish --target mygame`
 
-
-
 ### 三.使用命令行把白鹭游戏编译到小游戏项目
 #### 方法1：开发者可以使用命令行来编译和发布到支付宝小游戏项目中：
-	
+
   * dubug 模式： ```egret build --target mygame```
   * release 模式： ```egret publish --target mygame```
 
@@ -42,6 +39,3 @@ permalink: /docs/a4wwa3oc/
 ```
 
 如上所示，将 `egretProperties.json` 配置文件中的 `current` 属性设置为 `mygame` 时，可以直接使用```egret build``` 或者 ```egret publish``` 命令编译和发布支付宝小游戏。
-
-
-

@@ -52,7 +52,7 @@ permalink: /docs/egret3d/methods/compile/
 
 ```
 	super();
-	
+
     //创建Canvas对象。
     this._egret3DCanvas = new egret3d.Egret3DCanvas();
     //Canvas的起始坐标，页面左上角为起始坐标(0,0)。
@@ -191,7 +191,7 @@ permalink: /docs/egret3d/methods/compile/
         var loadtex: egret3d.URLLoader = new egret3d.URLLoader();
         //注册贴图读取完成回调
         loadtex.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE,this.onLoadTexture,this);
-        //开始读取贴图 
+        //开始读取贴图
         loadtex.load("resource/LingTong/hero_12.png");
         loadtex["mat"] = mat;
 
@@ -236,7 +236,7 @@ permalink: /docs/egret3d/methods/compile/
     var loadtex: egret3d.URLLoader = new egret3d.URLLoader();
     //注册贴图读取完成回调
     loadtex.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE,this.onLoadTexture,this);
-    //开始读取贴图 
+    //开始读取贴图
     loadtex.load("resource/LingTong/hero_12.png");
     loadtex["mat"] = mat;
 
@@ -372,7 +372,7 @@ permalink: /docs/egret3d/methods/compile/
     * 右键`切换显示列表查看器`继承了`Egret Inspector`查看显示列表等功能
     * 右键`切换开发者工具`可以查看网络、`console`等数据
     ![alt](575e571f4e779.jpg)
-    
+
 ### 4.4 修改代码调试
 我们简单修改一下
 ```
@@ -398,5 +398,5 @@ permalink: /docs/egret3d/methods/compile/
 * `变量`、`调用堆栈`等功能
 
  ![alt](575e571f6c232.jpg)
- 
+
  运行结果如上图，因为没有漫反射贴图，导致3D模型都是白色。

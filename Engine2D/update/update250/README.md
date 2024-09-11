@@ -54,7 +54,6 @@ GUI到EUI的更新对比参考：[GUI到EUI的更新对比](http://edn.egret.com
 
 升级参考教程：[Egret Engine 2.5项目升级指南](http://edn.egret.com/cn/index.php/article/index/id/640)
 
-
 #### 新的调试功能
 
 在桌面端我们能够方便的使用 console 提供的诸多方法输出日志，然后使用浏览器提供的开发者工具查看。但是在移动端这个方式收到了限制，大多数的浏览器没有方便的方法来查看日志。
@@ -124,7 +123,6 @@ game 兼容库中具体的 API 可以参考下面链接:[扩展模块说明](htt
 #### 运行时接口判断
 egret里提供了egret.is()的全局函数，能够在运行时准确判断一个实例是否实现了某个接口，或者是否为一个类或它的子类的实例
 
-
 #### 像素级精确碰撞
 
 将Bitmap实例的pixelHitTest属性设置为true即可实现点击穿透，能够实现位图透明区域的点击穿透。
@@ -155,14 +153,14 @@ egret里提供了egret.is()的全局函数，能够在运行时准确判断一�
 ```
 	sprite.width = 100;
 // 	旧版本实现
-// 	sprite.anchorX = 0.5; 
+// 	sprite.anchorX = 0.5;
 // 	新版本实现，使用绝对锚点替换掉相对锚点
-	sprite.anchorOffsetX = 50; 
+	sprite.anchorOffsetX = 50;
 ```
 ##### StageAPI调整
 
 在新版中，Stage 将对部分 DisplayObject 属性不可访问或者只读。这部分继承自 DisplayObject 的 API 将有如下变化：
-	
+
 	不可访问：
 
 		alpha
@@ -178,14 +176,13 @@ egret里提供了egret.is()的全局函数，能够在运行时准确判断一�
 		blendMode
 		touchEnabled
 		matrix
-	
+
 	只读：
-		
+
 		stageWidth
 		stageHeight
 
-
-##### 内部 API 调整 
+##### 内部 API 调整
 白鹭引擎不建议开发者直接调用或者重写引擎的内部方法（ 以 _ 或者 $ 开头 ），在本次调整中，大部分的内部方法都进行了调整，主要包括
 
 * ```_updateTransform```、```_calculateWorldTransform```。在新版中，将不再使用，如果想重写，可以重写 $update 来实现，不过不建议大家重写此方法。
@@ -194,7 +191,7 @@ egret里提供了egret.is()的全局函数，能够在运行时准确判断一�
 
 * ```_measureSize```、```_measureBounds```。旧版本中用来测量显示区域宽高的方法，在新版中使用 ```$measureContentBounds``` 代替。
 
-* 废弃之前所使用的 dirty 相关的方法。包括 
+* 废弃之前所使用的 dirty 相关的方法。包括
 ```
 _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty()、_clearSizeDirty()、_setTextDirty()、_setCacheDirty(dirty?: boolean)
 ```
@@ -212,7 +209,7 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 * scrollRect。 如果修改过 scrollRect 的值，必须对显示对象重新赋值 scrollRect。
 
 * DisplayObject
-		
+
 		rotation 获取到的 rotation 将会始终在  -180~180 之间。
 
 * Bitmap.
@@ -220,12 +217,12 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 		static _drawBitmap, 可以使用 Bitmap.$drawImage 代替。
 
 * ScrollView
-		
+
 		去掉 setScrollTop() 以及 setScrollLeft() 的返回值。
 		_dispatchPropagationEvent()
 		废弃 _onTweenFinished()。
 		废弃 _dispatchPropagationEvent()。
-		
+
 * Matrix
 
 		去掉 rotate() 的返回值。
@@ -236,7 +233,7 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 		增加 setTo() 的返回值，返回类型为Matrix。
 		增加 copyFrom() 的返回值，返回类型为Matrix。
 		变更 transformPoint(point: egret.Point) 为 transformPoint(pointX:number, pointY:number, resultPoint?:Point) ，参数增加到三个。
-		
+
 		prependTransform()
 		appendTransform()
 		skew()  可使用 matrix.$updateScaleAndRotation(scaleX:number, scaleY:number, skewX:number, skewY:number) 替代。
@@ -245,24 +242,24 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 
 		static identity
 		static DEG_TO_RAD
-		static transformCoords()		
-		
+		static transformCoords()
+
 * BitmapFont
-		
+
 		_font
 		_letterSpacing
 		_lineSpacing
 		_setSizeDirty()
 
 * BitmapText
-		
+
 		_font
 		_letterSpacing
 		_lineSpacing
 		_setSizeDirty()
 
 * Graphics
-		
+
 		_beginDraw(renderContext: RendererContext)
 		_endDraw(renderContext: RendererContext)
 		_checkRect(x: number, y: number, w: number, h: number)
@@ -271,29 +268,28 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 		_currentFillStyle
 
 * TextField
-		
+
 		_TF_Props_ 请使用 $TextField 代替
 		maxWidth
 		_setSelection(beginIndex: number, endIndex: number): void
-		
+
 * Texture
-		
+
 		_textureWidth 请使用 textureWidth 代替
 		_textureHeight 请使用 textureHeight 代替
 		_clone()
 
 * RenderTexture
-		
+
 		renderContext
 		init()
 		begin()
 		end()
 		setSize(width: number, height: number)
-		
+
 		static identityRectangle
 		static create()
 		static release(value: RenderTexture)
-	
 
 * MovieClip
 
@@ -303,7 +299,7 @@ _setDirty()、getDirty()、_clearDirty()、_setParentSizeDirty()、_setSizeDirty
 		_advanceFrame()
 		废弃 _textureToRender 属性，如需使用，请用 $movieClipData 代替。
 		废弃 _frameLabels，添加了可以直接访问的属性 frameLabels。
-        
+
 ##### 事件相关调整
 
 * Event
@@ -324,13 +320,13 @@ static _dispatchByTarget()
 
 * TouchEvent
 
-变更构造函数，减少了参数个数，新的构造函数为 
+变更构造函数，减少了参数个数，新的构造函数为
 
 ```
 constructor(type:string, bubbles?:boolean, cancelable?:boolean, stageX?:number, stageY?:number, touchPointID?:number)
-``` 
+```
 
-变更 ```TouchEvent.dispatchTouchEvent()``` 调整参数并增加表示调度结果的返回值， 新的方法为 
+变更 ```TouchEvent.dispatchTouchEvent()``` 调整参数并增加表示调度结果的返回值， 新的方法为
 
 ```
 TouchEvent.dispatchTouchEvent(target:IEventDispatcher, type:string, bubbles?:boolean, cancelable?:boolean, stageX?:number, stageY?:number, touchPointID?:number, touchDown:boolean = false):boolean
@@ -363,7 +359,7 @@ TouchEvent.dispatchTouchEvent(target:IEventDispatcher, type:string, bubbles?:boo
                   + '<member relation="son" name="Jom"/>'
               + '</family>'
           + '</familys>';
-          
+
       var familys = egret.XML.parse(source);
       console.log(familys.name); //familys
       console.log(familys.localName); //familys
@@ -380,7 +376,7 @@ TouchEvent.dispatchTouchEvent(target:IEventDispatcher, type:string, bubbles?:boo
       console.log(family1.namespace); //http://www.w3.org/2005/Atom
       console.log(family1.attributes.doorNumber); //1001
 	  console.log(family1["$doorNumber"]); //1001
-~~~		
+~~~
 
 ##### LoggerAPI
 
@@ -390,21 +386,20 @@ Logger处理更加精简，以降低尺寸，并减少不必要的封装。
 * ```Logger.fatal``` ```Logger.info``` ```Logger.warning``` 已被废弃，请使用 ```console.error()``` ```console.log``` ```console.warn```代替
 
 ##### Context API
-		
+
 * 废弃之前所使用的部分 Context 类，包括 ```MainContext、RenderContext、DeviceContext、TouchContext、NetContext```。目前 MainContext 还保留了获取stage的api，但是这个api将会在后期被废弃掉，请修改通过 MainContext 获取的 stage 引用的方式。
 
 ##### Injector
 
 此类已经被废弃。
-		
+
 如果在 gui 中使用了自定义的皮肤解析规则的注入方法 egret.Injector.mapClass("egret.gui.IAssetAdapter", AssetAdapter) 可使用 egret.gui.mapClass("egret.gui.IAssetAdapter",AssetAdapter) 代替
-		
-如果在 RES 中使用了自定义的解析器的注入方法```egret.Injector.mapClass(RES.AnalyzerBase,YourAnalyzer,"yourType");``` 请使用 ```RES.registerAnalyzer("yourType", YourAnalyzer)``` 代替		
-							
-##### Ticker	
+
+如果在 RES 中使用了自定义的解析器的注入方法```egret.Injector.mapClass(RES.AnalyzerBase,YourAnalyzer,"yourType");``` 请使用 ```RES.registerAnalyzer("yourType", YourAnalyzer)``` 代替
+
+##### Ticker
 
 `run`,`setTimeout()`这两个方法已被删除
-
 
 ##### Profiler
 
@@ -413,7 +408,7 @@ Logger处理更加精简，以降低尺寸，并减少不必要的封装。
 ##### Browser
 这个类已被删除
 Browser.isMobile 可以通过 Capabilities.isMobile 代替
-		
+
 ##### BlendMode
 
 BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为了解决不规则遮罩问题，而白鹭引擎2.5版本已完美支持不规则遮罩，故废弃掉此 API。
@@ -438,11 +433,11 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		_getConcatenatedMatrix()
 		_dispatchPropagationEvent()
 		_makeBitmapCache()
-		
+
 		static getTransformBounds()
 
 * Texture
-		
+
 		_disposeForNative()
 		_disposeForCanvas()
 		draw()
@@ -450,14 +445,14 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		_drawRepeatImageForNative()
 		_drawForNative()
 		_drawForCanvas()
-		
+
 		static _onError()
 		static _onLoad()
 		static _createBitmapDataForNative()
 		static _createBitmapDataForCanvasAndWebGl()
 		static createBitmapData()
 		static deleteWebGLTexture()
-		
+
 * RenderTexture
 
  		renderContext
@@ -465,11 +460,11 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
  		end()
  		setSize()
  		init()
- 		
+
  		static identityRectangle
  		static create()
  		static release()
- 		
+
 ### api由 "_" 变成 "$" 开始
 
 其中所有的 $set方法都增加了返回类型（布尔值）
@@ -502,17 +497,15 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		_doAddChild()
 		_doRemoveChild()
 
-
 * BitmapText
 
 		_lineHeights
 		_setLetterSpacing()
 		_setLineSpacing()
 		_getTextLines()
-		
 
 * TextField
-		
+
 		_inputEnabled
 		_getText()
 		_setText()
@@ -536,7 +529,7 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		static _getTextElement()
 		static _getHit()
 		static _getScrollNum()
-		
+
 * MovieClip
 
 		_movieClipData
@@ -544,7 +537,6 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		_currentFrameNum
 		_init()
 		_reset()
-		
 
 * MovieClipData
 
@@ -559,7 +551,6 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		_mcDataSet
 		_spriteSheet
 		_mcDataCache
-
 
 * Event
 
@@ -580,13 +571,13 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 * ColorMatrixFilter
 
 		_matrix
-		
+
 * GlowFilter
 
 		_red
 		_green
 		_blue
-		
+
 * 全局
 
 		__START_TIME
@@ -597,10 +588,8 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 		__callAsyncThisList
 		__callAsyncArgsList
 		__callAsync()
-				
- 		
-### 暂未实现的api
 
+### 暂未实现的api
 
 * ColorTransform
 
@@ -610,10 +599,9 @@ BlendMode.ERASE_REVERSE 已被删除，之前开发者使用此 API 主要是为
 
 		filters
 		transform
-		
+
 ### 注意
 请尽可能不要使用引擎内部使用的公有方法或者属性，这样可能会造成升级引擎时多出不必要的麻烦。
-
 
 ##### EgretEngine2.5升级相关问题请到论坛交流：[EgretEngine2.5升级相关问题](http://bbs.egret.com/forum.php?mod=viewthread&tid=11702&extra=&page=1)
 
@@ -845,7 +833,6 @@ sound.play(0,1);
 ```
 一般我们推荐用这种方法，最简单。
 
-
 ### 播放 Sound
 ```
 var sound:egret.Sound = RES.getRes("sound_mp3");
@@ -934,13 +921,3 @@ egret.Injector.mapClass("egret.gui.ISkinAdapter", MySkinAdapter)
 3. 定义皮肤文件，如果只是改素材，那就把默认的皮肤(大多是exml文件)拷贝过去，改改里面的资源引用就行了；如果要在皮肤中增加功能，可以在拷贝过去的默认的皮肤上改，也可以自己编写。
 4. 定义主题配置文件，参考默认主题配置文件，新建一个自己的主题配置，写好映射关系
 5. 运行项目，实际测试
-
-
-
-
-
-
-
-
-
-

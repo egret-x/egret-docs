@@ -78,22 +78,22 @@ var msg = sock.readUTF();
 
 ``` typescript
 private webSocket:egret.WebSocket;
-private createGameScene():void {    
-    this.webSocket = new egret.WebSocket();        
-    this.webSocket.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);                            
-    this.webSocket.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);    
+private createGameScene():void {
+    this.webSocket = new egret.WebSocket();
+    this.webSocket.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
+    this.webSocket.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
     this.webSocket.connect("echo.websocket.org", 80);
 }
-private onSocketOpen():void {    
-	var cmd = "Hello Egret WebSocket";    
-	console.log("连接成功，发送数据：" + cmd);    
+private onSocketOpen():void {
+	var cmd = "Hello Egret WebSocket";
+	console.log("连接成功，发送数据：" + cmd);
 	this.webSocket.writeUTF(cmd);
 }
-private onReceiveMessage(e:egret.Event):void {    
-    var msg = this.webSocket.readUTF();    
+private onReceiveMessage(e:egret.Event):void {
+    var msg = this.webSocket.readUTF();
     console.log("收到数据：" + msg);
 }
-``` 
+```
 访问 [这里](http://static.egret-labs.org/egret-game/example/html5/websocket/) 查看演示示例
 
 ## 注意事项

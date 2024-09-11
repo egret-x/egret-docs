@@ -7,9 +7,8 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及
 
 在 Egret Engine 的本次更新中，提供了若干新的功能，同时我们吸收开发者的意见修复若干问题。下面介绍 Egret Engine 3.0.8 到 Egret Engine 3.1.0 之间的更新详情。
 
-
 ## Egret Engine 2D
- 
+
 在 Egret Engine 2D 的本次更新中，提供了新的滤镜功能,组件实体系统,第三方库——微信扩展播放视频内容。同时吸收开发者的意见修复一些问题。下面列出的是 3.0.8 到 3.1.0 的更新详情。
 
 ### 滤镜
@@ -109,7 +108,3 @@ Windows 安装包下载地址：[点击这里](http://tool.egret-labs.org/EgretE
 Mac 安装包下载地址：     [点击这里](http://tool.egret-labs.org/EgretEngine/EgretEngine-v3.1.0.dmg)
 Egret Engine 2D 源码地址：[点击这里](https://github.com/egret-labs/egret-core/tree/v3.1.0)
 Egret Engine 3D 源码地址：[点击这里](https://github.com/egret-labs/egret-3d)
-
-
-
-

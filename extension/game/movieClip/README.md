@@ -87,7 +87,6 @@ MovieClip 需要一对 json 配置文件和一个纹理集图片。比如 `abc.j
     ]
 ~~~
 
-
 ## 3.使用
 
 ### 3.1.创建
@@ -98,9 +97,9 @@ egret 的 MovieClip 采用工厂模式，MovieClip 工厂类为：
 一个 MovieClip 工厂类对应一个MC资源合集。比如资源文件为 `abc.json` 和 `abc.png`。那么我们就可以在程序中把其解析到一个 MovieClip 工厂类：
 
 ~~~ typescript
-var data = RES.getRes("abc.json");
-var txtr = RES.getRes("abc.png");
-var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+const data = RES.getRes('abc.json')
+const txtr = RES.getRes('abc.png')
+const mcFactory: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(data, txtr)
 ~~~
 
 ### 3.2.获取动作
@@ -108,7 +107,7 @@ var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data,
 比如上面的的 `run`，则在程序中解析该 MovieClip 的方法为：
 
 ~~~ typescript
-var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "run" ) );
+const mc1: egret.MovieClip = new egret.MovieClip(mcFactory.generateMovieClipData('run'))
 ~~~
 
 ### 3.3.播放
@@ -118,15 +117,15 @@ var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( 
  	如果在 MovieClip run 中有名为 "start" 的帧标签，从这里播放 3 次，代码即为：
 
 ~~~ typescript
-this.addChild( mc1 );
-mc1.gotoAndPlay( "start" ,3);
+this.addChild(mc1)
+mc1.gotoAndPlay('start', 3)
 ~~~
 
 * 帧数播放
   比如要从第3帧播放，代码为：
 
 ~~~ typescript
-mc1.gotoAndPlay( 3 );
+mc1.gotoAndPlay(3)
 ~~~
 
 > 注意：为了避免可能的内存泄漏问题，MovieClip只有被加到显示列表上之后才能被正确的播放!
@@ -147,10 +146,10 @@ mc1.addEventListener(egret.MovieClipEvent.FRAME_LABEL,（e:egret.MovieClipEvent�
 比如要播放 3 次动画，每当动画循环播放完成一次，会调用一次 egret.Event.LOOP_COMPLETE 事件。3 次动画播放完后，会调用 egret.Event.COMPLETE 事件。
 
 ~~~ typescript
-this.mc1.addEventListener(egret.Event.LOOP_COMPLETE, (e:egret.Event)=>{
-	console.log(e.type);//输出3次
-}, this);
-this.mc1.addEventListener(egret.Event.COMPLETE, (e:egret.Event)=>{
-	console.log(e.type);//1次
-}, this);
+this.mc1.addEventListener(egret.Event.LOOP_COMPLETE, (e: egret.Event) => {
+  console.log(e.type)// 输出3次
+}, this)
+this.mc1.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+  console.log(e.type)// 1次
+}, this)
 ~~~

@@ -7,7 +7,6 @@ permalink: /docs/egret3d/Egret3DMaterial/texture/
 ----------
 设置普通贴图、法线贴图、高光贴图
 
-
     // 加载漫反射贴图 法线贴图 高光贴图
     protected loaderAsset() {
         var loader: egret3d.QueueLoader = new egret3d.QueueLoader();
@@ -18,9 +17,9 @@ permalink: /docs/egret3d/Egret3DMaterial/texture/
         loader.load("resource/doc/materail/brick-specular.jpg");
     }
 
-    // 
+    //
     protected onAssetComplete(e: egret3d.LoaderEvent3D) {
-        var loader: egret3d.QueueLoader = e.target; 
+        var loader: egret3d.QueueLoader = e.target;
         var plane: egret3d.Mesh = new egret3d.Mesh(new egret3d.PlaneGeometry(300, 300));
         this.view.addChild3D(plane);
 

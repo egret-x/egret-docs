@@ -46,5 +46,3 @@ Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的2D引擎及�
 您可以从入门教程开始学习：[Egret3D入门](http://edn.egret.com/cn/docs/page/906)
 
 更深入的API学习可以点击：[Egret3D API](http://edn.egret.com/cn/apidoc/index/name/egret3d.AudioManager)
-
-

@@ -27,7 +27,6 @@ permalink: /docs/uutgu6cq/
         var data: ParticleData = new ParticleData();
         data.geometry.planeW = data.geometry.planeH = 30;
 
-
         var life: ParticleDataLife = data.life;
         life.max = 6;
         life.min = 6;
@@ -85,7 +84,6 @@ permalink: /docs/uutgu6cq/
         zBezier.ctrlPoints.push(new Point(1, 0));
         speed.velocityOver.zBezier1 = zBezier;
 
-
         var colorOffset: ParticleDataColorOffset = new ParticleDataColorOffset();
         data.colorOffset = colorOffset;
         colorOffset.data.colors.push(new Color(255.0, 0.0, 0.0, 255.0));
@@ -132,4 +130,3 @@ permalink: /docs/uutgu6cq/
 ![](Img_0.png)
 
 ----------
-

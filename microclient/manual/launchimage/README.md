@@ -19,7 +19,6 @@ permalink: /docs/0euxj3ne/
 
 通过 NativeLauncher 类的 initViews 方法启用启动图功能，函数原型如下：
 
-
 ```
 public void initViews(FrameLayout layout, int imageResId, int duration);
 ```
@@ -28,17 +27,14 @@ public void initViews(FrameLayout layout, int imageResId, int duration);
 
 举例来说，假设 res 文件夹下面的 drawable 目录下有一个名为 background.jpg 的图片，该图片被用于启动图并且启动图的展示时间为 2 秒，那么示例代码如下：
 
-
 ```
 launcher.initViews(rootLayout, R.drawable.background, 2000);
 ```
 
 其中，launcher 来自于 NativeLauncher 类，rootLayout 是 View 的根节点，R.drawable.background 指向前面的 background.jpg 图片，2000 表示展示时间为 2 秒。
 
-
 ### iOS启动图的使用方法
 通过NativeLauncher类的setLaunchScreenImagePathAndDuration方法启用启动页功能，函数原型如下：
-
 
 ```
 - (void)setLaunchScreenImagePathAndDuration:(NSString*)imagePath Duration:(int)duration;
@@ -48,10 +44,8 @@ launcher.initViews(rootLayout, R.drawable.background, 2000);
 
 举例来说，假设程序中有一个名为background.jpg的图片，该图片被用于启动页并且启动页的展示时间为2秒，那么示例代码如下：
 
-
 ```
 [super.launcher setLaunchScreenImagePathAndDuration:@"background.jpg" Duration:2000];
 ```
 
 其中，launcher来自于NativeViewController类，@"background.jpg"指向前面的background.jpg图片，2000表示展示时间为2秒。
-

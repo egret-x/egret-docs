@@ -32,7 +32,6 @@ GUI相关教程：[主题和皮肤适配](http://edn.egret.com/cn20/index.php/ar
 
 * 重新编译项目即可。
 
-
 ###### 方法2：
 
 * 升级项目到2.5.1。
@@ -40,7 +39,7 @@ GUI相关教程：[主题和皮肤适配](http://edn.egret.com/cn20/index.php/ar
 * 在文档类里，在注入自定义的素材解析器处，增加一行语句
 
 ~~~
- 	egret.gui.mapClass("egret.gui.IThemeAdapter", ThemeAdapter); 
+ 	egret.gui.mapClass("egret.gui.IThemeAdapter", ThemeAdapter);
 ~~~
 
 * 将原来加载主题的代码放到加载完RES配置文件代码之后。

@@ -187,7 +187,6 @@ sprcon.swapChildren( spr1, spr2 );
 
 sprcon.swapChildrenAt( 0, 1 );
 
-
 ## 重设子对象深度
 
 当我们将一个显示对象添加到显示列表中后，我们还可以手动重设这个显示对象的深度。
@@ -226,5 +225,3 @@ sprcon.setChildIndex( spr1, 1 );
 运行效果如图：
 
 ![](566d13d877864.png)
-
-

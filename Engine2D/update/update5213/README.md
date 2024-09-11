@@ -8,7 +8,6 @@ permalink: /docs/onolitwq/
 
 最近更新时间：2018年11月27日
 
-
 欢迎您使用白鹭引擎
 
 ## 概述
@@ -23,7 +22,6 @@ permalink: /docs/onolitwq/
 
 * 2D 渲染 - JavaScript
     * 修复开启原生显示列表情况下 eui.Image 设置填充模式失效问题
-    
 
 ## 百度小游戏
 

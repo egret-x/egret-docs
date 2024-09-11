@@ -5,13 +5,11 @@ permalink: /docs/nafp65rb/
 ---
 # 白鹭引擎 5.2.14 发布日志
 
-
 ===============================
 
 更新时间：2019年2月19日
 
-
-## 2D 渲染 - JavaScript 
+## 2D 渲染 - JavaScript
 
 * 优化主循环逻辑，当游戏代码出现异常时，屏幕不再黑屏，游戏可以继续带错运行。
 * HttpRequest 支持在 Android 上通过 WebView 加载本地文件
@@ -31,7 +29,7 @@ permalink: /docs/nafp65rb/
 * 在 iOS12 的微信里，某些情况下，在弹出的软键盘回收时，顶起来的游戏页面不会落下来。该问题引擎暂不处理，等待微信修复。您可以在 `index.html` 的 `<script>` 标签里增加一个监听来处理该异常：
 
 ~~~ javascript
-document.body.addEventListener("blur",function(){
-    window.scrollTo(0,0);
-},true);
+document.body.addEventListener('blur', () => {
+  window.scrollTo(0, 0)
+}, true)
 ~~~

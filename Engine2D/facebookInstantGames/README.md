@@ -152,7 +152,6 @@ class Context {
 }
 ~~~
 
-
 ##### Menu.ts
 
 ~~~ javascript
@@ -194,7 +193,7 @@ class Menu extends egret.Sprite {
 
     public addTestFunc(label: string, callback: Function, target: Object): void {
         let btn: Button = new Button(label);
-        
+
         btn.x = (Context.stageWidth - 30) / 2 + 20;
         btn.y = 48 + this.viewNum* 47;
 
@@ -279,7 +278,6 @@ class Main extends egret.DisplayObjectContainer {
         FBInstant.logEvent("test", 2, { "test": "ta" });
     }
 
-
     private shareAsync(): void {
         egret.log("shareAsync");
         let data: FBInstant.SharePayload = {
@@ -289,7 +287,6 @@ class Main extends egret.DisplayObjectContainer {
         };
         FBInstant.shareAsync(data);
     }
-
 
     private player() {
         egret.log("player");

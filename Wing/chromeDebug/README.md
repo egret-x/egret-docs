@@ -8,7 +8,6 @@ EgretWing支持对JavaScript代码的调试在Chrome浏览器，或者支持Chom
 ## 开始
 EgretWing默认支持两种调试模式，`播放器调试` 、`Chrome`，可以在launch.json中手动添加 。
 
-
 ## launch
 
 ![image](1.png)
@@ -58,6 +57,6 @@ EgretWing默认支持两种调试模式，`播放器调试` 、`Chrome`，可以
 	- **webRoot** Web服务的根目录。
 	- **preLaunchTask** 执行任务之前运行的任务。
 	- **port** web服务器指定的端口号。
-	
+
 - 操作演示如下：
 ![image](573af07f2e7ff.gif)

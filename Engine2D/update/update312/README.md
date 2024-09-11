@@ -5,10 +5,9 @@ permalink: /docs/gjkifidh/
 ---
 Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及全新打造的 3D 引擎，它解决了 HTML5 性能问题及碎片化问题，灵活地满足开发者开发 2D 或 3D 游戏的需求，并有着极强的跨平台运行能力。
 
-
 ## Egret Engine 2D
 
-在本次更新 Egret Engine 2D 中，调整了 FPS 面板样式，输入文本支持设置弹出键盘类型，HttpRequest 支持发送 ArrayBuffer 类型数据,并增加了鼠标事件支持扩展库。同时也修复了若干问题，下面是 3.1.1 到 3.1.2 的更新详情。 
+在本次更新 Egret Engine 2D 中，调整了 FPS 面板样式，输入文本支持设置弹出键盘类型，HttpRequest 支持发送 ArrayBuffer 类型数据,并增加了鼠标事件支持扩展库。同时也修复了若干问题，下面是 3.1.1 到 3.1.2 的更新详情。
 
 ### 调整 FPS 面板样式
 
@@ -107,7 +106,3 @@ Mac 安装包下载地址：[点击这里](http://tool.egret-labs.org/EgretEngin
 Egret Engine 2D 源码地址：[点击这里](https://github.com/egret-labs/egret-core/tree/v3.1.2)
 
 Egret Engine 3D 源码地址：[点击这里](https://github.com/egret-labs/egret-3d/tree/rc/3.1.2)
-
-
-
-

@@ -10,23 +10,19 @@ permalink: /docs/minigame/minigameqq/faq/
 
 * 不允许动态执行代码的能力，eval、setTimeout 和 setInterval 函数的第一个参数不能为字符串，Function构造函数的参数不能为字符串。
 
-
 接下来汇总一下开发者普遍遇到的问题以及解决方案：
 
 ### 问题
 
 #### 我在使用白鹭引擎 5.0 / 4.x / 3.x 版本，可以直接转换为QQ小游戏游戏么？
 
-答：目前我们只支持白鹭引擎 5.2.19 以上的版本发布为QQ小游戏。老版本的项目，[参考微信小游戏升级指南](../../minigame/publish/README.md) 
-
+答：目前我们只支持白鹭引擎 5.2.19 以上的版本发布为QQ小游戏。老版本的项目，[参考微信小游戏升级指南](../../minigame/publish/README.md)
 
 #### 我在使用 egret res 库，5.2.19 创建的新项目使用的是 assetsmanager 库，这两个库有区别么？
 
 答：assetsmanager 是 res 的替代方案，这两者的 API 有 90% 保持一致，但是仍然有一些小区别，主要是在 RES.Analyzer 上，如果您遇到了相关问题，您可以在 egretProperties.json 中修改模块配置，从 assetsmanager 修改回 res 并执行 egret clean ，这样就可以换成 res 资源管理库了。更改如图所示：
 
 ![img](x02.png)
-
-
 
 #### 当老项目（5.2.19以前）升到到最新版时，发布小游戏项目报错：
 
@@ -46,8 +42,6 @@ permalink: /docs/minigame/minigameqq/faq/
 
 答：请查看游戏的入口类名是否为 Main，如不是请修改为 Main。
 
-
-
 #### 使用 eui 皮肤时报错 'parseFromString' of undefined，如何解决。
 
 答：检查是否使用了 嵌入EXML到代码中，例：
@@ -60,7 +54,6 @@ permalink: /docs/minigame/minigameqq/faq/
 
 需要改成单独的皮肤文件。
 
-
 <a name="thirdlib"></a>
 #### 为什么引入第三方库报 ``` 第三方库 is not defined``` 错误.
 
@@ -72,7 +65,6 @@ permalink: /docs/minigame/minigameqq/faq/
 
 #### 文件加载失败： default.res.json?v=201906191000
 答：去掉`?v=201906191000`
-
 
 #### 为什么我动态设置帧频没有效果
 答：小游戏平台只能在 index.html 里设置，不能通过 stage.frameRate 方法动态修改

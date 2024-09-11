@@ -40,7 +40,6 @@ private onLoad(evt: egret3d.LoaderEvent3D)
         this._mesh.rotation = new egret3d.Vector3D(30,30,0);
         this._view.addChild3D( this._mesh );
 
-
         var loader:egret3d.URLLoader = new egret3d.URLLoader();
         loader.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE,this.onTextureLoad,this);
         loader.load("resource/laohu/Mon_04.png");
@@ -67,7 +66,7 @@ private onTextureLoad(evt: egret3d.LoaderEvent3D)
 class Main extends egret.DisplayObject{
     // Canvas操作对象
     protected _egret3DCanvas: egret3d.Egret3DCanvas;
-    
+
     // View3D操作对象
     protected _view: egret3d.View3D;
     /**
@@ -84,15 +83,15 @@ class Main extends egret.DisplayObject{
 
     // 模型对象
     private model: egret3d.Mesh;
-    
+
     // 待机动画
     private idle: egret3d.SkeletonAnimationClip;
-    
+
     // 加载界面
     private loadingUI = new LoadingUI();
     public constructor() {
         super();
-        
+
         //创建Canvas对象。
         this._egret3DCanvas = new egret3d.Egret3DCanvas();
         //Canvas的起始坐标，页面左上角为起始坐标(0,0)。
@@ -101,7 +100,7 @@ class Main extends egret.DisplayObject{
         //设置Canvas页面尺寸。
         this._egret3DCanvas.width = window.innerWidth;
         this._egret3DCanvas.height = window.innerHeight;
-        
+
         //创建View3D对象,页面左上角为起始坐标(0,0)
         this._view = new egret3d.View3D(0,0,window.innerWidth,window.innerHeight);
         //当前对象对视位置,其参数依次为:
@@ -112,10 +111,10 @@ class Main extends egret.DisplayObject{
         this._view.backColor = 0xffffffff;
         //将View3D添加进Canvas中
         this._egret3DCanvas.addView3D(this._view);
-        
+
         //启动Canvas。
         this._egret3DCanvas.start();
-        
+
         this.loadingUI.CloseLoadingView();
 
         var loader:egret3d.URLLoader = new egret3d.URLLoader();
@@ -123,7 +122,7 @@ class Main extends egret.DisplayObject{
         loader.load("resource/laohu/Mon_04.esm");
 
     }
-    
+
     private _mat:egret3d.TextureMaterial;
     private _mesh:egret3d.Mesh;
     private _geom:egret3d.Geometry;
@@ -135,7 +134,6 @@ class Main extends egret.DisplayObject{
         this._mesh.rotation = new egret3d.Vector3D(30,30,0);
         this._view.addChild3D( this._mesh );
 
-
         var loader:egret3d.URLLoader = new egret3d.URLLoader();
         loader.addEventListener(egret3d.LoaderEvent3D.LOADER_COMPLETE,this.onTextureLoad,this);
         loader.load("resource/laohu/Mon_04.png");
@@ -146,6 +144,6 @@ class Main extends egret.DisplayObject{
         var texture:egret3d.ImageTexture = evt.loader.data;
         this._mat.diffuseTexture = texture;
     }
-    
-}     
+
+}
 ```

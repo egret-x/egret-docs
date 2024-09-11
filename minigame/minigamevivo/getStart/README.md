@@ -25,10 +25,9 @@ permalink: /docs/minigame/minigamevivo/getStart/
 	* 发布：相当于执行命令 `npm run build`，把小游戏工程，编译成 `rpk` 包
 	* 调试：使用 USB 连接手机和电脑后，点击调试，会把 `rpk` 上传到手机中，然后启动一个 `Chrome` 窗口，可以调试手机中运行的小游戏
 
-
 ### 三.使用命令行把白鹭游戏编译到小游戏项目
 #### 方法1：开发者可以使用命令行来编译和发布到 vivo 小游戏项目中：
-	
+
   * dubug 模式： ```egret build --target vivogame```
   * release 模式： ```egret publish --target vivogame```
 
@@ -62,7 +61,6 @@ permalink: /docs/minigame/minigamevivo/getStart/
 	* resource 文件夹：游戏资源文件
 	* sign 文件夹：签名文件存放的位置
 
-
 * manifest.json 配置说明
 
 ~~~ javascript
@@ -85,15 +83,12 @@ permalink: /docs/minigame/minigamevivo/getStart/
 	* icon：应用图标的路径
 	* orientation：支持的屏幕方向。portrait 为竖屏，landscape 为横屏。该参数会自动从白鹭游戏项目的 index.html 里获取。
 
-
 ### 四.真机调试调试
-**注意：**一定要使用 vivo 手机才可以调试 
+**注意：**一定要使用 vivo 手机才可以调试
 
 1.在 vivo 手机上安装 [快应用调试器](https://minigame.vivo.com.cn/documents/#/download/engine)
 
 3.打开快游戏调试器，点击 `扫码安装`，扫描 EgretLauncher 发布 vivo 小游戏界面里的二维码。
-
-
 
 ### 升级指南
 因为 vivo 小游戏项目结构升级，从白鹭引擎 5.2.28 开始不再支持老版本的结构，需要您升级一下游戏项目。

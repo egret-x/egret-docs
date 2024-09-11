@@ -4,7 +4,6 @@ createTime: 2024/09/11 10:50:04
 permalink: /docs/vxz8ovmm/
 ---
 
-
 通过 `Egret` 引擎制作的游戏，不仅可以发布成 `Html5` 网页项目，还可以发布成原生项目。
 
 ## 发布设置前的准备工作
@@ -31,7 +30,6 @@ permalink: /docs/vxz8ovmm/
 
 ![](./projectsetting/p1.png)
 
-
 ## 发布iOS工程
 
 ### 发布项目
@@ -43,7 +41,6 @@ permalink: /docs/vxz8ovmm/
 - 点击左侧的iOS按钮，在右侧页面中，输入应用名称、应用包名，点击确定。
 
 ![](./projectsetting/p2.png)
-
 
 ## 工程设置
 

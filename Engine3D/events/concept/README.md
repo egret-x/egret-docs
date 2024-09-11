@@ -9,19 +9,18 @@ Event3D 类作为创建事件实例的基类，当触发事件时，Event3D 实�
 
 事件监听对象通过监听某个事件类型（比如 egret3d.Event3D.COMPLETE）来绑定一个的事件响应函数（方法），在程序执行过程中，在通过事件触发对象触发之前监听的事件类型，从而进入到之前绑定的回调函数（方法）中，回调函数再去执行对应的逻辑。
 
-
 ## api 调用
 
 * 示例
-		
+
 		//监听事件
 		dispatcher.addEventListener(egret3d.Event3D.COMPLETE, this.onComplete, this, 10);
-		
+
 		//响应事件
 		private onComplete(event3D: egret3d.Event3D): void {
 			var target = event3D.target;
 		}
-		
+
 		//触发事件
 		dispatcher.dispatchEvent(new egret3d.Event3D(egret3d.Event3D.COMPLETE));
 

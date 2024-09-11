@@ -12,8 +12,8 @@ Egret 提供三种不同的文本类型。
 `egret.TextField` 类表示文本类型，使用范例如下：
 
 ```javascript
-var label:egret.TextField = new egret.TextField(); 
-label.text = "This is a text!"; 
+var label:egret.TextField = new egret.TextField();
+label.text = "This is a text!";
 this.addChild( label );
 ```
 
@@ -144,4 +144,3 @@ class Main extends egret.DisplayObjectContainer {
 运行效果：
 
 ![](20170830200839.png)
-

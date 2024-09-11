@@ -15,7 +15,7 @@ permalink: /docs/extension/EUI/autoLayout/layoutDebug/
 
 > 注意：以下的几个属性仅为了方便调试使用，均只存在于调试版代码中，可以通过调试工具在运行时查看，在发行版中，将无法访问它们。
 
-* (5)measuredWidth，measuredHeight：每个组件measure()方法执行的最终结果就是对这两个属性赋值。它们只记录测量结果。 
+* (5)measuredWidth，measuredHeight：每个组件measure()方法执行的最终结果就是对这两个属性赋值。它们只记录测量结果。
 
 * (6)preferredWidth，preferredHeight：首选宽高，这两个值通常在measure()方法中被调用。只是个便捷属性，按照explicitWidth，explicitHeight &gt; measuredWidth，measuredHeight的优先级返回值。布局类在measure()方法中，调用子项的这个属性，来获取子项的测量结果。累加到自身的测量结果上。注意这个值已经包含旋转和缩放的值，且返回值永远为正数。
 
@@ -23,12 +23,11 @@ permalink: /docs/extension/EUI/autoLayout/layoutDebug/
 
 * (8)preferredX,preferredY,layoutBoundsX,layoutBoundsY：这四个属性，通常情况下就是xy的值。但是当组件含有旋转缩放时。他们为组件旋转缩放后在父级容器里实际显示的起点。
 
-
 ## 使用调试工具
 
 Egret Inspector 是一款Chrome开发者工插件，能够帮助开发者快速查看显式列表每个对象的属性，显式，隐藏显示对象，或修改对象属性。使用这个工具能够极大程度方便自动布局的调试。具体安装和使用教程可以参考这里：[Egret Inspector使用手册](http://bbs.egret.com/forum.php?mod=viewthread&amp;tid=2184)
 
-![](55cdd7a6db3f7.png) 
+![](55cdd7a6db3f7.png)
 
 ## 调试技巧
 
@@ -47,5 +46,3 @@ Egret Inspector 是一款Chrome开发者工插件，能够帮助开发者快速�
 * (6)查看子项以及子项的子项的测量尺寸。找到第一个开始不对的节点。
 
 > 注意：因为Skin是非显示对象，所以它不在显示列表上，但是Skin上的宽高设置也会影响测量。所以检查显示列表时，不要忽略Skin这一层。可以从组件的skin属性上访问它。
-
-

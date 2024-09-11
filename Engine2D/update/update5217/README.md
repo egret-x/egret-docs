@@ -5,12 +5,11 @@ permalink: /docs/xs6s7ytr/
 ---
 # 白鹭引擎 5.2.17 发布日志
 
-
 ===============================
 
 更新时间：2019年4月1日
 
-## 2D 渲染 - JavaScript 
+## 2D 渲染 - JavaScript
 * 修复 `egret.Timer` 不会抛出 `Timer` 事件的问题
 * 优化 `egret.registerClass` 方法，兼容百度小游戏 `iOS` 版本
 

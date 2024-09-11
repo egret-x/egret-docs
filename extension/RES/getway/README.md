@@ -30,4 +30,3 @@ var texture = spriteSheet.getTexture("activity_10");
 
 var texture:egret.Texture = RES.getRes("icons#activity_10");
 ```
-

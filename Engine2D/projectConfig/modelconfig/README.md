@@ -19,7 +19,7 @@ permalink: /docs/egret2d/projectConfig/modelconfig/
 引擎库分为2种
 
 **内置库**，主要包括:
- 
+
 * `egret` 引擎核心库
 * `egret3d` 引擎 3D 库
 * `assetsmanager` 资源管理模块
@@ -38,30 +38,28 @@ permalink: /docs/egret2d/projectConfig/modelconfig/
 
 开发者也可以在项目中配置自己的库。
 
-
-
 使用示例：
 
 ``` json
 {
-	"egret_version":"5.2.6",
-	"modules":[
-		{
-			"name":"egret",
-		},
-		{
-			"name":"tween",
-			"path":"${EGRET_APP_DATA}/5.0.3"
-		},
-		{
-			"name": "particle",
-			"path": "../libsrc"
-		},
-		{
-			"name": "promise",
-			"path": "./promise"
-		}
-	]
+  "egret_version": "5.2.6",
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "tween",
+      "path": "${EGRET_APP_DATA}/5.0.3"
+    },
+    {
+      "name": "particle",
+      "path": "../libsrc"
+    },
+    {
+      "name": "promise",
+      "path": "./promise"
+    }
+  ]
 }
 ```
 该配置表示:
@@ -70,4 +68,3 @@ permalink: /docs/egret2d/projectConfig/modelconfig/
 *  `tween` 模块使用 5.0.3 版本
 *  `particle` 模块的路径在项目外面
 *  `promise` 模块的路径在项目里面
-

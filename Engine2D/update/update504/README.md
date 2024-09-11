@@ -17,11 +17,10 @@ permalink: /docs/erwodstx/
     * eui 项目 publish 流程优化
 
 * 2D 渲染 - WebAssembly
-    * 增加 eui 模块支持 
+    * 增加 eui 模块支持
     * 优化项目结构
 
 ## 已知问题
 
 * 开发者如果使用 WebAssembly 渲染，目前会在类的静态变量声明处创建对象时报错
 * WebAssembly 渲染目前暂不支持 DragonBones 模块
-

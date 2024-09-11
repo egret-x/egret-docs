@@ -8,13 +8,13 @@ permalink: /docs/Conversion/ASCodeTool/
 **如何使用“AS代码转换工具”单独转换as3件？**
 
  点击工具栏的按钮“SWF转换工具”
- 
+
  ![](56b1ac1e245c0.png)
- 
+
  打开AS代码转换面板：
- 
+
  ![](56b1ac1e2e299.png)
- 
+
 具体操作：
 
 1. 直接把as3文件或文件夹拖到面板中
