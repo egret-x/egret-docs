@@ -1,3 +1,8 @@
+---
+title: android
+createTime: 2024/09/11 17:01:29
+permalink: /docs/thu84rg8/
+---
 开发者在使用 Egret Native 发布 Android 工程时，由于开发者本地开发环境与 Egret Native 版本不匹配可能会遇到一些问题，引擎团队针对常见问题列出了如下解决方案，希望可以对您有所帮助。
 
 ## Android Studio 项目无法编译[​](#android-studio-项目无法编译 "Android Studio 项目无法编译的直接链接")

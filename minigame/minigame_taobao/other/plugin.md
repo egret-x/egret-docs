@@ -1,3 +1,8 @@
+---
+title: plugin
+createTime: 2024/09/11 11:40:49
+permalink: /docs/u5byb52m/
+---
 
 ### 一.开发环境准备[​](#一开发环境准备 "一.开发环境准备的直接链接")
 

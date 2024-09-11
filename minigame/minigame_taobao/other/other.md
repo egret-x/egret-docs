@@ -1,3 +1,8 @@
+---
+title: other
+createTime: 2024/09/11 11:40:34
+permalink: /docs/ebldhdtz/
+---
 # 关于全局变量的使用
 
 淘宝创意互动项目不支持全局变量，引用时需要开发者修改代码。例如有一个js，里面有一个方法 a:
