@@ -1,3 +1,8 @@
+---
+title: 百度小游戏开发快速指南
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigamebaidu/getStart/
+---
 ### 一.开发环境准备
 
 * Egret Launcher 1.0.61 以上版本

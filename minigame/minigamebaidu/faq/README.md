@@ -1,3 +1,9 @@
+---
+title: 百度小游戏FAQ
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigamebaidu/faq/
+---
+
 首先，再次强调一些百度小游戏的基础技术限制：
 
 * 不允许操作 DOM、BOM、如果必须改成小游戏相应的 API 调用方式，目前引擎会自动引入swan-game-adapter.js 文件做兼容处理。

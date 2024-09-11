@@ -1,3 +1,8 @@
+---
+title: 支付宝小游戏开发快速指南
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigamemy/getStart/
+---
 ### 一.开发环境准备
 
 * Egret Launcher 1.1.4 以上版本

@@ -1,3 +1,8 @@
+---
+title: 如何使用缓存资源
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigame/usingcache/
+---
 # 使用 AssetsManager 灵活定制微信小游戏的缓存策略
 
 

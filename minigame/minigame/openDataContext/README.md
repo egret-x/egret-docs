@@ -1,3 +1,8 @@
+---
+title: 开放数据域
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigame/openDataContext/
+---
 ## 开放数据域的使用
 
 ### 小游戏开放注册并添加了关系链数据，这一篇主要讲述利用关系链数据开发社交类游戏。

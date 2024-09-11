@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 11:37:09
+permalink: /docs/lgwyzofn/
+---
 ## 小游戏子域与主域简介
 
 ### 什么是子域和主域

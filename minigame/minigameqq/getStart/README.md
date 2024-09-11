@@ -1,3 +1,8 @@
+---
+title: QQ小游戏开发快速指南
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigameqq/getStart/
+---
 ### 一.开发环境准备
 
 * Egret Launcher 1.0.67 以上版本

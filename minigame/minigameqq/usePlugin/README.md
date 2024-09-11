@@ -1,3 +1,8 @@
+---
+title: QQ小游戏引擎插件
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigameqq/usePlugin/
+---
 
 白鹭引擎插件使用说明
 

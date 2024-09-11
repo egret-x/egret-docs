@@ -1,4 +1,9 @@
-﻿### 开发环境准备
+---
+title: 小游戏新手教程
+createTime: 2024/09/11 11:37:09
+permalink: /docs/minigame/minigame/tutorial/
+---
+### 开发环境准备
 
 * Egret Launcher 1.0.32 以上版本（包括 1.0.32）
 * 白鹭引擎 5.1.2 以上版本（包括 5.1.2）
