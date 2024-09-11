@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/6vx2dwc0/
+---
 
 
 	1）前两篇教程我们讲述了，如何调节材质球和如何输出mesh信息，本篇教程将进一步讲解如何输出SkinnedMesh。

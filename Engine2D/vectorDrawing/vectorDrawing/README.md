@@ -1,3 +1,8 @@
+---
+title: 矢量绘图
+createTime: 2024/09/11 09:50:34
+permalink: /docs/vectorDrawing/vectorDrawing/
+---
 Egret中封装了 `Graphics` 类实现矢量绘图功能，可以绘制矩形、圆形、直线、曲线、圆弧等。下面介绍了矢量绘图功能的基本用法和若干高级用法。
 
 ## 1.绘制矩形

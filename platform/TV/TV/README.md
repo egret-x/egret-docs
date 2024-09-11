@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/39mmjft1/
+---
 ## 接入步骤如下：
 
 1.     在游戏逻辑层加入按键开启事件，将registerKeyEvent在游戏初始化的时候执行。

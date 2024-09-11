@@ -1,3 +1,8 @@
+---
+title: 插件开发规范
+createTime: 2024/09/11 09:50:34
+permalink: /docs/specification/
+---
 # 概述
 DragonBonesPro4.2 开放了插件规范，并实现了导入插件的管理，目的是让用户可以方便的将任意格式动画数据通过插件导入到DragbonesPro中来进行二次编辑，并生成DragonBones格式动画，从而在包括Egret在内的任意的支持DragonBones的引擎中运行动画。本文会介绍编写插件的基本规范，以及目前版本中如何编写一个DragonBones的导入插件。
 

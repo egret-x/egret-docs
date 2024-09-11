@@ -1,3 +1,8 @@
+---
+title: 场景树面板
+createTime: 2024/09/11 09:50:34
+permalink: /docs/sceneTreePanel/
+---
 ![](p1.png)
 
 场景树面板用于显示和编辑主场景中骨骼和插槽的父子树形关系。

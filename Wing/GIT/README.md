@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/rvw3hb60/
+---
 EgretWing内置Git管理工具， 在右侧栏的GIT选项卡中能直接提交，拉取，推送代码到Git仓库。
 
 ![](12.png)

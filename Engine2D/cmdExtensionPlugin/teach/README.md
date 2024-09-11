@@ -1,3 +1,8 @@
+---
+title: 插件使用案例教程
+createTime: 2024/09/11 09:50:34
+permalink: /docs/teach/
+---
 # 插件使用案例教程
 
 ## 引言

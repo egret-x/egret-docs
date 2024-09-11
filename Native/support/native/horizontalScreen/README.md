@@ -1,6 +1,8 @@
 ---
 id: horizontalScreen.html
 title: 原生横屏设置
+createTime: 2024/09/11 09:50:34
+permalink: /docs/2yyuim72/
 ---
 
 ## 准备工作

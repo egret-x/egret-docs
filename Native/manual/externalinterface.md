@@ -1,5 +1,7 @@
 ---
 title: JS与原生通信
+createTime: 2024/09/11 09:50:34
+permalink: /docs/4j64zm7a/
 ---
 
 

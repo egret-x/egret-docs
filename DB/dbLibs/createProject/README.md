@@ -1,3 +1,8 @@
+---
+title: 创建项目
+createTime: 2024/09/11 09:50:34
+permalink: /docs/createProject/
+---
 DragonBones作为Egret引擎的扩展库已经集成在安装包中。如果你的项目需要使用到DragonBones，需要在项目配置中开启DragonBones配置项。操作步骤如下：
 
 1、新建 Egret项目

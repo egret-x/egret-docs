@@ -1,3 +1,8 @@
+---
+title: IK约束
+createTime: 2024/09/11 09:50:34
+permalink: /docs/IK/
+---
 
 #### 简介
 IK是反向动力学Inverse Kinematics的缩写。

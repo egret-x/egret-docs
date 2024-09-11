@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/0oukp8y8/
+---
 
 制作纹理字体，这个功能支持三种形式加载方式：
 

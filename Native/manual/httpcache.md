@@ -1,5 +1,7 @@
 ---
 title: 原生缓存策略
+createTime: 2024/09/11 09:50:34
+permalink: /docs/0wmj0nff/
 ---
 
 

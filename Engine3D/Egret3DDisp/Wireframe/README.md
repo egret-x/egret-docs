@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ejomvod0/
+---
 Wirefram
 ----------
 场景中渲染线条的对象

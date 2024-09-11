@@ -1,3 +1,8 @@
+---
+title: 纹理的填充方式
+createTime: 2024/09/11 09:50:34
+permalink: /docs/fillMode/
+---
 
 位图的填充方式有两种，
 

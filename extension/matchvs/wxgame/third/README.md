@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/dmqo8uyr/
+---
 Matchvs 服务器会通过注册接口下发“用于在服务器校验的 userID”，开发者在使用时，可将此 userID 与自己游戏的玩家ID进行绑定。
 
 第三方绑定是指：使用其他的 **用户身份代号** 与Matchvs平台的userID做映射。以实现使用 **用户身份代号** 就能获取 Matchvs 对应平台的 userID 。比如：身份证号，手机号，qq 号等等。

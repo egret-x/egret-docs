@@ -1,3 +1,8 @@
+---
+title: 时间控制
+createTime: 2024/09/11 09:50:34
+permalink: /docs/timeControl/timeControl/
+---
 ## 1.Timer 计时器 
 
 假设有这样一个需求：游戏中设计一个倒计时功能，要求玩家在30秒内进行游戏操作，并达到一定要求方可过关。 

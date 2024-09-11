@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/xslwwhi7/
+---
 在 Egret 5.x 项目的 `scripts` 目录下，有个 `config.ts` 文件，里面可以配置 EUI 的编译模式
 ![](p1.png)
 

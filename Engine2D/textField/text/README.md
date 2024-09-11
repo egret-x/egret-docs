@@ -1,3 +1,8 @@
+---
+title: 文本类型
+createTime: 2024/09/11 09:50:34
+permalink: /docs/text/
+---
 Egret 提供三种不同的文本类型。
 
 ## 1.普通文本

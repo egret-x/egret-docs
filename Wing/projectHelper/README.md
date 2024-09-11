@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/vgredaof/
+---
 ![image](1.png)
 
 如上图所示，点击显示右侧工具栏按钮会弹出项目助手。点击项目中的文件时，上方会给出文件的简要介绍。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/txecg5zp/
+---
 
 在 设置>设置 的界面中点击资源命名规则，可以看到如下配置界面。
 

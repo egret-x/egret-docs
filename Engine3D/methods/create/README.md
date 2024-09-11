@@ -1,3 +1,8 @@
+---
+title: 创建 Egret3D 项目
+createTime: 2024/09/11 09:50:34
+permalink: /docs/create/
+---
 
 我们Egret为大家提供了可视化创建工具Wing，它可以方便的创建、编译、修改`Egret3D`项目，接下来我们一起来学习创建一个简单的`Egret3D`项目。
 

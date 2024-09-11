@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ges6qc2i/
+---
 
 - **[修正]** 在打开原生显示列表时，粒子系统可能会卡死
 - **[修正]** 在打开原生显示列表时，使用RenderTexture可能会崩溃

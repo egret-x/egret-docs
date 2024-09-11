@@ -1,3 +1,8 @@
+---
+title: 基本布局
+createTime: 2024/09/11 09:50:34
+permalink: /docs/basiclayout/
+---
 首先新建一个 eui 项目，使用：
 
 ~~~ typescript

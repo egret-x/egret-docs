@@ -1,3 +1,8 @@
+---
+title: RES内置文件类型解析器
+createTime: 2024/09/11 09:50:34
+permalink: /docs/typeResolver/
+---
 ## 一、RES内置文件类型解析器
 
 RES内置支持的文件类型有：

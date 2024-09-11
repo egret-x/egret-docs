@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/rdi1vzqd/
+---
 ## 更新内容
 
 * [修复] 修复3.2.4中出现的部分情况下不能进入游戏的问题；

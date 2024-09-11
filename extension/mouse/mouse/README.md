@@ -1,3 +1,8 @@
+---
+title: mouse鼠标支持库
+createTime: 2024/09/11 09:50:34
+permalink: /docs/mouse/mouse/
+---
 通过使用[鼠标支持库](https://github.com/egret-labs/egret-game-library/tree/master/mouse)可以监听 PC 上的鼠标事件。
 
 ## 1.引入鼠标库

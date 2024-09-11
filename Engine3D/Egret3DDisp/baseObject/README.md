@@ -1,3 +1,8 @@
+---
+title: 基本显示对象
+createTime: 2024/09/11 09:50:34
+permalink: /docs/baseObject/
+---
 
 结构图
 ----------

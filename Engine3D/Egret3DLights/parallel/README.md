@@ -1,3 +1,8 @@
+---
+title: 平行光
+createTime: 2024/09/11 09:50:34
+permalink: /docs/parallel/
+---
 平行光
 ----------
 

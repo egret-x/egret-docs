@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/3q8dsy94/
+---
 选择`文件---新建项目`，会弹出如下界面：
 
 ![](p1.png)

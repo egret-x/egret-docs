@@ -1,3 +1,8 @@
+---
+title: 发送HTTP请求
+createTime: 2024/09/11 09:50:34
+permalink: /docs/sendHTTP/
+---
 Egret 中封装了 `XMLHttpRequest` 进行异步的数据交互。
 
 ## 1.HTTP请求

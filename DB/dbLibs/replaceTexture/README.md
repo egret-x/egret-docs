@@ -1,3 +1,8 @@
+---
+title: 骨骼换装
+createTime: 2024/09/11 09:50:34
+permalink: /docs/replaceTexture/
+---
 ### 局部换装
 
 原有换装方案，可以替换对应slot中的图片实现，但会存在图片位置错位问题。新版本局部换装功能，可通过DragonBones预设置替换内容实现此功能。

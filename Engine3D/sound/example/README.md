@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/pvn8h7hq/
+---
 # AudioManager的使用 #
 
 通过 AudioManager 类 加载音频并播放音频

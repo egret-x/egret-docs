@@ -1,3 +1,8 @@
+---
+title: 粒子系统使用
+createTime: 2024/09/11 09:50:34
+permalink: /docs/useParticle/
+---
 ## 初始化
 
 通过RES模块获得 GravityParticleSystem 所需要的纹理以及配置，然后创建particle.GravityParticleSystem对象。注：纹理和配置需要加载过的

@@ -1,3 +1,8 @@
+---
+title: 点光源
+createTime: 2024/09/11 09:50:34
+permalink: /docs/point/
+---
 点光源
 ----------
 

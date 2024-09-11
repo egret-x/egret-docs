@@ -1,6 +1,8 @@
 ---
 id: publishAndroid.html
 title: 打包 Android app
+createTime: 2024/09/11 09:50:34
+permalink: /docs/support/publish/publishAndroid/
 ---
 
 > 基于Android Studio 的 Android Support ,是用于创建Android Studio上的 Android 工程的模版。当前是预览版教程。

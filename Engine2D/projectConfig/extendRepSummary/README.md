@@ -1,3 +1,8 @@
+---
+title: 扩展库简介
+createTime: 2024/09/11 09:50:34
+permalink: /docs/extendRepSummary/
+---
 ## 扩展库说明
 
 根据不同的项目需求，您可以选择不同扩展库，这里主要介绍下常见的扩展库

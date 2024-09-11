@@ -1,3 +1,8 @@
+---
+title: 自动布局原理
+createTime: 2024/09/11 09:50:34
+permalink: /docs/layoutPrinciple/
+---
 自动布局本质上就是封装了各种更加便捷的相对布局属性，结合[失效验证机制](../../autoLayout/FailureToVerify/README.md)，在合适的触发条件下(如尺寸发生改变时)，自动设置相关对象的`x`，`y`，`width`，`height`等属性。所以无论过程是怎么样的，最终结果都是直接体现在`x`,`y`,`width`,`height`这些最原始的属性上，并没有脱离显示对象原始的API。
 
 在上一节内容中，简单介绍了跟布局有关的两个方法：`measure()`和`updateDisplayList()`。本节详细说明这个两个方法：

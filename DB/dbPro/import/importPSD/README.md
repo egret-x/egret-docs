@@ -1,3 +1,8 @@
+---
+title: 导入PhotoShop设计图
+createTime: 2024/09/11 09:50:34
+permalink: /docs/importPSD/
+---
 DragonBones Professional提供脚本文件，可以很方便将Photoshop中的设计图导出成DragonBones Professional支持的，可以导入的项目文件。
 
 * 在windows系统上，脚本文件的位置是：

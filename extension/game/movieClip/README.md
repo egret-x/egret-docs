@@ -1,3 +1,8 @@
+---
+title: MovieClip序列帧动画
+createTime: 2024/09/11 09:50:34
+permalink: /docs/movieClip/
+---
 MovieClip (MC) 又称之为 "影片剪辑"，是Egret中提供的一种动画解决方案。实际上 MC 所实现的功能就是播放序列帧动画。
 
 实现一个动画效果时，可以把原有的动画制作成为能够被 Egret 识别的动画格式。然后将这些制作好的资源进行加载，最后播放。

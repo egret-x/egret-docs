@@ -1,3 +1,8 @@
+---
+title: 新手入门
+createTime: 2024/09/11 09:50:34
+permalink: /docs/guide/
+---
 前面的文章介绍了Egret Conversion的界面，示例项目的演示。本文将讲述新手如何开始使用工具，更加详细的讲述工具的功能和细节，在转换过程中的问题和解决办法。
 
 在开始转换一个Flash的项目之前，建议您先阅读[EgretConversion FAQ](../..//Conversion/questions/README.md)文档，以了解本工具目前的可用范围。

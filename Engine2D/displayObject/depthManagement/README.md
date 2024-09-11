@@ -1,3 +1,8 @@
+---
+title: 深度管理
+createTime: 2024/09/11 09:50:34
+permalink: /docs/depthManagement/
+---
 每一个容器都有深度管理功能，它就像排队一样。
 
 ![](566d13d7e2212.png)

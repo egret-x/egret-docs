@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/h0pl0zu2/
+---
 重设子对象深度有2种方法:[使用 setChildIndex ](../depthManagement/README.md#4重设子对象深度)和使用 zIndex.
 
 从 Egret 5.2.24 版本开始，`DisplayObject` 中新增加了一个 `zIndex` 属性，可以设置对象的 Z 轴顺序。该值越大，越靠近顶部。

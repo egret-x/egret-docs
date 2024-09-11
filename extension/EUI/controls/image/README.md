@@ -1,3 +1,8 @@
+---
+title: 图片
+createTime: 2024/09/11 09:50:34
+permalink: /docs/image/
+---
 图片控件对应的类是 `eui.Image`。`eui.Image` 继承自 `egret.Bitmap`，实现了 `eui.UIComponent` 接口。因此它不仅拥有基本的位图功能(egret.Bitmap)，还有自动布局功能(eui.UIComponent)。
 
 基本的位图API使用参考 [egret Engine 编程指南 - 处理位图的基本知识](../../../../Engine2D/bitmapTexture/scale9Grid/README.md)

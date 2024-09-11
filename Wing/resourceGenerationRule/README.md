@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/jcz8wsvx/
+---
 点击`插件---Egret项目工具---设置Res自动生成规则`
 
 ![](1.png)

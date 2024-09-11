@@ -1,3 +1,8 @@
+---
+title: 缩放模式
+createTime: 2024/09/11 09:50:34
+permalink: /docs/zoomMode/
+---
 ## 1.缩放模式
 
 根据不同的项目需求，可能需要不同的缩放模式。

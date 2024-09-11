@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/87ggnpxp/
+---
 【新增】支持更多dom 标签，兼容更多的游戏
 【新增】支持 window.onerror 方法，便于开发者调试
 【新增】支持 alert ，便于开发者调试

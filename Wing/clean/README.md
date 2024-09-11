@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/yv4y9bdo/
+---
 描述：清除libs文件夹内的引擎代码，然后再重新拷贝引擎，编译指定项目。
 
 点击`项目清理`，或者`Ctrl+Shift+C`，或者命令行输入`egret clean`

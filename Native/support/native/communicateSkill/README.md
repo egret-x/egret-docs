@@ -1,6 +1,8 @@
 ---
 id: communicateSkill.html
 title: Egret 与 Native 通信
+createTime: 2024/09/11 09:50:34
+permalink: /docs/v91x1hf8/
 ---
 
 ## 准备工作

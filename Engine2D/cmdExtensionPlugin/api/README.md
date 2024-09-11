@@ -1,3 +1,8 @@
+---
+title: 命令行扩展插件api
+createTime: 2024/09/11 09:50:34
+permalink: /docs/api/
+---
 # 命令行扩展插件 API 文档
 
 ## 脚本插件目录结构

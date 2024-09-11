@@ -1,3 +1,8 @@
+---
+title: 命令行手册
+createTime: 2024/09/11 09:50:34
+permalink: /docs/cmdManual/
+---
 
 # 用法
 `egret [command]`

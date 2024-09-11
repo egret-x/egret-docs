@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/r3r5dxhm/
+---
 ![](5604c52079251.png)
 
 ## Egret Engine 2.5.0 更新特性详解

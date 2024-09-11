@@ -1,3 +1,8 @@
+---
+title: 基本的显示对象操作
+createTime: 2024/09/11 09:50:34
+permalink: /docs/baseOp/
+---
 
 
 Egret3D内置了多个常用几何体，我们可以使用这些默认提供的几何体快速制作一个三维场景Demo。

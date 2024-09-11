@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/rxdb70np/
+---
 在 Egret Engine 2.5.6 的更新中，我们吸取了开发者提供的建议，提供了新的屏幕旋转缩放模式。同时也提供了其他一些新的 API ，下面将详细介绍。
 
 ### 新增屏幕缩放模式

@@ -1,3 +1,8 @@
+---
+title: 自定义加载根目录
+createTime: 2024/09/11 09:50:34
+permalink: /docs/customizeRootDirectory/
+---
 ## 默认加载
 
 打开主题配置文件 ** default.thm.json **，会看到类似下面的内容

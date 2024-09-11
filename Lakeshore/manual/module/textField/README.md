@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/q3yecum9/
+---
 ![](564ad9fa78d4b.png)
 
 文本组件用来显示文字。可以显示静态文本和动态文本，并且可以设置为可输入文本框。

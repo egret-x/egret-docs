@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/18xnhs72/
+---
 EgretWing支持对JavaScript代码的调试在Chrome浏览器，或者支持Chome调试协议的程序。
 
 ## 开始

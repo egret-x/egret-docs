@@ -1,3 +1,8 @@
+---
+title: tsconfig 配置文件
+createTime: 2024/09/11 09:50:34
+permalink: /docs/tsconfig/
+---
 
 `tsconfig.json` 是 Typescript 项目的配置文件，TypeScript 编译器编译代码之前，会首先读取这个配置文件，并根据其中的属性来设置 TypeScript 项目的编译参数。
 

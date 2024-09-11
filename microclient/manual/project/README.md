@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/wqh51oxh/
+---
 # 设置log信息停留时间
 在微端工程中，可以设置 log 信息在屏幕上停留的时间
 

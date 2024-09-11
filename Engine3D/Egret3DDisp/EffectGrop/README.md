@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/9pe8ymby/
+---
 EffectGrop 
 ----------
 场景中特效组对象 管理一组特效的播放和停止

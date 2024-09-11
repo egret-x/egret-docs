@@ -1,3 +1,8 @@
+---
+title: 简单容器
+createTime: 2024/09/11 09:50:34
+permalink: /docs/group/
+---
 在 EUI 提供的容器中，Group 是最轻量级的，它本身不可以设置皮肤，也不具备外观，它的呈现只取决于内部的显示对象。如果需要使用容器，并且没有设置皮肤的需求，那么请尽量使用 Group。
 
 Group 操作内部对象的方法和 Sprite 基本一致，只是增加了2个方法`getElementAt()`  和 `numElements()`，在后面的 [数据容器](../../dataCollection/dataGroup/README.md) 章节将会详细说明。

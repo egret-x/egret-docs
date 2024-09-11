@@ -1,3 +1,8 @@
+---
+title: 显示继承工具
+createTime: 2024/09/11 09:50:34
+permalink: /docs/inheritToolbar/
+---
 
 
 ![](5576b6120294c.png)

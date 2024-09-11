@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/4bv76g3k/
+---
 Egret 统计接入根据游戏是否是用Egret 引擎开发分两种，遇到问题请加QQ群:386278100 
 
 ## 一、Egret 引擎开发的游戏

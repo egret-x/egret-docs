@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/wc5anmtg/
+---
 
 
 	1）前面我们已经完整的导出了整个场景的内容，接下来我们继续了解使用unity3d粒子系统导出时候所需要注意的事项。

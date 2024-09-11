@@ -1,3 +1,8 @@
+---
+title: 资源加载配置
+createTime: 2024/09/11 09:50:34
+permalink: /docs/loadConfig/
+---
 
 ## RES资源加载配置
 

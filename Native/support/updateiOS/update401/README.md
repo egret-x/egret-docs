@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/mlp4pgid/
+---
 ## 更新内容
 
 * [新特性] 提供图片选择器功能（使用方法请参考开发者中心的相关文档）；

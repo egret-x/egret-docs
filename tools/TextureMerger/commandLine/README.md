@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/18ovcbl1/
+---
 
 ###  打包命令
 * 命令格式：-p [目录] [...] -o [json输出路径] -e [文件筛选正则表达式]

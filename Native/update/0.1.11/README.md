@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/0iif8gwo/
+---
 
 - **[新增]** 增加对 pvr 和 etc 格式的支持
 - **[优化]** 优化 v8 编译选项，减小包体

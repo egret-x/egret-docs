@@ -1,3 +1,8 @@
+---
+title: 第三方库的使用方法
+createTime: 2024/09/11 09:50:34
+permalink: /docs/instructions/
+---
 # 第三方扩展库
 
 ## 准备 

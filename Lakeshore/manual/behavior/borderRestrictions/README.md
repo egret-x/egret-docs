@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/8lqmqnht/
+---
 ![](564d7dd767bd2.png)
 
 应用了边界限制行为的实例，其活动范围将被限制在指定的边界范围内。

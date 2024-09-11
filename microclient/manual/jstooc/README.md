@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/n6x64kz8/
+---
 # 微端中 JS 和 Objective-C 之间通信方法
 
 微端支持的游戏分为两种，一种是egret游戏，一种是非egret游戏。两种模式下均支持JS和Java之间的通讯，只是调用的函数接口略有不同。

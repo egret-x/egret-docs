@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/wg63euuv/
+---
 ## 更新内容
 
 * [新特性] 添加对Egret Engine v2.5.0的支持。

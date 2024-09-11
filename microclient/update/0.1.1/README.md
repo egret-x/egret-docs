@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/bpdpcj5b/
+---
 【新增】增加对 indexDB 的支持
 【新增】在 index.html 里开启了 data-show-log 时，在手机上显示 egret.log、egret.error 和 egret.warn 的信息
 【新增】增加window.location.reload()方法，可以在微端里强制刷新页面，重新加载游戏

@@ -1,3 +1,8 @@
+---
+title: 发布 Egret3D 项目
+createTime: 2024/09/11 09:50:34
+permalink: /docs/publish/
+---
 ![alt](575e573a75404.jpg)
 > `使用插件`->`Egret Support`->`发布Egret项目`即可
 

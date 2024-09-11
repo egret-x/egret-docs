@@ -1,3 +1,8 @@
+---
+title: 纹理集的使用
+createTime: 2024/09/11 09:50:34
+permalink: /docs/useTexture/
+---
 纹理集是将一些零碎的小图放到一张大图当中。游戏中经常使用到纹理集。
 
 

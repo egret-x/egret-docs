@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ei523go5/
+---
 ## 极速模式简介
 
 *DragonBones 4.1 (后面简称DB)引入了一套极速模式，目的在于一定程度上解决DB在H5-canvas上的性能问题。*

@@ -1,3 +1,8 @@
+---
+title: 使用EXML
+createTime: 2024/09/11 09:50:34
+permalink: /docs/useEXML/
+---
 在EUI中，EXML是可以运行时加载解析的。可以把它当做标准的文本文件加载后解析，或者直接将exml文本内容嵌入代码中解析。在下一节我们将详细讲解EXML的语法，这节我们先来看一下如何在代码中使用EXML文件。下面是一个EXML文件内容示例，它描述了一个按钮的皮肤：
 
 ~~~ typescript

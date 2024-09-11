@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/jgvvd1ai/
+---
 
 - **[新增]** 原生渲染支持自定义字体
 - **[新增]** 支持更多的WebGLExtension: `OES_texture_float`、`OES_standard_derivatives`

@@ -1,3 +1,8 @@
+---
+title: 数据格式说明
+createTime: 2024/09/11 09:50:34
+permalink: /docs/dataFormat/
+---
 ## 4.5 数据格式标准说明
 ```javascript
 {

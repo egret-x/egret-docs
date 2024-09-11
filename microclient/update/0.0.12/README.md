@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/q4g7tiyn/
+---
 【新增】安卓新增设置启动图的功能
 
 【新增】增加 webview 模式和原生的交互功能，统一了原生和js之间的互调接口

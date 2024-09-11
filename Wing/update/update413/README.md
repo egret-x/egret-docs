@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ak5r7uxo/
+---
 最新版本下载地址
 
 - [Egret Wing 4.1.3 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.1.3.exe?d=0707)

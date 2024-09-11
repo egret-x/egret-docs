@@ -1,5 +1,7 @@
 ---
 title: 原生项目常见问题
+createTime: 2024/09/11 09:50:34
+permalink: /docs/iskrds8p/
 ---
 
 #### 为什么遮罩没有效果了

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/mmeiwbo6/
+---
 # Facebook Instant Games 开发快速指南
 
 开发者可以基于现有的Egret HTML5游戏迁移到Facebook Instant Games平台，也可以开发全新针对于Facebook Instant Games平台的HTML5游戏。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/2zqcvim1/
+---
 ## 更新内容
 
 * [新特性] 支持本地和网络远程视频播放；

@@ -1,3 +1,8 @@
+---
+title: 文本样式
+createTime: 2024/09/11 09:50:34
+permalink: /docs/textStyle/
+---
 
 文本样式用来设置文字的外观，以下是常用文本样式属性，更详细的信息请参考API文档。
 

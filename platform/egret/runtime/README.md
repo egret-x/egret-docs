@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/w0vpdphy/
+---
 ## 一、概述
 
 游戏如果采用 Egret Runtime 发布，需要执行以下步骤

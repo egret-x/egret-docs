@@ -1,3 +1,8 @@
+---
+title: 自定义Shader
+createTime: 2024/09/11 09:50:34
+permalink: /docs/shader/
+---
 
 ### 1.使用说明
 

@@ -1,3 +1,8 @@
+---
+title: SWF转换工具
+createTime: 2024/09/11 09:50:34
+permalink: /docs/SWFTool/
+---
 “SWF转换工具”可将swf文件导出为Egret项目可用的资源。作为Egret Conversion附属工具，可以在swf文件有更改时，单独转换该swf文件，而不用转换整个项目。要注意的是，“SWF转换工具”是为Egret定制的工具，转出的格式只能用于egret项目（需要三方库的支持），无法在其他h5项目中使用。
 
 ## 一、如何使用“SWF转换工具”单独转换swf文件？

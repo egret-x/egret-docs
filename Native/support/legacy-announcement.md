@@ -1,5 +1,7 @@
 ---
 title: 过期声明
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ho97hyn0/
 ---
 
 Egret iOS/Android Support 是白鹭引擎2014年研发的iOS/Android打包方案。

@@ -1,3 +1,8 @@
+---
+title: ts 与 js 互调
+createTime: 2024/09/11 09:50:34
+permalink: /docs/callJS/tsCallJs/
+---
 
 ## 1.说明
 

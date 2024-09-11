@@ -1,3 +1,8 @@
+---
+title: 选项卡
+createTime: 2024/09/11 09:50:34
+permalink: /docs/tabBar/
+---
 在 [层叠容器](../../container/viewStack/README.md) 章节，我们介绍了 ViewStack，而本节介绍的 TabBar 可以用来控制 ViewStack 的显示。TabBar 会根据数据源，显示一组按钮，并且在同一时间，只有一个按钮会被选中，并且如果数据源是一个ViewStack 的话，那么 TabBar 的选中项索引将和 ViewStack 的选中项索引保持一致。
 
 ##  用法1：结合ViewStack

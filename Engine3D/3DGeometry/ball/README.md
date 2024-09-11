@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/t2qwxa2g/
+---
 
 Egret3D中创建球体模型的功能由`SphereGeometry`类实现，通过`SphereGeometry`你可以创建一个默认半径为100，分段数均为50的球体。
 

@@ -1,3 +1,8 @@
+---
+title: AS代码转换工具
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ASCodeTool/
+---
 “AS代码转换工具”可将as3件导出为egret项目ts代码。作为EgretConversion附属工具，可以在as3件有更改时，单独转换该as3件，而不用转换整个项目。
 
 **如何使用“AS代码转换工具”单独转换as3件？**

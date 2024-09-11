@@ -1,3 +1,8 @@
+---
+title: 滤镜
+createTime: 2024/09/11 09:50:34
+permalink: /docs/filter/
+---
 ## 1.发光滤镜
 
 ### 1.1.说明

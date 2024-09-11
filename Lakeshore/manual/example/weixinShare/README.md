@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/e461nk3u/
+---
 ## Lakeshore微信分享教程 
 
 Lakeshore 目前支持微信分享，提供了以下几个功能的微信分享功能，如下：

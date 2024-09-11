@@ -1,3 +1,8 @@
+---
+title: 简介
+createTime: 2024/09/11 09:50:34
+permalink: /docs/introduction/introduction/
+---
 ![image](561766be2385d.png)
 
 DragonBones Pro 是一套由Egret团队制作的独立的骨骼动画编辑器。

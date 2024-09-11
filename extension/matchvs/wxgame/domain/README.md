@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/vv4hi1xi/
+---
 微信小游戏如果没有配置可信域名列表，需要**开启调试模式**才可以访问非微信第三方服务器.，否则会造成登录 Matchvs 失败。 
 
 请根据微信[小游戏域名配置文档](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)进行配置.

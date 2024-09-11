@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/gid58nye/
+---
 Egret Engine 3.0 包含了白鹭时代研发的遵循HTML5标准的 2D 引擎及全新打造的 3D 引擎，它解决了 HTML5 性能问题及碎片化问题，灵活地满足开发者开发 2D 或 3D 游戏的需求，并有着极强的跨平台运行能力。
 
 在 Egret Engine 的本次更新中，提供了若干新的功能，同时我们吸收开发者的意见修复若干问题。下面介绍 Egret Engine 3.0.8 到 Egret Engine 3.1.0 之间的更新详情。

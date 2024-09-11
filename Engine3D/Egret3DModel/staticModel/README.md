@@ -1,3 +1,8 @@
+---
+title: 静态模型的使用
+createTime: 2024/09/11 09:50:34
+permalink: /docs/staticModel/
+---
 
 静态模型需要先加载esm文件，然后进行模型创建渲染。导出方法请参考《Egret3D 模型导出》部分。
 

@@ -1,3 +1,8 @@
+---
+title: Tween缓动库
+createTime: 2024/09/11 09:50:34
+permalink: /docs/tween/tween/
+---
 缓动动画是游戏中常见的一部分。例如界面弹出，道具飞入飞出的特效等等。Egret中的 Tween 缓动动画类提供了相关的功能。
 
 ## 1.确保项目支持 Tween

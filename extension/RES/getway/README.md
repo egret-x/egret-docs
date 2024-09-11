@@ -1,3 +1,8 @@
+---
+title: 获取资源的几种方式
+createTime: 2024/09/11 09:50:34
+permalink: /docs/getway/
+---
 RES资源管理模块共含有三种资源获取方式：
 
 * RES.getRes(name:string):any

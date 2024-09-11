@@ -1,6 +1,8 @@
 ---
 id: debugSkill.html
 title: 调试技巧
+createTime: 2024/09/11 09:50:34
+permalink: /docs/wlrljcja/
 ---
 
 在Android App打包运行过程中，有可能会发现一些问题，比如打包后黑屏无法正常运行。这时就需要使用Android的logcat调试功能来诊断问题。

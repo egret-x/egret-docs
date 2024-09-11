@@ -1,3 +1,8 @@
+---
+title: 资源面板
+createTime: 2024/09/11 09:50:34
+permalink: /docs/resourcesPanel/
+---
 
 ![资源面板](p1.png)
 

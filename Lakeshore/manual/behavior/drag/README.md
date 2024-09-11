@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/yaqb7u9m/
+---
 ![](564d7e8d64902.png)
 
 应用了拖拽行为的实例可以被鼠标或手指（手机端）拖动。

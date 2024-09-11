@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/zgwg2vpq/
+---
 ## 支持以下功能
 
 - 支持ftp以及sftp协议上传项目文件

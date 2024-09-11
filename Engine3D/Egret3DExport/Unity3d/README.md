@@ -1,3 +1,8 @@
+---
+title: Unity3d模型导出插件
+createTime: 2024/09/11 09:50:34
+permalink: /docs/Unity3d/
+---
 
 ## 需要的环境 ##
 	1.安装unity3d 4.x版本，推荐4.7.1,暂时不兼容5.x版本。  

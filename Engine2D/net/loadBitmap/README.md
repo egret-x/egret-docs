@@ -1,3 +1,8 @@
+---
+title: 加载位图文件
+createTime: 2024/09/11 09:50:34
+permalink: /docs/loadBitmap/
+---
 ## 1.使用
 Egret 提供了 `ImageLoader` 类，用于加载位图文件。
 

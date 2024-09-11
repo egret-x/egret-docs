@@ -1,3 +1,8 @@
+---
+title: 3D入门知识
+createTime: 2024/09/11 09:50:34
+permalink: /docs/guide/introduction/
+---
 
 > 以下教程部分摘自 learnopengl
 

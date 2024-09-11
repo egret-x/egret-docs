@@ -1,3 +1,8 @@
+---
+title: 调试
+createTime: 2024/09/11 09:50:34
+permalink: /docs/debug/debug/
+---
 
 ## 1.使用 DEBUG 编译参数
 开发者经常写一些希望仅在开发阶段使用的代码，来进行数据校验、输出日志等。

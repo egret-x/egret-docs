@@ -1,3 +1,8 @@
+---
+title: 音频
+createTime: 2024/09/11 09:50:34
+permalink: /docs/audio/
+---
 
 ## 1.创建Sound
 ### 1.1.通过Sound加装音频

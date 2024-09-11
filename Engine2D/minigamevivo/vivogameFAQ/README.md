@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/hv4oa9nb/
+---
 首先，强调一些 vivo 小游戏的基础技术限制：
 
 * 不允许操作 DOM、BOM、如果必须改成块游戏相应的 API 调用方式

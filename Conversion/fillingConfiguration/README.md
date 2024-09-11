@@ -1,3 +1,8 @@
+---
+title: API转换填充配置
+createTime: 2024/09/11 09:50:34
+permalink: /docs/fillingConfiguration/
+---
 本文讲述EgretConversion中遇到的API报错的处理方式。包括没有实现的Flash类，没有实现的Flash属性、API接口等的手动补充方法。
 
 在转换完项目后，“API警告统计”页面会显示所有未能转换的Flash类或属性，并在详情页定位到项目代码的位置。如果项目必须使用这些类或函数则必须补全这些API，即在egret项目端有相应的flash api的映射。

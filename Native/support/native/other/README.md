@@ -1,6 +1,8 @@
 ---
 id: other.html
 title: 其他原生支持
+createTime: 2024/09/11 09:50:34
+permalink: /docs/90zlbbim/
 ---
 
 ##	开启优化开关

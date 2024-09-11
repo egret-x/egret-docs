@@ -1,3 +1,8 @@
+---
+title: 骨骼动画事件
+createTime: 2024/09/11 09:50:34
+permalink: /docs/events/
+---
 DragonBones 本身并不实现事件派发，动画事件和自定义事件的派发与接收都依赖引擎的事件系统，这样可以使得 DragonBones 的事件融合到所支持的各个引擎的事件系统之中。
 
 在 Egret 中，DragonBones 是依赖 EgretArmatureDisplay 来派发和接收事件的，所以通过对其进行事件监听，就可以收到所有来自骨架的动画事件和自定义事件（更多关于 Egret 的事件知识请参考 Egret 的相关教程和文档）。

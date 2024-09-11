@@ -1,3 +1,8 @@
+---
+title: 垂直布局
+createTime: 2024/09/11 09:50:34
+permalink: /docs/verticallayout/
+---
 垂直布局的行为和水平布局类似，只是方向从水平方向变为竖直方向。     
 
 >这里仍然使用 eui 默认项目。

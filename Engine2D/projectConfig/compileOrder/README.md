@@ -1,3 +1,8 @@
+---
+title: 编译顺序说明
+createTime: 2024/09/11 09:50:34
+permalink: /docs/compileOrder/
+---
 在 Egret 中，需使用 TypeScript 编写程序，最终编译成浏览器可读的 JavaScript。
 
 JavaScript 是一种脚本语言，浏览器按脚本的顺序来执行。实际上浏览器会根据 `<script>` 标签中脚本的载入顺序来执行脚本。当某个脚本引用了一个未载入的脚本中的变量时，浏览将报出相应的错误。

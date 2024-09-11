@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ogugw3ei/
+---
 ### 快捷键列表
 
 * ctrl+n：新建

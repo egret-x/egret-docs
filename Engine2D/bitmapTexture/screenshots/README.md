@@ -1,3 +1,8 @@
+---
+title: 截屏功能
+createTime: 2024/09/11 09:50:34
+permalink: /docs/screenshots/
+---
 ## 1.动态纹理类`egret.RenderTexture`
 
 egret 中位图的显示基于纹理，通常静态纹理的获取方式有下面四种：

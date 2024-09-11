@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/te19bs8c/
+---
 KTX 转换工具使用说明
 
 #### [点此下载](http://tool.egret-labs.org/DocZip/tools/egret-texture-generator-0.1.0.tgz)

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ch8jdhmm/
+---
 在 Egret Engine 2.5.5 中，提供了一些新的特性，下面我们来逐一看以下吧。
 
 ### 脏矩形开关

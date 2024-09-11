@@ -1,5 +1,7 @@
 ---
 title: 如何发布原生项目
+createTime: 2024/09/11 09:50:34
+permalink: /docs/o7wirbd0/
 ---
 
 

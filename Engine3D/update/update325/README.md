@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/j0v5do6c/
+---
 ## 概述
 
 在Egret3D 3.2.5版本中，修复了3.2.4版本中相应的Bug

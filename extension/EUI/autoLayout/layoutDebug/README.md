@@ -1,3 +1,8 @@
+---
+title: 自动布局调试
+createTime: 2024/09/11 09:50:34
+permalink: /docs/layoutDebug/
+---
 ## 组件上与调试相关的布局属性
 
 * (1)includeInLayout：指定此组件是否包含在父容器的布局中。若为false，则父级容器在测量和布局阶段都忽略此组件。默认值为true。visible属性与此属性不同，设置visible为false，父级容器仍会对其布局。如果想”完全”隐藏掉一个组件，同时设置它的visible和includeInLayout为false即可。另外，这个属性对于缓动动画也非常有用，如果要对一个含有自动布局的UI组件执行缓动动画，在动画开始时设置此属性为false即可，它会确保UI组件从当前的布局结果位置开始缓动，并且不再受自动布局影响。

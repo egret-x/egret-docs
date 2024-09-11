@@ -1,3 +1,8 @@
+---
+title: 创建骨骼动画
+createTime: 2024/09/11 09:50:34
+permalink: /docs/createAnimation/
+---
 首先从DragonBones Pro中导出一份骨骼动画数据。你可以点击下面的连接下载。
 
 [Robot.zip](55937e0a59ba9.zip)

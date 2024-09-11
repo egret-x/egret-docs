@@ -1,3 +1,8 @@
+---
+title: Egret Feather
+createTime: 2024/09/11 09:50:34
+permalink: /docs/tools/Feather/manual/
+---
 ## 简介
 
 Egret Feather是一款粒子效果编辑器，全程可视化编辑操作，屏蔽所有底层复杂的参数设置。所见即所得的操作模式，让即使毫无编程技能的美术人员也可快速上手，立即制作出精美的粒子效果。编辑器自动导出配置文件供程序开发使用，让游戏效果更加绚丽！

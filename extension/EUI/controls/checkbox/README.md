@@ -1,3 +1,8 @@
+---
+title: 复选框
+createTime: 2024/09/11 09:50:34
+permalink: /docs/checkbox/
+---
 
 复选框组件 `eui.CheckBox` 继承自切换按钮 `eui.ToggleButton`。当它被选中,`selected`属性将变为true，反之则为false。
 

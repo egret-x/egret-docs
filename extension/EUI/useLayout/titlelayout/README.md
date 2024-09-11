@@ -1,3 +1,8 @@
+---
+title: 网格布局
+createTime: 2024/09/11 09:50:34
+permalink: /docs/titlelayout/
+---
 网格布局，既做横向排列，也做纵向排列，实现的效果像方格一样。可设置的属性主要包括：
 
 * `horizontalGap`属性，设置子项之间的水平间距

@@ -1,3 +1,8 @@
+---
+title: 进度条
+createTime: 2024/09/11 09:50:34
+permalink: /docs/progressBar/
+---
 `eui.ProgressBa` 进度条，一般用在加载某个或某组资源的时候，显示加载进程。
 
 与滑块控件一样，进度条控件也继承自 `eui.Range` 控件。也就是说 `eui.Progress` 进度条控件也可以设置 `maximum` 、`minimum `、`value` 等属性。

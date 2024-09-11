@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/28akdfai/
+---
 在 Egret Engine 2.5.7 的更新中，提供了一些新功能：EUI 的新控件 `TextInput`； EXML 可以设置版本号的功能。也修复了一些问题，下面来详细介绍一下。
 
 ### 输入控件 TextInput

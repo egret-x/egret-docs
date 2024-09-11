@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/ixp4fb0a/
+---
 
 Egret Inspector 是一款Chrome浏览器插件。
 

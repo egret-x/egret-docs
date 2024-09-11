@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/vtyd41si/
+---
 【新增】支持截屏功能
 【新增】添加修改启动页和关闭启动页的方法
 

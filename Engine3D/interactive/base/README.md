@@ -1,3 +1,8 @@
+---
+title: 3D 碰撞
+createTime: 2024/09/11 09:50:34
+permalink: /docs/base/
+---
 
 ## 概念与原理
 

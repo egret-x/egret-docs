@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/i0efjqj9/
+---
 
 
 1）前往unity3D官方网站，下载版本为4.7.1或其以上windows版本的安装程序,并安装。现阶段插件尚不支持unity3d 5.x版本和Mac版本的程序，使用时需要注意。

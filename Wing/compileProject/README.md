@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/le64qlno/
+---
 * 1.点击上方快捷工具栏中的编译按钮，如图所示：
 
 ![](1.png)

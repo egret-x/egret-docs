@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/hbkan2xl/
+---
 在 Egret 2.5.1 中，修复了 2.5.0 升级后的一些问题。新增了GUI的主题解析器的功能。
 
 查阅 Egret 2.5.0 更新详解： [Egret 2.5 更新详解](http://edn.egret.com/cn/index.php/article/index/id/628)

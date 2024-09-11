@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 09:50:34
+permalink: /docs/f5koujmh/
+---
 # 微端缓存策略
 
 * index.html 不会被缓存，每次都会从服务器读取.

@@ -1,3 +1,8 @@
+---
+title: type_temp
+createTime: 2024/09/11 09:50:34
+permalink: /docs/pe3313cv/
+---
 # 文档格式规范
 
 ## 标题相关

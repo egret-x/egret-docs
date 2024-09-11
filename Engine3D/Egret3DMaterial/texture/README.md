@@ -1,3 +1,8 @@
+---
+title: 纹理材质
+createTime: 2024/09/11 09:50:34
+permalink: /docs/texture/
+---
 材质
 ----------
 设置普通贴图、法线贴图、高光贴图
