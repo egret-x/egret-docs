@@ -1,3 +1,8 @@
+---
+title: 灯光组
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DLights/group/
+---
 灯光组(LightGroup)
 ----------
 

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/wc4u1ph7/
+---
 
 安装inspector插件前请您先查看下自己chrome浏览器的版本，在帮助》关于中查看版本，如何您的浏览器版本大于或等于63.x.x.x请使用开发者安装模式，如小于63.x.x.x您可以使用普通安装模式。
 

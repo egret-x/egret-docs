@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/1e5gn2er/
+---
 ## 更新内容
 
 * [修复] 修复game\_engine\_onStop后部分变量没有释放的问题；

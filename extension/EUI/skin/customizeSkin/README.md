@@ -1,3 +1,8 @@
+---
+title: 自定义皮肤
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/skin/customizeSkin/
+---
 对于一个自定义的皮肤，名称为**testSkin.exml**，有两种方式使用它
 ~~~ typescript
 <?xml version="1.0" encoding="utf-8"?> 

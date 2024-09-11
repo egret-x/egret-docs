@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/t4ris4i7/
+---
 ## 更新内容
 
 * [修复] 修复3.2.4中出现的部分情况下不能进入游戏的问题；

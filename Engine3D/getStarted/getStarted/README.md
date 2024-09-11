@@ -1,3 +1,8 @@
+---
+title: Get Started
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/getStarted/getStarted/
+---
 使用wing创建项目
 ----------
 

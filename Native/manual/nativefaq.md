@@ -1,5 +1,7 @@
 ---
 title: 原生项目常见问题
+createTime: 2024/09/11 10:50:04
+permalink: /docs/53vkf93x/
 ---
 
 #### 为什么遮罩没有效果了

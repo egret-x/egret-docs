@@ -1,3 +1,8 @@
+---
+title: 层叠容器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/container/viewStack/
+---
 ### ViewStack
 
 ViewStack 是层叠容器，在 ViewStack 容器中可以添加多个子项，但只能显示其中的一个。通过设置 `selectedIndex` 或者 `selectedChild` 属性，来控制当前应该显示的子项。

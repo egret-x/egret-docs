@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/zth7rwgx/
+---
 ![](56430c39f2708.png)
 ### 九宫格简介
 游戏中为了美观，常会使用一些圆角矩形或者边缘不规则的矩形。

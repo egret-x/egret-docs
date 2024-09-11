@@ -1,3 +1,8 @@
+---
+title: EXML基本语法(一)
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/EXML/syntax1/
+---
 EXML是一种严格遵循XML语法的标记语言，通常用于描述静态UI界面。这节内容将详细介绍EXML的语法规则。
 
 ## 根节点

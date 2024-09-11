@@ -1,3 +1,8 @@
+---
+title: 显示继承工具
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/inheritToolbar/
+---
 
 
 ![](5576b6120294c.png)

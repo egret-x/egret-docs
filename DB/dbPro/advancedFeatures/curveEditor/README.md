@@ -1,3 +1,8 @@
+---
+title: 曲线编辑器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/advancedFeatures/curveEditor/
+---
 DragonBones 4.1 新添加了曲线编辑器面板，在这个面板中，您可以对帧与帧间的补间应用曲线来实现不同的补间效果。
 
 进入动画模式，选中一个关键帧（其后含有补间的关键帧），然后点击时间轴上的曲线按钮。如下图：

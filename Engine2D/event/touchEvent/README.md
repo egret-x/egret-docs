@@ -1,3 +1,8 @@
+---
+title: 触摸事件
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/event/touchEvent/
+---
 ### 1.触摸事件
 对于移动游戏，触摸事件是最常用的用户交互事件类型。Egret 为触摸事件设置了专门的触摸事件类`egret.TouchEvent`。
 

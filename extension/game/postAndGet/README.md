@@ -1,3 +1,8 @@
+---
+title: URLLoader中POST与GET
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/game/postAndGet/
+---
 网络传输协议中存在多种请求方法，在HTTP/1.1协议中共定义了八种方法（也叫“动作”）来以不同的方式操作指定的资源。
 
 Egret提供的网络操作中，封装了其中两种方法。

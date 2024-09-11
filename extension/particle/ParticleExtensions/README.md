@@ -1,3 +1,8 @@
+---
+title: 粒子系统自定义扩展
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/particle/ParticleExtensions/
+---
 ## 概述
 
 ParticleSystem 是支持开发者自定义扩展的，开发者可以根据自己的业务需求实现自定义粒子系统扩展。

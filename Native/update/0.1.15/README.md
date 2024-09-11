@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/l406g4h7/
+---
 
 - **[新增]** 添加了 performance.now()
 - **[新增]** 添加了 getSystemInfo() 获得手机厂商和型号

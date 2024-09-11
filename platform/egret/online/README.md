@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/inq42rnz/
+---
 新版的游戏上线流程如下：
 
 完善资料 --> 游戏初审 --> 先行测试 --> 上线

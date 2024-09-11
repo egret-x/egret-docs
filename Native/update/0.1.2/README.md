@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/i8ae7ber/
+---
 
 - **[新增]** 支持更多dom 标签，兼容更多的游戏
 - **[新增]** 支持 window.onerror 方法，便于开发者调试

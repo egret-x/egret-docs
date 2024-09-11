@@ -1,3 +1,8 @@
+---
+title: Egret 3D入门
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/guide/guide/guide/
+---
 > Egret3D 有几个基本的元素，基本上会围绕这些元素节点做引擎结构 
 
 ## Egret3DCanvas

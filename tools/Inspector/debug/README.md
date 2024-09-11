@@ -1,3 +1,8 @@
+---
+title: Egret Inspector
+createTime: 2024/09/11 10:50:04
+permalink: /docs/tools/Inspector/debug/
+---
 
 首先用chrome打开需要调试的项目。并打开Egret工具。
 

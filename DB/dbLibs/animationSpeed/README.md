@@ -1,3 +1,8 @@
+---
+title: 改变动画速度
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbLibs/animationSpeed/
+---
 有时在游戏的运行过程中，需要动态的改变动画的播放速度。DragonBones 提供了几种不同的方式，可以在不同的场景下，实现动画的变速效果。
 
 * 第一种：调节动画速度

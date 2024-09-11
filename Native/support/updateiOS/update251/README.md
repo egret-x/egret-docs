@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/gvyfgkxi/
+---
 ## 更新内容
 
 * [新特性] 添加对Egret Engine v2.5的支持。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/tjn23w4t/
+---
 
 
 通过接入 Matchvs SDK ，我们已经可以实现多人在线联网游戏。但对于部分复杂度比较高的游戏，往往需要在服务器端进行个性化的功能实现，如客户端之间的安全性校验、数据校验、结果仲裁、随机道具生成等功能。这时，Matchvs 推荐您使用 gameServer 框架。

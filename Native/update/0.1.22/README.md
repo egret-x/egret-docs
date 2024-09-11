@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/z0at11qv/
+---
 
 - **[修正]** 在打开原生显示列表时，有表情的自动换行的文本可能导致崩溃
 - **[修正]** 没有引用的连接状态的WebSocket会被GC

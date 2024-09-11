@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/cjv3qivx/
+---
 
 - **[新增]** 支持 window.onload 和 document的onreadystatechange 事件
 - **[新增]** 支持 document.URL 属性

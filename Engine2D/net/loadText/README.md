@@ -1,3 +1,8 @@
+---
+title: 加载文本和二进制文件
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/net/loadText/
+---
 Egret 加载资源主要使用 `egret.HttpRequest` 类。该类封装了在异步加载资源和通讯方面作为 H5 标准的 `XMLHttpRequest` 对象。
 
 本节讲解的主要是加载静态文件，分为两种类型：文本和二进制数据。

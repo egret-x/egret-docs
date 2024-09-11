@@ -1,3 +1,8 @@
+---
+title: 第三方扩展库
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/libraryProject/
+---
 # 第三方扩展库
 
 ## 准备 

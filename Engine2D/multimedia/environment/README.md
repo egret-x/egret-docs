@@ -1,3 +1,8 @@
+---
+title: 环境信息
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/multimedia/environment/
+---
 
 ## 1.系统信息
 Egret 项目可以运行在支持HTML5的桌面浏览器和各种移动浏览器中。也可以运行在 Egret Runtime 的加速和原生系统环境中。若要获得不同系统的系统信息可以通过`egret.Capabilities `类来获取。需要注意的是它的值都是静态的，可以读取但是不能更改。

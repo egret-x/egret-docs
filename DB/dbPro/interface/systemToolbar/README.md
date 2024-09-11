@@ -1,3 +1,8 @@
+---
+title: 系统工具栏
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/systemToolbar/
+---
 ![](p1.png)
 
 从左到右的按钮依次是：新建项目，打开项目，保存项目，撤销，重做，导入，导出，预览，作品分享。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/28johzy8/
+---
 EgretWing提供了包括 **编辑器设置，文件设置，窗口设置** 等近200个设置项来满足各种用户习惯。常用的设置如：
 
     // 字体.

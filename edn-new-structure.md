@@ -1,3 +1,8 @@
+---
+title: edn-new-structure
+createTime: 2024/09/11 10:50:04
+permalink: /docs/zdgoqssv/
+---
 ## Egret Engine 2D
 
 - 历史更新`---------------------------文档需整理  `             

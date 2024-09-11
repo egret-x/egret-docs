@@ -1,3 +1,8 @@
+---
+title: 导入示例项目
+createTime: 2024/09/11 10:50:04
+permalink: /docs/Conversion/importProj/
+---
 安装好EgretConversion后，为了快速上手，可以用工具自带的示例项目来熟悉基本操作流程。
 
 **查看示例项目的流程如下：**

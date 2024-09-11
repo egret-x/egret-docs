@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/bpy5qxl9/
+---
 【新增】在 User Agent 中增加设备型号的信息，和浏览器中获取的信息保持一致
 
 【优化】canvas 增加 clientWidth 和 clientHeight 属性

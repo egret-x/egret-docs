@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/sspf9von/
+---
 好的，各位小伙伴们，我们来一起创建一个Lakeshore的项目吧！！
 首先启动Lakeshore后，在左上角的菜单中点选“新建项目”按钮。
 

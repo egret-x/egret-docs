@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/nfm5zfmt/
+---
 ## 简介
 Egret Wing中的Exml可视化编辑器，为针对EUI项目中的Exml皮肤进行代码编辑、可视化编辑、皮肤预览三个功能于一体的混合编辑器。
 

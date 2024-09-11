@@ -1,3 +1,8 @@
+---
+title: 基本概念
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/guide/conception/base/
+---
 
 <!--
 讨论：

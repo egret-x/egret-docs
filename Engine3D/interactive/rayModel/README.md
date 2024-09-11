@@ -1,3 +1,8 @@
+---
+title: 射线与模型碰撞
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/interactive/rayModel/
+---
 
 ## 射线与模型碰撞
 

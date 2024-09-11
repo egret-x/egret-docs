@@ -1,3 +1,8 @@
+---
+title: 命令行导入
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/import/importCommandLine/
+---
 DragonBones pro 从 4.3 开始支持命令行导入，实现批处理
 ``` typescript
 Import ( dbdata=""，texturefolder=""， textureatlas="xxx.png"， texturedata="" dbdatapack=""，plugin="auto"，projectname=""，projectpath="")

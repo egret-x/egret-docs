@@ -1,3 +1,8 @@
+---
+title: 纹理的填充方式
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/bitmapTexture/fillMode/
+---
 
 位图的填充方式有两种，
 

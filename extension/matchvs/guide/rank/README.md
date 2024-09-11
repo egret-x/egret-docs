@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/y8gg9xcy/
+---
 
 为方便开发者做游戏全局排行榜，Matchvs 提供了便捷的排行榜功能，主要流程为：
 

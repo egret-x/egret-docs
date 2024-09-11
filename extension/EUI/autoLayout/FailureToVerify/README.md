@@ -1,3 +1,8 @@
+---
+title: 失效验证机制
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/autoLayout/FailureToVerify/
+---
 这节内容对于学习使用EUI里的组件并不是必须的，但是了解失效验证机制与自动布局的关系，有助于理解自动布局的过程，从而在遇到布局问题时能够加快调试速度。
 
 ## 什么是失效验证

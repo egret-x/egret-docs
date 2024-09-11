@@ -1,3 +1,8 @@
+---
+title: 准备与安装
+createTime: 2024/09/11 10:50:04
+permalink: /docs/Conversion/installation/
+---
 ## 使用EgretConversion转换工具之前需要做哪些准备工作呢？
 
 ### 一. 在本机安装Egret环境

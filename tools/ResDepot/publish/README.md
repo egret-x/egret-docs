@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/b2rnkmwc/
+---
 
 本功能，是自定义一套合图组，然后将 `resource.json` 中图片资源进行合图，然后生成对应的sheet文件，以及新的 `resource.json`。
 发布功能即在完成项目准备打包发布的时候，可以利用此功能对已有的资源进行一遍合图，此功能是有别于TextureManager 的，TextureManager 的作用是在开发项目过程中使用。而 ResDepot 的作用是在项目开发完毕的时候使用，并且由 ResDepot 发布得到的资源包是非常不利于编辑和开发使用的，它仅仅是为了使项目内的资源数目变少，减少加载的io开销。所以注意不要在项目开发过程中使用发布功能！

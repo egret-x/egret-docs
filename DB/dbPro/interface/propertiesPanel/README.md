@@ -1,3 +1,8 @@
+---
+title: 属性面板
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/propertiesPanel/
+---
 
 ![插槽属性面板](p1.png) ![骨骼属性面板](p2.png) ![骨骼帧的属性](p3.png)
 

@@ -1,3 +1,8 @@
+---
+title: webassembly 版本使用
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/webassembly/
+---
 ## WebAssembly 概述
 
 WebAssembly 是一个可移植、体积小、加载快并且兼容 Web 的全新格式，是由主流浏览器厂商组成的 W3C 社区团体 制定的一个新的规范。

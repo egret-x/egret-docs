@@ -1,3 +1,8 @@
+---
+title: 首选项
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/firstChoice/
+---
 在菜单栏，选择 文件->首选项，可以开启首选项窗口。
 ![](56664a7fcc767.png)
 - 常规

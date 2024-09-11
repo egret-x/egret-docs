@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/q4gqlwtq/
+---
 
 
 	1）我们已经成功导出了unity3d的cube立方体，接下来我们来使用Egret3D插件内的shader来一比一还原导出mesh。

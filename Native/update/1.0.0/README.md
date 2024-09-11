@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/s3ixdh1l/
+---
 
 - **[修正]** 音频修改src引起的重复播放
 - **[修正]** 暂停声音时的线程安全问题

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/f7rjfymg/
+---
 ## 更新内容
 
 * [修复] 修复3.2.4中出现的不进行热更新时不出现GameLoadingView的问题；

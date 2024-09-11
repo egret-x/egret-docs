@@ -1,3 +1,8 @@
+---
+title: 自定义项呈示器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/dataCollection/itemRenderer/
+---
 前面的章节我们介绍了 DataGroup 和 List，发现里面都用到了 ItemRenderer 。它的作用实际上就是根据数据源，把当前的数据可视化的显示出来。ItemRenderer 中有一个默认的属性 data ，引擎会自动把通过 dataProvider 设置的的数据赋值给 data。
 用一段代码来举例,
 

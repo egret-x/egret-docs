@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/3v61cimv/
+---
 ![](564c2a211ef6d.png)
 
 应用了旋转行为的实例会自发的以指定速度旋转。旋转中心为实例锚点。

@@ -1,3 +1,8 @@
+---
+title: 新特性
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/outline/NewFeatures/
+---
 这篇文章主要介绍EUI库的新特性。在EUI库中，我们对这部分做了全面的优化：清除冗余计算，精简嵌套层次，减少类继承深度，并让包体最终降到了原先版本的40%。EUI目前的版本gzip后，包体仅有36k大小，对加载量已构不成压力。
 
 以下是GUI体系时比较集中的几个痛点：

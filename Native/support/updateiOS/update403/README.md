@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/bft55sdp/
+---
 ## 更新内容
 
 * [修复] 修复EgretRuntime initWithRect接口会改变EAGLView的位置的问题；

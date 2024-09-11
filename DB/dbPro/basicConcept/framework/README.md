@@ -1,3 +1,8 @@
+---
+title: 骨架
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/basicConcept/framework/
+---
 骨架是骨骼的集合，骨架中至少包含一个骨骼。一个项目中可以包含多付骨架。
 
 下图中的armatureName及其以下的树状结构便是一个典型的骨架。

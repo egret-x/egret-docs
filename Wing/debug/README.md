@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/42z3ln3r/
+---
 点击`项目---调试`或者快捷键F5。
 
 ![](1.png)

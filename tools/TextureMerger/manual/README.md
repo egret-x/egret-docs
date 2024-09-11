@@ -1,3 +1,8 @@
+---
+title: Texture Merger
+createTime: 2024/09/11 10:50:04
+permalink: /docs/tools/TextureMerger/manual/
+---
 
 Texture Merger 可将零散纹理拼合为整图，同时也可以解析SWF、GIF动画，制作Egret位图文本，导出可供Egret使用的配置文件。
 

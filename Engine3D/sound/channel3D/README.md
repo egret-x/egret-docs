@@ -1,3 +1,8 @@
+---
+title: Channel3D的使用
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/sound/channel3D/
+---
 
 Channel3d 类控制应用程序中 在三维空间中播放的声音。每个声音均分配给一个声道，而且应用程序可以具有混合在一起的多个声道。
 

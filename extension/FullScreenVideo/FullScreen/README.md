@@ -1,3 +1,8 @@
+---
+title: 视频全屏处理
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/FullScreenVideo/FullScreen/
+---
 使用[FullScreenVideo](https://github.com/egret-labs/egret-game-library/tree/master/weixinextension)扩展可实现微信中带顶部栏的全屏视频，一般用于游戏过场或者广告营销。 
 
 >只在微信中可用，手机浏览器和 runtime 中无效。

@@ -1,3 +1,8 @@
+---
+title: WebSocket库
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/WebSocket/WebSocket/
+---
 ## WebSocket概述
 
 WebSocket是基于H5规范的，WebSocket 类用于发送和接收数据。 在 H5 规范中，定义了客户端和服务器通讯的 WebSocket 方式，在得到浏览器支持以后，WebSocket 将会取代 Comet成为服务器推送的方法。 目前 Chrome、Firefox、Opera、Safari 等主流版本均支持，Internet Explorer从10开始支持。 WebSocket 标准在很大程度上简化了复杂的双向网络沟通和连接管理。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/rlau4hol/
+---
 # AudioManager的使用 #
 
 通过 AudioManager 类 加载音频并播放音频

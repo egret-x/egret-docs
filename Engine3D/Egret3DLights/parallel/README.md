@@ -1,3 +1,8 @@
+---
+title: 平行光
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DLights/parallel/
+---
 平行光
 ----------
 

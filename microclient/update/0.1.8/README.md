@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/uycdk1we/
+---
 【新增】支持截屏功能
 【新增】添加修改启动页和关闭启动页的方法
 

@@ -1,3 +1,8 @@
+---
+title: 工具界面介绍
+createTime: 2024/09/11 10:50:04
+permalink: /docs/Conversion/introduction/
+---
 本文档对EgretConversion工具做个大概介绍，通过本文档可以总览工具的所有功能特征，每个功能的具体用法在之后相应的文档中做详细解释。
 
 ## 一、菜单

@@ -1,3 +1,8 @@
+---
+title: URLLoader读取不同数据格式
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/game/URLLoaderDataformat/
+---
 在网络通信中，不仅会加载一个简单的文本数据，还会加载一些图片资源、音频资源等等。
 
 在针对不同格式数据的请求中，需要制定不同的处理方式。在Egret中，提供了五种可用的数据格式，分别是：

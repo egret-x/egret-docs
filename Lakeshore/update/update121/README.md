@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/e01e3wag/
+---
 【新增】WebSocket与Ajax组件，可与服务器进行交互
 
 【新增】横轴跑酷、营销页等模板

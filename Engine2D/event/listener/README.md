@@ -1,3 +1,8 @@
+---
+title: 事件侦听器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/event/listener/
+---
 事件侦听器也就是事件的处理者，负责接收事件携带的信息，并在接收到该事件后执行特定的代码。
 
 Egret中，事件的侦听器必须是一个函数。事件的发送者必须是 `egret.EventDispatcher` 类或者子类的实例。只有事件发送者才能侦听事件，并且可以注册侦听器。

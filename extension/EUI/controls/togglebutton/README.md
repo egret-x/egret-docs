@@ -1,3 +1,8 @@
+---
+title: 状态切换按钮
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/controls/togglebutton/
+---
 ToggleButton，是具备状态的按钮，该状态就是`selected`属性，类型是布尔值，默认为false，当点击按钮，`selected`将变为true，再点击一下，重新变成false。在显示上也是有区别的，选中和非选中的外观是不一样的。
 
 `eui.ToggleSwitch` 用来定义开关组件，包括一个开启和关闭状态的皮肤。它继承自 `eui.ToggleButton` ，可以使用 `selected` 来设置或获取其开关状态。

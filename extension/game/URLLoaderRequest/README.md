@@ -1,3 +1,8 @@
+---
+title: URLLoader发送带参数的请求
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/game/URLLoaderRequest/
+---
 如果在网络请求的同时还需要提交数据，需要使用 `URLVariables`。
 
 使用 `URLVariables` 类可以在应用程序和服务器之间传输变量。将 `URLVariables` 对象与 `URLLoader` 类的方法、 `URLRequest` 类的  `data` 属性一起使用。

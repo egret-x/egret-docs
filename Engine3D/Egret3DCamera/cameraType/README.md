@@ -1,3 +1,8 @@
+---
+title: 透视投影与正交投影
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DCamera/cameraType/
+---
 
 ## 透视投影
 

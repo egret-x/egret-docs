@@ -1,4 +1,9 @@
-﻿### 如何在 Egret 中调用小游戏 API
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/xnoqk8v3/
+---
+### 如何在 Egret 中调用小游戏 API
 
 在 Egret 中是可以直接调用小游戏的 API 的，这篇文档简要介绍如何在 Egret 中使用小游戏的 API。
 

@@ -1,3 +1,8 @@
+---
+title: 骨骼
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/basicConcept/skeleton/
+---
 
 骨骼是骨骼动画的基本组成部分。骨骼可以旋转，缩放，平移。
 

@@ -1,3 +1,8 @@
+---
+title: 自定义EXML组件
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/advancedSkills/useComponents/
+---
 ## 引用自定义组件
 
 之前例子中用到的节点都是EUI标准库中的组件，此外 EUI 可以自定义组件。例如有一个自定义的按钮类：`control.MyButton` ,在EXML中描述自定义组件的方式如下：

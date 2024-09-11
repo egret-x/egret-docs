@@ -1,5 +1,7 @@
 ---
 title: 使用自定义字体
+createTime: 2024/09/11 10:50:04
+permalink: /docs/9ff3etgn/
 ---
 
 `注意：字体文件需要通过资源加载后才可以使用。`

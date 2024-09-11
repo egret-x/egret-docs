@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/c0j7stn7/
+---
 
 * AlphaMaskMethod的使用：
 	* 通过采样贴图中的red的数值r，将这个r值作为最终输出像素颜色值的alpha相乘，获得alpha通道的遮罩效果。

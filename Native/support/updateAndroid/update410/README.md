@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/r1gigre7/
+---
 ## 更新内容
 
 * [修复] 修复播放声音引起卡顿和闪退的问题；

@@ -1,3 +1,8 @@
+---
+title: 蒙皮权重
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/advancedFeatures/skinWeights/
+---
 ### 简介
 蒙皮是指将网格点绑定在指定的骨骼上，基于绑定时分配的权重，网格点随着骨骼的运动而移动。蒙皮使得繁琐复杂的网格点操作只要通过简单的骨骼操作便能实现。
 

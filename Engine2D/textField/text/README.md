@@ -1,3 +1,8 @@
+---
+title: 文本类型
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/textField/text/
+---
 Egret 提供三种不同的文本类型。
 
 ## 1.普通文本

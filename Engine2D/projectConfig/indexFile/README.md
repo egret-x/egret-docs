@@ -1,3 +1,8 @@
+---
+title: 入口文件说明
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/indexFile/
+---
 
 `index.html` 为项目的入口文件，下面是 `body` 标签里的默认配置，您可以根据项目需求修改。
 

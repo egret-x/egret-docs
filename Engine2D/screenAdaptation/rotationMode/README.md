@@ -1,3 +1,8 @@
+---
+title: 旋转模式
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/screenAdaptation/rotationMode/
+---
 ## 2.旋转模式
 
 通过设置旋转模式，可以在浏览器因为重力感应发生旋转的时候，让内容根据要求变化。

@@ -1,3 +1,8 @@
+---
+title: Egret3D中的模型
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DModel/introduction/
+---
 
 Egret3D提供两种创建模型的方式，第一种使用内置几何体来创建模型。第二种方式通过网络加载模型文件，进而渲染出画面。
 

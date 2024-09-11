@@ -1,3 +1,8 @@
+---
+title: 音频
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/multimedia/audio/
+---
 
 ## 1.创建Sound
 ### 1.1.通过Sound加装音频

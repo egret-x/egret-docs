@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/u1oxiz0t/
+---
 ## 更新内容
 
 * [新特性] 使用OpenSLES来实现声音模块。

@@ -1,3 +1,8 @@
+---
+title: hello World
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/guide/helloWorld/
+---
 
 ### 安装引擎
 

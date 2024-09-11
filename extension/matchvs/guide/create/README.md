@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/0z813ppz/
+---
 使用Egret Launcher创建项目，在面板中，选择服务类别中的Matchvs，勾选后创建的项目中即包含Matchvs SDK。
 
 ![](launcher.png)

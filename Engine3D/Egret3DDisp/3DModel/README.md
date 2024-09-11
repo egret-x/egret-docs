@@ -1,3 +1,8 @@
+---
+title: 3D模型网格
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DDisp/3DModel/
+---
 * Mesh 场景中的网格对象 显示模型
 
 ----------

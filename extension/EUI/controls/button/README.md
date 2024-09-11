@@ -1,3 +1,8 @@
+---
+title: 按钮
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/controls/button/
+---
 首先新建一个 eui 项目，使用：
 ~~~ typescript
 egret create HelloEUI --type eui

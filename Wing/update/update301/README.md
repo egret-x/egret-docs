@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/h1jhnvzv/
+---
 
 在Egret Wing 3.0.1 这个版本中，我们主要做了以下改进
 - 增强了 Wing 插件体系的用户交互能力

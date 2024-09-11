@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/e4hp83ae/
+---
 场景中选中实例后，右侧面板会显示基本属性。
 
 ![](569359c2caf86.png)

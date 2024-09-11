@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/9b82tm5t/
+---
 首先，再次强调一些小米快游戏的基础技术限制：
 
 * 不允许操作 DOM、BOM、如果必须改成块游戏相应的 API 调用方式

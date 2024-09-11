@@ -1,5 +1,7 @@
 ---
 title: 热更新方案说明
+createTime: 2024/09/11 10:50:04
+permalink: /docs/xmfiyvk6/
 ---
 
 ## 当前文件缓存策略

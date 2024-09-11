@@ -1,3 +1,8 @@
+---
+title: 命令行手册
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/cmdManual/
+---
 
 # 用法
 `egret [command]`

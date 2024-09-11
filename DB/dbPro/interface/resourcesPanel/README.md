@@ -1,3 +1,8 @@
+---
+title: 资源面板
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/resourcesPanel/
+---
 
 ![资源面板](p1.png)
 

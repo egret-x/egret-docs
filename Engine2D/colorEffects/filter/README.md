@@ -1,3 +1,8 @@
+---
+title: 滤镜
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/colorEffects/filter/
+---
 ## 1.发光滤镜
 
 ### 1.1.说明

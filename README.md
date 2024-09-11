@@ -1,3 +1,8 @@
+---
+title: egret
+createTime: 2024/09/11 10:50:04
+permalink: /docs/
+---
 # 目录
 
 ## 2D引擎相关文档

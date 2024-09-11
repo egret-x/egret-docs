@@ -1,3 +1,8 @@
+---
+title: 插件使用案例教程
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/cmdExtensionPlugin/teach/
+---
 # 插件使用案例教程
 
 ## 引言

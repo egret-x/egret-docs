@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/5fkvlpzd/
+---
 * 使用插件导出粒子特效：您可以通过在Unity中编辑好一个粒子或者一组粒子特效，然后使用Egret3D提供的插件导出，放入到Egret3D中播放。
 
 在Unity中准备您的素材资源后，按照以下方式导出粒子组。

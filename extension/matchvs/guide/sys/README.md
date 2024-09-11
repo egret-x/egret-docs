@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/davgnnhy/
+---
 # Matchvs 服务环境
 #### Matchvs 服务可使用几套环境？
 Matchvs 提供了两套环境，测试环境 alpha 和正式环境 release，两套环境提供的功能一模一样。两套环境是完全隔离的，目的是让游戏调试和线上运行互不干扰。

@@ -1,3 +1,8 @@
+---
+title: 生命周期
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/guide/lifecycle/
+---
 
 在游戏中，用户可以切换应用的前后台。在用户进入后台时，关闭游戏逻辑、渲染逻辑、背景音乐，可以保证更好的用户体验。
 

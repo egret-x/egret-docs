@@ -1,3 +1,8 @@
+---
+title: URLLoader网络通讯
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/game/URLLoaderNetwork/
+---
 Egret对网络部分进行了封装，将网络访问请求与网络通信数据分离。在 “net” 文件夹中定义了与网络相关的五个类。分别为 `URLRequest`、 `URLLoader`、`URLLoaderDataFormat`、`URLRequestMethod` 和 `URLVariables`。
 
 创建一个网络连接的时候，需要创建一个 `URLLoader` 对象，该对象负责网络的连接状态操作， 同时负责接收网络回传的数据。网络通信时，网络通信数据由 `URLRequest` 对象负责管理。

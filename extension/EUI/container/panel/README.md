@@ -1,3 +1,8 @@
+---
+title: 面板容器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/container/panel/
+---
 面板 Panel 也是常用的容器，这种类型的组件在很多不同领域的 UI 库中都存在，也是开发者比较熟知的一种容器，它和 Group 的区别在于，可以给它附加一个皮肤，并设置一个标题栏和关闭按钮，实现类似下面的结构：
 
 ![](8-3-panel-A.png)

@@ -1,3 +1,8 @@
+---
+title: 像素碰撞检测
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/hit/pixelHit/
+---
 
 像素碰撞检测，是判断显示对象的图案（非透明区域）是否与一点相交。同样使用 `hitTestPoint()` 方法，用法为：
 

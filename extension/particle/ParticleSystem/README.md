@@ -1,3 +1,8 @@
+---
+title: ParticleSystem
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/particle/ParticleSystem/
+---
 ## 概述
 
 ParticleSystem 是粒子库的基类，其他粒子库可以继承自 ParticleSystem 实现自己的功能。ParticleSystem 提供了粒子库必须的一些属性和方法，在创建粒子对象时使用了对象池以减少对象创建带来的开销。

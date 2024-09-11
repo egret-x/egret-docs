@@ -1,3 +1,8 @@
+---
+title: 导出动画数据
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/export/exportAnimation/
+---
 DragonBones Professional 支持导出DragonBones，MovieClip和序列帧格式。
 
 ##### 导出DragonBones, 表示导出DragonBones骨骼动画格式:

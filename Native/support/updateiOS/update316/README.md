@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/jsc141pq/
+---
 ## 更新内容
 
 * [修复] 修复多个音效同时播放发生卡顿的问题；

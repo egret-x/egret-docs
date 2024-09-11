@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/4q2j7ti5/
+---
 ![](564d8197caff0.png)
 
 System为项目固有的组件，无需添加也不能删除。System用来实现一些系统级别的条件与动作。

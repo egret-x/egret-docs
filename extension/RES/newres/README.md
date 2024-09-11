@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/xwpw5kxn/
+---
 ## 使用方法
 
 * 遵循 ES6 Promise 标准的异步语法

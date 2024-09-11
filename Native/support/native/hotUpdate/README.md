@@ -1,6 +1,8 @@
 ---
 id: hotUpdate.html
 title: 热更新
+createTime: 2024/09/11 10:50:04
+permalink: /docs/l6dh1pcw/
 ---
 
 ## 概述

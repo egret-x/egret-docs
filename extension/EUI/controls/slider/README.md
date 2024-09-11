@@ -1,3 +1,8 @@
+---
+title: 滑动选择器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/controls/slider/
+---
 在 eui 中有滑块控件（类似于手机上亮度调节器）。根据方向，分为`eui.HSlider` 水平滑块控件和 `eui.VSlider` 垂直滑块控件。
 
 `eui.HSlider` 和 `eui.VSlider` 继承自 `eui.Range` 控件。可以设置 `maximum` 、`minimum `、`value` 等属性。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/gqiu9z1z/
+---
 - **[优化]** 提升了index.html的加载速度，缩短了native的启动到开始渲染的时间。
 - **[修正]** 修正了某些特殊情况下，url相对路径会被用于服务器请求
 - **[修正]** Android: 当使用ipv6地址连接websockets服务器时会失败。

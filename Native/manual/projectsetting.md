@@ -1,5 +1,7 @@
 ---
 title: 如何发布原生项目
+createTime: 2024/09/11 10:50:04
+permalink: /docs/vxz8ovmm/
 ---
 
 

@@ -1,3 +1,8 @@
+---
+title: 粒子系统简介
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/particle/introduction/
+---
 ## 概述
 
 该粒子库是基于 Egret 引擎做的扩展。粒子库中的所有粒子使用同一张纹理，通过设置的不同属性实现各种运动效果。该粒子库遵循 Egret 第三方库的规则，在项目中如果要使用需要在 egretProperties.json 中配置一个新的 module ，其 name 属性设置为particle并将path属性设置为粒子库路径。

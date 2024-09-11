@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/zn6mxj02/
+---
 屏幕适配包括缩放的适配和旋转的适配。
 
 ## 1.缩放模式

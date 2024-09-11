@@ -1,3 +1,8 @@
+---
+title: WebGL渲染
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/renderMode/webgl/
+---
 ## 1.介绍
 
 > WebGL 是一套用于渲染 2D 和 3D 图形的标准图形库，其标准是由 Khronos、AMD、爱立信、谷歌、Mozilla、Nvidia 以及 Opera 等共同制定。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/c7b63grf/
+---
 Egret Engine 2.5.2 主要解决了一些问题。
 
 * 解决 Native localStorage 保存失败问题

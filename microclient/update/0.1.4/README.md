@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/k9o3wwe6/
+---
 【新增】支持视频播放
 
 【新增】支持 navigator.platform 方法

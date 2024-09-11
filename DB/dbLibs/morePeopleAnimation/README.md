@@ -1,3 +1,8 @@
+---
+title: 多人物动画
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbLibs/morePeopleAnimation/
+---
 DragonBones 系统中允许创建多个骨骼动画，用户可以创建多个 Factory 来管理不同的骨骼动画，也可使用同一个 Factory 来管理多个骨骼动画。
 * 当使用一个 Factory 时，需要注意避免龙骨数据或骨架数据重名。
 * 如果没有特殊需求，建议不要使用多个 Factory 实例

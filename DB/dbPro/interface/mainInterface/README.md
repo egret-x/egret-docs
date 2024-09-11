@@ -1,3 +1,8 @@
+---
+title: 主界面
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/mainInterface/
+---
 ![](p1.png)
 
 1. 主场景。 装配骨架和制作动画的主要操作区域。

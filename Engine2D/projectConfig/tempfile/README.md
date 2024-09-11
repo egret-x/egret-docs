@@ -1,3 +1,8 @@
+---
+title: 入口文件模板
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/tempfile/
+---
 在 Egret 5.2.x 项目根目录下，有个 `template` 文件夹，里面有个2个目录
 
 ### web

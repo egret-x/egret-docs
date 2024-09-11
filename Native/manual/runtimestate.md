@@ -1,5 +1,7 @@
 ---
 title: 事件回调
+createTime: 2024/09/11 10:50:04
+permalink: /docs/rikhz5sv/
 ---
 
 # 运行过程中 runtime 的事件回调

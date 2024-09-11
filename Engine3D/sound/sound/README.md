@@ -1,3 +1,8 @@
+---
+title: Sound的使用
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/sound/sound/
+---
 
 使用 `Sound` 类可以创建 `Sound` 对象、将外部 `MP3` 文件加载到该对象并播放该文件、关闭声音流，以及访问有关声音的数据，如有关流中字节数和 `ID3` 元数据的信息。
 

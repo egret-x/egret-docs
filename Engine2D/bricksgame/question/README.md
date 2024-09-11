@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/bml5rus8/
+---
 # 新手教程
 
 针对目前玩一玩平台的部分相关问题，在此做出回应。日后会持续更新。

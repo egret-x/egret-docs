@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/mkrslshk/
+---
 ![](564c352422c7f.png)
 
 添加了炮塔行为的实例，便具备了塔防游戏中，炮塔的自动索敌，自动攻击等功能。

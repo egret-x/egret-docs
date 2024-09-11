@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/84zd0jjy/
+---
 
 EgretWing提供了近300个快捷键设置项自定义命令的快捷键。点击`文件---首选项---快捷键设置面板`，
 会进入到如下界面：

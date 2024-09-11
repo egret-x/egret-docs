@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/cb90w2jx/
+---
 ## 什么是微端
 
 白鹭微端是 Egret 团队为了解决 HTML5 游戏打包为原生 APP 而发布的原生打包解决方案。通过白鹭微端解决方案，让 HTML5 游戏以真正原生 APP 形态展现在玩家手中。

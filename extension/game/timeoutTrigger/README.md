@@ -1,3 +1,8 @@
+---
+title: 超时触发器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/game/timeoutTrigger/
+---
 ## 1.启动超时触发器
 
 有一种需求，是在运行一定时间后，触发一个事件。比如某个对话框提示呈现后，需要在几秒钟之后自动消失。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/8jrtziay/
+---
 ## KTX 纹理压缩使用说明
 
 ### 一.关于 KTX

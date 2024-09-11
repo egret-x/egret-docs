@@ -1,3 +1,8 @@
+---
+title: EXML基本语法(二)
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/EXML/syntax2/
+---
 ## 数据绑定
 
 EXMl支持数据绑定功能，数据绑定相当于是给静态的EXML文件添加动态脚本的功能，能够极大简化视图刷新的代码量。得益于JavaScript的动态语言特性，所有的Object对象都可以实现动态数据绑定，并不限定于Egret框架内的对象。在EXML中实现数据绑定只需要一对{}括号：

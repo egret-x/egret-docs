@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/96tt5j9s/
+---
 如何使用微信社交开放能力与Matchvs游戏云,邀约微信好友进行游戏实时对战?
 
 如何使用实现输入指定6位数短号加入房间?

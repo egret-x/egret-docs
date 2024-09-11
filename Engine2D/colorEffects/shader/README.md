@@ -1,3 +1,8 @@
+---
+title: 自定义Shader
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/colorEffects/shader/
+---
 
 ### 1.使用说明
 

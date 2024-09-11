@@ -1,3 +1,8 @@
+---
+title: 模块配置
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/modelconfig/
+---
 
 在项目配置文件`egretProperties.json`中， `modules` 字段可以定义项目中引用的所有库文件。
 

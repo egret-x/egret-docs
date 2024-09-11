@@ -1,3 +1,8 @@
+---
+title: 视频
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/multimedia/video/
+---
 在 Egret 中，可通过`egret.Video`来创建和管理视频。
 
 > 需要注意的是，大部分移动设备只支持全屏播放。

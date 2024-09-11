@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/k8ortnoh/
+---
 ![](564a9735c70a6.png)
 
 精灵是英文Spirte的直译，在游戏开发中Spirte是最基本的可操控对象。

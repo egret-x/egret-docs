@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/lxctocdi/
+---
 ## 支持以下功能
 
 - 支持ftp以及sftp协议上传项目文件

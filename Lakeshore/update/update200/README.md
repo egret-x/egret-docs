@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/kawjmdfp/
+---
 【新增】基于Egret 3.1.1引擎。
 
 【新增】全新的场景与事件表工具栏。

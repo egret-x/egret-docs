@@ -1,3 +1,8 @@
+---
+title: 生成 .d.ts
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/threes/dts/
+---
 一直以来，有不少开发者对于如何写自己的 “.d.ts” 而苦恼。下面我们将介绍下如何生成自己的js的头文件 “.d.ts” 。
 
 ## 前提

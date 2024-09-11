@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/t94i8wtd/
+---
 Egret Wing 3.0.7 是 Wing 3.0 的第一个完整版,包含了 Wing 3.0 的所有功能. 这个版本中，我们对社区反馈的问题进行修复。
 
  - 新增新手向导

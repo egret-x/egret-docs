@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/djgbf19l/
+---
 # 白鹭引擎 5.2.23 发布日志
 白鹭引擎在 2019年7月9日，发布 5.2.23 稳定版本。
 

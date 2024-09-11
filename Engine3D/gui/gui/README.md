@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/9rp5052z/
+---
 # Egret3d Gui 教程 #
 
 本教程主要介绍了如何在egret3d引擎中开始并使用gui功能, 以及gui组件的基本用法.

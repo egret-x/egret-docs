@@ -1,3 +1,8 @@
+---
+title: 访问容器和子对象
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/displayObject/childen/
+---
 想要获取一个容器的子对象，我们有两种方式可以选择，第一种是通过子对象的深度值来获取子对象，第二种是通过子对象的 name 属性来获取。
 
 ## 通过深度获取

@@ -1,3 +1,8 @@
+---
+title: 列表
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/dataCollection/list/
+---
 列表组件 List ，继承自 DataGroup，它和 DataGroup 的区别在于：
 
 * 在 List 中选中一项，会触发 `eui.ItemTapEvent.ITEM_TAP` 事件。

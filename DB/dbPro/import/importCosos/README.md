@@ -1,3 +1,8 @@
+---
+title: 导入Cocos、Spine项目
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/import/importCosos/
+---
 基于内置的Cocos和Spine导入插件，DragonBones支持导入Cocos和Spine的导出项目。
 
 如果用户选择导入Cocos或Spine的导出项目，以Spine为例导入窗口扩展如下

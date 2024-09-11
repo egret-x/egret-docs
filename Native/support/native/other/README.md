@@ -1,6 +1,8 @@
 ---
 id: other.html
 title: 其他原生支持
+createTime: 2024/09/11 10:50:04
+permalink: /docs/n1b4ck36/
 ---
 
 ##	开启优化开关

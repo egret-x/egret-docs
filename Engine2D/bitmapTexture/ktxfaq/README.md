@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/gvjwr2h4/
+---
 ## KTX 纹理压缩常见问题
 
 #### 我使用的图片转换成 KTX 后在 iOS 手机上显示变形了

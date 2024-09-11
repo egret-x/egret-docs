@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/ic5vniel/
+---
 ![](564d7fe45855d.png)
 
 应用了闪烁行为的实例，可以实现闪烁的效果。具体的闪烁参数需要在动作里设置。

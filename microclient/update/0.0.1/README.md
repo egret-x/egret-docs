@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/9snnhbmo/
+---
 1）从服务器更新数据
 
 2）下载runtime

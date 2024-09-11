@@ -1,3 +1,8 @@
+---
+title: 快速入门
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/getStarted/getStarted/
+---
 ## 使用示例项目
 
 学习EUI扩展库的第一步，就是运行示例项目，在 github 的 egret-examples 项目下有一个[EUIExamples](https://github.com/egret-labs/egret-examples/tree/rc/v2.5/EUIExample)项目。将示例项目克隆到本地，然后您在命令行进入相应的目录，执行 

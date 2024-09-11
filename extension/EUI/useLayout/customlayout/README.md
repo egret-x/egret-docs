@@ -1,3 +1,8 @@
+---
+title: 自定义布局
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/useLayout/customlayout/
+---
 Egret eui库内置的4个布局类基本上可以满足大部分需求，不过在一些特殊情况下，可能会需要一些特殊的布局方式。此时可以制作自定义布局类，代替默认的布局类。   
 
 新建一个MyLayout.ts，扩展自 eui.LayoutBase:   

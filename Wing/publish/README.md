@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/86ds1enb/
+---
 ## 发布功能介绍
 - 发布Egret项目：在弹出的窗口中配置发布信息，并发布当前 Egret 项目。
 

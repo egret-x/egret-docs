@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/pxma14kq/
+---
 
 如图下图所示，可以设置文件忽略列表
 

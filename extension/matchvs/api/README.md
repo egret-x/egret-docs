@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/6r5xrtwo/
+---
 ## API 说明
 MatchvsSDK 主要是由 MatchvsEngine（接口请求） 类，和 MatchvsResponse（接口回调） 类控制。先new这两个类的对象作为全局使用。例如：
 

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/bs0x24hs/
+---
 最新版本下载地址
 
 - [Egret Wing 4.0.2 for Windows](http://tool.egret-labs.org/EgretWing/electron/EgretWing-v4.0.2.exe?d=0221)

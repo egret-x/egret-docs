@@ -1,3 +1,8 @@
+---
+title: 混合模式
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/colorEffects/blendMode/
+---
 
 混合模式是指同一个显示容器中的两个显示对象重叠时，重叠区域如何呈现的方式，也就是两个显示对象的重叠区域像素如何混合产生结果像素。
 

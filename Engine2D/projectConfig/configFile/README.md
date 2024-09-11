@@ -1,3 +1,8 @@
+---
+title: 项目配置文件说明
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/configFile/
+---
 
 项目的根文件夹下有名为 `egretProperties.json` 的配置文件，引擎所涉及的配置均存储在此。
 

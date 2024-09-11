@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/ja0zkicn/
+---
 首先将调试面板中的启动选项调成`Wing内置播放器`。
 
 ![](1.png)

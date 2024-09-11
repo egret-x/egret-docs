@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/diuzieq0/
+---
 # 使用 AssetsManager 灵活定制微信小游戏的缓存策略
 
 

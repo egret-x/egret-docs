@@ -1,3 +1,8 @@
+---
+title: GravityParticleSystem
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/particle/GravityParticleSystem/
+---
 ## 概述
 
 GravityParticleSystem 是继承自 ParticleSystem 扩展的重力粒子系统，在该系统中通过设置重力、速度、径向加速度以及切向加速度实现粒子不同的运动轨迹。

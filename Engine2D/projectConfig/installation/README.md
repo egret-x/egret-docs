@@ -1,3 +1,8 @@
+---
+title: 安装与部署
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/projectConfig/installation/
+---
 
 Egret Engine 版本分为两类：“稳定版”，和“社区体验版”，社区体验版采用双周迭代方式发布。
 下面以 Egret Engine v5.0.6 来演示安装和部署流程。

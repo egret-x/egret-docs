@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/joy8eh5e/
+---
 
 点击新建编辑>SpriteSheet，进入到如下界面
 

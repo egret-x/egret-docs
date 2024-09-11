@@ -1,3 +1,8 @@
+---
+title: 矩形碰撞检测
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/hit/rectangleHit/
+---
 
 碰撞检测，判断显示对象是否与一点相交。
 

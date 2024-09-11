@@ -1,3 +1,8 @@
+---
+title: 纹理材质
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DMaterial/texture/
+---
 材质
 ----------
 设置普通贴图、法线贴图、高光贴图

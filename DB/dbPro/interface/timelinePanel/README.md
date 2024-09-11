@@ -1,3 +1,8 @@
+---
+title: 时间轴面板
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/interface/timelinePanel/
+---
 
 ![](p1.png)
 

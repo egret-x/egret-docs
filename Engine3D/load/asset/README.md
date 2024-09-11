@@ -1,3 +1,8 @@
+---
+title: 资源加载
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/load/asset/
+---
 资源介绍:
 ----------
 

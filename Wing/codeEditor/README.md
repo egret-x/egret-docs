@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/84awhvgk/
+---
 ## 多编辑器 
 
 EgretWing允许最多同时打开三个编辑器，并排在编辑器显示。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/44fxv8wy/
+---
 ![](564c45fe6a125.png)
 
 添加了寻路行为的实例，可以基于指定的Tiled地图中设定的路径来自动行进。

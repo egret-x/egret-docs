@@ -1,3 +1,8 @@
+---
+title: 插件管理
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/plugin/pluginManager/
+---
 DragonBones Pro 4.2 新增插件系统，通过插件系统使得DragonBones Pro具有更好可扩展性。插件可由第三方基于DragonBones Pro的插件规范来开发。
 
 在帮助菜单中选择“插件管理”打开插件管理窗口。

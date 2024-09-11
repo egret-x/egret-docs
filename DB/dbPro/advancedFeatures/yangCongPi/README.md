@@ -1,3 +1,8 @@
+---
+title: 洋葱皮
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/advancedFeatures/yangCongPi/
+---
 洋葱皮是DragonBones Pro 4.1 新增加的功能。开启洋葱皮功能后，会同时显示前后N帧（默认为3帧）的影图，方便动画师更好的定位角色动作，使连续动画更流畅。
 
 进入动画模式，点击时间轴工具栏上的洋葱皮按钮开启洋葱皮功能，如下图：

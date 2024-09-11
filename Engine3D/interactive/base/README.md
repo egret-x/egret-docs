@@ -1,3 +1,8 @@
+---
+title: 3D 碰撞
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/interactive/base/
+---
 
 ## 概念与原理
 

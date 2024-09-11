@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/271yd9sf/
+---
 ## 更新内容
 
 * [改进] 添加热更新失败的回调（参照LoadingView.m的onGameLoadingError方法）；

@@ -1,3 +1,8 @@
+---
+title: type_temp
+createTime: 2024/09/11 10:50:04
+permalink: /docs/i2ob0mh4/
+---
 # 文档格式规范
 
 ## 标题相关

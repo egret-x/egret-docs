@@ -1,3 +1,8 @@
+---
+title: 灯光模块的设计
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DLights/model/
+---
 灯光模块
 ----------
 相关代码全部放在源码目录中的`lights`文件夹中。

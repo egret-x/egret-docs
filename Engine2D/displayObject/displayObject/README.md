@@ -1,3 +1,8 @@
+---
+title: 基本概念
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/displayObject/displayObject/
+---
 
 ## 显示对象
 ### 1.基本概念

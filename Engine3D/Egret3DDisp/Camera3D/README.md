@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/54w4qfut/
+---
 Camera3D
 ----------
 场景中的摄像机对象 用来观察场景中的物体

@@ -1,3 +1,8 @@
+---
+title: 导入项目文件夹
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/import/importFolder/
+---
 如果项目文件为文件夹形式，则选择相应的项目数据文件，json, xml或 amf。
 
 DragonBones Professional 会自动判断项目使用的是图片文件还是纹理集，然后切换对应的导入选项，用户也可以手动切换。

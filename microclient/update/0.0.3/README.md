@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/xy3to8dt/
+---
 1.【新增】iOS 添加删除本地游戏缓存功能
 
 2.【新增】安卓增加动态权限申请功能

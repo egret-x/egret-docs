@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/gd0stq80/
+---
 
 ###  打包命令
 * 命令格式：-p [目录] [...] -o [json输出路径] -e [文件筛选正则表达式]

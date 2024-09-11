@@ -1,3 +1,8 @@
+---
+title: 导入集成数据PNG
+createTime: 2024/09/11 10:50:04
+permalink: /docs/db/dbPro/import/importPNG/
+---
 如果用户选择集成数据的PNG，导入窗口扩展如下
 
 ![](5576ba6ac0a4f.png)

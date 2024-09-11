@@ -1,3 +1,8 @@
+---
+title: 事件的优先级
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/event/priority/
+---
 通过制定事件的优先级来设置事件侦听器的执行顺序。
 
 可以在注册侦听器的时候制定事件的优先级。

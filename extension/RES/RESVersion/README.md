@@ -1,3 +1,8 @@
+---
+title: RES版本控制
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/RES/RESVersion/
+---
 ## 游戏资源版本控制功能的设计与实现
 ***
 本篇文档主要以插件控制流为基础，实现自由定制的版本控制功能。

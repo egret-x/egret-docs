@@ -1,3 +1,8 @@
+---
+title: 在 Egret Wing 中编译
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/methods/compile/
+---
 
 ## 1、查看项目结构
 

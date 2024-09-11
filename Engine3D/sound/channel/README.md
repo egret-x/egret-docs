@@ -1,3 +1,8 @@
+---
+title: Channel的使用
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/sound/channel/
+---
 
 Channel 类控制应用程序中的声音，对声音执行更精细的控制。每个声音均分配给一个声道，而且应用程序可以具有混合在一起的多个声道。
 

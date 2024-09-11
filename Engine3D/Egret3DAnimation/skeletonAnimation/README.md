@@ -1,3 +1,8 @@
+---
+title: 骨骼动画的使用
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret3d/Egret3DAnimation/skeletonAnimation/
+---
 骨骼动画
 ----------
 

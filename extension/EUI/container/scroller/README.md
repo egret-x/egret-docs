@@ -1,3 +1,8 @@
+---
+title: 滚动控制容器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/EUI/container/scroller/
+---
 屏幕的尺寸总是有限的，当内容已经超出屏幕的范围时，需要特殊的处理方式。EUI 利用滚动条实现此功能。通过拉动滚动条，可以在有限的屏幕中浏览全部内容。首先引入一个概念：视口(ViewPort)，如下图所示：
 
 ![](563b06b89cc00.png)

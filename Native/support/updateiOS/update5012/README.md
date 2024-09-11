@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/50zdsnw5/
+---
 ## 更新内容
 
 * [修复] 修复国行设备首次启动可能黑屏的问题；

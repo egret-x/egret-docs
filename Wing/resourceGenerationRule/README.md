@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/r3mge90z/
+---
 点击`插件---Egret项目工具---设置Res自动生成规则`
 
 ![](1.png)

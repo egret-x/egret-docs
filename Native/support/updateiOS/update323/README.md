@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/3mcmnu8l/
+---
 ## 更新内容
 
 * [修复] 在关闭cmdBatch的情况下支持渲染滤镜；

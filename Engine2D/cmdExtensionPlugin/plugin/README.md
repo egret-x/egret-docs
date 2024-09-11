@@ -1,3 +1,8 @@
+---
+title: 命令行扩展插件
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/cmdExtensionPlugin/plugin/
+---
 ## 命令行扩展插件
 
 ### 脚本插件目录结构

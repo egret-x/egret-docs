@@ -1,3 +1,8 @@
+---
+title: 加载资源组
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/RES/loadGroup/
+---
 ## 一、预加载资源组
 
 在配置文件加载完成后，我们可以调用RES.loadGroup(name:string,priority:number=0)开始预加载配置中的一组资源。该函数需要两个参数，参数"name"对应配置文件中的资源组名。预加载可以在游戏启动时，也可以是某个面板被打开前，调用时机由具体项的目逻辑确定。代码如下：

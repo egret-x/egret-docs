@@ -1,3 +1,8 @@
+---
+title: Event类
+createTime: 2024/09/11 10:50:04
+permalink: /docs/egret2d/event/event/
+---
 Event类是所有事件类的基类。当创建一个自定义事件的时候，事件应该继承自Event类。同时Event类也包含一些事件。这些事件通常与显示列表，显示对象的状态有关。
 
 在使用Event类时，有以下几个属性与方法需要注意。

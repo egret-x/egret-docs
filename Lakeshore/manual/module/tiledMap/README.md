@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/ctz67i0r/
+---
 ![](564ae846ddaf9.png)
 
 Tiled组件是用来添加和使用Tiled Map Editor编辑的游戏地图文件的。

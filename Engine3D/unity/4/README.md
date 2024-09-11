@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/3vmjbh7t/
+---
 
 
 	1）本篇教程将讲述如何输出EffectGroup特效组。

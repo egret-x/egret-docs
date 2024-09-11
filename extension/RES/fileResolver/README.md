@@ -1,3 +1,8 @@
+---
+title: 扩展资源加载模块文件解析器
+createTime: 2024/09/11 10:50:04
+permalink: /docs/extension/RES/fileResolver/
+---
 打开资源配置文件 resource.json ，你可以看到里面的资源文件都有一个 type 类型，
 
 ~~~

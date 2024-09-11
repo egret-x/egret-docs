@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/415m6oib/
+---
 
 
 Matchvs 提供了断线重连的功能：当客户端网络异常（包含网络关闭、弱网络、挂起至后台等情况），网络异常时应用层会收到“检测到客户端已经断线的`errorResponse` 错误码1001。此种情况下可以使用 reconnect接口进行重连。

@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/jjim3q2u/
+---
 
 从 Egret 5.2.24 版本开始，`DisplayObject` 中新增加了一个 `tint` 属性，可以给当前对象设置填充色.
 

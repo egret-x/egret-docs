@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/i342y2kq/
+---
 ### 一.开发环境准备
 
 * Egret Launcher 1.0.65 以上版本

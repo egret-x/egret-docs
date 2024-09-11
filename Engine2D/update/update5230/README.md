@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/l5auluhy/
+---
 # 白鹭引擎 5.2.30 发布日志
 白鹭引擎在 2019年10月28日，发布 5.2.30 稳定版本。
 

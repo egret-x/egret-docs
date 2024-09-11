@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/ewpev0ex/
+---
 
 - **[新增]** 矢量图支持渐变填充
 - **[新增]** 输入框支持inputType属性

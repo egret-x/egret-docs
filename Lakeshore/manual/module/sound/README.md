@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/nqmdqgyx/
+---
 ![](564af1ef17212.png)
 
 声音组件用来给游戏中添加声音效果。

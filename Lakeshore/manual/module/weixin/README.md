@@ -1,3 +1,8 @@
+---
+title: README
+createTime: 2024/09/11 10:50:04
+permalink: /docs/xvm84tv7/
+---
 ![](564bfe68b7143.png)
 
 添加微信组件后，游戏便可以实现微信分享功能。
