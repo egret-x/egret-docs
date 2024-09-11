@@ -10,11 +10,11 @@ permalink: /docs/ebldhdtz/
 ```js
 a.js 中的内容：
 
-var 
+var
 
-a 
+a
 
-= 
+=
 
 function(){
 
@@ -26,11 +26,11 @@ function(){
 然后我们引用 js，调用该方法，在 H5 上是可以正常输出内容的。
 
 ```js
-require("a.js")
+require('a.js')
 
-a(); 
+a()
 
-//a
+// a
 ```
 
 但是在淘宝创意互动平台上是不支持这种写法的，需要把该方法挂载到全局变量上，修改如下：
@@ -38,11 +38,11 @@ a();
 ```js
 a.js 中的内容：
 
-var 
+var
 
-a 
+a
 
-= 
+=
 
 function(){
 
@@ -50,9 +50,9 @@ function(){
 
 }
 
-$global.window.a 
+$global.window.a
 
-= a; 
+= a;
 
 //必须使用 $global 才能获取全局对象
 
@@ -61,27 +61,26 @@ $global.window.a
 然后我们引用 js，调用该方法，也要通过全局变量引用
 
 ```js
-require("a.js")
+require('a.js')
 
-$global.window.a(); 
+$global.window.a()
 
-//a
-
+// a
 ```
 
 ### 一.第三方库的使用[​](#一第三方库的使用 "一.第三方库的使用的直接链接")
 
-我们以引入 `particle` 粒子库为例，说明如何对第三方库进行修改。  
+我们以引入 `particle` 粒子库为例，说明如何对第三方库进行修改。
 1\. 我们在 `egretProperties.json` 中的配置如下:
 
 ```js
 {
 
-  "modules":  
+  "modules":
 
-[  {  "name":  
+[  {  "name":
 
-"particle",  "path":  
+"particle",  "path":
 
 "libs/particle"  }  ]
 
@@ -89,15 +88,14 @@ $global.window.a();
 ```
 
 1.  打开项目中的 `scrpits/tbgame/tbgame.ts` 文件，在 `onFile` 方法中可以看到，我们给每一个 `js` 文件的开头部分都添加一行代码：
-    
+
     `var global = $global; var window = $global.window; var egret = window.egret;`
-    
+
     这样每个 `js` 里都可以调用 `window` 和 `egret` 对象。
-    
+
 2.  然后我们将 `particle` 挂载到 `window` 对象上：
-    
+
 3.  在游戏代码 `main.js` 中添加 `particle` 的引用，这样在游戏中就可以正常调用粒子库了：
-    
 
 如果您使用的其他的第三方库，也需要这样配置，否则无法运行
 
@@ -118,24 +116,22 @@ EUI 是白鹭引擎官方的界面库，因为全局变量的问题，我们在�
 因为全局变量引用的问题，我们在给一个 `eui.Component` 赋予一个皮肤的时候，不可以用字符串的形式来赋值，必须用对象的方式。
 
 ```js
-let cp = 
+const cp
 
-new 
+= new
 
-eui.Component();
+eui.Component()
 
-cp.skinName 
+cp.skinName
 
-= 
+= 'skins.mySkin'// 这种写法不行
 
-'skins.mySkin';// 这种写法不行
+cp.skinName
 
-cp.skinName 
-
-= skins.mySkin;// 要使用这种写法
+= skins.mySkin// 要使用这种写法
 ```
 
-**注意：** `skins` 对象之可以使用，是因为我们事先通过全局对象进行了引用，如果您的皮肤类名不在 `skins` 中，需要您自己添加引用。  
+**注意：** `skins` 对象之可以使用，是因为我们事先通过全局对象进行了引用，如果您的皮肤类名不在 `skins` 中，需要您自己添加引用。
 打开项目中的 `scrpits/tbgame/tbgame.ts` 文件，在 `onFile` 方法中可以看到:
 
 #### 4\. `exml` 中组件的皮肤[​](#4-exml-中组件的皮肤 "4-exml-中组件的皮肤的直接链接")

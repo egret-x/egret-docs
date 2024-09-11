@@ -50,14 +50,13 @@ permalink: /docs/minigame/minigame_taobao/faq/
 答：检查是否使用了 嵌入EXML到代码中，例：
 
 ```js
-var className = "skins.ButtonSkin";
+const className = 'skins.ButtonSkin'
 
- var exmlText = 
+const exmlText
 
-`<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
+= `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
 ...
-</e:Skin>`;
-
+</e:Skin>`
 ```
 
 需要改成单独的皮肤文件。
@@ -73,19 +72,19 @@ var className = "skins.ButtonSkin";
 **注意**：同时只能创建6个声音对象，超出的会覆盖掉老的声音对象。
 
 ```js
-for 
+for
 
-(let i = 
+(let i =
 
-0; i < 
+0; i <
 
-3; i++) 
+3; i++)
 
 {
 
- let sd = 
+ let sd =
 
-new 
+new
 
 egret.Sound() sd.load('resource/assets/se1.mp3') ...
 

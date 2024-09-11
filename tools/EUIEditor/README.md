@@ -39,7 +39,6 @@ Egret UI Editor 是针对 `EUI` 项目进行编辑的。所以请确保您打开
 
 	![img](docs/images-1/3.png)
 
-
 ## 界面简介
 ### 基本布局
 ![img](docs/images-2/1.png)
@@ -65,7 +64,7 @@ Egret UI Editor的布局直观简单，起包含一下几个主要部分：
 
 ## 快速打开文件
 
-您可以通过如下快捷键来唤起快速打开文件的面板 
+您可以通过如下快捷键来唤起快速打开文件的面板
 - win: `Ctrl` + `Shift` + `R`
 - mac: `Command` + `Shift` + `R`
 

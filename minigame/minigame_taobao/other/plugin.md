@@ -15,21 +15,21 @@ permalink: /docs/u5byb52m/
 ### 二.创建小游戏和可视化编译打包小游戏[​](#二创建小游戏和可视化编译打包小游戏 "二.创建小游戏和可视化编译打包小游戏的直接链接")
 
 1.  使用最新版的 Egret Launcher 创建一个 Egret 游戏项目，或者将原有的 Egret 项目导入 ![alt text](image.png)
-    
+
 2.  导入或者创建完成后，会在 Egret Launcher 的列表里看到该项目。点击发布设置: ![alt text](image-1.png)
-    
+
 3.  选择 `创意互动小程序` 标签，点击`确定`，创建淘宝项目 ![alt text](image-2.png)
-    
+
 4.  创建成功后，点击`发布`标签，可以可视化的发布小游戏包 ![alt text](image-3.png)
-    
+
 5.  游戏代码类型：把白鹭工程里的代码编译淘宝项目里
-    
+
     - debug：js 代码不进行 uglify 混淆，便于 debug 调试
     - release：js 代码进行 uglify 混淆压缩
 6.  淘宝创意互动项目结构
-    
+
     ![alt text](image-4.png)
-    
+
     - app.css ：应用的全局样式文件，一般不需要修改。[查看详细说明](https://miniapp.open.taobao.com/docV3.htm?docId=117171&docType=1&tag=dev)
     - app.js：注册应用，获取应用的启动、显示、隐藏等消息。[查看详细说明](https://miniapp.open.taobao.com/docV3.htm?docId=117174&docType=1&tag=dev)
     - app.json：应用的配置文件。[查看详细说明](https://miniapp.open.taobao.com/docV3.htm?docId=117457&docType=1&tag=dev)

@@ -46,19 +46,19 @@ permalink: /docs/minigame/minigame/facebook/
 ##### Button.ts[​](#buttonts "Button.ts的直接链接")
 
 ```js
-class  
+class
 
-Button  
+Button
 
-extends  
+extends
 
-egret.Sprite  
+egret.Sprite
 
 {
 
-  public  
+  public
 
-constructor(label: string)  
+constructor(label: string)
 
 {
 
@@ -66,45 +66,45 @@ constructor(label: string)
 
   this.drawText(label);
 
-  this.addEventListener(egret.TouchEvent.TOUCH_BEGIN,  
+  this.addEventListener(egret.TouchEvent.TOUCH_BEGIN,
 
-this.touch_begin,  
-
-this);
-
-  this.addEventListener(egret.TouchEvent.TOUCH_END,  
-
-this.touch_end,  
+this.touch_begin,
 
 this);
 
-  this.addEventListener(egret.TouchEvent.TOUCH_TAP,  
+  this.addEventListener(egret.TouchEvent.TOUCH_END,
 
-this.click,  
+this.touch_end,
+
+this);
+
+  this.addEventListener(egret.TouchEvent.TOUCH_TAP,
+
+this.click,
 
 this);
 
   this.draw();
 
-  this.touchEnabled  
+  this.touchEnabled
 
-=  
+=
 
 true;
 
   }
 
-  private  
+  private
 
-touch_begin(evt: egret.TouchEvent):  
+touch_begin(evt: egret.TouchEvent):
 
-void  
+void
 
 {
 
-  this.isUp  
+  this.isUp
 
-=  
+=
 
 false;
 
@@ -112,17 +112,17 @@ false;
 
   }
 
-  private  
+  private
 
-touch_end(evt: egret.TouchEvent):  
+touch_end(evt: egret.TouchEvent):
 
-void  
+void
 
 {
 
-  this.isUp  
+  this.isUp
 
-=  
+=
 
 true;
 
@@ -130,31 +130,31 @@ true;
 
   }
 
-  private  
+  private
 
-click(evt: egret.TouchEvent):  
+click(evt: egret.TouchEvent):
 
-void  
+void
 
 {
 
-  this.dispatchEvent(new  
+  this.dispatchEvent(new
 
 egret.Event("CHAGE_STAGE"));
 
   }
 
-  private 
+  private
 
-isUp:  boolean  =  
+isUp:  boolean  =
 
 true;
 
-  private  
+  private
 
-draw():  
+draw():
 
-void  
+void
 
 {
 
@@ -162,9 +162,9 @@ void
 
   this.removeChildren();
 
-  if  
+  if
 
-(this.isUp)  
+(this.isUp)
 
 {
 
@@ -172,7 +172,7 @@ void
 
   }
 
-  else  
+  else
 
 {
 
@@ -184,83 +184,83 @@ void
 
   }
 
-  private 
+  private
 
 textF: egret.TextField;
 
-  private  
+  private
 
-drawText(label:  string):  
+drawText(label:  string):
 
-void  
-
-{
-
-  if  
-
-(this.textF  
-
-==  
-
-null)  
+void
 
 {
 
-  let 
+  if
 
-text: egret.TextField  
+(this.textF
 
-=  
+==
 
-new  
+null)
+
+{
+
+  let
+
+text: egret.TextField
+
+=
+
+new
 
 egret.TextField();
 
- text.text  
+ text.text
 
 = label;
 
- text.width  
+ text.width
 
-=  
+=
 
-(Context.stageWidth  
+(Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
 2;
 
- text.height  
+ text.height
 
-=  
+=
 
 35;
 
- text.size  
+ text.size
 
-=  
+=
 
 22;
 
- text.verticalAlign  
+ text.verticalAlign
 
 = egret.VerticalAlign.MIDDLE;
 
- text.textAlign  
+ text.textAlign
 
 = egret.HorizontalAlign.CENTER;
 
-  this.textF  
+  this.textF
 
 = text;
 
-  this.textF.strokeColor  
+  this.textF.strokeColor
 
-=  
+=
 
 0x292b2f;
 
@@ -268,201 +268,201 @@ egret.TextField();
 
   }
 
-  private  
+  private
 
-drawUp():  
+drawUp():
 
-void  
+void
 
 {
 
   this.graphics.beginFill(0x666666);
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
 0x282828);
 
-  this.graphics.drawRoundRect(0,  
+  this.graphics.drawRoundRect(0,
 
-0,  
+0,
 
-(Context.stageWidth  
+(Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2,  
+2,
 
-35,  
+35,
 
-15,  
+15,
 
 15);
 
   this.graphics.endFill();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
-9474192,  
+9474192,
 
 0.5);
 
-  this.graphics.moveTo(5,  
+  this.graphics.moveTo(5,
 
 2);
 
-  this.graphics.lineTo((Context.stageWidth  
+  this.graphics.lineTo((Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2  
+2
 
--  
+-
 
-5,  
+5,
 
 2);
 
   this.graphics.endFill();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
-0x676767,  
+0x676767,
 
 0.7);
 
-  this.graphics.moveTo(5,  
+  this.graphics.moveTo(5,
 
 37);
 
-  this.graphics.lineTo((Context.stageWidth  
+  this.graphics.lineTo((Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2  
+2
 
--  
+-
 
-5,  
+5,
 
 37);
 
   this.graphics.endFill();
 
-  this.textF.stroke  
+  this.textF.stroke
 
-=  
+=
 
 0;
 
   }
 
-  private  
+  private
 
-drawDown():  
+drawDown():
 
-void  
+void
 
 {
 
   this.graphics.beginFill(0x3b3b3b);
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
 0x282828);
 
-  this.graphics.drawRoundRect(0,  
+  this.graphics.drawRoundRect(0,
 
-0,  
+0,
 
-(Context.stageWidth  
+(Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2,  
+2,
 
-35,  
+35,
 
-15,  
+15,
 
 15);
 
   this.graphics.endFill();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
-0x313131,  
+0x313131,
 
 0.5);
 
-  this.graphics.moveTo(5,  
+  this.graphics.moveTo(5,
 
 2);
 
-  this.graphics.lineTo((Context.stageWidth  
+  this.graphics.lineTo((Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2  
+2
 
--  
+-
 
-5,  
+5,
 
 2);
 
   this.graphics.endFill();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
-0x676767,  
+0x676767,
 
 0.7);
 
-  this.graphics.moveTo(5,  
+  this.graphics.moveTo(5,
 
 37);
 
-  this.graphics.lineTo((Context.stageWidth  
+  this.graphics.lineTo((Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2  
+2
 
--  
+-
 
-5,  
+5,
 
 37);
 
   this.graphics.endFill();
 
-  this.textF.stroke  
+  this.textF.stroke
 
-=  
+=
 
 1;
 
@@ -475,39 +475,39 @@ void
 ##### Context.ts[​](#contextts "Context.ts的直接链接")
 
 ```js
-class  
+class
 
-Context  
-
-{
-
-  static 
-
-stageWidth:  number  =  
-
-0;
-
-  static 
-
-stageHeight:  number  =  
-
-0;
-
-  public  
-
-static  
-
-init(_stage: egret.Stage):  
-
-void  
+Context
 
 {
 
-  Context.stageWidth  
+  static
+
+stageWidth:  number  =
+
+0;
+
+  static
+
+stageHeight:  number  =
+
+0;
+
+  public
+
+static
+
+init(_stage: egret.Stage):
+
+void
+
+{
+
+  Context.stageWidth
 
 = _stage.stageWidth;
 
-  Context.stageHeight  
+  Context.stageHeight
 
 = _stage.stageHeight;
 
@@ -520,47 +520,47 @@ void
 ##### Menu.ts[​](#menuts "Menu.ts的直接链接")
 
 ```js
-class  
+class
 
-Menu  
+Menu
 
-extends  
+extends
 
-egret.Sprite  
+egret.Sprite
 
 {
 
-  public  
+  public
 
-constructor(title: string)  
+constructor(title: string)
 
 {
 
   super();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
 0x282828);
 
-  this.graphics.moveTo(0,  
+  this.graphics.moveTo(0,
 
 35);
 
-  this.graphics.lineTo(Context.stageWidth,  
+  this.graphics.lineTo(Context.stageWidth,
 
 35);
 
   this.graphics.endFill();
 
-  this.graphics.lineStyle(2,  
+  this.graphics.lineStyle(2,
 
 0x6a6a6a);
 
-  this.graphics.moveTo(0,  
+  this.graphics.moveTo(0,
 
 37);
 
-  this.graphics.lineTo(Context.stageWidth,  
+  this.graphics.lineTo(Context.stageWidth,
 
 37);
 
@@ -572,75 +572,75 @@ constructor(title: string)
 
   }
 
-  private 
+  private
 
 textF: egret.TextField;
 
-  private  
+  private
 
-drawText(label:  string):  
+drawText(label:  string):
 
-void  
-
-{
-
-  if  
-
-(this.textF  
-
-==  
-
-null)  
+void
 
 {
 
-  let 
+  if
 
-text: egret.TextField  
+(this.textF
 
-=  
+==
 
-new  
+null)
+
+{
+
+  let
+
+text: egret.TextField
+
+=
+
+new
 
 egret.TextField();
 
- text.text  
+ text.text
 
 = label;
 
- text.width  
+ text.width
 
-=  
+=
 
 Context.stageWidth;
 
- text.height  
+ text.height
 
-=  
+=
 
 35;
 
- text.size  
+ text.size
 
-=  
+=
 
 22;
 
- text.verticalAlign  
+ text.verticalAlign
 
 = egret.VerticalAlign.MIDDLE;
 
- text.textAlign  
+ text.textAlign
 
 = egret.HorizontalAlign.CENTER;
 
-  this.textF  
+  this.textF
 
 = text;
 
-  this.textF.strokeColor  
+  this.textF.strokeColor
 
-=  
+=
 
 0x292b2f;
 
@@ -648,69 +648,69 @@ Context.stageWidth;
 
   }
 
-  private 
+  private
 
-viewNum:  number  =  
+viewNum:  number  =
 
 0;
 
-  public  
+  public
 
-addTestFunc(label:  string, 
+addTestFunc(label:  string,
 
-callback:  
+callback:
 
-Function, 
+Function,
 
-target:  
+target:
 
-Object):  
+Object):
 
-void  
+void
 
 {
 
-  let 
+  let
 
-btn:  
+btn:
 
-Button  
+Button
 
-=  
+=
 
-new  
+new
 
 Button(label);
 
- btn.x  
+ btn.x
 
-=  
+=
 
-(Context.stageWidth  
+(Context.stageWidth
 
--  
+-
 
-30)  
+30)
 
-/  
+/
 
-2  
+2
 
-+  
++
 
 20;
 
- btn.y  
+ btn.y
 
-=  
+=
 
-48  
+48
 
-+  
++
 
-this.viewNum  
+this.viewNum
 
-*  
+*
 
 47;
 
@@ -729,75 +729,75 @@ this.viewNum
 ##### Main.ts[​](#maints "Main.ts的直接链接")
 
 ```js
-class  
+class
 
-Main  
+Main
 
-extends  
+extends
 
-egret.DisplayObjectContainer  
+egret.DisplayObjectContainer
 
 {
 
-  public  
+  public
 
-static 
+static
 
 menu:  any;
 
-  private  
+  private
 
-static 
+static
 
 _that: egret.DisplayObjectContainer;
 
-  public  
+  public
 
-constructor()  
+constructor()
 
 {
 
   super();
 
-  this.once(egret.Event.ADDED_TO_STAGE,  
+  this.once(egret.Event.ADDED_TO_STAGE,
 
-this.addStage,  
+this.addStage,
 
 this);
 
   }
 
-  private  
+  private
 
-addStage(evt: egret.Event):  
+addStage(evt: egret.Event):
 
-void  
+void
 
 {
 
   this.initializeAsync();
 
-  FBInstant.startGameAsync().then(()  
+  FBInstant.startGameAsync().then(()
 
-=>  
+=>
 
 {
 
  egret.log("start game");
 
-  Main._that  
+  Main._that
 
-=  
+=
 
 this;
 
   Context.init(this.stage);
 
-  Main.menu  
+  Main.menu
 
-=  
+=
 
-new  
+new
 
 Menu("Egret Facebook SDK Demo");
 
@@ -809,13 +809,13 @@ Menu("Egret Facebook SDK Demo");
 
   }
 
-  public  
+  public
 
-static  
+static
 
-backMenu():  
+backMenu():
 
-void  
+void
 
 {
 
@@ -825,203 +825,203 @@ void
 
   }
 
-  private  
+  private
 
-createMenu():  
+createMenu():
 
-void  
+void
 
 {
 
-  Main.menu.addTestFunc("baseinfo",  
+  Main.menu.addTestFunc("baseinfo",
 
-this.baseinfo,  
-
-this);
-
-  Main.menu.addTestFunc("quit",  
-
-this.quit,  
+this.baseinfo,
 
 this);
 
-  Main.menu.addTestFunc("logEvent",  
+  Main.menu.addTestFunc("quit",
 
-this.logEvent,  
-
-this);
-
-  Main.menu.addTestFunc("shareAsync",  
-
-this.shareAsync,  
+this.quit,
 
 this);
 
-  Main.menu.addTestFunc("player",  
+  Main.menu.addTestFunc("logEvent",
 
-this.player,  
-
-this);
-
-  Main.menu.addTestFunc("getConnectedPlayersAsync",  
-
-this.getEgretConnectedPlayersAsync,  
+this.logEvent,
 
 this);
 
-  Main.menu.addTestFunc("contextinfo",  
+  Main.menu.addTestFunc("shareAsync",
 
-this.contextinfo,  
-
-this);
-
-  Main.menu.addTestFunc("share",  
-
-this.share,  
+this.shareAsync,
 
 this);
 
-  }  private  
+  Main.menu.addTestFunc("player",
 
-initializeAsync():  
+this.player,
 
-void  
+this);
 
-{  FBInstant.initializeAsync().then(function  
+  Main.menu.addTestFunc("getConnectedPlayersAsync",
 
-()  
+this.getEgretConnectedPlayersAsync,
 
-{ egret.log("getLocale:",  
+this);
 
-FBInstant.getLocale()); egret.log("getPlatform:",  
+  Main.menu.addTestFunc("contextinfo",
 
-FBInstant.getPlatform()); egret.log("getSDKVersion",  
+this.contextinfo,
 
-FBInstant.getSDKVersion()); egret.log("getSupportedAPIs",  
+this);
 
-FBInstant.getSupportedAPIs()); egret.log("getEntryPointData",  
+  Main.menu.addTestFunc("share",
 
-FBInstant.getEntryPointData());  });  setTimeout(function  
+this.share,
 
-()  
+this);
 
-{  FBInstant.setLoadingProgress(100);  },  
+  }  private
 
-1000);  }  private  
+initializeAsync():
 
-baseinfo()  
+void
 
-{ egret.log("baseinfo"); egret.log("getLocale:",  
+{  FBInstant.initializeAsync().then(function
 
-FBInstant.getLocale()); egret.log("getPlatform:",  
+()
 
-FBInstant.getPlatform()); egret.log("getSDKVersion",  
+{ egret.log("getLocale:",
 
-FBInstant.getSDKVersion()); egret.log("getSupportedAPIs",  
+FBInstant.getLocale()); egret.log("getPlatform:",
 
-FBInstant.getSupportedAPIs()); egret.log("getEntryPointData",  
+FBInstant.getPlatform()); egret.log("getSDKVersion",
 
-FBInstant.getEntryPointData());  }  private  
+FBInstant.getSDKVersion()); egret.log("getSupportedAPIs",
 
-quit():  
+FBInstant.getSupportedAPIs()); egret.log("getEntryPointData",
 
-void  
+FBInstant.getEntryPointData());  });  setTimeout(function
 
-{ egret.log("quit");  FBInstant.quit();  }  private  
+()
 
-logEvent():  
+{  FBInstant.setLoadingProgress(100);  },
 
-void  
+1000);  }  private
 
-{ egret.log("logEvent");  FBInstant.logEvent("test",  
+baseinfo()
 
-2,  
+{ egret.log("baseinfo"); egret.log("getLocale:",
 
-{  
+FBInstant.getLocale()); egret.log("getPlatform:",
 
-"test":  
+FBInstant.getPlatform()); egret.log("getSDKVersion",
 
-"ta"  
+FBInstant.getSDKVersion()); egret.log("getSupportedAPIs",
 
-});  }  private  
+FBInstant.getSupportedAPIs()); egret.log("getEntryPointData",
 
-shareAsync():  
+FBInstant.getEntryPointData());  }  private
 
-void  
+quit():
 
-{ egret.log("shareAsync");  let 
+void
 
-data:  
+{ egret.log("quit");  FBInstant.quit();  }  private
 
-FBInstant.SharePayload  
+logEvent():
 
-=  
+void
 
-{ intent:  
+{ egret.log("logEvent");  FBInstant.logEvent("test",
 
-"", text:  
+2,
 
-"", image:  
+{
 
-"",  };  FBInstant.shareAsync(data);  }  private  
+"test":
 
-player()  
+"ta"
 
-{ egret.log("player"); egret.log("player.getID",  
+});  }  private
 
-FBInstant.player.getID()); egret.log("player.getName",  
+shareAsync():
 
-FBInstant.player.getName()); egret.log("player.getPhoto",  
+void
 
-FBInstant.player.getPhoto());  }  private  
+{ egret.log("shareAsync");  let
 
-async  
+data:
 
-getEgretConnectedPlayersAsync()  
+FBInstant.SharePayload
 
-{ egret.log("frends info:::");  let 
+=
 
-datas:  
+{ intent:
 
-FBInstant.ConnectedPlayer[]  
+"", text:
 
-=  
+"", image:
 
-await  
+"",  };  FBInstant.shareAsync(data);  }  private
 
-FBInstant.player.getConnectedPlayersAsync(); egret.log(datas); datas.forEach(element  
+player()
 
-=>  
+{ egret.log("player"); egret.log("player.getID",
 
-{ egret.log("player.getID", element.getID()); egret.log("player.getName", element.getName()); egret.log("player.getPhoto", element.getPhoto());  });  }  private  
+FBInstant.player.getID()); egret.log("player.getName",
 
-contextinfo():  
+FBInstant.player.getName()); egret.log("player.getPhoto",
 
-void  
+FBInstant.player.getPhoto());  }  private
 
-{ egret.log("Context.getID",  
+async
 
-FBInstant.context.getID()); egret.log("Context.getType",  
+getEgretConnectedPlayersAsync()
 
-FBInstant.context.getType());  }  private  
+{ egret.log("frends info:::");  let
 
-share():  
+datas:
 
-void  
+FBInstant.ConnectedPlayer[]
 
-{ egret.log("share");  let 
+=
 
-data:  
+await
 
-FBInstant.SharePayload  
+FBInstant.player.getConnectedPlayersAsync(); egret.log(datas); datas.forEach(element
 
-=  
+=>
 
-{ intent:  
+{ egret.log("player.getID", element.getID()); egret.log("player.getName", element.getName()); egret.log("player.getPhoto", element.getPhoto());  });  }  private
 
-"", text:  
+contextinfo():
 
-"", image:  
+void
+
+{ egret.log("Context.getID",
+
+FBInstant.context.getID()); egret.log("Context.getType",
+
+FBInstant.context.getType());  }  private
+
+share():
+
+void
+
+{ egret.log("share");  let
+
+data:
+
+FBInstant.SharePayload
+
+=
+
+{ intent:
+
+"", text:
+
+"", image:
 
 "",  };  FBInstant.shareAsync(data);  }
 

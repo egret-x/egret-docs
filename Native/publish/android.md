@@ -12,19 +12,19 @@ permalink: /docs/thu84rg8/
 可以使用国内提供的镜像服务，在`根目录的build.gradle`下repositories 下 所有其他项目前 添加如下代码：
 
 ```js
-maven { url 'https://maven.aliyun.com/repository/jcenter' 
+maven { url 'https://maven.aliyun.com/repository/jcenter'
 
 }
 
-maven { url 'https://maven.aliyun.com/repository/google' 
+maven { url 'https://maven.aliyun.com/repository/google'
 
 }
 
-maven { url 'https://maven.aliyun.com/repository/central' 
+maven { url 'https://maven.aliyun.com/repository/central'
 
 }
 
-maven { url 'https://maven.aliyun.com/repository/gradle-plugin' 
+maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
 
 }
 
@@ -34,26 +34,25 @@ maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
 
 ```js
 
-
 // 项目/build.gradle，即根目录下的 build.gradle
 
 buildscript {
 
  repositories {
 
- maven { url 'https://maven.aliyun.com/repository/jcenter' 
+ maven { url 'https://maven.aliyun.com/repository/jcenter'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/google' 
+ maven { url 'https://maven.aliyun.com/repository/google'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/central' 
+ maven { url 'https://maven.aliyun.com/repository/central'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/gradle-plugin' 
+ maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
 
 }
 
@@ -73,19 +72,19 @@ allprojects {
 
  repositories {
 
- maven { url 'https://maven.aliyun.com/repository/jcenter' 
+ maven { url 'https://maven.aliyun.com/repository/jcenter'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/google' 
+ maven { url 'https://maven.aliyun.com/repository/google'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/central' 
+ maven { url 'https://maven.aliyun.com/repository/central'
 
 }
 
- maven { url 'https://maven.aliyun.com/repository/gradle-plugin' 
+ maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
 
 }
 
@@ -107,7 +106,6 @@ allprojects {
 
 ```js
 
-
 // 项目/build.gradle，即根目录下的 build.gradle
 
 buildscript {
@@ -128,7 +126,6 @@ buildscript {
 
 ```js
 
-
 # 项目/gradle/wrapper/gradle-wrapper.properties
 
 distributionUrl=https\\://services.gradle.org/distributions/gradle-x.x.x-all.zip
@@ -138,7 +135,6 @@ distributionUrl=https\\://services.gradle.org/distributions/gradle-x.x.x-all.zip
 ### 安卓编译工具版本 BuildToolsVersion[​](#安卓编译工具版本-buildtoolsversion "安卓编译工具版本 BuildToolsVersion的直接链接")
 
 ```js
-
 
 // 项目/app/build.gradle
 
@@ -178,7 +174,6 @@ EgretNative 提供了 `armeabi-v7a`, `x86`, `arm64-v8a`, `x86_64` 四种CPU abi
 我们可以通过指定CPU的abi过滤来让apk中包含哪些CPU的so。
 
 ```js
-
 
 // 项目/app/build.gradle
 
@@ -228,10 +223,9 @@ Egret Native 已经移除了 `armeabi` 这个CPU 的支持：
 
 ```js
 
+-keep class
 
--keep class 
-
-org.egret.runtime.launcherInterface.**  
+org.egret.runtime.launcherInterface.**
 
 {
 

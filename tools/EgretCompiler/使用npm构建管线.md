@@ -9,25 +9,25 @@ permalink: /docs/tools/EgretCompiler/usenpm/
 2.  在该文件夹下执行如下逻辑
 
 ```js
-npm init 
+npm init
 npm  install webpack webpack-dev-server webpack-cli @egret/egret-webpack-bundler --save-dev --registry https://registry.npm.taobao.org
 ```
 
-> info 这样做是为了避免在白鹭项目根目录下创建 package.json 文件。  
-> 当执行 egret build 时候，根目录中中包含 package.json 文件，则会将这个项目认为是一个白鹭的库项目。  
+> info 这样做是为了避免在白鹭项目根目录下创建 package.json 文件。
+> 当执行 egret build 时候，根目录中中包含 package.json 文件，则会将这个项目认为是一个白鹭的库项目。
 > 为了避开这个机制，所以需要创建一个子文件夹中。
 
 1.  在该文件夹下添加一个名为 `webpack.config.js` 的配置文件，内容如下：
 
 ```js
-//@ts-check
-const path =  require("path");
-const bundler =  require("@egret/egret-webpack-bundler");
-const projectRoot = path.resolve(__dirname,  "../");
-const config = bundler.generateConfig(projectRoot,  {
- libraryType:  "debug"
-},  "web",  false);
-module.exports  = config;
+// @ts-check
+const path = require('node:path')
+const bundler = require('@egret/egret-webpack-bundler')
+const projectRoot = path.resolve(__dirname, '../')
+const config = bundler.generateConfig(projectRoot, {
+  libraryType: 'debug'
+}, 'web', false)
+module.exports = config
 ```
 
 4.  修改 `build/package.json` 文件，添加如下内容:

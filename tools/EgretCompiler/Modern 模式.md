@@ -61,7 +61,7 @@ tsc --noEmit
 这一过程比较复杂，构建成功后，打开浏览器控制台，您很大概率会发现项目无法运行并存在一些报错，通过堆栈可以判断其大意是某个类继承了一个 undefined 的类。这种问题是循环依赖导致的，具体原因如下：\\
 
 ```js
-// index.ts 
+// index.ts
 
 import  {  MyComponent  }  from  "./component";
 
@@ -109,7 +109,6 @@ export  class  MyComponent2  extends  BaseObject  {
 
 }
 
-
 ```
 
 上述代码中，只要在MyApp中引用MyComponent不会报错，但是如果引用了 MyComponent2，就会报错。 这是因为 index.ts 中的 import { MyComponent2} from './MyComponent2' 中执行时，class BaseObject 还没有生成，而MyComponent2 继承了 BaseObject，就会出现这个问题。
@@ -127,12 +126,9 @@ export  class  MyComponent2  extends  BaseObject  {
 一个简单的解决方案如下所示：
 
 ```js
-
 // 修改 Main.ts
 
-import  './components/CustomComponent.ts'
-
-
+import './components/CustomComponent.ts'
 ```
 
 编写完上述代码后，再运行项目，就不会出现找不到自定义组件的问题了。
@@ -140,9 +136,7 @@ import  './components/CustomComponent.ts'
 一个常见的错误是如下代码：
 
 ```js
-import  {  CustomComponent  }  from  './components/CustomComponent.ts'
-
-
+import { CustomComponent } from './components/CustomComponent.ts'
 ```
 
 上述代码中，虽然 import 了这个文件，但是如果您的 Main.ts 中**没有使用过** CustomComponent，那么在生成 JavaScript 代码时，这段 import 逻辑会在 **编译期擦除**，进而仍然没有成功 import。

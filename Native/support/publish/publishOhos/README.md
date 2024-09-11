@@ -9,7 +9,7 @@ permalink: /docs/Native/support/publish/publishOhos/
 1.  egret引擎版本支持：engine > 5.2.
 2.  鸿蒙sdk版本：5.0.0（12）
 3.  DevEco编辑器版本：5.0.3.400以上
-	>下载地址:https://developer.harmonyos.com/deveco-developer-suite/  
+	>下载地址:https://developer.harmonyos.com/deveco-developer-suite/
 	>以上地址需要申请HarmonyOS Next预览版开发者权限
 4. HarmonyOS Next手机系统版本: >= NEXT.0.0.31
 
@@ -25,7 +25,6 @@ permalink: /docs/Native/support/publish/publishOhos/
 ![添加引擎显示组件](image-3.png)
 1. 拷贝发布后的游戏资源到 **resources/rawfiles/game/** 路径下
 ![拷贝游戏资源](image-4.png)
-
 
 通过上述步骤，接入工作就完成了。也可以直接使用提供的 **egret_template** 模版项目,更新 **resources/rawfiles/game/** 路径下的游戏资源。接下来就可以开始启动测试游戏
 

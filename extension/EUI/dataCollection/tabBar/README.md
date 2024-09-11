@@ -50,7 +50,6 @@ class TabBarDemo extends eui.Group {
 
 效果：
 
-
 ## 用法2：结合ArrayCollection
 
 TabBar 也可以单独使用的，将数据源设置为一个 ArrayCollection 实例即可。并且可以通过侦听 `ITEM_TAP` 事件，来获取 TabBar 的选中项。示例代码：

@@ -28,7 +28,7 @@ GooglePlay 平台是很多开发者在海外发布游戏的第一选择。
 
 ## 注册开发者账号[​](#注册开发者账号 "注册开发者账号的直接链接")
 
-注册并登陆 GooglePlay 开发者账号,链接是 https://play.google.com/apps/publish/signup/  
+注册并登陆 GooglePlay 开发者账号,链接是 https://play.google.com/apps/publish/signup/
 
 需要注意的是 在支付25美金的时候,Chrome 浏览器登录账号一定和你刚才注册的 GooglePlay 账号是同一个 否则可能会出现无法支付的问题
 
@@ -54,7 +54,6 @@ GooglePlay 平台是很多开发者在海外发布游戏的第一选择。
 如果您遇到该错误，则需要在打包的时候补充64位的支持。请修改工程App对应build.gradle 文件，添加如下属性
 
 ```js
-
 
 {
 
@@ -88,22 +87,18 @@ GooglePlay 权限检查相关内容
 2.  开发者可以在AndroidManifest.xml 中添加相应权限的主动删除
 
 ```js
-
-
 <uses-permission
 
   android:name="android.permission.READ_PHONE_STATE"
 
-  tools:node="remove"  
+  tools:node="remove"
 
 />
-
 ```
 
 如遇到 tools 无法识别显示为红色，则： 需要在应用的 AndroidManifest.xml（不是上文中提到的 egret.arr 的 AndroidManifest.xml) 的跟节点中添加如下内容：
 
 ```js
-
 
 <manifest  xmlns:android="http://schemas.android.com/apk/res/android"
 
