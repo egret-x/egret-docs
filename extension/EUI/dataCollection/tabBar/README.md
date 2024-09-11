@@ -50,7 +50,6 @@ class TabBarDemo extends eui.Group {
 
 效果：
 
-![](9-4-tabbar-A.png)
 
 ## 用法2：结合ArrayCollection
 
@@ -83,5 +82,3 @@ class TabBarDemo extends eui.Group {
 ~~~
 
 效果：
-
-![](9-4-tabbar-B.png)

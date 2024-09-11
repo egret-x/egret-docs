@@ -21,7 +21,7 @@ egret本机项目运行在3000端口上，需要结束其他占用了3000端口�
 
 * 类型转换报错
 
-ts中任意类型转换报错，可在表达式前加<any>强转一下。
+ts中任意类型转换报错，可在表达式前加强转一下。
 
 使用'as'操作符做类型转换时，如果要转为Class类型，会有一个编译报错：
 
@@ -60,7 +60,7 @@ private myFunc():void{
 
 编译时经常会报错:  error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => boolean'.
 
-大部分情况下这是编译器的误报，可以忽略不管。也可以手动在右侧表达式前加<any>强转，再次编译就不会报类型强转的错误。
+大部分情况下这是编译器的误报，可以忽略不管。也可以手动在右侧表达式前加强转，再次编译就不会报类型强转的错误。
 
 * 接口继承接口，类型判定需手动修改。
 
