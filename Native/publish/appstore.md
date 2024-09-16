@@ -1,8 +1,4 @@
----
-title: 发布到 AppStore
-createTime: 2024/09/11 10:50:04
-permalink: /docs/bysd3fsw/
----
+
 
 2019年苹果更新了对HTML5游戏的政策，要求HTML5游戏应在 Safari浏览器中展现，而不是直接打包为 ipa 发布到 AppStore 中，对此，很多
 开发者给予关注，并跟我们咨询寻求帮助，解决他们在白鹭引擎开发的HTML5游戏发布到AppStore的问题。

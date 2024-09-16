@@ -52,9 +52,8 @@ permalink: /docs/minigame/minigame_taobao/faq/
 ```js
 const className = 'skins.ButtonSkin'
 
-const exmlText
-
-= `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
+const exmlText= 
+`<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
 ...
 </e:Skin>`
 ```
@@ -72,22 +71,10 @@ const exmlText
 **注意**：同时只能创建6个声音对象，超出的会覆盖掉老的声音对象。
 
 ```js
-for
-
-(let i =
-
-0; i <
-
-3; i++)
-
-{
-
- let sd =
-
-new
-
-egret.Sound() sd.load('resource/assets/se1.mp3') ...
-
+for (let i = 0; i < 3; i++) {
+ let sd = new egret.Sound()
+ sd.load('resource/assets/se1.mp3')
+ ...
 }
 ```
 

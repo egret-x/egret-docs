@@ -43,11 +43,11 @@ permalink: /docs/minigame/minigame_360/faq/
 答：检查是否使用了 嵌入EXML到代码中，例：
 
 ```js
-const className
-
-= 'skins.ButtonSkin'; const exmlText
-
-= `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">                ...    </e:Skin>`
+const className= 'skins.ButtonSkin';
+const exmlText = 
+`<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
+...
+</e:Skin>`
 ```
 
 需要改成单独的皮肤文件。

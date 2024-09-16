@@ -47,9 +47,11 @@ permalink: /docs/minigame/minigamexiaomi/faq/
 答：检查是否使用了 嵌入EXML到代码中，例：
 
 ```
-    var className = "skins.ButtonSkin";
-    var exmlText = `<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">                ...
-                    </e:Skin>`;
+var className = "skins.ButtonSkin";
+var exmlText = 
+`<e:Skin class="${className}" states="up,over,down,disabled" xmlns:s="http://ns.egret.com/eui">
+...
+</e:Skin>`;
 ```
 
 需要改成单独的皮肤文件。

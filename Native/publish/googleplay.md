@@ -1,8 +1,5 @@
----
-title: googleplay
-createTime: 2024/09/11 17:01:55
-permalink: /docs/ghhnpivn/
----
+
+publish/googleplay.md
 GooglePlay 平台是很多开发者在海外发布游戏的第一选择。
 
 本文将介绍如何将白鹭引擎开发的游戏通过 Egret Native 发布到 GooglePlay 平台。

@@ -1,8 +1,9 @@
 ---
-title: 原生缓存策略
-createTime: 2024/09/11 10:50:04
-permalink: /docs/3wp55wpd/
+title: httpcache
+createTime: 2024/09/11 11:37:40
+permalink: /docs/yjiordvy/
 ---
+
 
 * 以下内容仅适用于应用运行过程中下载的资源；assets、预加载目录下的资源不会被runtime更新。
 * index.html 不会被缓存，每次都会从服务器读取.

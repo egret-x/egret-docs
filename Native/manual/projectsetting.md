@@ -1,8 +1,3 @@
----
-title: 如何发布原生项目
-createTime: 2024/09/11 10:50:04
-permalink: /docs/vxz8ovmm/
----
 
 通过 `Egret` 引擎制作的游戏，不仅可以发布成 `Html5` 网页项目，还可以发布成原生项目。
 
