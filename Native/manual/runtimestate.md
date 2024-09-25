@@ -1,3 +1,8 @@
+---
+title: runtimestate
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/manual/runtimestate/
+---
 
 
 

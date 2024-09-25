@@ -1,3 +1,8 @@
+---
+title: Android Gradle 配置FAQ
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/publish/android/
+---
 
 
 开发者在使用 Egret Native 发布 Android 工程时，由于开发者本地开发环境与 Egret Native 版本不匹配可能会遇到一些问题，引擎团队针对常见问题列出了如下解决方案，希望可以对您有所帮助。
@@ -9,21 +14,15 @@
 可以使用国内提供的镜像服务，在`根目录的build.gradle`下repositories 下 所有其他项目前 添加如下代码：
 
 ```js
-maven { url 'https://maven.aliyun.com/repository/jcenter'
+maven { url 'https://maven.aliyun.com/repository/jcenter' }
 
-}
+maven { url 'https://maven.aliyun.com/repository/google' }
 
-maven { url 'https://maven.aliyun.com/repository/google'
+maven { url 'https://maven.aliyun.com/repository/central' }
 
-}
+maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
-maven { url 'https://maven.aliyun.com/repository/central'
 
-}
-
-maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
-
-}
 
 ```
 
@@ -31,27 +30,20 @@ maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
 
 ```js
 
+
 // 项目/build.gradle，即根目录下的 build.gradle
 
 buildscript {
 
  repositories {
 
- maven { url 'https://maven.aliyun.com/repository/jcenter'
+ maven { url 'https://maven.aliyun.com/repository/jcenter' }
 
-}
+ maven { url 'https://maven.aliyun.com/repository/google' }
 
- maven { url 'https://maven.aliyun.com/repository/google'
+ maven { url 'https://maven.aliyun.com/repository/central' }
 
-}
-
- maven { url 'https://maven.aliyun.com/repository/central'
-
-}
-
- maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
-
-}
+ maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
  google()
 
@@ -69,21 +61,13 @@ allprojects {
 
  repositories {
 
- maven { url 'https://maven.aliyun.com/repository/jcenter'
+ maven { url 'https://maven.aliyun.com/repository/jcenter' }
 
-}
+ maven { url 'https://maven.aliyun.com/repository/google' }
 
- maven { url 'https://maven.aliyun.com/repository/google'
+ maven { url 'https://maven.aliyun.com/repository/central' }
 
-}
-
- maven { url 'https://maven.aliyun.com/repository/central'
-
-}
-
- maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
-
-}
+ maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
  google()
 
@@ -92,6 +76,8 @@ allprojects {
  }
 
 }
+
+
 
 ```
 
@@ -116,6 +102,7 @@ buildscript {
  }
 
 }
+
 
 ```
 
@@ -193,6 +180,8 @@ android {
  ...
 
 }
+
+
 
 ```
 

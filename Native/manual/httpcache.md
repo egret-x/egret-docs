@@ -1,7 +1,7 @@
 ---
-title: httpcache
+title: 原生缓存策略
 createTime: 2024/09/11 11:37:40
-permalink: /docs/yjiordvy/
+permalink: /docs/Native/manual/httpcache/
 ---
 
 

@@ -1,3 +1,8 @@
+---
+title: 发布到Appstore
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/publish/appstore/
+---
 
 
 2019年苹果更新了对HTML5游戏的政策，要求HTML5游戏应在 Safari浏览器中展现，而不是直接打包为 ipa 发布到 AppStore 中，对此，很多

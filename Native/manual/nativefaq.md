@@ -1,3 +1,8 @@
+---
+title: nativefaq
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/manual/nativefaq/
+---
 
 
 #### 为什么遮罩没有效果了

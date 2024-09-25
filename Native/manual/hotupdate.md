@@ -1,3 +1,8 @@
+---
+title: 热更新方案说明
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/manual/hotupdate/
+---
 
 
 ## 当前文件缓存策略

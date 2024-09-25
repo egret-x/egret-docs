@@ -1,3 +1,8 @@
+---
+title: 发布到GooglePlay
+createTime: 2024/09/16 17:56:37
+permalink: /docs/Native/publish/googleplay/
+---
 
 publish/googleplay.md
 GooglePlay 平台是很多开发者在海外发布游戏的第一选择。
