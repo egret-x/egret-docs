@@ -4,13 +4,6 @@ createTime: 2024/09/11 17:47:48
 permalink: /docs/tools/EgretCompiler/legacy/
 ---
 
-已完成：11/09/2024 17:47（633ms）
-搜索...
-
-Legacy 模式 | Egret Engine
-06/09/2024 18:08
-en
-
 ## 安装编译器[​](#安装编译器 "安装编译器的直接链接")
 
 我们为 EgretCompiler 提供了三种安装方式，分别为快速安装、npm拉取安装与命令行安装。

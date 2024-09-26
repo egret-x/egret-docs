@@ -1,3 +1,8 @@
+---
+title: fix_domain
+createTime: 2024/09/18 11:05:58
+permalink: /docs/u2clkxqs/
+---
 
 ```ts
     public static shareImage(display: egret.DisplayObject): void
